@@ -1,0 +1,26 @@
+# module.yaml - Chapter 6: Skauril's Army
+# Module metadata for Necromancer's Lieutenant - Chapter 6
+
+name: skaurilsarmy
+display_name: "Skauril's Army - Assault on the Elves"
+author: "Your Name"
+category: "Middle-earth Role Playing"
+
+# All components included
+include:
+  stories: true
+  encounters: true
+  npcs: true
+  items: true
+  parcels: true
+  images: false  # Set to true if you add maps
+
+# Standard settings
+options:
+  validate: true
+  auto_id: true
+  overwrite: false
+
+output:
+  filename: "skaurilsarmy.mod"
+  directory: "./output"

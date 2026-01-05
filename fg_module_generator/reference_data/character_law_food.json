@@ -1,0 +1,78 @@
+{
+  "module": "Character Law",
+  "section": "equipment.foodlodgingservices",
+  "items": [
+    {
+      "id": "00001",
+      "name": "Beer/ale"
+    },
+    {
+      "id": "00002",
+      "name": "Brandy"
+    },
+    {
+      "id": "00003",
+      "name": "Cider"
+    },
+    {
+      "id": "00004",
+      "name": "Mead"
+    },
+    {
+      "id": "00005",
+      "name": "Wine"
+    },
+    {
+      "id": "00006",
+      "name": "Light meal"
+    },
+    {
+      "id": "00007",
+      "name": "Normal meal"
+    },
+    {
+      "id": "00008",
+      "name": "Heavy meal"
+    },
+    {
+      "id": "00009",
+      "name": "Week's rations"
+    },
+    {
+      "id": "00010",
+      "name": "Trail rations"
+    },
+    {
+      "id": "00011",
+      "name": "Greatbread"
+    },
+    {
+      "id": "00012",
+      "name": "Waybread"
+    },
+    {
+      "id": "00013",
+      "name": "Poor lodging"
+    },
+    {
+      "id": "00014",
+      "name": "Average lodging"
+    },
+    {
+      "id": "00015",
+      "name": "Good lodging"
+    },
+    {
+      "id": "00016",
+      "name": "Stable"
+    },
+    {
+      "id": "00017",
+      "name": "Hospitalization"
+    },
+    {
+      "id": "00018",
+      "name": "Library Access"
+    }
+  ]
+}

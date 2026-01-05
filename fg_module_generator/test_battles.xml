@@ -1,0 +1,195 @@
+<?xml version="1.0" ?>
+<battle>
+	<id-00007>
+		<exp type="number">800</exp>
+		<name type="string">6.5.02 - Bridge Crew</name>
+		<npclist>
+			<id-00019>
+				<count type="number">1</count>
+				<faction type="string">foe</faction>
+				<link type="windowreference">
+					<class>npc</class>
+					<recordname>reference.npcs.rangerlevel5@Character Law</recordname>
+				</link>
+				<name type="string">Bridge Crew Ranger</name>
+			</id-00019>
+			<id-00020>
+				<count type="number">1</count>
+				<faction type="string">foe</faction>
+				<link type="windowreference">
+					<class>npc</class>
+					<recordname>reference.npcs.animistlevel5@Character Law</recordname>
+				</link>
+				<name type="string">Bridge Crew Animist</name>
+			</id-00020>
+			<id-00021>
+				<count type="number">2</count>
+				<faction type="string">foe</faction>
+				<link type="windowreference">
+					<class>npc</class>
+					<recordname>reference.npcs.fighterlevel3@Character Law</recordname>
+				</link>
+				<name type="string">Scout (3rd Level)</name>
+			</id-00021>
+			<id-00022>
+				<count type="number">4</count>
+				<faction type="string">foe</faction>
+				<link type="windowreference">
+					<class>npc</class>
+					<recordname>reference.npcs.fighterlevel3@Character Law</recordname>
+				</link>
+				<name type="string">Warrior</name>
+			</id-00022>
+		</npclist>
+	</id-00007>
+	<id-00008>
+		<exp type="number">400</exp>
+		<name type="string">6.5.03 - Road Crew</name>
+		<npclist>
+			<id-00023>
+				<count type="number">10</count>
+				<faction type="string">foe</faction>
+				<link type="windowreference">
+					<class>npc</class>
+					<recordname>reference.npcs.orcscout@Character Law</recordname>
+				</link>
+			</id-00023>
+			<id-00024>
+				<count type="number">1</count>
+				<faction type="string">foe</faction>
+				<link type="windowreference">
+					<class>npc</class>
+					<recordname>reference.npcs.fighterlevel3@Character Law</recordname>
+				</link>
+				<name type="string">Mannish Overseer</name>
+			</id-00024>
+			<id-00025>
+				<count type="number">2</count>
+				<faction type="string">foe</faction>
+				<link type="windowreference">
+					<class>npc</class>
+					<recordname>reference.npcs.warg@Character Law</recordname>
+				</link>
+			</id-00025>
+		</npclist>
+	</id-00008>
+	<id-00009>
+		<exp type="number">600</exp>
+		<name type="string">6.5.04 - Scouting Party</name>
+		<npclist>
+			<id-00026>
+				<count type="number">1</count>
+				<faction type="string">foe</faction>
+				<link type="windowreference">
+					<class>npc</class>
+					<recordname>reference.npcs.orcuruk@Character Law</recordname>
+				</link>
+				<name type="string">Uruk Leader</name>
+			</id-00026>
+			<id-00027>
+				<count type="number">4</count>
+				<faction type="string">foe</faction>
+				<link type="windowreference">
+					<class>npc</class>
+					<recordname>reference.npcs.orcscout@Character Law</recordname>
+				</link>
+				<name type="string">Tracking Orc</name>
+			</id-00027>
+			<id-00028>
+				<count type="number">4</count>
+				<faction type="string">foe</faction>
+				<link type="windowreference">
+					<class>npc</class>
+					<recordname>reference.npcs.warg@Character Law</recordname>
+				</link>
+			</id-00028>
+		</npclist>
+	</id-00009>
+	<id-00010>
+		<exp type="number">750</exp>
+		<name type="string">6.5.05 - Foraging Party</name>
+		<npclist>
+			<id-00029>
+				<count type="number">1</count>
+				<faction type="string">foe</faction>
+				<link type="windowreference">
+					<class>npc</class>
+					<recordname>reference.npcs.rangerlevel5@Character Law</recordname>
+				</link>
+				<name type="string">Foraging Ranger</name>
+			</id-00029>
+			<id-00030>
+				<count type="number">1</count>
+				<faction type="string">foe</faction>
+				<link type="windowreference">
+					<class>npc</class>
+					<recordname>reference.npcs.animistlevel5@Character Law</recordname>
+				</link>
+				<name type="string">Foraging Animist</name>
+			</id-00030>
+			<id-00031>
+				<count type="number">2</count>
+				<faction type="string">foe</faction>
+				<link type="windowreference">
+					<class>npc</class>
+					<recordname>reference.npcs.fighterlevel3@Character Law</recordname>
+				</link>
+				<name type="string">Scout</name>
+			</id-00031>
+			<id-00032>
+				<count type="number">6</count>
+				<faction type="string">foe</faction>
+				<link type="windowreference">
+					<class>npc</class>
+					<recordname>reference.npcs.orcscout@Character Law</recordname>
+				</link>
+			</id-00032>
+			<id-00033>
+				<count type="number">2</count>
+				<faction type="string">foe</faction>
+				<link type="windowreference">
+					<class>npc</class>
+					<recordname>reference.npcs.warg@Character Law</recordname>
+				</link>
+			</id-00033>
+		</npclist>
+	</id-00010>
+	<id-00011>
+		<exp type="number">300</exp>
+		<name type="string">6.5.07 - Giant Spiders</name>
+		<npclist>
+			<id-00034>
+				<count type="number">8</count>
+				<faction type="string">foe</faction>
+				<link type="windowreference">
+					<class>npc</class>
+					<recordname>reference.npcs.giantspider@Character Law</recordname>
+				</link>
+			</id-00034>
+		</npclist>
+	</id-00011>
+	<id-00012>
+		<exp type="number">0</exp>
+		<name type="string">6.0.02 - Woodmen Reinforcements</name>
+		<npclist>
+			<id-00035>
+				<count type="number">10</count>
+				<faction type="string">friend</faction>
+				<link type="windowreference">
+					<class>npc</class>
+					<recordname>reference.npcs.rangerlevel3@Character Law</recordname>
+				</link>
+				<name type="string">Woodman Scout</name>
+			</id-00035>
+			<id-00036>
+				<count type="number">20</count>
+				<faction type="string">friend</faction>
+				<link type="windowreference">
+					<class>npc</class>
+					<recordname>reference.npcs.fighterlevel3@Character Law</recordname>
+				</link>
+				<name type="string">Woodman Warrior</name>
+			</id-00036>
+		</npclist>
+	</id-00012>
+</battle>

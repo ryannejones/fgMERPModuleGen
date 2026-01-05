@@ -1,0 +1,275 @@
+{
+  "creatures": {
+    "Orc Scout": {
+      "level": 6,
+      "hp": 75,
+      "at": 1,
+      "db": 10,
+      "baserate": 50,
+      "group": "Monsters",
+      "subgroup": "Underground Races",
+      "weapons": [
+        {"name": "Scimitar", "ob": 60, "type": "One-Handed Slashing", "attack_table": "ALT-22"}
+      ],
+      "defences": [
+        {"name": "Normal Shield", "melee_bonus": 25, "missile_bonus": 25}
+      ],
+      "abilities": "Darkvision; Partially blinded by sunlight (-50 to all activity)",
+      "description": "Lesser orc leader. Leads squads of fighters. 4'-5' tall",
+      "source": "Necromancer's Lieutenant / Creatures & Treasures"
+    },
+    
+    "Orc Uruk": {
+      "level": 8,
+      "hp": 95,
+      "at": 13,
+      "db": 15,
+      "baserate": 50,
+      "group": "Monsters",
+      "subgroup": "Underground Races",
+      "weapons": [
+        {"name": "Scimitar", "ob": 75, "type": "One-Handed Slashing", "attack_table": "ALT-22"}
+      ],
+      "defences": [
+        {"name": "Normal Shield", "melee_bonus": 25, "missile_bonus": 25}
+      ],
+      "abilities": "Darkvision; Can operate in daylight",
+      "description": "Greater orc - smarter and tougher than lesser orcs. 5'-6' tall",
+      "source": "Necromancer's Lieutenant / Creatures & Treasures"
+    },
+    
+    "Orc - Bulkupar": {
+      "level": 10,
+      "hp": 110,
+      "at": 1,
+      "db": 10,
+      "baserate": 50,
+      "group": "Monsters",
+      "subgroup": "Underground Races",
+      "weapons": [
+        {"name": "Scimitar", "ob": 90, "type": "One-Handed Slashing", "attack_table": "ALT-22"}
+      ],
+      "defences": [
+        {"name": "Normal Shield", "melee_bonus": 25, "missile_bonus": 25}
+      ],
+      "abilities": "Darkvision; Partially blinded by sunlight (-50 to all activity)",
+      "description": "Orc commander. Rules large clans or groups. 4'-5' tall",
+      "source": "Necromancer's Lieutenant"
+    },
+    
+    "Warg": {
+      "level": 5,
+      "hp": 60,
+      "at": 1,
+      "db": 20,
+      "baserate": 80,
+      "group": "Monsters",
+      "subgroup": "Canines",
+      "weapons": [
+        {"name": "Bite", "ob": 55, "type": "Natural Weapon", "attack_table": "CLT-07"}
+      ],
+      "abilities": "Enhanced senses, can track by scent",
+      "description": "Evil wolf-like creature, often ridden by orcs. Intelligent and cunning.",
+      "source": "Creatures & Treasures"
+    },
+    
+    "Wolf": {
+      "level": 3,
+      "hp": 35,
+      "at": 1,
+      "db": 15,
+      "baserate": 70,
+      "group": "Animals",
+      "subgroup": "Canines",
+      "weapons": [
+        {"name": "Bite", "ob": 40, "type": "Natural Weapon", "attack_table": "CLT-07"}
+      ],
+      "abilities": "Pack tactics, enhanced senses",
+      "description": "Natural wolf. Hunts in packs.",
+      "source": "Creatures & Treasures"
+    },
+    
+    "Wolf - Alpha": {
+      "level": 5,
+      "hp": 50,
+      "at": 1,
+      "db": 20,
+      "baserate": 75,
+      "group": "Animals",
+      "subgroup": "Canines",
+      "weapons": [
+        {"name": "Bite", "ob": 50, "type": "Natural Weapon", "attack_table": "CLT-07"}
+      ],
+      "abilities": "Pack leader, enhanced senses, commands pack",
+      "description": "Pack leader. Larger and more dangerous than regular wolves.",
+      "source": "Creatures & Treasures"
+    },
+    
+    "Giant Spider": {
+      "level": 4,
+      "hp": 45,
+      "at": 1,
+      "db": 10,
+      "baserate": 60,
+      "group": "Monsters",
+      "subgroup": "Arachnids",
+      "weapons": [
+        {"name": "Bite", "ob": 45, "type": "Natural Weapon", "attack_table": "CLT-07"},
+        {"name": "Web", "ob": 30, "type": "Special", "attack_table": "Special"}
+      ],
+      "abilities": "Web-spinning, poison bite (Level 5), wall-climbing",
+      "description": "Large spider with poisonous bite. Can trap victims in webs.",
+      "source": "Creatures & Treasures"
+    },
+    
+    "Troll": {
+      "level": 8,
+      "hp": 150,
+      "at": 5,
+      "db": 20,
+      "baserate": 50,
+      "group": "Monsters",
+      "subgroup": "Giants",
+      "weapons": [
+        {"name": "Club", "ob": 80, "type": "Two-Handed Concussion", "attack_table": "ALT-05"},
+        {"name": "Claw", "ob": 70, "type": "Natural Weapon", "attack_table": "CLT-03"}
+      ],
+      "abilities": "Regeneration, sunlight turns to stone, great strength",
+      "description": "Large, powerful creature. 8-9 feet tall. Regenerates unless killed by fire or acid.",
+      "source": "Creatures & Treasures"
+    }
+  },
+  
+  "npcs": {
+    "Ranger Level 1": {
+      "level": 1,
+      "hp": 25,
+      "at": 10,
+      "db": 0,
+      "baserate": 50,
+      "profession": "Ranger",
+      "group": "NPCs",
+      "weapons": [
+        {"name": "Long Bow", "ob": 25, "type": "Missile Weapon", "attack_table": "AMT-07"},
+        {"name": "Short Sword", "ob": 25, "type": "One-Handed Slashing", "attack_table": "ALT-24"}
+      ],
+      "defences": [
+        {"name": "Full Shield", "melee_bonus": 25, "missile_bonus": 25}
+      ],
+      "abilities": "Tracking, Nature lore",
+      "source": "Character Law"
+    },
+    
+    "Ranger Level 3": {
+      "level": 3,
+      "hp": 35,
+      "at": 10,
+      "db": 0,
+      "baserate": 50,
+      "profession": "Ranger",
+      "group": "NPCs",
+      "weapons": [
+        {"name": "Long Bow", "ob": 40, "type": "Missile Weapon", "attack_table": "AMT-07"},
+        {"name": "Short Sword", "ob": 40, "type": "One-Handed Slashing", "attack_table": "ALT-24"}
+      ],
+      "defences": [
+        {"name": "Full Shield", "melee_bonus": 25, "missile_bonus": 25}
+      ],
+      "abilities": "Tracking, Nature lore, 1 Spell List to Level 10",
+      "source": "Character Law"
+    },
+    
+    "Ranger Level 5": {
+      "level": 5,
+      "hp": 45,
+      "at": 10,
+      "db": 0,
+      "baserate": 50,
+      "profession": "Ranger",
+      "group": "NPCs",
+      "weapons": [
+        {"name": "Long Bow", "ob": 55, "type": "Missile Weapon", "attack_table": "AMT-07"},
+        {"name": "Short Sword", "ob": 55, "type": "One-Handed Slashing", "attack_table": "ALT-24"}
+      ],
+      "defences": [
+        {"name": "Full Shield", "melee_bonus": 25, "missile_bonus": 25}
+      ],
+      "abilities": "Tracking, Nature lore, 2 Spell Lists to Level 10",
+      "source": "Character Law"
+    },
+    
+    "Fighter Level 3": {
+      "level": 3,
+      "hp": 46,
+      "at": 20,
+      "db": 0,
+      "baserate": 50,
+      "profession": "Fighter",
+      "group": "NPCs",
+      "weapons": [
+        {"name": "Broadsword", "ob": 50, "type": "One-Handed Slashing", "attack_table": "ALT-04"}
+      ],
+      "defences": [
+        {"name": "Full Shield", "melee_bonus": 25, "missile_bonus": 25}
+      ],
+      "source": "Character Law"
+    },
+    
+    "Fighter Level 5": {
+      "level": 5,
+      "hp": 62,
+      "at": 20,
+      "db": 0,
+      "baserate": 50,
+      "profession": "Fighter",
+      "group": "NPCs",
+      "weapons": [
+        {"name": "Broadsword", "ob": 65, "type": "One-Handed Slashing", "attack_table": "ALT-04"}
+      ],
+      "defences": [
+        {"name": "Full Shield", "melee_bonus": 25, "missile_bonus": 25}
+      ],
+      "source": "Character Law"
+    },
+    
+    "Animist Level 3": {
+      "level": 3,
+      "hp": 30,
+      "at": 5,
+      "db": 0,
+      "baserate": 50,
+      "profession": "Animist",
+      "group": "NPCs",
+      "weapons": [
+        {"name": "Staff", "ob": 35, "type": "Two-Handed Concussion", "attack_table": "APT-04"}
+      ],
+      "abilities": "Healing spells, Nature magic, 3 Spell Lists to Level 10",
+      "spells": ["Healing, Nature's Law, Animal Mastery"],
+      "source": "Custom (based on Rolemaster rules)"
+    },
+    
+    "Animist Level 5": {
+      "level": 5,
+      "hp": 45,
+      "at": 10,
+      "db": 0,
+      "baserate": 50,
+      "profession": "Animist",
+      "group": "NPCs",
+      "weapons": [
+        {"name": "Staff", "ob": 45, "type": "Two-Handed Concussion", "attack_table": "APT-04"}
+      ],
+      "abilities": "Healing spells, Nature magic, 4 Spell Lists to Level 15",
+      "spells": ["Healing, Nature's Law, Animal Mastery, Plant Mastery"],
+      "source": "Custom (based on Rolemaster rules)"
+    }
+  },
+  
+  "usage_notes": {
+    "creatures": "Common MERP monsters - orcs, wargs, wolves, trolls, spiders",
+    "npcs": "Human/Elf NPCs by profession and level",
+    "weapons": "All weapons reference Arms Law standard weapons",
+    "defences": "Shields and defensive gear",
+    "custom_creation": "Users can override any stat or add new creatures/NPCs"
+  }
+}
