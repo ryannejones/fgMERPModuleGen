@@ -96,17 +96,3 @@ Into this XML:
 - [DONE] Proper XML structure for Fantasy Grounds
 
 
-## Next Phases
-
-Still needed:
-
-- [TODO] Phase 5: Story XML generation
-- [TODO] Phase 6: NPC XML generation
-- [TODO] Phase 7: Items/Parcels XML
-- [TODO] Phase 8: Images XML
-- [TODO] Phase 9: DB.xml assembly
-- [TODO] Phase 10: Module packaging
-- [TODO] Phase 11: Update mode
-- [TODO] Misc: Update README - include how to format yaml files, how to know if custom npc or item is needed
-- [TODO] Templates: Provide empty yaml templates
-
