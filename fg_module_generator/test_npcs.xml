@@ -1,0 +1,163 @@
+<?xml version="1.0" ?>
+<npc>
+	<id-00001>
+		<name type="string">Gardagd</name>
+		<level type="number">7</level>
+		<hits type="number">60</hits>
+		<armortype type="number">12</armortype>
+		<defensivebonus type="number">20</defensivebonus>
+		<baserate type="number">50</baserate>
+		<profession type="string">Scout/Assassin</profession>
+		<type type="string">NPCs</type>
+		<weapons>
+			<id-00001>
+				<name type="string">Long Bow</name>
+				<ob type="number">65</ob>
+				<attacktable>
+					<tableid type="string">ALT-01</tableid>
+				</attacktable>
+			</id-00001>
+			<id-00002>
+				<name type="string">Short Sword</name>
+				<ob type="number">60</ob>
+				<attacktable>
+					<tableid type="string">ALT-01</tableid>
+				</attacktable>
+			</id-00002>
+			<id-00003>
+				<name type="string">Dagger</name>
+				<ob type="number">55</ob>
+				<attacktable>
+					<tableid type="string">ALT-01</tableid>
+				</attacktable>
+			</id-00003>
+		</weapons>
+		<defences>
+			<id-00004>
+				<name type="string">Rigid Leather Armor</name>
+				<meleedefense type="number">0</meleedefense>
+				<missiledefense type="number">0</missiledefense>
+			</id-00004>
+		</defences>
+		<abilities type="formattedtext">
+			<p>Tracking, Stalking, Hiding, Ambush. Bitter hatred of Easterlings. Will kill Skauril if given easy opportunity.</p>
+		</abilities>
+		<description type="formattedtext">
+			<p>Self-trained ranger turned bandit turned assassin. Lost family to Easterling raiders. Enrolled in Skauril's company but secretly hates his Easterling master.</p>
+		</description>
+	</id-00001>
+	<id-00002>
+		<name type="string">Skauril the Conjurer</name>
+		<level type="number">15</level>
+		<hits type="number">130</hits>
+		<armortype type="number">15</armortype>
+		<defensivebonus type="number">30</defensivebonus>
+		<baserate type="number">50</baserate>
+		<profession type="string">Evil Cleric/Conjurer</profession>
+		<type type="string">NPCs</type>
+		<weapons>
+			<id-00005>
+				<name type="string">Staff</name>
+				<ob type="number">85</ob>
+				<attacktable>
+					<tableid type="string">ALT-01</tableid>
+				</attacktable>
+				<bonus type="number">10</bonus>
+			</id-00005>
+		</weapons>
+		<defences>
+			<id-00006>
+				<name type="string">Robes of Protection</name>
+				<meleedefense type="number">15</meleedefense>
+				<missiledefense type="number">15</missiledefense>
+			</id-00006>
+		</defences>
+		<abilities type="formattedtext">
+			<p>Necromancy, Summoning, Darkness spells. Commands army of 500+ Orcs and Men. Tactically experienced. Will abandon army to save himself.</p>
+		</abilities>
+		<spells type="formattedtext">
+			<p>Leaving, Limbwalking, Levitate, Invisibility, Nature's Awareness, Change of Kind, Plant Facade, Long Ear</p>
+		</spells>
+		<description type="formattedtext">
+			<p>Lieutenant of the Witch-king. Commands assault on Thranduil's Elves. Crafty, experienced, but values own life above all. Wears Necklace of Deployment for escape.</p>
+		</description>
+	</id-00002>
+	<id-00003>
+		<name type="string">Gihellin</name>
+		<level type="number">5</level>
+		<hits type="number">55</hits>
+		<armortype type="number">13</armortype>
+		<defensivebonus type="number">25</defensivebonus>
+		<baserate type="number">60</baserate>
+		<profession type="string">Elven Warrior</profession>
+		<type type="string">NPCs</type>
+		<weapons>
+			<id-00007>
+				<name type="string">Long Sword</name>
+				<ob type="number">70</ob>
+				<attacktable>
+					<tableid type="string">ALT-01</tableid>
+				</attacktable>
+			</id-00007>
+			<id-00008>
+				<name type="string">Long Bow</name>
+				<ob type="number">65</ob>
+				<attacktable>
+					<tableid type="string">ALT-01</tableid>
+				</attacktable>
+			</id-00008>
+		</weapons>
+		<defences>
+			<id-00009>
+				<name type="string">Elven Chain Mail</name>
+				<meleedefense type="number">10</meleedefense>
+				<missiledefense type="number">10</missiledefense>
+			</id-00009>
+		</defences>
+		<abilities type="formattedtext">
+			<p>Elven senses, woodland paths knowledge, courier for Thranduil. Friendly to Men.</p>
+		</abilities>
+		<description type="formattedtext">
+			<p>Young Sindar Elf. Footloose traveler and courier. Addresses PCs as 'Elf-friends.' Offers family heirloom dagger to aid the quest.</p>
+		</description>
+	</id-00003>
+	<id-00004>
+		<name type="string">Natak</name>
+		<level type="number">8</level>
+		<hits type="number">95</hits>
+		<armortype type="number">14</armortype>
+		<defensivebonus type="number">15</defensivebonus>
+		<baserate type="number">50</baserate>
+		<profession type="string">Orc Commander</profession>
+		<type type="string">Monsters</type>
+		<weapons>
+			<id-00010>
+				<name type="string">Scimitar</name>
+				<ob type="number">80</ob>
+				<attacktable>
+					<tableid type="string">ALT-01</tableid>
+				</attacktable>
+			</id-00010>
+			<id-00011>
+				<name type="string">Claw</name>
+				<ob type="number">70</ob>
+				<attacktable>
+					<tableid type="string">ALT-01</tableid>
+				</attacktable>
+			</id-00011>
+		</weapons>
+		<defences>
+			<id-00012>
+				<name type="string">Heavy Shield</name>
+				<meleedefense type="number">25</meleedefense>
+				<missiledefense type="number">25</missiledefense>
+			</id-00012>
+		</defences>
+		<abilities type="formattedtext">
+			<p>Darkvision, Commands through fear and brutality. Orcs under his command prefer front lines to stay away from him.</p>
+		</abilities>
+		<description type="formattedtext">
+			<p>Largest of his brood. Never learned subtlety—uses strength and terror. Orcs fear him more than the enemy.</p>
+		</description>
+	</id-00004>
+</npc>
