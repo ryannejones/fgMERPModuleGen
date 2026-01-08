@@ -63,7 +63,12 @@ class ReferenceLibrary:
         data = self.load_json('arms_law_weapons.json')
         if data:
             weapons = data.get('weapons', [])
-            self.weapons_reference = {w['name']: w for w in weapons}
+            # Add category and store with lowercase keys
+            for weapon in weapons:
+                weapon['category'] = 'weapons'
+                key = weapon['name'].lower()
+                self.weapons_reference[key] = weapon
+            
             self.stats['weapons'] = len(self.weapons_reference)
             print(f"  [OK] arms_law_weapons.json: {self.stats['weapons']} weapons")
             return True
@@ -79,7 +84,10 @@ class ReferenceLibrary:
         data = self.load_json('character_law_accessories.json')
         if data:
             items = data.get('items', [])
-            self.accessories_reference = {item['name']: item for item in items}
+            for item in items:
+                item['category'] = 'accessories'
+                key = item['name'].lower()
+                self.accessories_reference[key] = item
             loaded_count += len(self.accessories_reference)
         
         # Armor - skip for now (different structure)
@@ -92,22 +100,31 @@ class ReferenceLibrary:
         # Herbs
         data = self.load_json('character_law_herbs.json')
         if data:
-            herbs = data.get('herbs', [])
-            self.herbs_reference = {herb['name']: herb for herb in herbs}
+            herbs = data.get('items', [])
+            for herb in herbs:
+                herb['category'] = 'herbs'
+                key = herb['name'].lower()
+                self.herbs_reference[key] = herb
             loaded_count += len(self.herbs_reference)
         
         # Food
         data = self.load_json('character_law_food.json')
         if data:
-            food = data.get('food', [])
-            self.food_reference = {item['name']: item for item in food}
+            food = data.get('items', [])
+            for item in food:
+                item['category'] = 'food'
+                key = item['name'].lower()
+                self.food_reference[key] = item
             loaded_count += len(self.food_reference)
         
         # Transport
         data = self.load_json('character_law_transport.json')
         if data:
-            transport = data.get('transport', [])
-            self.transport_reference = {item['name']: item for item in transport}
+            transport = data.get('items', [])
+            for item in transport:
+                item['category'] = 'transport'
+                key = item['name'].lower()
+                self.transport_reference[key] = item
             loaded_count += len(self.transport_reference)
         
         self.stats['items'] = loaded_count
@@ -154,6 +171,10 @@ class ReferenceLibrary:
     
     def get_item(self, name):
         """Get item data by name (from any item reference)"""
+        # Check weapons first
+        if name in self.weapons_reference:
+            return self.weapons_reference[name]
+        # Then other items
         if name in self.accessories_reference:
             return self.accessories_reference[name]
         if name in self.armor_reference:
@@ -168,8 +189,72 @@ class ReferenceLibrary:
     
     def item_exists(self, name):
         """Check if item exists in any reference"""
-        return (name in self.accessories_reference or
+        return (name in self.weapons_reference or
+                name in self.accessories_reference or
                 name in self.armor_reference or
                 name in self.herbs_reference or
                 name in self.food_reference or
                 name in self.transport_reference)
+    
+    def get_item_reference(self, name):
+        """Get FG reference path for an item"""
+        item = self.get_item(name)
+        if item:
+            category = item.get('category', 'items')
+            item_id = item.get('id', '00000')
+            
+            # Weapons come from Arms Law
+            if category == 'weapons':
+                return f'reference.weapons.id-{item_id}@Arms Law'
+            # Everything else from Character Law
+            else:
+                return f'reference.equipment.{category}.id-{item_id}@Character Law'
+        return None
+    
+    def find_item_fuzzy(self, name):
+        """Try to find an item with fuzzy matching (case-insensitive)"""
+        # Convert to lowercase for all matching
+        name_lower = name.lower()
+        
+        # Try exact match
+        if self.item_exists(name_lower):
+            return name_lower
+        
+        # Try singular/plural variations
+        if name_lower.endswith('s') and len(name_lower) > 3:
+            singular = name_lower[:-1]
+            if self.item_exists(singular):
+                return singular
+        
+        # Try removing parenthetical descriptions like "(full)" or "(poor quality)"
+        import re
+        base_name = re.sub(r'\s*\([^)]+\)\s*', '', name_lower).strip()
+        if base_name != name_lower and self.item_exists(base_name):
+            return base_name
+        
+        # Try base name singular
+        if base_name.endswith('s') and len(base_name) > 3:
+            base_singular = base_name[:-1]
+            if self.item_exists(base_singular):
+                return base_singular
+        
+        # For weapons, try removing quality descriptors (orcish, crude, etc.)
+        quality_words = ['orcish', 'crude', 'poor', 'fine', 'excellent', 'elven', 'dwarven', 'mannish']
+        words = base_name.split()
+        if len(words) >= 2:
+            # Try without first word if it's a quality descriptor
+            if words[0] in quality_words:
+                without_quality = ' '.join(words[1:])
+                
+                # Try as-is
+                if self.item_exists(without_quality):
+                    return without_quality
+                
+                # Try singular
+                if without_quality.endswith('s'):
+                    without_quality_sing = without_quality[:-1]
+                    if self.item_exists(without_quality_sing):
+                        return without_quality_sing
+        
+        # No match found
+        return None

@@ -70,11 +70,14 @@ class BattleGenerator:
         recordname = ET.SubElement(link, 'recordname')
         recordname.text = link_data['recordname']
         
-        # Name (display name if provided)
+        # Name (display name if provided, otherwise creature name)
+        name = ET.SubElement(entry, 'name')
+        name.set('type', 'string')
         if 'display_name' in npc_ref:
-            name = ET.SubElement(entry, 'name')
-            name.set('type', 'string')
             name.text = npc_ref['display_name']
+        else:
+            # Use creature name as default
+            name.text = creature_name
         
         # Token (if provided)
         if 'token' in npc_ref:

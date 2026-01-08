@@ -12,6 +12,12 @@ from lib.loader import ModuleLoader
 from lib.validator import ModuleValidator
 from lib.library import ReferenceLibrary
 from lib.db_battles import BattleGenerator
+from lib.db_stories import StoryGenerator
+from lib.db_npcs import NPCGenerator
+from lib.db_items import ItemGenerator
+from lib.db_images import ImageGenerator
+from lib.db_generator import DBGenerator
+from lib.packager import ModulePackager
 
 def main():
     parser = argparse.ArgumentParser(
@@ -90,16 +96,118 @@ def main():
     battle_xml = battle_gen.generate()
     
     if battle_xml is not None:
-        print(f"  [OK] Generated battle XML for {len(loader.encounters)} encounters")
+        print(f"  [OK] Generated {len(loader.encounters)} battles")
     else:
-        print("  [WARN] No encounters to generate")
+        print("  [SKIP] No encounters to generate")
     print()
     
-    # TODO: Phase 5-10 - Story XML, NPC XML, Items, Parcels, Images, Packaging
-    print("[WARN] Full module generation not yet implemented")
-    print("  Battle XML generated successfully")
-    print("  Still needed: Stories, NPCs, Items, Parcels, Images, Packaging")
-    print("  Implementation: Phases 5-10 (coming next)")
+    # Phase 5: Generate Story XML  
+    print("Phase 5: Generating Story XML")
+    print("-" * 60)
+    story_gen = StoryGenerator(loader, library, verbose=args.verbose)
+    story_xml = story_gen.generate()
+    
+    if story_xml is not None:
+        print(f"  [OK] Generated {len(loader.stories)} stories")
+    else:
+        print("  [SKIP] No stories to generate")
+    print()
+    
+    # Phase 6: Generate NPC XML
+    print("Phase 6: Generating NPC XML")
+    print("-" * 60)
+    npc_gen = NPCGenerator(loader, library, verbose=args.verbose)
+    npc_xml = npc_gen.generate()
+    
+    if npc_xml is not None:
+        print(f"  [OK] Generated {len(loader.npcs)} custom NPCs")
+    else:
+        print("  [SKIP] No custom NPCs to generate")
+    print()
+    
+    # Phase 7: Generate Items and Parcels XML
+    print("Phase 7: Generating Items and Parcels XML")
+    print("-" * 60)
+    item_gen = ItemGenerator(loader, library, verbose=args.verbose)
+    
+    item_xml = item_gen.generate_items()
+    if item_xml is not None:
+        print(f"  [OK] Generated {len(loader.items)} items")
+    else:
+        print("  [SKIP] No items to generate")
+    
+    parcel_xml = item_gen.generate_parcels()
+    if parcel_xml is not None:
+        print(f"  [OK] Generated {len(loader.parcels)} parcels")
+    else:
+        print("  [SKIP] No parcels to generate")
+    print()
+    
+    # Phase 8: Generate Images XML
+    print("Phase 8: Generating Images XML")
+    print("-" * 60)
+    image_gen = ImageGenerator(loader, library, verbose=args.verbose)
+    image_xml = image_gen.generate()
+    
+    if image_xml is not None:
+        print(f"  [OK] Generated {len(loader.images)} images")
+    else:
+        print("  [SKIP] No images to generate")
+    print()
+    
+    # Phase 9: Assemble db.xml
+    print("Phase 9: Assembling db.xml")
+    print("-" * 60)
+    db_gen = DBGenerator(loader, library, verbose=args.verbose)
+    db_xml = db_gen.generate(
+        battle_xml=battle_xml,
+        story_xml=story_xml,
+        npc_xml=npc_xml,
+        item_xml=item_xml,
+        parcel_xml=parcel_xml,
+        image_xml=image_xml
+    )
+    
+    if db_xml is not None:
+        print("  [OK] Assembled complete db.xml")
+    else:
+        print("  [ERROR] Failed to assemble db.xml")
+        return 1
+    print()
+    
+    # Phase 10: Package module
+    print("Phase 10: Packaging Module")
+    print("-" * 60)
+    
+    # Determine output settings
+    output_dir = args.output if args.output else './output'
+    
+    packager = ModulePackager(loader, verbose=args.verbose)
+    
+    try:
+        output_path = packager.package(db_xml, output_dir=output_dir)
+        
+        print()
+        print("=" * 60)
+        print("Module Generation Complete!")
+        print("=" * 60)
+        print(f"Module: {loader.config['display_name']}")
+        print(f"Author: {loader.config['author']}")
+        print(f"File:   {output_path}")
+        print()
+        print("Content Summary:")
+        print(f"  Battles:    {len(loader.encounters)}")
+        print(f"  Stories:    {len(loader.stories)}")
+        print(f"  NPCs:       {len(loader.npcs)}")
+        print(f"  Items:      {len(loader.items)}")
+        print(f"  Parcels:    {len(loader.parcels)}")
+        print(f"  Images:     {len(loader.images)}")
+        print()
+        print("[OK] Module ready to import into Fantasy Grounds!")
+        
+    except Exception as e:
+        print(f"\n[ERROR] Failed to package module: {e}")
+        return 1
     
     return 0
 
