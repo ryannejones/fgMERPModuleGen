@@ -1,0 +1,106 @@
+# encounters.yaml - Chapter 6: Skauril's Army
+# Combat encounters
+
+encounters:
+  - name: "6.5.02 - Bridge Crew"
+    exp: 800
+    npcs:
+      - creature: "Ranger Level 5"
+        count: 1
+        faction: foe
+        display_name: "Bridge Crew Ranger"
+      
+      - creature: "Animist Level 5"
+        count: 1
+        faction: foe
+        display_name: "Bridge Crew Animist"
+      
+      - creature: "Fighter Level 3"
+        count: 2
+        faction: foe
+        display_name: "Scout (3rd Level)"
+      
+      - creature: "Fighter Level 3"
+        count: 4
+        faction: foe
+        display_name: "Warrior"
+  
+  - name: "6.5.03 - Road Crew"
+    exp: 400
+    npcs:
+      - creature: "Orc Scout"
+        count: 10
+        faction: foe
+      
+      - creature: "Fighter Level 3"
+        count: 1
+        faction: foe
+        display_name: "Mannish Overseer"
+      
+      - creature: "Warg"
+        count: 2
+        faction: foe
+  
+  - name: "6.5.04 - Scouting Party"
+    exp: 600
+    npcs:
+      - creature: "Orc Uruk"
+        count: 1
+        faction: foe
+        display_name: "Uruk Leader"
+      
+      - creature: "Orc Scout"
+        count: 4
+        faction: foe
+        display_name: "Tracking Orc"
+      
+      - creature: "Warg"
+        count: 4
+        faction: foe
+  
+  - name: "6.5.05 - Foraging Party"
+    exp: 750
+    npcs:
+      - creature: "Ranger Level 5"
+        count: 1
+        faction: foe
+        display_name: "Foraging Ranger"
+      
+      - creature: "Animist Level 5"
+        count: 1
+        faction: foe
+        display_name: "Foraging Animist"
+      
+      - creature: "Fighter Level 3"
+        count: 2
+        faction: foe
+        display_name: "Scout"
+      
+      - creature: "Orc Scout"
+        count: 6
+        faction: foe
+      
+      - creature: "Warg"
+        count: 2
+        faction: foe
+  
+  - name: "6.5.07 - Giant Spiders"
+    exp: 300
+    npcs:
+      - creature: "Giant Spider"
+        count: 8
+        faction: foe
+  
+  # Woodmen allies (if PCs request help)
+  - name: "6.0.02 - Woodmen Reinforcements"
+    exp: 0
+    npcs:
+      - creature: "Ranger Level 3"
+        count: 10
+        faction: friend
+        display_name: "Woodman Scout"
+      
+      - creature: "Fighter Level 3"
+        count: 20
+        faction: friend
+        display_name: "Woodman Warrior"

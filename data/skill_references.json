@@ -1,0 +1,489 @@
+{
+  "_metadata": {
+    "description": "Skill reference table from Character Law",
+    "total_skills": 80,
+    "note": "Maps skill names to Character Law reference paths"
+  },
+  "skills": {
+    "man. in soft leather": {
+      "name": "Man. in Soft Leather",
+      "id": "id-00001",
+      "category": "primaryskills",
+      "reference_path": "reference.skilllist.primaryskills.list.id-00001@Character Law"
+    },
+    "man. in rigid leather": {
+      "name": "Man. in Rigid Leather",
+      "id": "id-00002",
+      "category": "primaryskills",
+      "reference_path": "reference.skilllist.primaryskills.list.id-00002@Character Law"
+    },
+    "man. in chain": {
+      "name": "Man. in Chain",
+      "id": "id-00003",
+      "category": "primaryskills",
+      "reference_path": "reference.skilllist.primaryskills.list.id-00003@Character Law"
+    },
+    "man. in plate": {
+      "name": "Man. in Plate",
+      "id": "id-00004",
+      "category": "primaryskills",
+      "reference_path": "reference.skilllist.primaryskills.list.id-00004@Character Law"
+    },
+    "weapon 1": {
+      "name": "Weapon 1",
+      "id": "id-00005",
+      "category": "primaryskills",
+      "reference_path": "reference.skilllist.primaryskills.list.id-00005@Character Law"
+    },
+    "weapon 2": {
+      "name": "Weapon 2",
+      "id": "id-00006",
+      "category": "primaryskills",
+      "reference_path": "reference.skilllist.primaryskills.list.id-00006@Character Law"
+    },
+    "weapon 3": {
+      "name": "Weapon 3",
+      "id": "id-00007",
+      "category": "primaryskills",
+      "reference_path": "reference.skilllist.primaryskills.list.id-00007@Character Law"
+    },
+    "weapon 4": {
+      "name": "Weapon 4",
+      "id": "id-00008",
+      "category": "primaryskills",
+      "reference_path": "reference.skilllist.primaryskills.list.id-00008@Character Law"
+    },
+    "weapon 5": {
+      "name": "Weapon 5",
+      "id": "id-00009",
+      "category": "primaryskills",
+      "reference_path": "reference.skilllist.primaryskills.list.id-00009@Character Law"
+    },
+    "weapon 6": {
+      "name": "Weapon 6",
+      "id": "id-00010",
+      "category": "primaryskills",
+      "reference_path": "reference.skilllist.primaryskills.list.id-00010@Character Law"
+    },
+    "climb": {
+      "name": "Climb",
+      "id": "id-00011",
+      "category": "primaryskills",
+      "reference_path": "reference.skilllist.primaryskills.list.id-00011@Character Law"
+    },
+    "swim": {
+      "name": "Swim",
+      "id": "id-00012",
+      "category": "primaryskills",
+      "reference_path": "reference.skilllist.primaryskills.list.id-00012@Character Law"
+    },
+    "ride": {
+      "name": "Ride",
+      "id": "id-00013",
+      "category": "primaryskills",
+      "reference_path": "reference.skilllist.primaryskills.list.id-00013@Character Law"
+    },
+    "disarm traps": {
+      "name": "Disarm Traps",
+      "id": "id-00014",
+      "category": "primaryskills",
+      "reference_path": "reference.skilllist.primaryskills.list.id-00014@Character Law"
+    },
+    "pick locks": {
+      "name": "Pick Locks",
+      "id": "id-00015",
+      "category": "primaryskills",
+      "reference_path": "reference.skilllist.primaryskills.list.id-00015@Character Law"
+    },
+    "stalk": {
+      "name": "Stalk",
+      "id": "id-00016",
+      "category": "primaryskills",
+      "reference_path": "reference.skilllist.primaryskills.list.id-00016@Character Law"
+    },
+    "hide": {
+      "name": "Hide",
+      "id": "id-00016a",
+      "category": "primaryskills",
+      "reference_path": "reference.skilllist.primaryskills.list.id-00016a@Character Law"
+    },
+    "perception": {
+      "name": "Perception",
+      "id": "id-00017",
+      "category": "primaryskills",
+      "reference_path": "reference.skilllist.primaryskills.list.id-00017@Character Law"
+    },
+    "spells": {
+      "name": "Spells",
+      "id": "id-00018",
+      "category": "primaryskills",
+      "reference_path": "reference.skilllist.primaryskills.list.id-00018@Character Law"
+    },
+    "runes": {
+      "name": "Runes",
+      "id": "id-00019",
+      "category": "primaryskills",
+      "reference_path": "reference.skilllist.primaryskills.list.id-00019@Character Law"
+    },
+    "staves & wands": {
+      "name": "Staves & Wands",
+      "id": "id-00020",
+      "category": "primaryskills",
+      "reference_path": "reference.skilllist.primaryskills.list.id-00020@Character Law"
+    },
+    "channeling": {
+      "name": "Channeling",
+      "id": "id-00021",
+      "category": "primaryskills",
+      "reference_path": "reference.skilllist.primaryskills.list.id-00021@Character Law"
+    },
+    "directed spells": {
+      "name": "Directed Spells",
+      "id": "id-00022",
+      "category": "primaryskills",
+      "reference_path": "reference.skilllist.primaryskills.list.id-00022@Character Law"
+    },
+    "ambush": {
+      "name": "Ambush",
+      "id": "id-00023",
+      "category": "primaryskills",
+      "reference_path": "reference.skilllist.primaryskills.list.id-00023@Character Law"
+    },
+    "linguistics": {
+      "name": "Linguistics",
+      "id": "id-00024",
+      "category": "primaryskills",
+      "reference_path": "reference.skilllist.primaryskills.list.id-00024@Character Law"
+    },
+    "adrenal moves": {
+      "name": "Adrenal Moves",
+      "id": "id-00025",
+      "category": "primaryskills",
+      "reference_path": "reference.skilllist.primaryskills.list.id-00025@Character Law"
+    },
+    "adrenal defense": {
+      "name": "Adrenal Defense",
+      "id": "id-00026",
+      "category": "primaryskills",
+      "reference_path": "reference.skilllist.primaryskills.list.id-00026@Character Law"
+    },
+    "martial arts": {
+      "name": "Martial Arts",
+      "id": "id-00027",
+      "category": "primaryskills",
+      "reference_path": "reference.skilllist.primaryskills.list.id-00027@Character Law"
+    },
+    "body development": {
+      "name": "Body Development",
+      "id": "id-00028",
+      "category": "primaryskills",
+      "reference_path": "reference.skilllist.primaryskills.list.id-00028@Character Law"
+    },
+    "power point dev.": {
+      "name": "Power Point Dev.",
+      "id": "id-00029",
+      "category": "primaryskills",
+      "reference_path": "reference.skilllist.primaryskills.list.id-00029@Character Law"
+    },
+    "acrobatics": {
+      "name": "Acrobatics",
+      "id": "id-00001",
+      "category": "secondaryskills",
+      "reference_path": "reference.skilllist.secondaryskills.list.id-00001@Character Law"
+    },
+    "acting": {
+      "name": "Acting",
+      "id": "id-00002",
+      "category": "secondaryskills",
+      "reference_path": "reference.skilllist.secondaryskills.list.id-00002@Character Law"
+    },
+    "animal healing": {
+      "name": "Animal Healing",
+      "id": "id-00003",
+      "category": "secondaryskills",
+      "reference_path": "reference.skilllist.secondaryskills.list.id-00003@Character Law"
+    },
+    "caving": {
+      "name": "Caving",
+      "id": "id-00004",
+      "category": "secondaryskills",
+      "reference_path": "reference.skilllist.secondaryskills.list.id-00004@Character Law"
+    },
+    "contortions": {
+      "name": "Contortions",
+      "id": "id-00005",
+      "category": "secondaryskills",
+      "reference_path": "reference.skilllist.secondaryskills.list.id-00005@Character Law"
+    },
+    "cookery": {
+      "name": "Cookery",
+      "id": "id-00006",
+      "category": "secondaryskills",
+      "reference_path": "reference.skilllist.secondaryskills.list.id-00006@Character Law"
+    },
+    "dance": {
+      "name": "Dance",
+      "id": "id-00007",
+      "category": "secondaryskills",
+      "reference_path": "reference.skilllist.secondaryskills.list.id-00007@Character Law"
+    },
+    "diving": {
+      "name": "Diving",
+      "id": "id-00008",
+      "category": "secondaryskills",
+      "reference_path": "reference.skilllist.secondaryskills.list.id-00008@Character Law"
+    },
+    "falsification": {
+      "name": "Falsification",
+      "id": "id-00009",
+      "category": "secondaryskills",
+      "reference_path": "reference.skilllist.secondaryskills.list.id-00009@Character Law"
+    },
+    "first aid": {
+      "name": "First Aid",
+      "id": "id-00010",
+      "category": "secondaryskills",
+      "reference_path": "reference.skilllist.secondaryskills.list.id-00010@Character Law"
+    },
+    "fletching": {
+      "name": "Fletching",
+      "id": "id-00011",
+      "category": "secondaryskills",
+      "reference_path": "reference.skilllist.secondaryskills.list.id-00011@Character Law"
+    },
+    "foraging": {
+      "name": "Foraging",
+      "id": "id-00012",
+      "category": "secondaryskills",
+      "reference_path": "reference.skilllist.secondaryskills.list.id-00012@Character Law"
+    },
+    "frenzy": {
+      "name": "Frenzy",
+      "id": "id-00013",
+      "category": "secondaryskills",
+      "reference_path": "reference.skilllist.secondaryskills.list.id-00013@Character Law"
+    },
+    "gambling": {
+      "name": "Gambling",
+      "id": "id-00014",
+      "category": "secondaryskills",
+      "reference_path": "reference.skilllist.secondaryskills.list.id-00014@Character Law"
+    },
+    "herding": {
+      "name": "Herding",
+      "id": "id-00015",
+      "category": "secondaryskills",
+      "reference_path": "reference.skilllist.secondaryskills.list.id-00015@Character Law"
+    },
+    "jousting": {
+      "name": "Jousting",
+      "id": "id-00016",
+      "category": "secondaryskills",
+      "reference_path": "reference.skilllist.secondaryskills.list.id-00016@Character Law"
+    },
+    "leather-working": {
+      "name": "Leather-working",
+      "id": "id-00017",
+      "category": "secondaryskills",
+      "reference_path": "reference.skilllist.secondaryskills.list.id-00017@Character Law"
+    },
+    "lore, general": {
+      "name": "Lore, General",
+      "id": "id-00018",
+      "category": "secondaryskills",
+      "reference_path": "reference.skilllist.secondaryskills.list.id-00018@Character Law"
+    },
+    "lore, magical": {
+      "name": "Lore, Magical",
+      "id": "id-00019",
+      "category": "secondaryskills",
+      "reference_path": "reference.skilllist.secondaryskills.list.id-00019@Character Law"
+    },
+    "lore, obscure": {
+      "name": "Lore, Obscure",
+      "id": "id-00020",
+      "category": "secondaryskills",
+      "reference_path": "reference.skilllist.secondaryskills.list.id-00020@Character Law"
+    },
+    "lore, technical": {
+      "name": "Lore, Technical",
+      "id": "id-00021",
+      "category": "secondaryskills",
+      "reference_path": "reference.skilllist.secondaryskills.list.id-00021@Character Law"
+    },
+    "mathematics": {
+      "name": "Mathematics",
+      "id": "id-00022",
+      "category": "secondaryskills",
+      "reference_path": "reference.skilllist.secondaryskills.list.id-00022@Character Law"
+    },
+    "meditation": {
+      "name": "Meditation",
+      "id": "id-00023",
+      "category": "secondaryskills",
+      "reference_path": "reference.skilllist.secondaryskills.list.id-00023@Character Law"
+    },
+    "music": {
+      "name": "Music",
+      "id": "id-00024",
+      "category": "secondaryskills",
+      "reference_path": "reference.skilllist.secondaryskills.list.id-00024@Character Law"
+    },
+    "navigation": {
+      "name": "Navigation",
+      "id": "id-00025",
+      "category": "secondaryskills",
+      "reference_path": "reference.skilllist.secondaryskills.list.id-00025@Character Law"
+    },
+    "public-speaking": {
+      "name": "Public-speaking",
+      "id": "id-00026",
+      "category": "secondaryskills",
+      "reference_path": "reference.skilllist.secondaryskills.list.id-00026@Character Law"
+    },
+    "rope-mastery": {
+      "name": "Rope-mastery",
+      "id": "id-00027",
+      "category": "secondaryskills",
+      "reference_path": "reference.skilllist.secondaryskills.list.id-00027@Character Law"
+    },
+    "rowing": {
+      "name": "Rowing",
+      "id": "id-00028",
+      "category": "secondaryskills",
+      "reference_path": "reference.skilllist.secondaryskills.list.id-00028@Character Law"
+    },
+    "sailing": {
+      "name": "Sailing",
+      "id": "id-00029",
+      "category": "secondaryskills",
+      "reference_path": "reference.skilllist.secondaryskills.list.id-00029@Character Law"
+    },
+    "seduction": {
+      "name": "Seduction",
+      "id": "id-00030",
+      "category": "secondaryskills",
+      "reference_path": "reference.skilllist.secondaryskills.list.id-00030@Character Law"
+    },
+    "signaling": {
+      "name": "Signaling",
+      "id": "id-00031",
+      "category": "secondaryskills",
+      "reference_path": "reference.skilllist.secondaryskills.list.id-00031@Character Law"
+    },
+    "singing": {
+      "name": "Singing",
+      "id": "id-00032",
+      "category": "secondaryskills",
+      "reference_path": "reference.skilllist.secondaryskills.list.id-00032@Character Law"
+    },
+    "skiing": {
+      "name": "Skiing",
+      "id": "id-00033",
+      "category": "secondaryskills",
+      "reference_path": "reference.skilllist.secondaryskills.list.id-00033@Character Law"
+    },
+    "smithing": {
+      "name": "Smithing",
+      "id": "id-00034",
+      "category": "secondaryskills",
+      "reference_path": "reference.skilllist.secondaryskills.list.id-00034@Character Law"
+    },
+    "spell-mastery": {
+      "name": "Spell-mastery",
+      "id": "id-00035",
+      "category": "secondaryskills",
+      "reference_path": "reference.skilllist.secondaryskills.list.id-00035@Character Law"
+    },
+    "star-gazing": {
+      "name": "Star-gazing",
+      "id": "id-00036",
+      "category": "secondaryskills",
+      "reference_path": "reference.skilllist.secondaryskills.list.id-00036@Character Law"
+    },
+    "stone-carving": {
+      "name": "Stone-carving",
+      "id": "id-00037",
+      "category": "secondaryskills",
+      "reference_path": "reference.skilllist.secondaryskills.list.id-00037@Character Law"
+    },
+    "streetwise": {
+      "name": "Streetwise",
+      "id": "id-00038",
+      "category": "secondaryskills",
+      "reference_path": "reference.skilllist.secondaryskills.list.id-00038@Character Law"
+    },
+    "subduing": {
+      "name": "Subduing",
+      "id": "id-00039",
+      "category": "secondaryskills",
+      "reference_path": "reference.skilllist.secondaryskills.list.id-00039@Character Law"
+    },
+    "tracking": {
+      "name": "Tracking",
+      "id": "id-00040",
+      "category": "secondaryskills",
+      "reference_path": "reference.skilllist.secondaryskills.list.id-00040@Character Law"
+    },
+    "trading": {
+      "name": "Trading",
+      "id": "id-00041",
+      "category": "secondaryskills",
+      "reference_path": "reference.skilllist.secondaryskills.list.id-00041@Character Law"
+    },
+    "trap-building": {
+      "name": "Trap-building",
+      "id": "id-00042",
+      "category": "secondaryskills",
+      "reference_path": "reference.skilllist.secondaryskills.list.id-00042@Character Law"
+    },
+    "trickery": {
+      "name": "Trickery",
+      "id": "id-00043",
+      "category": "secondaryskills",
+      "reference_path": "reference.skilllist.secondaryskills.list.id-00043@Character Law"
+    },
+    "tumbling": {
+      "name": "Tumbling",
+      "id": "id-00044",
+      "category": "secondaryskills",
+      "reference_path": "reference.skilllist.secondaryskills.list.id-00044@Character Law"
+    },
+    "weather-watching": {
+      "name": "Weather-watching",
+      "id": "id-00045",
+      "category": "secondaryskills",
+      "reference_path": "reference.skilllist.secondaryskills.list.id-00045@Character Law"
+    },
+    "wood-carving": {
+      "name": "Wood-carving",
+      "id": "id-00046",
+      "category": "secondaryskills",
+      "reference_path": "reference.skilllist.secondaryskills.list.id-00046@Character Law"
+    },
+    "base casting roll": {
+      "name": "Base Casting Roll",
+      "id": "id-00001",
+      "category": "unskilledactions",
+      "reference_path": "reference.skilllist.unskilledactions.list.id-00001@Character Law"
+    },
+    "dodge": {
+      "name": "Dodge",
+      "id": "id-00002",
+      "category": "unskilledactions",
+      "reference_path": "reference.skilllist.unskilledactions.list.id-00002@Character Law"
+    },
+    "movement": {
+      "name": "Movement",
+      "id": "id-00003",
+      "category": "unskilledactions",
+      "reference_path": "reference.skilllist.unskilledactions.list.id-00003@Character Law"
+    },
+    "stunned maneuvers": {
+      "name": "Stunned Maneuvers",
+      "id": "id-00004",
+      "category": "unskilledactions",
+      "reference_path": "reference.skilllist.unskilledactions.list.id-00004@Character Law"
+    }
+  }
+}

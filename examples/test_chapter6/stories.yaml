@@ -1,0 +1,237 @@
+# stories.yaml - Chapter 6: Skauril's Army
+# Narrative content and GM notes
+
+stories:
+  - name: "6.0.01 - Introduction to Skauril's Army"
+    sections:
+      - type: header
+        text: "Chapter 6: Skauril's Army - Assault on the Elves"
+      
+      - type: gm_notes
+        text: "This adventure assumes the PCs recovered the scroll from Bulkupar in Chapter 5. If not, another messenger can bring warning to the Woodmen."
+      
+      - type: read_aloud
+        text: "The Woodmen examine the scroll with grave concern. Waulfa looks up from the parchment, his weathered face showing rare alarm. 'Skauril marches against the Elves. We must warn Thranduil, but his warriors are scattered. Someone must slow this army, or many Elves will die.'"
+
+  - name: "6.1.01 - The Plotting of Skauril"
+    sections:
+      - type: header
+        text: "Background: The Witch-king's Plan"
+      
+      - type: gm_notes
+        text: "The Witch-king has sent Skauril three duplicate scrolls ordering an assault on Thranduil's Elves. The scroll reads:\n\n'Skauril—My forces raid in Arthedain, keeping the eyes of the foolish Elf-friends facing my kingdom. Now must you assault Aradhrynd. Hasten. Although Thranduil's house guard numbers less than 200, he will assemble more warriors if you delay too long. Leave no later than two days past the full moon. —Good Blood, Angmar'\n\nThe attacks in Arthedain are meant to distract the Wise while Skauril attacks the Elves. A victory would greatly lengthen the shadows of Mirkwood."
+      
+      - type: gm_notes
+        text: "Bulkupar's map shows the location of Skauril's caverns (starting point). The Elves' house guard numbers only 100—not enough to defend outlying settlements. Skauril cannot penetrate Aradhrynd fortress, but hopes to destroy many Elves in the surrounding area.\n\nWaulfa can send 30 Woodmen troops, but they will barely arrive in time. For each day Skauril is delayed, the Elves can muster more warriors."
+
+  - name: "6.1.02 - The Request for Aid"
+    sections:
+      - type: header
+        text: "The Task"
+      
+      - type: read_aloud
+        text: "Gihellin the Elf steps forward. 'I will carry word to Thranduil with all haste, but my people are scattered throughout the forest. The house guard alone cannot stop this army.' Waulfa nods gravely. 'If someone could slow the army, track its numbers, or demoralize its troops, the Elves would have time to gather their strength.'"
+      
+      - type: gm_notes
+        text: "If the PCs agree to scout and delay Skauril's army, the Woodmen will provide:\n- Reasonable supplies and normal equipment\n- Healing herbs (all they can spare)\n- Inereneraban (enchanted food boxes) for each PC - stores 1 month of food in a 12\"x8\"x6\" box\n- Gihellin's magic dagger (glows blue near creatures of Darkness, heirloom from Gondolin)\n\nGihellin will draw a map showing trails between Skauril's caverns and Aradhrynd. One line marks the path Skauril must use to move a large force. Unknown: how Skauril plans to cross the enchanted river Gulduin."
+      
+      - type: link_item
+        item_name: "Inerenerab"
+        link_text: "Item: Inerenerab (Enchanted Food Box)"
+      
+      - type: link_item
+        item_name: "Gihellin's Dagger"
+        link_text: "Item: Gihellin's Dagger"
+
+  - name: "6.2.01 - NPC: Gardagd"
+    sections:
+      - type: header
+        text: "Gardagd - The Bitter Hunter"
+      
+      - type: gm_notes
+        text: "Born to a Gramuz family in the East Bight. At age 10, his father contracted a wasting disease. The family struggled—Gardagd hunted in Mirkwood to add meat to the table.\n\nReturning from one hunt, he saw smoke rising from his home. He found smoldering ruins: father dead, mother and sisters carried off by Easterlings.\n\nCursing Easterlings, Gondorians, and the world, he returned to the forest. He learned that Men were easier prey than beasts—their silver bought food and supplies. He became a bandit.\n\nOnce he tried to rob an agent of Skauril (attracted by a fat purse) and was brought before the Conjurer. Skauril saw potential and enrolled him as a scout/assassin.\n\nGardagd secretly hates Easterlings and will kill Skauril if given an easy opportunity."
+      
+      - type: link_npc
+        npc_name: "Gardagd"
+        link_text: "NPC: Gardagd Stats"
+
+  - name: "6.2.02 - NPC: Gihellin"
+    sections:
+      - type: header
+        text: "Gihellin - The Elven Courier"
+      
+      - type: gm_notes
+        text: "Young Sindar Elf warrior raised north of Aradhrynd. Footloose and friendly with both Elves and Men. Used as courier by Thranduil due to his knowledge of woodland paths.\n\nArrived in Buhr Widufiras bearing a message to Waulfa. Will make a swift courier back to Aradhrynd to warn the Elves.\n\nAddresses willing PCs as 'Elf-friends' and offers his family heirloom dagger."
+
+  - name: "6.2.03 - NPC: Natak"
+    sections:
+      - type: header
+        text: "Natak - The Brutal Orc Commander"
+      
+      - type: gm_notes
+        text: "Always the largest of his brood in Dol Guldur. Never learned subtlety—not as clever as his age-mates, but uses strength and terror to command.\n\nOrcs under his command gladly leap to the front to attack—it keeps them away from Natak himself.\n\nCommands through fear and brutality."
+
+  - name: "6.3.01 - The Journey to Intercept"
+    sections:
+      - type: header
+        text: "Setting Out"
+      
+      - type: read_aloud
+        text: "You set out into the dark eaves of Mirkwood, following Gihellin's map toward the trail Skauril's army must take. The forest grows darker as you travel deeper, the canopy overhead blocking much of the sun."
+      
+      - type: gm_notes
+        text: "The PCs must locate Skauril's army and begin their delaying actions. See encounter 6.5.01 for details on locating the army.\n\nThe army moves quickly—approximately 15 miles per day on the trail. For each day the PCs delay the army, the Elves can muster more warriors for the final battle."
+      
+      - type: link_encounter
+        encounter_name: "6.5.01 - Locating the Army"
+
+  - name: "6.5.01 - Locating the Army"
+    sections:
+      - type: header
+        text: "Finding Skauril's Forces"
+      
+      - type: gm_notes
+        text: "The PCs have Gihellin's map showing Skauril's probable route. Knowing the starting date and expected arrival time gives them an excellent indication of his speed.\n\nThe Woodmen assume Skauril uses a trail (only way to make such speed) and that his force is mostly Orcs (Men on foot couldn't sustain the pace).\n\nDetection methods:\n- Trail: Routine (+30) Perception—beaten down by 500+ troops\n- Hearing: Easy (+0) Perception within 1/4 mile of any group\n- Campfire smoke: Easy (+0) Perception from treetops at dawn/dusk, within 3 miles of main camp\n- Other: Chance encounters with foraging parties, Path Tales, Nature's Awareness, talking to animals"
+      
+      - type: gm_notes
+        text: "The army is organized into several groups:\n- Bridge Crew (advance party, mounted)\n- Road Crews (clearing the trail)\n- Scouting Parties (detecting traps/ambushes)\n- Foraging Parties (gathering food)\n- Main Force (bulk of the army)\n\nEach can be encountered separately."
+
+  - name: "6.5.02 - Bridge Crew Encounter"
+    sections:
+      - type: header
+        text: "The Bridge Crew"
+      
+      - type: read_aloud
+        text: "Through the trees ahead, you hear the sound of horses moving in single file. Voices call out in the harsh tongue of Men from the East."
+      
+      - type: gm_notes
+        text: "Composition: Mounted group in single file, led and followed by 3rd level Scouts.\n\nTactics:\n- Travel speed prevents Scouts from using Trap Detection efficiently (Extremely Hard -30)\n- If impeded by traps 2+ times: Ranger and Animist lead using Nature's Lore Trap Detection\n- If ambushed once: Ranger uses Nature's Awareness to avoid second occurrence\n- Retreat conditions: 75% losses OR 50% losses in single combat without killing attackers\n- Warriors/Scouts flee; Ranger/Animist try to warn Skauril"
+      
+      - type: link_encounter
+        encounter_name: "6.5.02 - Bridge Crew"
+      
+      - type: link_parcel
+        parcel_name: "6.5.02 - Bridge Crew Loot"
+
+  - name: "6.5.03 - Road Crew Encounter"
+    sections:
+      - type: header
+        text: "Road Crews"
+      
+      - type: read_aloud
+        text: "The sound of axes and guttural Orcish curses echoes through the forest. A work crew is clearing brush from the trail ahead."
+      
+      - type: gm_notes
+        text: "Composition: 10 Orcs, 1 Man, 2 Wargs per unit. Multiple units working the trail.\n\nStrengths:\n- Wargs smell anything upwind before it arrives\n- Keen hearing: -30 to Stalk/Hide/Ambush within 100 yards\n\nWeaknesses:\n- Not well-organized or alert for traps\n- Orcs not valued—Man waits until 2-3 Orcs die before scouting ahead\n- Move slowly (ambushers may get cramps waiting)\n\nTactics:\n- Orcs won't retreat unless heavily overmatched\n- Warg and Man retreat after losing half the Orcs\n- Lack of distance weapons has little effect (only 10-20 feet clear range in woods)"
+      
+      - type: link_encounter
+        encounter_name: "6.5.03 - Road Crew"
+      
+      - type: link_parcel
+        parcel_name: "6.5.03 - Road Crew Loot"
+
+  - name: "6.5.04 - Scouting Party Encounter"
+    sections:
+      - type: header
+        text: "Scouting Parties"
+      
+      - type: read_aloud
+        text: "The forest has gone quiet. Through the undergrowth, you catch glimpses of dark shapes moving with purpose—Wargs and their Orc handlers, searching for signs of danger."
+      
+      - type: gm_notes
+        text: "Composition: 1 Uruk leader, 4 Tracking Orcs, 4 Wargs. Purpose: Locate traps and ambushes.\n\nStrengths:\n- Alert and organized\n- Wargs make ambushes difficult\n- Shifting path limits trap effectiveness\n- More likely to ambush PCs than vice versa\n\nTactics:\n- Unlikely to enter pitched battle\n- Sound horns if attacked and unable to retreat\n- Dispatch tracking Orc to report at first sign of trouble\n- Note ALL signs: tracks, campfires, etc.\n- If they detect PCs: Track them while calling reinforcements (another Scout group + Mage/Animist)\n\nImportant: Outcome of battle with Scout group affects army morale!"
+      
+      - type: link_encounter
+        encounter_name: "6.5.04 - Scouting Party"
+      
+      - type: link_parcel
+        parcel_name: "6.5.04 - Scouting Party Loot"
+
+  - name: "6.5.05 - Foraging Party Encounter"
+    sections:
+      - type: header
+        text: "Foraging Parties"
+      
+      - type: read_aloud
+        text: "You hear movement through the forest—not the brutal chopping of the road crews, but the quieter sounds of hunters gathering food. Voices call softly in both Orkish and Westron."
+      
+      - type: gm_notes
+        text: "Composition: 1 Ranger, 1 Animist, 2 Scouts, 6 Orcs, 2 Wargs. Purpose: Gather food for the army.\n\nStrengths:\n- Watchful and alert\n- May be using Nature's Awareness\n- Wargs/Rangers/Scouts make them very hard to surprise\n- Scouts and wandering path make traps difficult\n- Spell casters backed by Warriors make them formidable\n\nWeaknesses:\n- Not organized for combat\n- Will avoid hostilities if possible\n\nTactics:\n- Will NOT track or attack PCs\n- Will report to Skauril and let other units deal with threat\n\nNote: Probably the toughest satellite unit the party may face!"
+      
+      - type: link_encounter
+        encounter_name: "6.5.05 - Foraging Party"
+      
+      - type: link_parcel
+        parcel_name: "6.5.05 - Foraging Party Loot"
+
+  - name: "6.5.06 - The Main Force"
+    sections:
+      - type: header
+        text: "Skauril's Main Army"
+      
+      - type: read_aloud
+        text: "Through the trees, you see the main body of the army—hundreds of Orcs, ranks of Men in dark armor, and at their center, a figure in robes that seem to drink in the light itself. This is Skauril the Conjurer."
+      
+      - type: gm_notes
+        text: "WARNING: Only exceptionally powerful and foolhardy characters would attack the main force directly.\n\nHowever, PCs can weaken and demoralize the army:\n\n1. DRAIN RESOURCES:\n- Thwart outlying parties to drain main army\n- Most spell casters will use power points for food/water and trap detection\n\n2. TRAPS:\n- After 3+ successful traps, Skauril sends Scouts ahead to detect more\n- Cuts movement by 1/2 mile per day\n- Scouts traveling quickly: -20 to Trap Detection\n\n3. INFILTRATION:\n- Change of Kind spells may allow penetration\n- If detected: Skauril increases night patrols by 10% (up to 3 times)\n- Then Rangers/Animists use Nature's Awareness for night watch\n- Plant Facade or Invisibility: Watch army pass, report organization\n- Long Ear: Learn Skauril's plans\n\n4. RAIDS:\n- After 3 losses to main force (snipers/raids), Skauril uses magic to locate and attack with overwhelming force\n- By this point, close to Gulduin—discretion recommended\n- Flee to give information to Elves"
+      
+      - type: link_npc
+        npc_name: "Skauril the Conjurer"
+
+  - name: "6.5.07 - Spider Encounter"
+    sections:
+      - type: header
+        text: "The Spiders"
+      
+      - type: read_aloud
+        text: "A rustling in the canopy above draws your attention. Eight massive spiders descend on silk threads, their mandibles clicking with hunger."
+      
+      - type: gm_notes
+        text: "8 Giant Spiders on the path. Hungry and aggressive—will attack all who cross (including Orcs).\n\nDangerous Gambit:\n- If sufficiently aggravated, Spiders will chase opponents all the way to Skauril's army\n- Risk: PCs caught between Spiders and Orcs\n- Leaving spell very effective here\n\nTreasure: None"
+      
+      - type: link_encounter
+        encounter_name: "6.5.07 - Giant Spiders"
+
+  - name: "6.5.08 - The River Gulduin"
+    sections:
+      - type: header
+        text: "The Enchanted River"
+      
+      - type: read_aloud
+        text: "Through the trees ahead, you hear the sound of running water. The trail leads to a wide, swift-flowing river. Its waters glitter with an unnatural sheen in the dim forest light."
+      
+      - type: gm_notes
+        text: "The trail intersects the Gulduin on the border of Thranduil's kingdom.\n\nRIVER PROPERTIES:\n- No visible crossing\n- Anyone who touches or drinks: Deep sleep (may never awaken)\n- River is deep—crossing difficult and potentially fatal\n\nTHRANDUIL'S PLAN:\n- Stop Skauril at the river crossing\n- Use this obstacle to advantage\n\nSKAURIL'S ORIGINAL PLAN:\n- Bridge crew builds bridge\n- Patrol far bank for Elves\n- Cross entire army on crude bridge\n- Hope to completely surprise the Elves"
+      
+      - type: gm_notes
+        text: "IF BRIDGE EXISTS:\n- Skauril crosses immediately\n- When fired upon: Pulls back, leaves bowmen/Mages to defend bridge\n- After consultation: Outflank using magic\n- Leaving, Limbwalking, Levitate: Send forces across 100 yards to either side\n- As battle joins: Rest charge across bridge (accepting losses)\n\nIF NO BRIDGE:\n- Delay 1 day to construct\n- Use Invisibility + darkness to fell trees and string ropes across"
+
+  - name: "6.5.09 - The Battle of Gulduin"
+    sections:
+      - type: header
+        text: "The Final Battle"
+      
+      - type: read_aloud
+        text: "The clash of steel and the cries of Elves and Orcs echo through the forest. The battle for the Gulduin crossing has begun."
+      
+      - type: gm_notes
+        text: "Once beachhead established: Long battle as both armies become disorganized in the woods.\n\nIF PCs JOINED ELVES:\n- GM may have them fight Orc detachment\n- Can use miniatures rules if desired\n- Or determine outcome on table in Section 9.0\n\nELVEN ADVANTAGE:\n- Better at woodland combat\n- Terrain advantage\n- Orcs almost certainly forced to retreat\n\nSKAURIL'S ESCAPE:\n- Uses Necklace of Deployment if strongly threatened OR 60%+ losses without equal damage to Elves\n- Necklace: Cast Leaving on 5 creatures, send in up to 6 directions\n- Will abandon army and bodyguard to buy escape time\n\nAFTER SKAURIL FLEES:\n- Army becomes disorganized and demoralized\n- Quickly routed by Elves\n- If not playing Section 7.0: Skauril captured or killed here"
+      
+      - type: link_item
+        item_name: "Necklace of Deployment"
+
+  - name: "6.6.01 - Rewards"
+    sections:
+      - type: header
+        text: "Rewards and Recognition"
+      
+      - type: gm_notes
+        text: "INITIAL REWARDS (from Woodmen/Gihellin):\n- Inereneraban (enchanted food boxes)\n- Healing herbs\n- Gihellin's Elven dagger\n\nIF SUCCESSFUL IN DELAYING ARMY:\n- Thranduil gives emerald rings signifying Elf-friend status\n- Rings have no enchantment but are quite valuable\n\nADDITIONAL REWARDS:\n- Anything grabbed during the march\n- Share of spoils from Battle of Gulduin (offered by Thranduil)"
+
+  - name: "6.6.02 - GM Notes"
+    sections:
+      - type: header
+        text: "Gamemaster Notes"
+      
+      - type: gm_notes
+        text: "SKAURIL'S NATURE:\n- Crafty and tactically experienced\n- Force is organized and well-disciplined\n- Reacts quickly to threats and changing situations\n\nORC NATURE:\n- Fond of direct approach\n- Impulsive (may rush 100 yards to attack archers)\n- Not valued by Skauril\n\nTACTICS:\n- May use Orc suicide squads to flush PCs\n- Heedless of Orc losses to maintain speed\n- Won't waste magic needed for food on saving Orcs from traps\n\nKEY POINT: The more the PCs can disrupt outlying units, the weaker the main force becomes."

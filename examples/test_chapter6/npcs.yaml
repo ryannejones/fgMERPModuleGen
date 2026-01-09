@@ -1,0 +1,101 @@
+# npcs.yaml - Chapter 6: Skauril's Army
+# Custom NPCs not in the creature library
+
+npcs:
+  - name: "Gardagd"
+    level: 7
+    hp: 60
+    at: 12
+    db: 20
+    baserate: 50
+    profession: "Scout/Assassin"
+    group: "NPCs"
+    
+    weapons:
+      - weapon: "Long Bow"
+        ob: 65
+      
+      - weapon: "Short Sword"
+        ob: 60
+      
+      - weapon: "Dagger"
+        ob: 55
+    
+    defences:
+      - name: "Rigid Leather Armor"
+        melee_bonus: 0
+        missile_bonus: 0
+    
+    abilities: "Tracking, Stalking, Hiding, Ambush. Bitter hatred of Easterlings. Will kill Skauril if given easy opportunity."
+    description: "Self-trained ranger turned bandit turned assassin. Lost family to Easterling raiders. Enrolled in Skauril's company but secretly hates his Easterling master."
+  
+  - name: "Skauril the Conjurer"
+    level: 15
+    hp: 130
+    at: 15
+    db: 30
+    baserate: 50
+    profession: "Evil Cleric/Conjurer"
+    group: "NPCs"
+    
+    weapons:
+      - weapon: "Staff"
+        ob: 85
+        bonus: 10
+    
+    defences:
+      - name: "Robes of Protection"
+        melee_bonus: 15
+        missile_bonus: 15
+    
+    abilities: "Necromancy, Summoning, Darkness spells. Commands army of 500+ Orcs and Men. Tactically experienced. Will abandon army to save himself."
+    spells: "Leaving, Limbwalking, Levitate, Invisibility, Nature's Awareness, Change of Kind, Plant Facade, Long Ear"
+    description: "Lieutenant of the Witch-king. Commands assault on Thranduil's Elves. Crafty, experienced, but values own life above all. Wears Necklace of Deployment for escape."
+  
+  - name: "Gihellin"
+    level: 5
+    hp: 55
+    at: 13
+    db: 25
+    baserate: 60
+    profession: "Elven Warrior"
+    group: "NPCs"
+    
+    weapons:
+      - weapon: "Long Sword"
+        ob: 70
+      
+      - weapon: "Long Bow"
+        ob: 65
+    
+    defences:
+      - name: "Elven Chain Mail"
+        melee_bonus: 10
+        missile_bonus: 10
+    
+    abilities: "Elven senses, woodland paths knowledge, courier for Thranduil. Friendly to Men."
+    description: "Young Sindar Elf. Footloose traveler and courier. Addresses PCs as 'Elf-friends.' Offers family heirloom dagger to aid the quest."
+  
+  - name: "Natak"
+    level: 8
+    hp: 95
+    at: 14
+    db: 15
+    baserate: 50
+    profession: "Orc Commander"
+    group: "Monsters"
+    
+    weapons:
+      - weapon: "Scimitar"
+        ob: 80
+      
+      - weapon: "Claw"
+        ob: 70
+    
+    defences:
+      - name: "Heavy Shield"
+        melee_bonus: 25
+        missile_bonus: 25
+    
+    abilities: "Darkvision, Commands through fear and brutality. Orcs under his command prefer front lines to stay away from him."
+    description: "Largest of his brood. Never learned subtlety—uses strength and terror. Orcs fear him more than the enemy."

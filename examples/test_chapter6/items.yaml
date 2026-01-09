@@ -1,0 +1,41 @@
+# items.yaml - Chapter 6: Skauril's Army
+# Custom magical items and quest items
+
+items:
+  - name: "Inerenerab"
+    type: "Magical Item"
+    count: 1
+    description: "Enchanted wooden box constructed by the Woodmen. Measures 12\"x8\"x6\". Keeps herbs fresh for months or stores enough food to feed one person for a month. Given to each PC by the Woodmen."
+    properties:
+      special: "Food preservation - 1 month supply in small box"
+  
+  - name: "Gihellin's Dagger"
+    type: "Weapon"
+    count: 1
+    description: "Old family heirloom originally forged in Gondolin. The enchanted blade glows with a cold blue light when near creatures of Darkness."
+    properties:
+      weapon_bonus: 5
+      base_weapon: "Dagger"
+      special: "Glows blue near creatures of Darkness (Orcs, Trolls, Spiders, etc.)"
+  
+  - name: "Necklace of Deployment"
+    type: "Magical Item"
+    count: 1
+    description: "Silver necklace bearing an amber medallion in the form of a compass rose. Worn by Skauril. Allows the wearer to cast Leaving on five creatures at the same time, sending them in up to six different directions."
+    properties:
+      spell_adder: 0
+      special: "Cast Leaving on 5 creatures simultaneously, send in up to 6 directions"
+  
+  - name: "Emerald Ring of Elf-friend"
+    type: "Magical Item"
+    count: 1
+    description: "Emerald ring given by Thranduil to signify Elf-friend status. Bears no enchantment but is quite valuable and grants recognition among the Elves."
+    properties:
+      special: "Mark of Elf-friend status, valuable (500+ gp)"
+  
+  - name: "Healing Herbs (Woodmen Supply)"
+    type: "Herb"
+    count: 5
+    description: "Medicinal herbs from the Woodmen's limited supply. +10 to healing when properly applied."
+    properties:
+      healing_bonus: 10

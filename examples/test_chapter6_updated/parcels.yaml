@@ -1,0 +1,65 @@
+# parcels.yaml - Chapter 6: Skauril's Army
+# Treasure from encounters using item references
+
+parcels:
+  - name: "6.5.02 - Bridge Crew Loot"
+    description: "Equipment and supplies from the defeated bridge crew"
+    coins:
+      GP: 50
+    items:
+      - name: "Broadsword"
+        count: 6
+      - name: "Long Bow"
+        count: 4
+      - name: "Dagger"
+        count: 6
+    # Note: Non-item loot like horses, tools, rations handled in story/description
+  
+  - name: "6.5.03 - Road Crew Loot"
+    description: "Loot from defeated road crew. Orcish equipment is crude and of poor quality."
+    coins:
+      GP: 15
+      SP: 30
+    items:
+      - name: "Scimitar"
+        count: 10
+  
+  - name: "6.5.04 - Scouting Party Loot"
+    description: "Equipment from the scouting party. Tracking equipment of excellent quality, signal horn (orcish make), map fragment showing Skauril's route (if not destroyed)."
+    coins:
+      GP: 25
+    items:
+      - name: "Scimitar"
+        count: 5
+      - name: "Long Bow"
+        count: 4
+  
+  - name: "6.5.05 - Foraging Party Loot"
+    description: "Supplies and equipment from foraging party. Includes gathered food supplies (herbs, game, roots), hunting equipment (snares, skinning knives), and spell component pouch."
+    coins:
+      GP: 40
+    items:
+      - name: "Healing Herbs (Woodmen Supply)"
+        count: 3
+      - name: "Scimitar"
+        count: 6
+  
+  - name: "6.6.01 - Spoils of Gulduin"
+    description: "Thranduil's share of battle spoils offered to the PCs. Includes Elven cloak (grants +10 to Hiding in forest), bottle of Elven cordial (heals 1-10 HP), silver dagger (+5, non-magical but fine quality), and choice of weapon from Elven armory."
+    coins:
+      GP: 200
+    items:
+      - name: "Emerald Ring of Elf-friend"
+        count: 1
+      - name: "Dagger"
+        count: 1
+  
+  - name: "6.0.01 - Starting Equipment from Woodmen"
+    description: "Supplies provided by the Woodmen before departure. Includes 50 feet of rope, waterskins (full), fire-starting kit, and map drawn by Gihellin."
+    items:
+      - name: "Inerenerab"
+        count: 1
+      - name: "Healing Herbs (Woodmen Supply)"
+        count: 5
+      - name: "Gihellin's Dagger"
+        count: 1

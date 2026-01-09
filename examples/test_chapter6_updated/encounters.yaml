@@ -1,0 +1,131 @@
+# encounters.yaml - Chapter 6: Skauril's Army
+# Combat encounters using complete library system
+
+encounters:
+  - name: "6.5.02 - Bridge Crew"
+    exp: 800
+    npcs:
+      - name: "Ranger Level 5"
+        count: 1
+        faction: foe
+        display_name: "Bridge Crew Ranger"
+      
+      - name: "Animist"
+        based_on: "Pure Channeling Spell User"
+        level: 5
+        count: 1
+        faction: foe
+        display_name: "Bridge Crew Animist"
+      
+      - name: "Fighter"
+        level: 3
+        count: 2
+        faction: foe
+        display_name: "Scout (3rd Level)"
+      
+      - name: "Fighter"
+        level: 3
+        count: 4
+        faction: foe
+        display_name: "Warrior"
+  
+  - name: "6.5.03 - Road Crew"
+    exp: 400
+    npcs:
+      - name: "Orc Scout"
+        based_on: "Orc, Lesser"  # Scouts are lesser orcs - combatants
+        count: 10
+        faction: foe
+      
+      - name: "Fighter"
+        level: 3
+        count: 1
+        faction: foe
+        display_name: "Mannish Overseer"
+      
+      - name: "Warg"
+        count: 2
+        faction: foe
+  
+  - name: "6.5.04 - Scouting Party"
+    exp: 600
+    npcs:
+      - name: "Orc Uruk"
+        based_on: "Orc (leader)"  # Uruk = leader type orc
+        count: 1
+        faction: foe
+        display_name: "Uruk Leader"
+      
+      - name: "Tracking Orc"
+        based_on: "Orc, Lesser"  # Tracking scouts = lesser orcs
+        count: 4
+        faction: foe
+      
+      - name: "Warg"
+        count: 4
+        faction: foe
+  
+  - name: "6.5.05 - Foraging Party"
+    exp: 700
+    npcs:
+      - name: "Animist"
+        based_on: "Pure Channeling Spell User"
+        level: 5
+        count: 1
+        faction: foe
+        display_name: "Orcish Shaman"
+      
+      - name: "Orc Warrior"  # Custom NPC from npcs.yaml (50 OB, 60 HP)
+        count: 6
+        faction: foe
+      
+      - name: "Warg"
+        count: 3
+        faction: foe
+  
+  - name: "6.5.06 - Main Force Encounter"
+    exp: 1200
+    npcs:
+      - name: "Natak"  # Custom NPC from npcs.yaml
+        count: 1
+        faction: foe
+      
+      - name: "Orc Uruk"
+        based_on: "Orc, Greater"  # Uruks are Greater orcs (80 OB, 70 HP)
+        count: 3
+        faction: foe
+        display_name: "Orc Elite"
+      
+      - name: "Orc Warrior"  # Custom NPC from npcs.yaml
+        count: 12
+        faction: foe
+      
+      - name: "Warg"
+        count: 6
+        faction: foe
+  
+  - name: "6.6.01 - Final Battle at Gulduin"
+    exp: 2000
+    npcs:
+      - name: "Skauril the Conjurer"  # Custom NPC from npcs.yaml
+        count: 1
+        faction: foe
+      
+      - name: "Gardagd"  # Custom NPC from npcs.yaml
+        count: 1
+        faction: foe
+      
+      - name: "Orc Commander"
+        based_on: "Orc (commander)"
+        count: 2
+        faction: foe
+      
+      - name: "Orc Uruk"
+        based_on: "Orc, Greater"  # Elite uruks
+        count: 8
+        faction: foe
+        display_name: "Orc Elite Guard"
+      
+      - name: "Orc Warrior"  # Custom NPC from npcs.yaml
+        count: 20
+        faction: foe

@@ -1,0 +1,1961 @@
+{
+  "_metadata": {
+    "description": "Spell list references from Spell Law",
+    "total_lists": 162,
+    "note": "These are spell list references only. Individual spells are added in Fantasy Grounds."
+  },
+  "realms": {
+    "channeling": [
+      {
+        "name": "Barrier Law",
+        "id": "list-001",
+        "realm": "channeling",
+        "reference_path": "reference.spelllist.channeling.lists.list-001@Spell Law"
+      },
+      {
+        "name": "Concussion's Way",
+        "id": "list-002",
+        "realm": "channeling",
+        "reference_path": "reference.spelllist.channeling.lists.list-002@Spell Law"
+      },
+      {
+        "name": "Detection Mastery",
+        "id": "list-003",
+        "realm": "channeling",
+        "reference_path": "reference.spelllist.channeling.lists.list-003@Spell Law"
+      },
+      {
+        "name": "Light's Way",
+        "id": "list-004",
+        "realm": "channeling",
+        "reference_path": "reference.spelllist.channeling.lists.list-004@Spell Law"
+      },
+      {
+        "name": "Lofty Movements",
+        "id": "list-005",
+        "realm": "channeling",
+        "reference_path": "reference.spelllist.channeling.lists.list-005@Spell Law"
+      },
+      {
+        "name": "Nature's Law",
+        "id": "list-006",
+        "realm": "channeling",
+        "reference_path": "reference.spelllist.channeling.lists.list-006@Spell Law"
+      },
+      {
+        "name": "Purifications",
+        "id": "list-007",
+        "realm": "channeling",
+        "reference_path": "reference.spelllist.channeling.lists.list-007@Spell Law"
+      },
+      {
+        "name": "Sound's Way",
+        "id": "list-008",
+        "realm": "channeling",
+        "reference_path": "reference.spelllist.channeling.lists.list-008@Spell Law"
+      },
+      {
+        "name": "Spell Defense",
+        "id": "list-009",
+        "realm": "channeling",
+        "reference_path": "reference.spelllist.channeling.lists.list-009@Spell Law"
+      },
+      {
+        "name": "Weather Ways",
+        "id": "list-010",
+        "realm": "channeling",
+        "reference_path": "reference.spelllist.channeling.lists.list-010@Spell Law"
+      },
+      {
+        "name": "Blood Law",
+        "id": "list-011",
+        "realm": "channeling",
+        "reference_path": "reference.spelllist.channeling.lists.list-011@Spell Law"
+      },
+      {
+        "name": "Bone Law",
+        "id": "list-012",
+        "realm": "channeling",
+        "reference_path": "reference.spelllist.channeling.lists.list-012@Spell Law"
+      },
+      {
+        "name": "Calm Spirits",
+        "id": "list-013",
+        "realm": "channeling",
+        "reference_path": "reference.spelllist.channeling.lists.list-013@Spell Law"
+      },
+      {
+        "name": "Creations",
+        "id": "list-014",
+        "realm": "channeling",
+        "reference_path": "reference.spelllist.channeling.lists.list-014@Spell Law"
+      },
+      {
+        "name": "Locating Ways",
+        "id": "list-015",
+        "realm": "channeling",
+        "reference_path": "reference.spelllist.channeling.lists.list-015@Spell Law"
+      },
+      {
+        "name": "Lore",
+        "id": "list-016",
+        "realm": "channeling",
+        "reference_path": "reference.spelllist.channeling.lists.list-016@Spell Law"
+      },
+      {
+        "name": "Muscle Law",
+        "id": "list-017",
+        "realm": "channeling",
+        "reference_path": "reference.spelllist.channeling.lists.list-017@Spell Law"
+      },
+      {
+        "name": "Nerve Law",
+        "id": "list-018",
+        "realm": "channeling",
+        "reference_path": "reference.spelllist.channeling.lists.list-018@Spell Law"
+      },
+      {
+        "name": "Organ Law",
+        "id": "list-019",
+        "realm": "channeling",
+        "reference_path": "reference.spelllist.channeling.lists.list-019@Spell Law"
+      },
+      {
+        "name": "Symbolic Ways",
+        "id": "list-020",
+        "realm": "channeling",
+        "reference_path": "reference.spelllist.channeling.lists.list-020@Spell Law"
+      },
+      {
+        "name": "Animal Mastery",
+        "id": "list-021",
+        "realm": "channeling",
+        "reference_path": "reference.spelllist.channeling.lists.list-021@Spell Law"
+      },
+      {
+        "name": "Herb Mastery",
+        "id": "list-022",
+        "realm": "channeling",
+        "reference_path": "reference.spelllist.channeling.lists.list-022@Spell Law"
+      },
+      {
+        "name": "Nature's Lore",
+        "id": "list-023",
+        "realm": "channeling",
+        "reference_path": "reference.spelllist.channeling.lists.list-023@Spell Law"
+      },
+      {
+        "name": "Nature's Movement",
+        "id": "list-024",
+        "realm": "channeling",
+        "reference_path": "reference.spelllist.channeling.lists.list-024@Spell Law"
+      },
+      {
+        "name": "Nature's Protection",
+        "id": "list-025",
+        "realm": "channeling",
+        "reference_path": "reference.spelllist.channeling.lists.list-025@Spell Law"
+      },
+      {
+        "name": "Plant Mastery",
+        "id": "list-026",
+        "realm": "channeling",
+        "reference_path": "reference.spelllist.channeling.lists.list-026@Spell Law"
+      },
+      {
+        "name": "Channels",
+        "id": "list-027",
+        "realm": "channeling",
+        "reference_path": "reference.spelllist.channeling.lists.list-027@Spell Law"
+      },
+      {
+        "name": "Communal Ways",
+        "id": "list-028",
+        "realm": "channeling",
+        "reference_path": "reference.spelllist.channeling.lists.list-028@Spell Law"
+      },
+      {
+        "name": "Life Mastery",
+        "id": "list-029",
+        "realm": "channeling",
+        "reference_path": "reference.spelllist.channeling.lists.list-029@Spell Law"
+      },
+      {
+        "name": "Protections",
+        "id": "list-030",
+        "realm": "channeling",
+        "reference_path": "reference.spelllist.channeling.lists.list-030@Spell Law"
+      },
+      {
+        "name": "Repulsions",
+        "id": "list-031",
+        "realm": "channeling",
+        "reference_path": "reference.spelllist.channeling.lists.list-031@Spell Law"
+      },
+      {
+        "name": "Summons",
+        "id": "list-032",
+        "realm": "channeling",
+        "reference_path": "reference.spelllist.channeling.lists.list-032@Spell Law"
+      },
+      {
+        "name": "Transferring Ways",
+        "id": "list-033",
+        "realm": "channeling",
+        "reference_path": "reference.spelllist.channeling.lists.list-033@Spell Law"
+      },
+      {
+        "name": "Blood Ways",
+        "id": "list-034",
+        "realm": "channeling",
+        "reference_path": "reference.spelllist.channeling.lists.list-034@Spell Law"
+      },
+      {
+        "name": "Bone Ways",
+        "id": "list-035",
+        "realm": "channeling",
+        "reference_path": "reference.spelllist.channeling.lists.list-035@Spell Law"
+      },
+      {
+        "name": "Muscle Ways",
+        "id": "list-036",
+        "realm": "channeling",
+        "reference_path": "reference.spelllist.channeling.lists.list-036@Spell Law"
+      },
+      {
+        "name": "Organ Ways",
+        "id": "list-037",
+        "realm": "channeling",
+        "reference_path": "reference.spelllist.channeling.lists.list-037@Spell Law"
+      },
+      {
+        "name": "Surface Ways",
+        "id": "list-038",
+        "realm": "channeling",
+        "reference_path": "reference.spelllist.channeling.lists.list-038@Spell Law"
+      },
+      {
+        "name": "Inner Walls",
+        "id": "list-039",
+        "realm": "channeling",
+        "reference_path": "reference.spelllist.channeling.lists.list-039@Spell Law"
+      },
+      {
+        "name": "Moving Ways",
+        "id": "list-040",
+        "realm": "channeling",
+        "reference_path": "reference.spelllist.channeling.lists.list-040@Spell Law"
+      },
+      {
+        "name": "Nature's Guises",
+        "id": "list-041",
+        "realm": "channeling",
+        "reference_path": "reference.spelllist.channeling.lists.list-041@Spell Law"
+      },
+      {
+        "name": "Nature's Way",
+        "id": "list-042",
+        "realm": "channeling",
+        "reference_path": "reference.spelllist.channeling.lists.list-042@Spell Law"
+      },
+      {
+        "name": "Path Mastery",
+        "id": "list-043",
+        "realm": "channeling",
+        "reference_path": "reference.spelllist.channeling.lists.list-043@Spell Law"
+      },
+      {
+        "name": "Far Voice",
+        "id": "list-044",
+        "realm": "channeling",
+        "reference_path": "reference.spelllist.channeling.lists.list-044@Spell Law"
+      },
+      {
+        "name": "Holy Vision",
+        "id": "list-045",
+        "realm": "channeling",
+        "reference_path": "reference.spelllist.channeling.lists.list-045@Spell Law"
+      },
+      {
+        "name": "Starlights",
+        "id": "list-046",
+        "realm": "channeling",
+        "reference_path": "reference.spelllist.channeling.lists.list-046@Spell Law"
+      },
+      {
+        "name": "Starsense",
+        "id": "list-047",
+        "realm": "channeling",
+        "reference_path": "reference.spelllist.channeling.lists.list-047@Spell Law"
+      },
+      {
+        "name": "Time's Bridge",
+        "id": "list-048",
+        "realm": "channeling",
+        "reference_path": "reference.spelllist.channeling.lists.list-048@Spell Law"
+      },
+      {
+        "name": "Way of the Voice",
+        "id": "list-049",
+        "realm": "channeling",
+        "reference_path": "reference.spelllist.channeling.lists.list-049@Spell Law"
+      },
+      {
+        "name": "Curses",
+        "id": "list-050",
+        "realm": "channeling",
+        "reference_path": "reference.spelllist.channeling.lists.list-050@Spell Law"
+      },
+      {
+        "name": "Dark Channels",
+        "id": "list-051",
+        "realm": "channeling",
+        "reference_path": "reference.spelllist.channeling.lists.list-051@Spell Law"
+      },
+      {
+        "name": "Dark Lore",
+        "id": "list-052",
+        "realm": "channeling",
+        "reference_path": "reference.spelllist.channeling.lists.list-052@Spell Law"
+      },
+      {
+        "name": "Disease",
+        "id": "list-053",
+        "realm": "channeling",
+        "reference_path": "reference.spelllist.channeling.lists.list-053@Spell Law"
+      },
+      {
+        "name": "Necromancy",
+        "id": "list-054",
+        "realm": "channeling",
+        "reference_path": "reference.spelllist.channeling.lists.list-054@Spell Law"
+      }
+    ],
+    "essence": [
+      {
+        "name": "Delving Ways",
+        "id": "list-001",
+        "realm": "essence",
+        "reference_path": "reference.spelllist.essence.lists.list-001@Spell Law"
+      },
+      {
+        "name": "Detecting Ways",
+        "id": "list-002",
+        "realm": "essence",
+        "reference_path": "reference.spelllist.essence.lists.list-002@Spell Law"
+      },
+      {
+        "name": "Elemental Shields",
+        "id": "list-003",
+        "realm": "essence",
+        "reference_path": "reference.spelllist.essence.lists.list-003@Spell Law"
+      },
+      {
+        "name": "Essence Hand",
+        "id": "list-004",
+        "realm": "essence",
+        "reference_path": "reference.spelllist.essence.lists.list-004@Spell Law"
+      },
+      {
+        "name": "Essence's Perceptions",
+        "id": "list-005",
+        "realm": "essence",
+        "reference_path": "reference.spelllist.essence.lists.list-005@Spell Law"
+      },
+      {
+        "name": "Lesser Illusions",
+        "id": "list-006",
+        "realm": "essence",
+        "reference_path": "reference.spelllist.essence.lists.list-006@Spell Law"
+      },
+      {
+        "name": "Physical Enhancement",
+        "id": "list-007",
+        "realm": "essence",
+        "reference_path": "reference.spelllist.essence.lists.list-007@Spell Law"
+      },
+      {
+        "name": "Rune Mastery",
+        "id": "list-008",
+        "realm": "essence",
+        "reference_path": "reference.spelllist.essence.lists.list-008@Spell Law"
+      },
+      {
+        "name": "Spell Wall",
+        "id": "list-009",
+        "realm": "essence",
+        "reference_path": "reference.spelllist.essence.lists.list-009@Spell Law"
+      },
+      {
+        "name": "Unbarring Ways",
+        "id": "list-010",
+        "realm": "essence",
+        "reference_path": "reference.spelllist.essence.lists.list-010@Spell Law"
+      },
+      {
+        "name": "Dispelling Ways",
+        "id": "list-011",
+        "realm": "essence",
+        "reference_path": "reference.spelllist.essence.lists.list-011@Spell Law"
+      },
+      {
+        "name": "Gate Mastery",
+        "id": "list-012",
+        "realm": "essence",
+        "reference_path": "reference.spelllist.essence.lists.list-012@Spell Law"
+      },
+      {
+        "name": "Invisible Ways",
+        "id": "list-013",
+        "realm": "essence",
+        "reference_path": "reference.spelllist.essence.lists.list-013@Spell Law"
+      },
+      {
+        "name": "Living Change",
+        "id": "list-014",
+        "realm": "essence",
+        "reference_path": "reference.spelllist.essence.lists.list-014@Spell Law"
+      },
+      {
+        "name": "Lofty Bridge",
+        "id": "list-015",
+        "realm": "essence",
+        "reference_path": "reference.spelllist.essence.lists.list-015@Spell Law"
+      },
+      {
+        "name": "Rapid Ways",
+        "id": "list-016",
+        "realm": "essence",
+        "reference_path": "reference.spelllist.essence.lists.list-016@Spell Law"
+      },
+      {
+        "name": "Shield Mastery",
+        "id": "list-017",
+        "realm": "essence",
+        "reference_path": "reference.spelllist.essence.lists.list-017@Spell Law"
+      },
+      {
+        "name": "Spell Enhancement",
+        "id": "list-018",
+        "realm": "essence",
+        "reference_path": "reference.spelllist.essence.lists.list-018@Spell Law"
+      },
+      {
+        "name": "Spell Reins",
+        "id": "list-019",
+        "realm": "essence",
+        "reference_path": "reference.spelllist.essence.lists.list-019@Spell Law"
+      },
+      {
+        "name": "Spirit Mastery",
+        "id": "list-020",
+        "realm": "essence",
+        "reference_path": "reference.spelllist.essence.lists.list-020@Spell Law"
+      },
+      {
+        "name": "Enchanting Ways",
+        "id": "list-021",
+        "realm": "essence",
+        "reference_path": "reference.spelllist.essence.lists.list-021@Spell Law"
+      },
+      {
+        "name": "Essence Imbedding",
+        "id": "list-022",
+        "realm": "essence",
+        "reference_path": "reference.spelllist.essence.lists.list-022@Spell Law"
+      },
+      {
+        "name": "Inorganic Skills",
+        "id": "list-023",
+        "realm": "essence",
+        "reference_path": "reference.spelllist.essence.lists.list-023@Spell Law"
+      },
+      {
+        "name": "Liquid-Gas Skills",
+        "id": "list-024",
+        "realm": "essence",
+        "reference_path": "reference.spelllist.essence.lists.list-024@Spell Law"
+      },
+      {
+        "name": "Mentalism/Channeling Imbedding",
+        "id": "list-025",
+        "realm": "essence",
+        "reference_path": "reference.spelllist.essence.lists.list-025@Spell Law"
+      },
+      {
+        "name": "Organic Skills",
+        "id": "list-026",
+        "realm": "essence",
+        "reference_path": "reference.spelllist.essence.lists.list-026@Spell Law"
+      },
+      {
+        "name": "Feel-Taste-Smell",
+        "id": "list-027",
+        "realm": "essence",
+        "reference_path": "reference.spelllist.essence.lists.list-027@Spell Law"
+      },
+      {
+        "name": "Guises",
+        "id": "list-028",
+        "realm": "essence",
+        "reference_path": "reference.spelllist.essence.lists.list-028@Spell Law"
+      },
+      {
+        "name": "Illusion Mastery",
+        "id": "list-029",
+        "realm": "essence",
+        "reference_path": "reference.spelllist.essence.lists.list-029@Spell Law"
+      },
+      {
+        "name": "Light Molding",
+        "id": "list-030",
+        "realm": "essence",
+        "reference_path": "reference.spelllist.essence.lists.list-030@Spell Law"
+      },
+      {
+        "name": "Mind Sense Molding",
+        "id": "list-031",
+        "realm": "essence",
+        "reference_path": "reference.spelllist.essence.lists.list-031@Spell Law"
+      },
+      {
+        "name": "Sound Molding",
+        "id": "list-032",
+        "realm": "essence",
+        "reference_path": "reference.spelllist.essence.lists.list-032@Spell Law"
+      },
+      {
+        "name": "Earth Law",
+        "id": "list-033",
+        "realm": "essence",
+        "reference_path": "reference.spelllist.essence.lists.list-033@Spell Law"
+      },
+      {
+        "name": "Fire Law",
+        "id": "list-034",
+        "realm": "essence",
+        "reference_path": "reference.spelllist.essence.lists.list-034@Spell Law"
+      },
+      {
+        "name": "Ice Law",
+        "id": "list-035",
+        "realm": "essence",
+        "reference_path": "reference.spelllist.essence.lists.list-035@Spell Law"
+      },
+      {
+        "name": "Light Law",
+        "id": "list-036",
+        "realm": "essence",
+        "reference_path": "reference.spelllist.essence.lists.list-036@Spell Law"
+      },
+      {
+        "name": "Water Law",
+        "id": "list-037",
+        "realm": "essence",
+        "reference_path": "reference.spelllist.essence.lists.list-037@Spell Law"
+      },
+      {
+        "name": "Wind Law",
+        "id": "list-038",
+        "realm": "essence",
+        "reference_path": "reference.spelllist.essence.lists.list-038@Spell Law"
+      },
+      {
+        "name": "Body Reins",
+        "id": "list-039",
+        "realm": "essence",
+        "reference_path": "reference.spelllist.essence.lists.list-039@Spell Law"
+      },
+      {
+        "name": "Body Renewal",
+        "id": "list-040",
+        "realm": "essence",
+        "reference_path": "reference.spelllist.essence.lists.list-040@Spell Law"
+      },
+      {
+        "name": "Evasions",
+        "id": "list-041",
+        "realm": "essence",
+        "reference_path": "reference.spelllist.essence.lists.list-041@Spell Law"
+      },
+      {
+        "name": "Monk's Bridge",
+        "id": "list-042",
+        "realm": "essence",
+        "reference_path": "reference.spelllist.essence.lists.list-042@Spell Law"
+      },
+      {
+        "name": "Monk's Sense",
+        "id": "list-043",
+        "realm": "essence",
+        "reference_path": "reference.spelllist.essence.lists.list-043@Spell Law"
+      },
+      {
+        "name": "Flesh Destruction",
+        "id": "list-044",
+        "realm": "essence",
+        "reference_path": "reference.spelllist.essence.lists.list-044@Spell Law"
+      },
+      {
+        "name": "Fluid Destruction",
+        "id": "list-045",
+        "realm": "essence",
+        "reference_path": "reference.spelllist.essence.lists.list-045@Spell Law"
+      },
+      {
+        "name": "Gas Destruction",
+        "id": "list-046",
+        "realm": "essence",
+        "reference_path": "reference.spelllist.essence.lists.list-046@Spell Law"
+      },
+      {
+        "name": "Mind Destruction",
+        "id": "list-047",
+        "realm": "essence",
+        "reference_path": "reference.spelllist.essence.lists.list-047@Spell Law"
+      },
+      {
+        "name": "Solid Destruction",
+        "id": "list-048",
+        "realm": "essence",
+        "reference_path": "reference.spelllist.essence.lists.list-048@Spell Law"
+      },
+      {
+        "name": "Soul Destruction",
+        "id": "list-049",
+        "realm": "essence",
+        "reference_path": "reference.spelllist.essence.lists.list-049@Spell Law"
+      },
+      {
+        "name": "Dark Contacts",
+        "id": "list-050",
+        "realm": "essence",
+        "reference_path": "reference.spelllist.essence.lists.list-050@Spell Law"
+      },
+      {
+        "name": "Dark Summons",
+        "id": "list-051",
+        "realm": "essence",
+        "reference_path": "reference.spelllist.essence.lists.list-051@Spell Law"
+      },
+      {
+        "name": "Darkness",
+        "id": "list-052",
+        "realm": "essence",
+        "reference_path": "reference.spelllist.essence.lists.list-052@Spell Law"
+      },
+      {
+        "name": "Matter Disruption",
+        "id": "list-053",
+        "realm": "essence",
+        "reference_path": "reference.spelllist.essence.lists.list-053@Spell Law"
+      },
+      {
+        "name": "Physical Erosion",
+        "id": "list-054",
+        "realm": "essence",
+        "reference_path": "reference.spelllist.essence.lists.list-054@Spell Law"
+      }
+    ],
+    "mentalism": [
+      {
+        "name": "Anticipations",
+        "id": "list-001",
+        "realm": "mentalism",
+        "reference_path": "reference.spelllist.mentalism.lists.list-001@Spell Law"
+      },
+      {
+        "name": "Attack Avoidance",
+        "id": "list-002",
+        "realm": "mentalism",
+        "reference_path": "reference.spelllist.mentalism.lists.list-002@Spell Law"
+      },
+      {
+        "name": "Brilliance",
+        "id": "list-003",
+        "realm": "mentalism",
+        "reference_path": "reference.spelllist.mentalism.lists.list-003@Spell Law"
+      },
+      {
+        "name": "Cloaking",
+        "id": "list-004",
+        "realm": "mentalism",
+        "reference_path": "reference.spelllist.mentalism.lists.list-004@Spell Law"
+      },
+      {
+        "name": "Damage Resistance",
+        "id": "list-005",
+        "realm": "mentalism",
+        "reference_path": "reference.spelllist.mentalism.lists.list-005@Spell Law"
+      },
+      {
+        "name": "Delving",
+        "id": "list-006",
+        "realm": "mentalism",
+        "reference_path": "reference.spelllist.mentalism.lists.list-006@Spell Law"
+      },
+      {
+        "name": "Detections",
+        "id": "list-007",
+        "realm": "mentalism",
+        "reference_path": "reference.spelllist.mentalism.lists.list-007@Spell Law"
+      },
+      {
+        "name": "Illusions",
+        "id": "list-008",
+        "realm": "mentalism",
+        "reference_path": "reference.spelllist.mentalism.lists.list-008@Spell Law"
+      },
+      {
+        "name": "Self Healing",
+        "id": "list-009",
+        "realm": "mentalism",
+        "reference_path": "reference.spelllist.mentalism.lists.list-009@Spell Law"
+      },
+      {
+        "name": "Spell Resistance",
+        "id": "list-010",
+        "realm": "mentalism",
+        "reference_path": "reference.spelllist.mentalism.lists.list-010@Spell Law"
+      },
+      {
+        "name": "Gas Manipulation",
+        "id": "list-011",
+        "realm": "mentalism",
+        "reference_path": "reference.spelllist.mentalism.lists.list-011@Spell Law"
+      },
+      {
+        "name": "Liquid Manipulation",
+        "id": "list-012",
+        "realm": "mentalism",
+        "reference_path": "reference.spelllist.mentalism.lists.list-012@Spell Law"
+      },
+      {
+        "name": "Mind Mastery",
+        "id": "list-013",
+        "realm": "mentalism",
+        "reference_path": "reference.spelllist.mentalism.lists.list-013@Spell Law"
+      },
+      {
+        "name": "Mind's Door",
+        "id": "list-014",
+        "realm": "mentalism",
+        "reference_path": "reference.spelllist.mentalism.lists.list-014@Spell Law"
+      },
+      {
+        "name": "Movement",
+        "id": "list-015",
+        "realm": "mentalism",
+        "reference_path": "reference.spelllist.mentalism.lists.list-015@Spell Law"
+      },
+      {
+        "name": "Sense Mastery",
+        "id": "list-016",
+        "realm": "mentalism",
+        "reference_path": "reference.spelllist.mentalism.lists.list-016@Spell Law"
+      },
+      {
+        "name": "Shifting",
+        "id": "list-017",
+        "realm": "mentalism",
+        "reference_path": "reference.spelllist.mentalism.lists.list-017@Spell Law"
+      },
+      {
+        "name": "Solid Manipulation",
+        "id": "list-018",
+        "realm": "mentalism",
+        "reference_path": "reference.spelllist.mentalism.lists.list-018@Spell Law"
+      },
+      {
+        "name": "Speed",
+        "id": "list-019",
+        "realm": "mentalism",
+        "reference_path": "reference.spelllist.mentalism.lists.list-019@Spell Law"
+      },
+      {
+        "name": "Telekinesis",
+        "id": "list-020",
+        "realm": "mentalism",
+        "reference_path": "reference.spelllist.mentalism.lists.list-020@Spell Law"
+      },
+      {
+        "name": "Blood Mastery",
+        "id": "list-021",
+        "realm": "mentalism",
+        "reference_path": "reference.spelllist.mentalism.lists.list-021@Spell Law"
+      },
+      {
+        "name": "Bone Mastery",
+        "id": "list-022",
+        "realm": "mentalism",
+        "reference_path": "reference.spelllist.mentalism.lists.list-022@Spell Law"
+      },
+      {
+        "name": "Concussion Mastery",
+        "id": "list-023",
+        "realm": "mentalism",
+        "reference_path": "reference.spelllist.mentalism.lists.list-023@Spell Law"
+      },
+      {
+        "name": "Muscle Mastery",
+        "id": "list-024",
+        "realm": "mentalism",
+        "reference_path": "reference.spelllist.mentalism.lists.list-024@Spell Law"
+      },
+      {
+        "name": "Nerve and Organ Mastery",
+        "id": "list-025",
+        "realm": "mentalism",
+        "reference_path": "reference.spelllist.mentalism.lists.list-025@Spell Law"
+      },
+      {
+        "name": "Prosthetics",
+        "id": "list-026",
+        "realm": "mentalism",
+        "reference_path": "reference.spelllist.mentalism.lists.list-026@Spell Law"
+      },
+      {
+        "name": "Mind Attack",
+        "id": "list-027",
+        "realm": "mentalism",
+        "reference_path": "reference.spelllist.mentalism.lists.list-027@Spell Law"
+      },
+      {
+        "name": "Mind Control",
+        "id": "list-028",
+        "realm": "mentalism",
+        "reference_path": "reference.spelllist.mentalism.lists.list-028@Spell Law"
+      },
+      {
+        "name": "Mind Merge",
+        "id": "list-029",
+        "realm": "mentalism",
+        "reference_path": "reference.spelllist.mentalism.lists.list-029@Spell Law"
+      },
+      {
+        "name": "Mind Speech",
+        "id": "list-030",
+        "realm": "mentalism",
+        "reference_path": "reference.spelllist.mentalism.lists.list-030@Spell Law"
+      },
+      {
+        "name": "Presence",
+        "id": "list-031",
+        "realm": "mentalism",
+        "reference_path": "reference.spelllist.mentalism.lists.list-031@Spell Law"
+      },
+      {
+        "name": "Sense Control",
+        "id": "list-032",
+        "realm": "mentalism",
+        "reference_path": "reference.spelllist.mentalism.lists.list-032@Spell Law"
+      },
+      {
+        "name": "Future Visions",
+        "id": "list-033",
+        "realm": "mentalism",
+        "reference_path": "reference.spelllist.mentalism.lists.list-033@Spell Law"
+      },
+      {
+        "name": "Mind Visions",
+        "id": "list-034",
+        "realm": "mentalism",
+        "reference_path": "reference.spelllist.mentalism.lists.list-034@Spell Law"
+      },
+      {
+        "name": "Past Visions",
+        "id": "list-035",
+        "realm": "mentalism",
+        "reference_path": "reference.spelllist.mentalism.lists.list-035@Spell Law"
+      },
+      {
+        "name": "Sense Through Others",
+        "id": "list-036",
+        "realm": "mentalism",
+        "reference_path": "reference.spelllist.mentalism.lists.list-036@Spell Law"
+      },
+      {
+        "name": "True Perception",
+        "id": "list-037",
+        "realm": "mentalism",
+        "reference_path": "reference.spelllist.mentalism.lists.list-037@Spell Law"
+      },
+      {
+        "name": "True Sight",
+        "id": "list-038",
+        "realm": "mentalism",
+        "reference_path": "reference.spelllist.mentalism.lists.list-038@Spell Law"
+      },
+      {
+        "name": "Controlling Songs",
+        "id": "list-039",
+        "realm": "mentalism",
+        "reference_path": "reference.spelllist.mentalism.lists.list-039@Spell Law"
+      },
+      {
+        "name": "Item Lore",
+        "id": "list-040",
+        "realm": "mentalism",
+        "reference_path": "reference.spelllist.mentalism.lists.list-040@Spell Law"
+      },
+      {
+        "name": "Lores",
+        "id": "list-041",
+        "realm": "mentalism",
+        "reference_path": "reference.spelllist.mentalism.lists.list-041@Spell Law"
+      },
+      {
+        "name": "Sound Control",
+        "id": "list-042",
+        "realm": "mentalism",
+        "reference_path": "reference.spelllist.mentalism.lists.list-042@Spell Law"
+      },
+      {
+        "name": "Sound Projection",
+        "id": "list-043",
+        "realm": "mentalism",
+        "reference_path": "reference.spelllist.mentalism.lists.list-043@Spell Law"
+      },
+      {
+        "name": "Confusing Ways",
+        "id": "list-044",
+        "realm": "mentalism",
+        "reference_path": "reference.spelllist.mentalism.lists.list-044@Spell Law"
+      },
+      {
+        "name": "Gas Alteration",
+        "id": "list-045",
+        "realm": "mentalism",
+        "reference_path": "reference.spelllist.mentalism.lists.list-045@Spell Law"
+      },
+      {
+        "name": "Hiding",
+        "id": "list-046",
+        "realm": "mentalism",
+        "reference_path": "reference.spelllist.mentalism.lists.list-046@Spell Law"
+      },
+      {
+        "name": "Liquid Alteration",
+        "id": "list-047",
+        "realm": "mentalism",
+        "reference_path": "reference.spelllist.mentalism.lists.list-047@Spell Law"
+      },
+      {
+        "name": "Mystical Change",
+        "id": "list-048",
+        "realm": "mentalism",
+        "reference_path": "reference.spelllist.mentalism.lists.list-048@Spell Law"
+      },
+      {
+        "name": "Solid Alteration",
+        "id": "list-049",
+        "realm": "mentalism",
+        "reference_path": "reference.spelllist.mentalism.lists.list-049@Spell Law"
+      },
+      {
+        "name": "Mind Death",
+        "id": "list-050",
+        "realm": "mentalism",
+        "reference_path": "reference.spelllist.mentalism.lists.list-050@Spell Law"
+      },
+      {
+        "name": "Mind Disease",
+        "id": "list-051",
+        "realm": "mentalism",
+        "reference_path": "reference.spelllist.mentalism.lists.list-051@Spell Law"
+      },
+      {
+        "name": "Mind Domination",
+        "id": "list-052",
+        "realm": "mentalism",
+        "reference_path": "reference.spelllist.mentalism.lists.list-052@Spell Law"
+      },
+      {
+        "name": "Mind Erosion",
+        "id": "list-053",
+        "realm": "mentalism",
+        "reference_path": "reference.spelllist.mentalism.lists.list-053@Spell Law"
+      },
+      {
+        "name": "Mind Subversion",
+        "id": "list-054",
+        "realm": "mentalism",
+        "reference_path": "reference.spelllist.mentalism.lists.list-054@Spell Law"
+      }
+    ]
+  },
+  "spell_lists": {
+    "barrier law": {
+      "name": "Barrier Law",
+      "id": "list-001",
+      "realm": "channeling",
+      "reference_path": "reference.spelllist.channeling.lists.list-001@Spell Law"
+    },
+    "concussion's way": {
+      "name": "Concussion's Way",
+      "id": "list-002",
+      "realm": "channeling",
+      "reference_path": "reference.spelllist.channeling.lists.list-002@Spell Law"
+    },
+    "detection mastery": {
+      "name": "Detection Mastery",
+      "id": "list-003",
+      "realm": "channeling",
+      "reference_path": "reference.spelllist.channeling.lists.list-003@Spell Law"
+    },
+    "light's way": {
+      "name": "Light's Way",
+      "id": "list-004",
+      "realm": "channeling",
+      "reference_path": "reference.spelllist.channeling.lists.list-004@Spell Law"
+    },
+    "lofty movements": {
+      "name": "Lofty Movements",
+      "id": "list-005",
+      "realm": "channeling",
+      "reference_path": "reference.spelllist.channeling.lists.list-005@Spell Law"
+    },
+    "nature's law": {
+      "name": "Nature's Law",
+      "id": "list-006",
+      "realm": "channeling",
+      "reference_path": "reference.spelllist.channeling.lists.list-006@Spell Law"
+    },
+    "purifications": {
+      "name": "Purifications",
+      "id": "list-007",
+      "realm": "channeling",
+      "reference_path": "reference.spelllist.channeling.lists.list-007@Spell Law"
+    },
+    "sound's way": {
+      "name": "Sound's Way",
+      "id": "list-008",
+      "realm": "channeling",
+      "reference_path": "reference.spelllist.channeling.lists.list-008@Spell Law"
+    },
+    "spell defense": {
+      "name": "Spell Defense",
+      "id": "list-009",
+      "realm": "channeling",
+      "reference_path": "reference.spelllist.channeling.lists.list-009@Spell Law"
+    },
+    "weather ways": {
+      "name": "Weather Ways",
+      "id": "list-010",
+      "realm": "channeling",
+      "reference_path": "reference.spelllist.channeling.lists.list-010@Spell Law"
+    },
+    "blood law": {
+      "name": "Blood Law",
+      "id": "list-011",
+      "realm": "channeling",
+      "reference_path": "reference.spelllist.channeling.lists.list-011@Spell Law"
+    },
+    "bone law": {
+      "name": "Bone Law",
+      "id": "list-012",
+      "realm": "channeling",
+      "reference_path": "reference.spelllist.channeling.lists.list-012@Spell Law"
+    },
+    "calm spirits": {
+      "name": "Calm Spirits",
+      "id": "list-013",
+      "realm": "channeling",
+      "reference_path": "reference.spelllist.channeling.lists.list-013@Spell Law"
+    },
+    "creations": {
+      "name": "Creations",
+      "id": "list-014",
+      "realm": "channeling",
+      "reference_path": "reference.spelllist.channeling.lists.list-014@Spell Law"
+    },
+    "locating ways": {
+      "name": "Locating Ways",
+      "id": "list-015",
+      "realm": "channeling",
+      "reference_path": "reference.spelllist.channeling.lists.list-015@Spell Law"
+    },
+    "lore": {
+      "name": "Lore",
+      "id": "list-016",
+      "realm": "channeling",
+      "reference_path": "reference.spelllist.channeling.lists.list-016@Spell Law"
+    },
+    "muscle law": {
+      "name": "Muscle Law",
+      "id": "list-017",
+      "realm": "channeling",
+      "reference_path": "reference.spelllist.channeling.lists.list-017@Spell Law"
+    },
+    "nerve law": {
+      "name": "Nerve Law",
+      "id": "list-018",
+      "realm": "channeling",
+      "reference_path": "reference.spelllist.channeling.lists.list-018@Spell Law"
+    },
+    "organ law": {
+      "name": "Organ Law",
+      "id": "list-019",
+      "realm": "channeling",
+      "reference_path": "reference.spelllist.channeling.lists.list-019@Spell Law"
+    },
+    "symbolic ways": {
+      "name": "Symbolic Ways",
+      "id": "list-020",
+      "realm": "channeling",
+      "reference_path": "reference.spelllist.channeling.lists.list-020@Spell Law"
+    },
+    "animal mastery": {
+      "name": "Animal Mastery",
+      "id": "list-021",
+      "realm": "channeling",
+      "reference_path": "reference.spelllist.channeling.lists.list-021@Spell Law"
+    },
+    "herb mastery": {
+      "name": "Herb Mastery",
+      "id": "list-022",
+      "realm": "channeling",
+      "reference_path": "reference.spelllist.channeling.lists.list-022@Spell Law"
+    },
+    "nature's lore": {
+      "name": "Nature's Lore",
+      "id": "list-023",
+      "realm": "channeling",
+      "reference_path": "reference.spelllist.channeling.lists.list-023@Spell Law"
+    },
+    "nature's movement": {
+      "name": "Nature's Movement",
+      "id": "list-024",
+      "realm": "channeling",
+      "reference_path": "reference.spelllist.channeling.lists.list-024@Spell Law"
+    },
+    "nature's protection": {
+      "name": "Nature's Protection",
+      "id": "list-025",
+      "realm": "channeling",
+      "reference_path": "reference.spelllist.channeling.lists.list-025@Spell Law"
+    },
+    "plant mastery": {
+      "name": "Plant Mastery",
+      "id": "list-026",
+      "realm": "channeling",
+      "reference_path": "reference.spelllist.channeling.lists.list-026@Spell Law"
+    },
+    "channels": {
+      "name": "Channels",
+      "id": "list-027",
+      "realm": "channeling",
+      "reference_path": "reference.spelllist.channeling.lists.list-027@Spell Law"
+    },
+    "communal ways": {
+      "name": "Communal Ways",
+      "id": "list-028",
+      "realm": "channeling",
+      "reference_path": "reference.spelllist.channeling.lists.list-028@Spell Law"
+    },
+    "life mastery": {
+      "name": "Life Mastery",
+      "id": "list-029",
+      "realm": "channeling",
+      "reference_path": "reference.spelllist.channeling.lists.list-029@Spell Law"
+    },
+    "protections": {
+      "name": "Protections",
+      "id": "list-030",
+      "realm": "channeling",
+      "reference_path": "reference.spelllist.channeling.lists.list-030@Spell Law"
+    },
+    "repulsions": {
+      "name": "Repulsions",
+      "id": "list-031",
+      "realm": "channeling",
+      "reference_path": "reference.spelllist.channeling.lists.list-031@Spell Law"
+    },
+    "summons": {
+      "name": "Summons",
+      "id": "list-032",
+      "realm": "channeling",
+      "reference_path": "reference.spelllist.channeling.lists.list-032@Spell Law"
+    },
+    "transferring ways": {
+      "name": "Transferring Ways",
+      "id": "list-033",
+      "realm": "channeling",
+      "reference_path": "reference.spelllist.channeling.lists.list-033@Spell Law"
+    },
+    "blood ways": {
+      "name": "Blood Ways",
+      "id": "list-034",
+      "realm": "channeling",
+      "reference_path": "reference.spelllist.channeling.lists.list-034@Spell Law"
+    },
+    "bone ways": {
+      "name": "Bone Ways",
+      "id": "list-035",
+      "realm": "channeling",
+      "reference_path": "reference.spelllist.channeling.lists.list-035@Spell Law"
+    },
+    "muscle ways": {
+      "name": "Muscle Ways",
+      "id": "list-036",
+      "realm": "channeling",
+      "reference_path": "reference.spelllist.channeling.lists.list-036@Spell Law"
+    },
+    "organ ways": {
+      "name": "Organ Ways",
+      "id": "list-037",
+      "realm": "channeling",
+      "reference_path": "reference.spelllist.channeling.lists.list-037@Spell Law"
+    },
+    "surface ways": {
+      "name": "Surface Ways",
+      "id": "list-038",
+      "realm": "channeling",
+      "reference_path": "reference.spelllist.channeling.lists.list-038@Spell Law"
+    },
+    "inner walls": {
+      "name": "Inner Walls",
+      "id": "list-039",
+      "realm": "channeling",
+      "reference_path": "reference.spelllist.channeling.lists.list-039@Spell Law"
+    },
+    "moving ways": {
+      "name": "Moving Ways",
+      "id": "list-040",
+      "realm": "channeling",
+      "reference_path": "reference.spelllist.channeling.lists.list-040@Spell Law"
+    },
+    "nature's guises": {
+      "name": "Nature's Guises",
+      "id": "list-041",
+      "realm": "channeling",
+      "reference_path": "reference.spelllist.channeling.lists.list-041@Spell Law"
+    },
+    "nature's way": {
+      "name": "Nature's Way",
+      "id": "list-042",
+      "realm": "channeling",
+      "reference_path": "reference.spelllist.channeling.lists.list-042@Spell Law"
+    },
+    "path mastery": {
+      "name": "Path Mastery",
+      "id": "list-043",
+      "realm": "channeling",
+      "reference_path": "reference.spelllist.channeling.lists.list-043@Spell Law"
+    },
+    "far voice": {
+      "name": "Far Voice",
+      "id": "list-044",
+      "realm": "channeling",
+      "reference_path": "reference.spelllist.channeling.lists.list-044@Spell Law"
+    },
+    "holy vision": {
+      "name": "Holy Vision",
+      "id": "list-045",
+      "realm": "channeling",
+      "reference_path": "reference.spelllist.channeling.lists.list-045@Spell Law"
+    },
+    "starlights": {
+      "name": "Starlights",
+      "id": "list-046",
+      "realm": "channeling",
+      "reference_path": "reference.spelllist.channeling.lists.list-046@Spell Law"
+    },
+    "starsense": {
+      "name": "Starsense",
+      "id": "list-047",
+      "realm": "channeling",
+      "reference_path": "reference.spelllist.channeling.lists.list-047@Spell Law"
+    },
+    "time's bridge": {
+      "name": "Time's Bridge",
+      "id": "list-048",
+      "realm": "channeling",
+      "reference_path": "reference.spelllist.channeling.lists.list-048@Spell Law"
+    },
+    "way of the voice": {
+      "name": "Way of the Voice",
+      "id": "list-049",
+      "realm": "channeling",
+      "reference_path": "reference.spelllist.channeling.lists.list-049@Spell Law"
+    },
+    "curses": {
+      "name": "Curses",
+      "id": "list-050",
+      "realm": "channeling",
+      "reference_path": "reference.spelllist.channeling.lists.list-050@Spell Law"
+    },
+    "dark channels": {
+      "name": "Dark Channels",
+      "id": "list-051",
+      "realm": "channeling",
+      "reference_path": "reference.spelllist.channeling.lists.list-051@Spell Law"
+    },
+    "dark lore": {
+      "name": "Dark Lore",
+      "id": "list-052",
+      "realm": "channeling",
+      "reference_path": "reference.spelllist.channeling.lists.list-052@Spell Law"
+    },
+    "disease": {
+      "name": "Disease",
+      "id": "list-053",
+      "realm": "channeling",
+      "reference_path": "reference.spelllist.channeling.lists.list-053@Spell Law"
+    },
+    "necromancy": {
+      "name": "Necromancy",
+      "id": "list-054",
+      "realm": "channeling",
+      "reference_path": "reference.spelllist.channeling.lists.list-054@Spell Law"
+    },
+    "delving ways": {
+      "name": "Delving Ways",
+      "id": "list-001",
+      "realm": "essence",
+      "reference_path": "reference.spelllist.essence.lists.list-001@Spell Law"
+    },
+    "detecting ways": {
+      "name": "Detecting Ways",
+      "id": "list-002",
+      "realm": "essence",
+      "reference_path": "reference.spelllist.essence.lists.list-002@Spell Law"
+    },
+    "elemental shields": {
+      "name": "Elemental Shields",
+      "id": "list-003",
+      "realm": "essence",
+      "reference_path": "reference.spelllist.essence.lists.list-003@Spell Law"
+    },
+    "essence hand": {
+      "name": "Essence Hand",
+      "id": "list-004",
+      "realm": "essence",
+      "reference_path": "reference.spelllist.essence.lists.list-004@Spell Law"
+    },
+    "essence's perceptions": {
+      "name": "Essence's Perceptions",
+      "id": "list-005",
+      "realm": "essence",
+      "reference_path": "reference.spelllist.essence.lists.list-005@Spell Law"
+    },
+    "lesser illusions": {
+      "name": "Lesser Illusions",
+      "id": "list-006",
+      "realm": "essence",
+      "reference_path": "reference.spelllist.essence.lists.list-006@Spell Law"
+    },
+    "physical enhancement": {
+      "name": "Physical Enhancement",
+      "id": "list-007",
+      "realm": "essence",
+      "reference_path": "reference.spelllist.essence.lists.list-007@Spell Law"
+    },
+    "rune mastery": {
+      "name": "Rune Mastery",
+      "id": "list-008",
+      "realm": "essence",
+      "reference_path": "reference.spelllist.essence.lists.list-008@Spell Law"
+    },
+    "spell wall": {
+      "name": "Spell Wall",
+      "id": "list-009",
+      "realm": "essence",
+      "reference_path": "reference.spelllist.essence.lists.list-009@Spell Law"
+    },
+    "unbarring ways": {
+      "name": "Unbarring Ways",
+      "id": "list-010",
+      "realm": "essence",
+      "reference_path": "reference.spelllist.essence.lists.list-010@Spell Law"
+    },
+    "dispelling ways": {
+      "name": "Dispelling Ways",
+      "id": "list-011",
+      "realm": "essence",
+      "reference_path": "reference.spelllist.essence.lists.list-011@Spell Law"
+    },
+    "gate mastery": {
+      "name": "Gate Mastery",
+      "id": "list-012",
+      "realm": "essence",
+      "reference_path": "reference.spelllist.essence.lists.list-012@Spell Law"
+    },
+    "invisible ways": {
+      "name": "Invisible Ways",
+      "id": "list-013",
+      "realm": "essence",
+      "reference_path": "reference.spelllist.essence.lists.list-013@Spell Law"
+    },
+    "living change": {
+      "name": "Living Change",
+      "id": "list-014",
+      "realm": "essence",
+      "reference_path": "reference.spelllist.essence.lists.list-014@Spell Law"
+    },
+    "lofty bridge": {
+      "name": "Lofty Bridge",
+      "id": "list-015",
+      "realm": "essence",
+      "reference_path": "reference.spelllist.essence.lists.list-015@Spell Law"
+    },
+    "rapid ways": {
+      "name": "Rapid Ways",
+      "id": "list-016",
+      "realm": "essence",
+      "reference_path": "reference.spelllist.essence.lists.list-016@Spell Law"
+    },
+    "shield mastery": {
+      "name": "Shield Mastery",
+      "id": "list-017",
+      "realm": "essence",
+      "reference_path": "reference.spelllist.essence.lists.list-017@Spell Law"
+    },
+    "spell enhancement": {
+      "name": "Spell Enhancement",
+      "id": "list-018",
+      "realm": "essence",
+      "reference_path": "reference.spelllist.essence.lists.list-018@Spell Law"
+    },
+    "spell reins": {
+      "name": "Spell Reins",
+      "id": "list-019",
+      "realm": "essence",
+      "reference_path": "reference.spelllist.essence.lists.list-019@Spell Law"
+    },
+    "spirit mastery": {
+      "name": "Spirit Mastery",
+      "id": "list-020",
+      "realm": "essence",
+      "reference_path": "reference.spelllist.essence.lists.list-020@Spell Law"
+    },
+    "enchanting ways": {
+      "name": "Enchanting Ways",
+      "id": "list-021",
+      "realm": "essence",
+      "reference_path": "reference.spelllist.essence.lists.list-021@Spell Law"
+    },
+    "essence imbedding": {
+      "name": "Essence Imbedding",
+      "id": "list-022",
+      "realm": "essence",
+      "reference_path": "reference.spelllist.essence.lists.list-022@Spell Law"
+    },
+    "inorganic skills": {
+      "name": "Inorganic Skills",
+      "id": "list-023",
+      "realm": "essence",
+      "reference_path": "reference.spelllist.essence.lists.list-023@Spell Law"
+    },
+    "liquid-gas skills": {
+      "name": "Liquid-Gas Skills",
+      "id": "list-024",
+      "realm": "essence",
+      "reference_path": "reference.spelllist.essence.lists.list-024@Spell Law"
+    },
+    "mentalism/channeling imbedding": {
+      "name": "Mentalism/Channeling Imbedding",
+      "id": "list-025",
+      "realm": "essence",
+      "reference_path": "reference.spelllist.essence.lists.list-025@Spell Law"
+    },
+    "organic skills": {
+      "name": "Organic Skills",
+      "id": "list-026",
+      "realm": "essence",
+      "reference_path": "reference.spelllist.essence.lists.list-026@Spell Law"
+    },
+    "feel-taste-smell": {
+      "name": "Feel-Taste-Smell",
+      "id": "list-027",
+      "realm": "essence",
+      "reference_path": "reference.spelllist.essence.lists.list-027@Spell Law"
+    },
+    "guises": {
+      "name": "Guises",
+      "id": "list-028",
+      "realm": "essence",
+      "reference_path": "reference.spelllist.essence.lists.list-028@Spell Law"
+    },
+    "illusion mastery": {
+      "name": "Illusion Mastery",
+      "id": "list-029",
+      "realm": "essence",
+      "reference_path": "reference.spelllist.essence.lists.list-029@Spell Law"
+    },
+    "light molding": {
+      "name": "Light Molding",
+      "id": "list-030",
+      "realm": "essence",
+      "reference_path": "reference.spelllist.essence.lists.list-030@Spell Law"
+    },
+    "mind sense molding": {
+      "name": "Mind Sense Molding",
+      "id": "list-031",
+      "realm": "essence",
+      "reference_path": "reference.spelllist.essence.lists.list-031@Spell Law"
+    },
+    "sound molding": {
+      "name": "Sound Molding",
+      "id": "list-032",
+      "realm": "essence",
+      "reference_path": "reference.spelllist.essence.lists.list-032@Spell Law"
+    },
+    "earth law": {
+      "name": "Earth Law",
+      "id": "list-033",
+      "realm": "essence",
+      "reference_path": "reference.spelllist.essence.lists.list-033@Spell Law"
+    },
+    "fire law": {
+      "name": "Fire Law",
+      "id": "list-034",
+      "realm": "essence",
+      "reference_path": "reference.spelllist.essence.lists.list-034@Spell Law"
+    },
+    "ice law": {
+      "name": "Ice Law",
+      "id": "list-035",
+      "realm": "essence",
+      "reference_path": "reference.spelllist.essence.lists.list-035@Spell Law"
+    },
+    "light law": {
+      "name": "Light Law",
+      "id": "list-036",
+      "realm": "essence",
+      "reference_path": "reference.spelllist.essence.lists.list-036@Spell Law"
+    },
+    "water law": {
+      "name": "Water Law",
+      "id": "list-037",
+      "realm": "essence",
+      "reference_path": "reference.spelllist.essence.lists.list-037@Spell Law"
+    },
+    "wind law": {
+      "name": "Wind Law",
+      "id": "list-038",
+      "realm": "essence",
+      "reference_path": "reference.spelllist.essence.lists.list-038@Spell Law"
+    },
+    "body reins": {
+      "name": "Body Reins",
+      "id": "list-039",
+      "realm": "essence",
+      "reference_path": "reference.spelllist.essence.lists.list-039@Spell Law"
+    },
+    "body renewal": {
+      "name": "Body Renewal",
+      "id": "list-040",
+      "realm": "essence",
+      "reference_path": "reference.spelllist.essence.lists.list-040@Spell Law"
+    },
+    "evasions": {
+      "name": "Evasions",
+      "id": "list-041",
+      "realm": "essence",
+      "reference_path": "reference.spelllist.essence.lists.list-041@Spell Law"
+    },
+    "monk's bridge": {
+      "name": "Monk's Bridge",
+      "id": "list-042",
+      "realm": "essence",
+      "reference_path": "reference.spelllist.essence.lists.list-042@Spell Law"
+    },
+    "monk's sense": {
+      "name": "Monk's Sense",
+      "id": "list-043",
+      "realm": "essence",
+      "reference_path": "reference.spelllist.essence.lists.list-043@Spell Law"
+    },
+    "flesh destruction": {
+      "name": "Flesh Destruction",
+      "id": "list-044",
+      "realm": "essence",
+      "reference_path": "reference.spelllist.essence.lists.list-044@Spell Law"
+    },
+    "fluid destruction": {
+      "name": "Fluid Destruction",
+      "id": "list-045",
+      "realm": "essence",
+      "reference_path": "reference.spelllist.essence.lists.list-045@Spell Law"
+    },
+    "gas destruction": {
+      "name": "Gas Destruction",
+      "id": "list-046",
+      "realm": "essence",
+      "reference_path": "reference.spelllist.essence.lists.list-046@Spell Law"
+    },
+    "mind destruction": {
+      "name": "Mind Destruction",
+      "id": "list-047",
+      "realm": "essence",
+      "reference_path": "reference.spelllist.essence.lists.list-047@Spell Law"
+    },
+    "solid destruction": {
+      "name": "Solid Destruction",
+      "id": "list-048",
+      "realm": "essence",
+      "reference_path": "reference.spelllist.essence.lists.list-048@Spell Law"
+    },
+    "soul destruction": {
+      "name": "Soul Destruction",
+      "id": "list-049",
+      "realm": "essence",
+      "reference_path": "reference.spelllist.essence.lists.list-049@Spell Law"
+    },
+    "dark contacts": {
+      "name": "Dark Contacts",
+      "id": "list-050",
+      "realm": "essence",
+      "reference_path": "reference.spelllist.essence.lists.list-050@Spell Law"
+    },
+    "dark summons": {
+      "name": "Dark Summons",
+      "id": "list-051",
+      "realm": "essence",
+      "reference_path": "reference.spelllist.essence.lists.list-051@Spell Law"
+    },
+    "darkness": {
+      "name": "Darkness",
+      "id": "list-052",
+      "realm": "essence",
+      "reference_path": "reference.spelllist.essence.lists.list-052@Spell Law"
+    },
+    "matter disruption": {
+      "name": "Matter Disruption",
+      "id": "list-053",
+      "realm": "essence",
+      "reference_path": "reference.spelllist.essence.lists.list-053@Spell Law"
+    },
+    "physical erosion": {
+      "name": "Physical Erosion",
+      "id": "list-054",
+      "realm": "essence",
+      "reference_path": "reference.spelllist.essence.lists.list-054@Spell Law"
+    },
+    "anticipations": {
+      "name": "Anticipations",
+      "id": "list-001",
+      "realm": "mentalism",
+      "reference_path": "reference.spelllist.mentalism.lists.list-001@Spell Law"
+    },
+    "attack avoidance": {
+      "name": "Attack Avoidance",
+      "id": "list-002",
+      "realm": "mentalism",
+      "reference_path": "reference.spelllist.mentalism.lists.list-002@Spell Law"
+    },
+    "brilliance": {
+      "name": "Brilliance",
+      "id": "list-003",
+      "realm": "mentalism",
+      "reference_path": "reference.spelllist.mentalism.lists.list-003@Spell Law"
+    },
+    "cloaking": {
+      "name": "Cloaking",
+      "id": "list-004",
+      "realm": "mentalism",
+      "reference_path": "reference.spelllist.mentalism.lists.list-004@Spell Law"
+    },
+    "damage resistance": {
+      "name": "Damage Resistance",
+      "id": "list-005",
+      "realm": "mentalism",
+      "reference_path": "reference.spelllist.mentalism.lists.list-005@Spell Law"
+    },
+    "delving": {
+      "name": "Delving",
+      "id": "list-006",
+      "realm": "mentalism",
+      "reference_path": "reference.spelllist.mentalism.lists.list-006@Spell Law"
+    },
+    "detections": {
+      "name": "Detections",
+      "id": "list-007",
+      "realm": "mentalism",
+      "reference_path": "reference.spelllist.mentalism.lists.list-007@Spell Law"
+    },
+    "illusions": {
+      "name": "Illusions",
+      "id": "list-008",
+      "realm": "mentalism",
+      "reference_path": "reference.spelllist.mentalism.lists.list-008@Spell Law"
+    },
+    "self healing": {
+      "name": "Self Healing",
+      "id": "list-009",
+      "realm": "mentalism",
+      "reference_path": "reference.spelllist.mentalism.lists.list-009@Spell Law"
+    },
+    "spell resistance": {
+      "name": "Spell Resistance",
+      "id": "list-010",
+      "realm": "mentalism",
+      "reference_path": "reference.spelllist.mentalism.lists.list-010@Spell Law"
+    },
+    "gas manipulation": {
+      "name": "Gas Manipulation",
+      "id": "list-011",
+      "realm": "mentalism",
+      "reference_path": "reference.spelllist.mentalism.lists.list-011@Spell Law"
+    },
+    "liquid manipulation": {
+      "name": "Liquid Manipulation",
+      "id": "list-012",
+      "realm": "mentalism",
+      "reference_path": "reference.spelllist.mentalism.lists.list-012@Spell Law"
+    },
+    "mind mastery": {
+      "name": "Mind Mastery",
+      "id": "list-013",
+      "realm": "mentalism",
+      "reference_path": "reference.spelllist.mentalism.lists.list-013@Spell Law"
+    },
+    "mind's door": {
+      "name": "Mind's Door",
+      "id": "list-014",
+      "realm": "mentalism",
+      "reference_path": "reference.spelllist.mentalism.lists.list-014@Spell Law"
+    },
+    "movement": {
+      "name": "Movement",
+      "id": "list-015",
+      "realm": "mentalism",
+      "reference_path": "reference.spelllist.mentalism.lists.list-015@Spell Law"
+    },
+    "sense mastery": {
+      "name": "Sense Mastery",
+      "id": "list-016",
+      "realm": "mentalism",
+      "reference_path": "reference.spelllist.mentalism.lists.list-016@Spell Law"
+    },
+    "shifting": {
+      "name": "Shifting",
+      "id": "list-017",
+      "realm": "mentalism",
+      "reference_path": "reference.spelllist.mentalism.lists.list-017@Spell Law"
+    },
+    "solid manipulation": {
+      "name": "Solid Manipulation",
+      "id": "list-018",
+      "realm": "mentalism",
+      "reference_path": "reference.spelllist.mentalism.lists.list-018@Spell Law"
+    },
+    "speed": {
+      "name": "Speed",
+      "id": "list-019",
+      "realm": "mentalism",
+      "reference_path": "reference.spelllist.mentalism.lists.list-019@Spell Law"
+    },
+    "telekinesis": {
+      "name": "Telekinesis",
+      "id": "list-020",
+      "realm": "mentalism",
+      "reference_path": "reference.spelllist.mentalism.lists.list-020@Spell Law"
+    },
+    "blood mastery": {
+      "name": "Blood Mastery",
+      "id": "list-021",
+      "realm": "mentalism",
+      "reference_path": "reference.spelllist.mentalism.lists.list-021@Spell Law"
+    },
+    "bone mastery": {
+      "name": "Bone Mastery",
+      "id": "list-022",
+      "realm": "mentalism",
+      "reference_path": "reference.spelllist.mentalism.lists.list-022@Spell Law"
+    },
+    "concussion mastery": {
+      "name": "Concussion Mastery",
+      "id": "list-023",
+      "realm": "mentalism",
+      "reference_path": "reference.spelllist.mentalism.lists.list-023@Spell Law"
+    },
+    "muscle mastery": {
+      "name": "Muscle Mastery",
+      "id": "list-024",
+      "realm": "mentalism",
+      "reference_path": "reference.spelllist.mentalism.lists.list-024@Spell Law"
+    },
+    "nerve and organ mastery": {
+      "name": "Nerve and Organ Mastery",
+      "id": "list-025",
+      "realm": "mentalism",
+      "reference_path": "reference.spelllist.mentalism.lists.list-025@Spell Law"
+    },
+    "prosthetics": {
+      "name": "Prosthetics",
+      "id": "list-026",
+      "realm": "mentalism",
+      "reference_path": "reference.spelllist.mentalism.lists.list-026@Spell Law"
+    },
+    "mind attack": {
+      "name": "Mind Attack",
+      "id": "list-027",
+      "realm": "mentalism",
+      "reference_path": "reference.spelllist.mentalism.lists.list-027@Spell Law"
+    },
+    "mind control": {
+      "name": "Mind Control",
+      "id": "list-028",
+      "realm": "mentalism",
+      "reference_path": "reference.spelllist.mentalism.lists.list-028@Spell Law"
+    },
+    "mind merge": {
+      "name": "Mind Merge",
+      "id": "list-029",
+      "realm": "mentalism",
+      "reference_path": "reference.spelllist.mentalism.lists.list-029@Spell Law"
+    },
+    "mind speech": {
+      "name": "Mind Speech",
+      "id": "list-030",
+      "realm": "mentalism",
+      "reference_path": "reference.spelllist.mentalism.lists.list-030@Spell Law"
+    },
+    "presence": {
+      "name": "Presence",
+      "id": "list-031",
+      "realm": "mentalism",
+      "reference_path": "reference.spelllist.mentalism.lists.list-031@Spell Law"
+    },
+    "sense control": {
+      "name": "Sense Control",
+      "id": "list-032",
+      "realm": "mentalism",
+      "reference_path": "reference.spelllist.mentalism.lists.list-032@Spell Law"
+    },
+    "future visions": {
+      "name": "Future Visions",
+      "id": "list-033",
+      "realm": "mentalism",
+      "reference_path": "reference.spelllist.mentalism.lists.list-033@Spell Law"
+    },
+    "mind visions": {
+      "name": "Mind Visions",
+      "id": "list-034",
+      "realm": "mentalism",
+      "reference_path": "reference.spelllist.mentalism.lists.list-034@Spell Law"
+    },
+    "past visions": {
+      "name": "Past Visions",
+      "id": "list-035",
+      "realm": "mentalism",
+      "reference_path": "reference.spelllist.mentalism.lists.list-035@Spell Law"
+    },
+    "sense through others": {
+      "name": "Sense Through Others",
+      "id": "list-036",
+      "realm": "mentalism",
+      "reference_path": "reference.spelllist.mentalism.lists.list-036@Spell Law"
+    },
+    "true perception": {
+      "name": "True Perception",
+      "id": "list-037",
+      "realm": "mentalism",
+      "reference_path": "reference.spelllist.mentalism.lists.list-037@Spell Law"
+    },
+    "true sight": {
+      "name": "True Sight",
+      "id": "list-038",
+      "realm": "mentalism",
+      "reference_path": "reference.spelllist.mentalism.lists.list-038@Spell Law"
+    },
+    "controlling songs": {
+      "name": "Controlling Songs",
+      "id": "list-039",
+      "realm": "mentalism",
+      "reference_path": "reference.spelllist.mentalism.lists.list-039@Spell Law"
+    },
+    "item lore": {
+      "name": "Item Lore",
+      "id": "list-040",
+      "realm": "mentalism",
+      "reference_path": "reference.spelllist.mentalism.lists.list-040@Spell Law"
+    },
+    "lores": {
+      "name": "Lores",
+      "id": "list-041",
+      "realm": "mentalism",
+      "reference_path": "reference.spelllist.mentalism.lists.list-041@Spell Law"
+    },
+    "sound control": {
+      "name": "Sound Control",
+      "id": "list-042",
+      "realm": "mentalism",
+      "reference_path": "reference.spelllist.mentalism.lists.list-042@Spell Law"
+    },
+    "sound projection": {
+      "name": "Sound Projection",
+      "id": "list-043",
+      "realm": "mentalism",
+      "reference_path": "reference.spelllist.mentalism.lists.list-043@Spell Law"
+    },
+    "confusing ways": {
+      "name": "Confusing Ways",
+      "id": "list-044",
+      "realm": "mentalism",
+      "reference_path": "reference.spelllist.mentalism.lists.list-044@Spell Law"
+    },
+    "gas alteration": {
+      "name": "Gas Alteration",
+      "id": "list-045",
+      "realm": "mentalism",
+      "reference_path": "reference.spelllist.mentalism.lists.list-045@Spell Law"
+    },
+    "hiding": {
+      "name": "Hiding",
+      "id": "list-046",
+      "realm": "mentalism",
+      "reference_path": "reference.spelllist.mentalism.lists.list-046@Spell Law"
+    },
+    "liquid alteration": {
+      "name": "Liquid Alteration",
+      "id": "list-047",
+      "realm": "mentalism",
+      "reference_path": "reference.spelllist.mentalism.lists.list-047@Spell Law"
+    },
+    "mystical change": {
+      "name": "Mystical Change",
+      "id": "list-048",
+      "realm": "mentalism",
+      "reference_path": "reference.spelllist.mentalism.lists.list-048@Spell Law"
+    },
+    "solid alteration": {
+      "name": "Solid Alteration",
+      "id": "list-049",
+      "realm": "mentalism",
+      "reference_path": "reference.spelllist.mentalism.lists.list-049@Spell Law"
+    },
+    "mind death": {
+      "name": "Mind Death",
+      "id": "list-050",
+      "realm": "mentalism",
+      "reference_path": "reference.spelllist.mentalism.lists.list-050@Spell Law"
+    },
+    "mind disease": {
+      "name": "Mind Disease",
+      "id": "list-051",
+      "realm": "mentalism",
+      "reference_path": "reference.spelllist.mentalism.lists.list-051@Spell Law"
+    },
+    "mind domination": {
+      "name": "Mind Domination",
+      "id": "list-052",
+      "realm": "mentalism",
+      "reference_path": "reference.spelllist.mentalism.lists.list-052@Spell Law"
+    },
+    "mind erosion": {
+      "name": "Mind Erosion",
+      "id": "list-053",
+      "realm": "mentalism",
+      "reference_path": "reference.spelllist.mentalism.lists.list-053@Spell Law"
+    },
+    "mind subversion": {
+      "name": "Mind Subversion",
+      "id": "list-054",
+      "realm": "mentalism",
+      "reference_path": "reference.spelllist.mentalism.lists.list-054@Spell Law"
+    }
+  }
+}
