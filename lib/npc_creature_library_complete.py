@@ -252,7 +252,8 @@ class CompleteNPCCreatureLibrary:
         new_entry['_id'] = f"id-custom-{new_name.lower().replace(' ', '_')}"
         new_entry['_reference_path'] = None  # Custom NPCs don't have reference paths
         new_entry['_is_custom'] = True
-        new_entry['_based_on'] = base_entry.get('_reference_path')
+        new_entry['_based_on'] = base_entry.get('_display_name')  # Store the display name for weapon assignment
+        new_entry['_based_on_path'] = base_entry.get('_reference_path')  # Store original reference path
         new_entry['_based_on_source'] = base_entry.get('_source_module')
         
         # Apply modifications

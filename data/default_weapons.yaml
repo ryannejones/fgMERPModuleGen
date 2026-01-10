@@ -36,36 +36,37 @@ Thief:
     - name: "Dagger"
       slot: "melee"
 
-# Spell users - staff only, no missile
-"Pure Channeling Spell User":
-  weapons:
-    - name: "Staff"
-      slot: "melee"
+# Spell users - no default weapons, they use spell lists (Base Spell Attack, MA Strikes)
+# If you want them to have a physical weapon, add it in npcs.yaml
+# "Pure Channeling Spell User":
+#   weapons:
+#     - name: "Quarterstaff"
+#       slot: "melee"
 
-"Pure Essence Spell User":
-  weapons:
-    - name: "Staff"
-      slot: "melee"
+# "Pure Essence Spell User":
+#   weapons:
+#     - name: "Quarterstaff"
+#       slot: "melee"
 
-"Pure Mentalism Spell User":
-  weapons:
-    - name: "Staff"
-      slot: "melee"
+# "Pure Mentalism Spell User":
+#   weapons:
+#     - name: "Quarterstaff"
+#       slot: "melee"
 
-Animist:
-  weapons:
-    - name: "Staff"
-      slot: "melee"
+# Animist:
+#   weapons:
+#     - name: "Quarterstaff"
+#       slot: "melee"
 
-Cleric:
-  weapons:
-    - name: "Staff"
-      slot: "melee"
+# Cleric:
+#   weapons:
+#     - name: "Quarterstaff"
+#       slot: "melee"
 
-Mage:
-  weapons:
-    - name: "Staff"
-      slot: "melee"
+# Mage:
+#   weapons:
+#     - name: "Quarterstaff"
+#       slot: "melee"
 
 # Creatures - Orcs
 "Orc (non-combatant)":

@@ -4,8 +4,8 @@ Complete Item Library Helper with Source Priority
 Provides functions to search, retrieve, and copy items with ALL fields
 
 SOURCE PRIORITY HIERARCHY (when multiple sources have the same name):
-1. Character Law (highest priority)
-2. Arms Law
+1. Arms Law (highest priority - full weapon combat stats)
+2. Character Law (basic equipment)
 3. Spell Law (not currently used for items)
 4. Creatures & Treasures (lowest priority)
 """
@@ -19,9 +19,10 @@ class CompleteItemLibrary:
     """Library for accessing complete items/equipment/weapons from MERP/ICE rulebooks"""
     
     # Source priority order (lower number = higher priority)
+    # Arms Law first for weapons with full combat stats
     SOURCE_PRIORITY = {
-        'Character Law': 1,
-        'Arms Law': 2,
+        'Arms Law': 1,
+        'Character Law': 2,
         'Spell Law': 3,
         'Creatures & Treasures': 4
     }

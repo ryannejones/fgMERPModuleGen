@@ -158,10 +158,33 @@ class NPCGenerator:
                     else:
                         weapon_name = weapon_data['name']
                 
+                if self.verbose and weapon_name:
+                    ob_val = weapon_data.get('ob', {})
+                    if isinstance(ob_val, dict):
+                        ob_val = ob_val.get('_text', 'N/A')
+                    print(f"    DEBUG: Processing weapon {weapon_id}: {weapon_name}, OB in data: {ob_val}")
+                
                 # Try to create reference
                 if weapon_name and weapon_name in self.loader.name_to_id.get('item', {}):
                     # Create reference to module item
                     self.create_item_reference(weapon_name, weapon_elem, 'link')
+                    
+                    # FG weapons need name and OB alongside the link
+                    if 'name' in weapon_data:
+                        name_elem = ET.SubElement(weapon_elem, 'name')
+                        name_elem.set('type', 'string')
+                        if isinstance(weapon_data['name'], dict):
+                            name_elem.text = weapon_data['name'].get('_text', weapon_name)
+                        else:
+                            name_elem.text = weapon_data['name']
+                    
+                    if 'ob' in weapon_data:
+                        ob_elem = ET.SubElement(weapon_elem, 'ob')
+                        ob_elem.set('type', 'number')
+                        if isinstance(weapon_data['ob'], dict):
+                            ob_elem.text = str(weapon_data['ob'].get('_text', '0'))
+                        else:
+                            ob_elem.text = str(weapon_data['ob'])
                     
                     # Add count if specified
                     if 'count' in weapon_data:
@@ -189,13 +212,22 @@ class NPCGenerator:
         if 'weapons' not in npc_data or not npc_data['weapons']:
             return npc_data
         
-        # Determine NPC base type (strip level if present)
-        base_type = npc_name
-        if ' Level ' in npc_name:
-            base_type = npc_name.split(' Level ')[0]
+        # Determine NPC base type
+        # 1. Check if this is a custom NPC based on another (check _based_on metadata)
+        # 2. Strip level if present (e.g., "Fighter Level 03" -> "Fighter")
+        # 3. Use the name as-is
+        base_type = npc_data.get('_based_on', npc_name)  # Check metadata first
+        
+        if self.verbose:
+            print(f"    DEBUG: Checking weapons for '{npc_name}', base_type='{base_type}', has _based_on: {'_based_on' in npc_data}")
+        
+        if ' Level ' in base_type:
+            base_type = base_type.split(' Level ')[0]
         
         # Check if we have default weapons for this type
         if base_type not in self.default_weapons:
+            if self.verbose:
+                print(f"    DEBUG: No default weapons found for '{base_type}'")
             return npc_data
         
         default_config = self.default_weapons[base_type]
@@ -212,12 +244,18 @@ class NPCGenerator:
                 continue
             if isinstance(weapon_data, dict):
                 weapon_name = weapon_data.get('name', {}).get('_text', weapon_data.get('name', '')).lower()
-                if weapon_name == 'melee':
+                if weapon_name in ['melee', 'weapon']:  # "Weapon" is also a melee placeholder
                     melee_key = weapon_id
                 elif weapon_name == 'missile':
                     missile_key = weapon_id
         
         # Apply default weapons
+        weapons_to_assign = {}  # slot -> weapon config
+        for default_weapon in default_config['weapons']:
+            slot = default_weapon.get('slot', 'melee')
+            weapons_to_assign[slot] = default_weapon
+        
+        # Replace or remove weapons based on defaults
         for default_weapon in default_config['weapons']:
             weapon_name = default_weapon['name']
             slot = default_weapon.get('slot', 'melee')
@@ -252,6 +290,12 @@ class NPCGenerator:
                     mod_str = f" ({ob_modifier:+d})" if ob_modifier != 0 else ""
                     print(f"    Assigned {weapon_name} to {npc_name} (OB {base_ob + ob_modifier}{mod_str})")
         
+        # Remove missile weapon if no missile weapon in defaults (e.g., spell users with staff only)
+        if missile_key and 'missile' not in weapons_to_assign:
+            if self.verbose:
+                print(f"    Removed missile weapon from {npc_name} (not in default weapons)")
+            del weapons[missile_key]
+        
         return npc_data
     
     def create_npc_from_library(self, npc_data: Dict, use_item_refs: bool = True) -> ET.Element:
@@ -271,6 +315,16 @@ class NPCGenerator:
         npc_name = npc_data.get('_display_name', '')
         if npc_name and self.default_weapons:
             npc_data = self.apply_default_weapons(npc_data, npc_name)
+            
+            # DEBUG: Check if modifications persist
+            if self.verbose and 'weapons' in npc_data:
+                print(f"    DEBUG: After apply_default_weapons, weapons are:")
+                for w_id, w_data in list(npc_data['weapons'].items())[:3]:
+                    if isinstance(w_data, dict):
+                        w_name = w_data.get('name', {})
+                        if isinstance(w_name, dict):
+                            w_name = w_name.get('_text', 'unknown')
+                        print(f"      {w_id}: {w_name}")
         
         # Create element with temporary tag (caller will set the real ID)
         npc_elem = ET.Element('temp')
