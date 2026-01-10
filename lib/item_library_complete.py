@@ -60,6 +60,11 @@ class CompleteItemLibrary:
         for item in self.data['creatures_treasures_items']['items']:
             all_entries.append(item)
         
+        # Add MERP Herbs (if available)
+        if 'merp_herbs' in self.data:
+            for item in self.data['merp_herbs']['items']:
+                all_entries.append(item)
+        
         # Now index everything, applying priority rules
         for entry in all_entries:
             name = entry.get('_display_name', '').lower()

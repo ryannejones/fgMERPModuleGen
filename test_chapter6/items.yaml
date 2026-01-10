@@ -43,3 +43,9 @@ items:
   - name: "Staff"
   - name: "Scimitar"
   - name: "Long Sword"
+
+# MERP Herbs from Rolemaster Companion 1
+  - name: "Carefree Mustard"
+  - name: "Tulavar"
+  - name: "Kelventari"
+  - name: "Mirenna"

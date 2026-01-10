@@ -6,6 +6,7 @@ When items are looted by players, FG automatically copies full data
 
 import xml.etree.ElementTree as ET
 from typing import Dict, Any
+import copy
 
 
 class ItemGenerator:
@@ -27,6 +28,7 @@ class ItemGenerator:
         self.parcel_next_id = 1
         self.parcel_item_entry_id = 1  # Separate counter for parcel item entries
         self.coin_types = ['MP', 'GP', 'SP', 'BP', 'CP', 'TP', 'IP']
+        self.created_items = {}  # Store item data by name for parcel embedding
     
     def get_next_item_id(self):
         """Get next item ID"""
@@ -83,17 +85,17 @@ class ItemGenerator:
                 elem = ET.SubElement(parent, key)
                 elem.text = str(value)
     
-    def create_item_from_library(self, item_data: Dict) -> ET.Element:
+    def create_item_from_library(self, item_data: Dict, item_id: str) -> ET.Element:
         """
         Create item element from complete library data
         
         Args:
             item_data: Complete item dictionary from library
+            item_id: The ID to use for this item (already generated)
             
         Returns:
             XML Element with complete stat block
         """
-        item_id = self.get_next_item_id()
         item_elem = ET.Element(item_id)
         
         # Convert the complete item data to XML
@@ -119,25 +121,37 @@ class ItemGenerator:
             print(f"  WARNING: Item without name: {yaml_item}")
             return None
         
-        # Case 1: Find existing item
+        # Case 1: Library item without modifications
         if 'based_on' not in yaml_item:
-            result = self.library.find_item(item_name)
+            # Use create_custom_item with item as its own base and no modifications
+            # This creates a fresh copy instead of using a reference
+            result = self.library.create_custom_item(
+                item_name,
+                item_name,  # Based on itself
+                {}          # No modifications
+            )
             
-            if not result['found']:
+            if not result['success']:
                 print(f"  WARNING: Item '{item_name}' not found in library")
                 if result.get('suggestions'):
                     print(f"    Suggestions: {', '.join(result['suggestions'][:3])}")
                 return None
             
             if self.verbose:
-                print(f"  Found '{item_name}' via {result['method']}: {result['matched_name']}")
+                print(f"  Found '{item_name}' via library copy: {result['based_on']}")
             
             # Store ID for cross-referencing
             item_id = self.get_next_item_id()
             self.loader.name_to_id['item'][item_name] = item_id
             
-            # Create XML from library data
-            item_elem = self.create_item_from_library(result['entry'])
+            # Store item data for parcel embedding (deep copy to avoid modification)
+            self.created_items[item_name] = copy.deepcopy(result['entry'])
+            
+            if self.verbose:
+                print(f"    DEBUG: Stored '{item_name}', entry has {len(result['entry'])} keys, has 'name': {'name' in result['entry']}")
+            
+            # Create XML from library data (pass the ID we just generated)
+            item_elem = self.create_item_from_library(result['entry'], item_id)
             
             # Override count if specified in YAML
             if 'count' in yaml_item:
@@ -176,8 +190,14 @@ class ItemGenerator:
             item_id = self.get_next_item_id()
             self.loader.name_to_id['item'][item_name] = item_id
             
-            # Create XML from custom data
-            item_elem = self.create_item_from_library(result['entry'])
+            # Store item data for parcel embedding (deep copy to avoid modification)
+            self.created_items[item_name] = copy.deepcopy(result['entry'])
+            
+            if self.verbose:
+                print(f"    DEBUG: Stored custom '{item_name}', entry has {len(result['entry'])} keys, has 'name': {'name' in result['entry']}")
+            
+            # Create XML from custom data (pass the ID we just generated)
+            item_elem = self.create_item_from_library(result['entry'], item_id)
             
             # Override count if specified
             if 'count' in yaml_item:
@@ -217,7 +237,7 @@ class ItemGenerator:
             p = ET.SubElement(description, 'p')
             p.text = parcel['description']
         
-        # Items in parcel - REFERENCE module items
+        # Items in parcel - EMBED full item data (FG doesn't use links)
         if 'items' in parcel and parcel['items']:
             items = ET.SubElement(parcel_elem, 'itemlist')
             for item in parcel['items']:
@@ -228,27 +248,28 @@ class ItemGenerator:
                 
                 item_name = item.get('name')
                 
-                # Create reference to module item
-                if item_name and item_name in self.loader.name_to_id['item']:
-                    link = ET.SubElement(item_entry, 'link')
-                    link.set('type', 'windowreference')
-                    
-                    link_class = ET.SubElement(link, 'class')
-                    link_class.text = 'item'
-                    
-                    link_record = ET.SubElement(link, 'recordname')
-                    link_record.text = f"item.{self.loader.name_to_id['item'][item_name]}"
-                    
-                    # Count
-                    count = ET.SubElement(item_entry, 'count')
-                    count.set('type', 'number')
-                    count.text = str(item.get('count', 1))
-                else:
-                    # Item not in module list - embed data (fallback)
+                # Embed full item data from created items
+                if item_name and item_name in self.created_items:
                     if self.verbose:
-                        print(f"    Warning: Item '{item_name}' in parcel but not in module item list")
+                        item_keys = list(self.created_items[item_name].keys())[:10]
+                        print(f"    DEBUG: Embedding '{item_name}', data has {len(self.created_items[item_name])} keys: {item_keys}")
                     
-                    # Create basic item entry
+                    # Copy the complete item data into the parcel entry
+                    self.dict_to_xml(self.created_items[item_name], item_entry)
+                    
+                    # Override count from parcel specification
+                    count_elem = item_entry.find('count')
+                    if count_elem is not None:
+                        count_elem.text = str(item.get('count', 1))
+                    else:
+                        count = ET.SubElement(item_entry, 'count')
+                        count.set('type', 'number')
+                        count.text = str(item.get('count', 1))
+                else:
+                    # Item not created - shouldn't happen if validation worked
+                    if self.verbose:
+                        print(f"    Warning: Item '{item_name}' in parcel but not generated")
+                    
                     name_elem = ET.SubElement(item_entry, 'name')
                     name_elem.set('type', 'string')
                     name_elem.text = item_name
