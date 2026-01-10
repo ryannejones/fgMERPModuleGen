@@ -1,98 +1,93 @@
-# fgMERPModuleGen
-Fantasy Grounds MERP Module Generator
-============================================================
+# Fantasy Grounds Module Generator v0.11
 
-A generator to create and add to Fantasty Grounds MERP modules using user provided yaml files for
-* Stories
-* Items (includes weapons and armor)
-* NPCs
-* Encounters
-* Parcels
-* Images (requires folder called images/ in directory yaml files are in)
+**Version**: 0.11  
+**Date**: 2026-01-07  
+**Status**: Pre-Release / Development
 
-Prerequisites: 
-python 3.9.6 (and probably higher)
-PyYaml 
-Fantasy Grounds Modules 
-    MERP Character Law
-    MERP Arms Law
-    MERP Spell Law
-    MERP Creatures and Treasures
+Complete Fantasy Grounds module generator with intelligent NPC/item matching, compound name handling, and full stat block generation.
 
-## This generator is incomplete. It can currently create battle/encounter XML and validate yaml files. 
+## What's New in v0.11
 
-## Usage
+- ✅ Compound name matching documented (e.g., "Orc Scout" won't match "Scout")
+- ✅ Default level fixed: 4 → 5 (level 4 doesn't exist in library)
+- ✅ Smart partial matching feature planned for next version
+- ✅ Comprehensive matching behavior documentation
+- ✅ CHANGELOG added
 
-Validate yaml files 
+## Quick Start
+
 ```bash
-python3 fg_generator.py ../test_chapter6/ --validate-only
-```
+# Test the library
+python3 test_library.py
 
-Create XML files for module
-```bash
-python3 fg_generator.py ../test_chapter6/
-```
-
-
-## Code Structure
-
-**lib/db_battles.py**
-- `BattleGenerator` class
-- `create_npc_list_entry()` - Creates NPC references
-- `create_battle()` - Creates complete battle entry
-- `generate()` - Generates entire <battle> section
-- `to_xml_string()` - Formats XML for output
-
-
-## Phase 4: Battle XML Generation
-
-Phase 4 is now complete! The generator can now create proper Fantasy Grounds battle XML from encounters.yaml.
-
-## What Phase 4 Does
-
-Converts this YAML:
-
-```yaml
-encounters:
-  - name: "6.5.02 - Bridge Crew"
-    exp: 800
-    npcs:
-      - creature: "Ranger Level 5"
-        count: 1
-        faction: foe
-        display_name: "Bridge Crew Ranger"
-```
-
-Into this XML:
-
-```xml
-<battle>
-  <id-00007>
-    <exp type="number">800</exp>
-    <name type="string">6.5.02 - Bridge Crew</name>
-    <npclist>
-      <id-00019>
-        <count type="number">1</count>
-        <faction type="string">foe</faction>
-        <link type="windowreference">
-          <class>npc</class>
-          <recordname>reference.npcs.rangerlevel5@Character Law</recordname>
-        </link>
-        <name type="string">Bridge Crew Ranger</name>
-      </id-00019>
-    </npclist>
-  </id-00007>
-</battle>
+# Generate a module
+python3 fg_generator.py examples/test_chapter6/ -v
 ```
 
 ## Features
 
-- [DONE] Auto-assigns sequential IDs
-- [DONE] Links to library creatures automatically
-- [DONE] Supports display names for NPCs
-- [DONE] Handles factions (foe/friend/neutral)
-- [DONE] Supports multiple NPCs per encounter
-- [DONE] Experience point calculation
-- [DONE] Proper XML structure for Fantasy Grounds
+- **715 NPCs/Creatures** with complete stat blocks
+- **1,257 Items** with complete data
+- **80 Skills** with Character Law references
+- **162 Spell Lists** across 3 realms
+- **Intelligent Matching**: Profession mappings, aliases, fuzzy matching
+- **Source Priority**: Character Law > Arms Law > Creatures & Treasures
 
+## Directory Structure
 
+```
+fg_module_generator_v0.11/
+├── fg_generator.py          # Main script
+├── lib/                     # Core libraries
+│   ├── library.py          # Integrated reference library
+│   ├── npc_creature_library_complete.py
+│   ├── item_library_complete.py
+│   ├── entity_matcher.py
+│   ├── db_npcs.py          # NPC XML generator
+│   ├── db_items.py         # Item XML generator
+│   └── ... (other modules)
+├── data/                    # Complete databases (13+ MB)
+│   ├── npcs_and_creatures_complete.json
+│   ├── items_complete.json
+│   ├── skill_references.json
+│   └── spell_references.json
+├── examples/                # Example YAML files
+│   └── test_chapter6/
+└── docs/                    # Documentation
+```
+
+## Documentation
+
+- `README.md` - This file
+- `docs/TODO.md` - Roadmap and planned features
+- `docs/COMPOUND_NAME_MATCHING.md` - How matching works
+- `docs/MATCHING_SYSTEM_GUIDE.md` - Matching system details
+- `docs/SKILLS_REFERENCE_GUIDE.md` - Skills documentation
+- `docs/SPELLS_REFERENCE_GUIDE.md` - Spell lists documentation
+
+## Status
+
+- ✅ Core library integration complete
+- ✅ Matching system working
+- ✅ Test script passing
+- ⏳ End-to-end testing needed
+- ⏳ XML generation validation needed
+
+## Next Steps
+
+See `docs/TODO.md` for complete roadmap.
+
+Priority items:
+1. Smart partial matching for failed lookups
+2. End-to-end module generation testing
+3. XML output validation
+
+## Version History
+
+- **v0.11** (2026-01-07): Compound name matching documented, default level fixed
+- **v0.10** (2026-01-07): Complete data extraction, library integration
+- **v10_FINAL** (previous): Initial version
+
+## License
+
+For MERP/Rolemaster use only. Respects ICE copyright.

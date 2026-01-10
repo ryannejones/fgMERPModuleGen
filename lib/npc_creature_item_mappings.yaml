@@ -1,0 +1,257 @@
+# NPC and Creature Name Mappings
+# Maps common names/aliases to actual entries in the library
+
+# =============================================================================
+# PROFESSIONS TO NPC TEMPLATES
+# =============================================================================
+# Maps profession names to the generic NPC templates in Character Law
+
+professions:
+  # Self-referencing (allow direct use of profession names)
+  Fighter: "Fighter"
+  Rogue: "Rogue"
+  Thief: "Thief"
+  Bard: "Bard"
+  Ranger: "Ranger"
+  Monk: "Monk"
+  "Warrior Monk": "Warrior Monk"
+  "Pure Channeling Spell User": "Pure Channeling Spell User"
+  "Pure Essence Spell User": "Pure Essence Spell User"
+  "Pure Mentalism Spell User": "Pure Mentalism Spell User"
+  "Hybrid Spell User": "Hybrid Spell User"
+  
+  # Channeling Realm
+  Animist: "Pure Channeling Spell User"
+  Cleric: "Pure Channeling Spell User"
+  
+  # Essence Realm
+  Mage: "Pure Essence Spell User"
+  Illusionist: "Pure Essence Spell User"
+  Alchemist: "Pure Essence Spell User"
+  
+  # Mentalism Realm
+  Mystic: "Pure Mentalism Spell User"
+  "Lay Healer": "Pure Mentalism Spell User"
+  Healer: "Pure Mentalism Spell User"
+  Mentalist: "Pure Mentalism Spell User"
+  
+  # Hybrid Casters
+  "Bard": "Hybrid Spell User"
+  
+  # Semi-spell users (use Hybrid or choose specific realm based on campaign)
+  Ranger: "Ranger"  # Has own template in Character Law
+  
+  # Pure fighters
+  Warrior: "Fighter"
+  Soldier: "Fighter"
+  Guard: "Fighter"
+  Knight: "Fighter"
+  Mercenary: "Fighter"
+  
+  # Rogues/Thieves
+  Bandit: "Rogue"
+  Burglar: "Rogue"
+  Assassin: "Rogue"
+  Spy: "Rogue"
+  
+  # Monks
+  "Martial Artist": "Monk"
+  "Warrior Monk": "Warrior Monk"
+
+# =============================================================================
+# CREATURE ALIASES
+# =============================================================================
+# Maps common creature name variations to library entries
+
+creatures:
+  # Canines
+  Warg: "Wolf"
+  "Dire Wolf": "Wolf"
+  "War Dog": "Wolf"
+  
+  # Orcs
+  Orc: "Orc (non-combatant)"  # Default to basic orc
+  Uruk: "Orc (leader)"
+  "Orc Warrior": "Orc (non-combatant)"
+  "Orc Captain": "Orc (leader)"
+  "Orc Chieftain": "Orc (commander)"
+  
+  # Goblins
+  Goblin: "Goblin"
+  
+  # Trolls
+  Troll: "Troll"
+  "Cave Troll": "Troll"
+  
+  # Spiders
+  Spider: "Spider, Large"
+  "Giant Spider": "Spider, Large"
+  "Great Spider": "Spider, Large"
+  
+  # Generic terms
+  Scout: "Ranger"  # Use Ranger template for scouts
+  Tracker: "Ranger"
+  Woodsman: "Ranger"
+
+# =============================================================================
+# ITEM ALIASES
+# =============================================================================
+# Maps common item name variations to library entries
+
+items:
+  # Weapons - common variations
+  Sword: "Broadsword"
+  "Long Sword": "Broadsword"
+  "Short Sword": "Dagger"
+  Knife: "Dagger"
+  Spear: "Long Spear"
+  Axe: "Battle Axe"
+  Mace: "Mace"
+  
+  # Armor
+  "Leather Armor": "Soft Leather"
+  "Chain Mail": "Chain"
+  "Plate Mail": "Full Plate"
+  
+  # Equipment
+  Rope: "Rope (50')"
+  Torch: "Torch"
+  Backpack: "Backpack"
+  "Water Skin": "Waterskin"
+  Rations: "Rations (1 week)"
+
+# =============================================================================
+# GENERIC NPC TYPES
+# =============================================================================
+# Maps generic descriptors to appropriate NPC templates
+# These are used when the user provides a generic description
+
+generic_npcs:
+  # Combat roles
+  Warrior: "Fighter"
+  Soldier: "Fighter"
+  Guard: "Fighter"
+  Sentry: "Fighter"
+  Knight: "Fighter"
+  Champion: "Fighter"
+  Veteran: "Fighter"
+  
+  # Stealth/cunning
+  Thief: "Rogue"
+  Rogue: "Rogue"
+  Burglar: "Rogue"
+  Cutpurse: "Rogue"
+  Pickpocket: "Rogue"
+  Bandit: "Rogue"
+  Brigand: "Rogue"
+  Highwayman: "Rogue"
+  Assassin: "Rogue"
+  
+  # Scouts/rangers
+  Scout: "Ranger"
+  Tracker: "Ranger"
+  Hunter: "Ranger"
+  Woodsman: "Ranger"
+  Forester: "Ranger"
+  Trapper: "Ranger"
+  
+  # Magic users (require realm specification or default to Hybrid)
+  Wizard: "Pure Essence Spell User"
+  Mage: "Pure Essence Spell User"
+  Sorcerer: "Pure Essence Spell User"
+  Priest: "Pure Channeling Spell User"
+  Cleric: "Pure Channeling Spell User"
+  Shaman: "Pure Channeling Spell User"
+  Druid: "Pure Channeling Spell User"
+
+# =============================================================================
+# THIEF VS ROGUE
+# =============================================================================
+# Note: Both "Thief" and "Rogue" exist as separate templates in Character Law.
+# By default, we map generic "Thief" requests to "Rogue" which is the more
+# modern/neutral term. If user specifically wants the Character Law "Thief"
+# template, they should specify it exactly.
+#
+# Mapping: Generic "thief" → "Rogue" template
+# Exact match: "Thief" (when specified exactly) → "Thief" template
+
+# =============================================================================
+# LEVEL DEFAULTS
+# =============================================================================
+# When a user doesn't specify a level for leveled NPCs/creatures:
+#
+# DEFAULT_LEVEL: 4
+#
+# Reasoning: Most "Ready Adventures" are designed for characters at levels 4-6,
+# so level 4 is a reasonable default for NPCs.
+#
+# This applies to:
+# - All profession-based NPCs (Fighter, Ranger, Rogue, Spell Users, etc.)
+# - Any named NPC based on a profession template
+#
+# Does NOT apply to:
+# - Fixed-stat creatures (Wolf, Orc, Troll - use their standard stats)
+# - Items (items don't have levels)
+
+# =============================================================================
+# USAGE NOTES
+# =============================================================================
+# 
+# Matching Priority:
+# 1. Exact match in library (case-insensitive)
+# 2. Check this mapping file
+# 3. Fuzzy match (edit distance < 3 or 80%+ similarity)
+# 4. Report not found
+#
+# Example YAML usage:
+#
+# encounters:
+#   - name: "Forest Patrol"
+#     npcs:
+#       - name: "Scout"           # Maps to Ranger, uses level 4
+#         count: 2
+#       
+#       - name: "Warrior"         # Maps to Fighter, uses level 4
+#         level: 6                # Override default level
+#         count: 3
+#       
+#       - name: "Wolf"            # Exact match, fixed stats
+#         count: 5
+#       
+#       - name: "Skauril"         # Named NPC
+#         based_on: "Warrior"     # Maps to Fighter
+#         level: 15
+#         modifications:
+#           hits: 150
+#
+# =============================================================================
+# FUZZY MATCHING EXAMPLES
+# =============================================================================
+#
+# These would match with fuzzy matching (edit distance ≤ 2):
+# - "Brodsword" → "Broadsword"
+# - "Wolfs" → "Wolf"
+# - "Rangr" → "Ranger"
+#
+# These would NOT match (too different):
+# - "Bird" → "Broadsword" (edit distance too high)
+# - "Cat" → "Rat" (could match, but semantically wrong)
+#
+# Fuzzy matching should be used carefully and may require user confirmation
+# in an interactive tool.
+
+# =============================================================================
+# MAINTENANCE NOTES
+# =============================================================================
+#
+# When adding new mappings:
+# 1. Check if the target exists in the library
+# 2. Document reasoning for non-obvious mappings
+# 3. Consider if multiple mappings make sense (e.g., "Assassin" could be
+#    Rogue or a specific custom NPC)
+# 4. Test edge cases (capitalization, plurals, etc.)
+#
+# To validate this file:
+# 1. Load both NPC and Item libraries
+# 2. For each mapping, verify target exists
+# 3. Report any broken mappings

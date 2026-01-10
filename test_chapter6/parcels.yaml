@@ -1,65 +1,69 @@
 # parcels.yaml - Chapter 6: Skauril's Army
-# Treasure from encounters
+# Treasure from encounters using item references
 
 parcels:
   - name: "6.5.02 - Bridge Crew Loot"
     description: "Equipment and supplies from the defeated bridge crew"
-    contents:
-      - "50 gold pieces (in various purses)"
-      - "6 horses with riding tack"
-      - "Bridge-building tools (axes, ropes, spikes)"
-      - "Trail rations for 8 people, 5 days"
-      - "2 sets of leather armor (AT 10)"
-      - "Various weapons (scimitars, bows, daggers)"
+    coins:
+      GP: 50
+    items:
+      - name: "Broadsword"
+        count: 6
+      - name: "Long Bow"
+        count: 4
+      - name: "Dagger"
+        count: 6
+    # Note: Non-item loot like horses, tools, rations handled in story/description
   
   - name: "6.5.03 - Road Crew Loot"
-    description: "Loot from defeated road crew"
-    contents:
-      - "15 gold pieces"
-      - "30 silver pieces"
-      - "10 orcish scimitars (poor quality)"
-      - "Crude tools (axes, shovels)"
-      - "Dried meat and stale bread"
-      - "Warg pelts (if Wargs killed)"
+    description: "Loot from defeated road crew. Orcish equipment is crude and of poor quality."
+    coins:
+      GP: 15
+      SP: 30
+    items:
+      - name: "Scimitar"
+        count: 10
   
   - name: "6.5.04 - Scouting Party Loot"
-    description: "Equipment from the scouting party"
-    contents:
-      - "25 gold pieces"
-      - "Tracking equipment (excellent quality)"
-      - "Signal horn (orcish make)"
-      - "4 sets of leather armor (AT 8-10)"
-      - "Map fragment showing Skauril's route (if not destroyed)"
-      - "Warg pelts (if Wargs killed)"
+    description: "Equipment from the scouting party. Tracking equipment of excellent quality, signal horn (orcish make), map fragment showing Skauril's route (if not destroyed)."
+    coins:
+      GP: 25
+    items:
+      - name: "Scimitar"
+        count: 5
+      - name: "Long Bow"
+        count: 4
   
   - name: "6.5.05 - Foraging Party Loot"
-    description: "Supplies and equipment from foraging party"
-    contents:
-      - "40 gold pieces"
-      - "Gathered food supplies (herbs, game, roots)"
-      - item: "Healing Herbs (Woodmen Supply)"
-      - "Hunting equipment (snares, skinning knives)"
-      - "2 sets of rigid leather armor (AT 12)"
-      - "Spell component pouch (Animist's)"
-      - "Warg pelts (if Wargs killed)"
+    description: "Supplies and equipment from foraging party. Includes gathered food supplies (herbs, game, roots), hunting equipment (snares, skinning knives), and spell component pouch."
+    coins:
+      GP: 40
+    items:
+      - name: "Scimitar"
+        count: 6
   
   - name: "6.6.01 - Spoils of Gulduin"
-    description: "Thranduil's share of battle spoils offered to the PCs"
-    contents:
-      - "200 gold pieces"
-      - item: "Emerald Ring of Elf-friend"
-      - "Elven cloak (grants +10 to Hiding in forest)"
-      - "Bottle of Elven cordial (heals 1-10 HP)"
-      - "Silver dagger (+5, non-magical but fine quality)"
-      - "Choice of weapon from Elven armory"
+    description: "Thranduil's share of battle spoils offered to the PCs. Includes Elven cloak (grants +10 to Hiding in forest), bottle of Elven cordial (heals 1-10 HP), silver dagger (+5, non-magical but fine quality), and choice of weapon from Elven armory."
+    coins:
+      GP: 200
+    items:
+      - name: "Emerald Ring of Elf-friend"
+        count: 1
+      - name: "Dagger"
+        count: 1
   
   - name: "6.0.01 - Starting Equipment from Woodmen"
-    description: "Supplies provided by the Woodmen before departure"
-    contents:
-      - item: "Inerenerab"
-      - item: "Healing Herbs (Woodmen Supply)"
-      - item: "Gihellin's Dagger"
-      - "50 feet of rope"
-      - "Waterskins (full)"
-      - "Fire-starting kit"
-      - "Map drawn by Gihellin"
+    description: "Supplies provided by the Woodmen before departure. Includes 50 feet of rope, waterskins (full), fire-starting kit, and map drawn by Gihellin."
+    items:
+      - name: "Inerenerab"
+        count: 1
+      - name: "Gihellin's Dagger"
+        count: 1
+      - name: "Carefree Mustard"
+        count: 3
+      - name: "Kelventari"
+        count: 4
+      - name: "Mirenna"
+        count: 6
+      - name: "Tulavar"
+        count: 2
