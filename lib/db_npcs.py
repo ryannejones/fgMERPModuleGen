@@ -1,5 +1,5 @@
 """
-NPC XML Generator v0.11 - Generate <npc> section with item references
+NPC XML Generator v0.12 - Generate <npc> section with item references and default weapons
 Uses references to module items (single point of truth)
 When players loot, FG automatically copies full item data to character
 """
@@ -23,6 +23,18 @@ class NPCGenerator:
         self.library = library
         self.verbose = verbose
         self.next_id = 1
+        
+        # Load default weapons mapping
+        import yaml
+        import os
+        weapons_path = os.path.join(os.path.dirname(__file__), '..', 'data', 'default_weapons.yaml')
+        try:
+            with open(weapons_path, 'r') as f:
+                self.default_weapons = yaml.safe_load(f) or {}
+        except FileNotFoundError:
+            self.default_weapons = {}
+            if self.verbose:
+                print("  Warning: default_weapons.yaml not found, skipping weapon assignment")
         
     def get_next_id(self):
         """Get next NPC ID"""
@@ -163,6 +175,85 @@ class NPCGenerator:
                     # Weapon not in module, embed full data
                     self.dict_to_xml(weapon_data, weapon_elem)
     
+    def apply_default_weapons(self, npc_data: Dict, npc_name: str) -> Dict:
+        """
+        Replace melee/missile placeholders with default weapons based on NPC type
+        
+        Args:
+            npc_data: NPC data dictionary
+            npc_name: Display name of the NPC (e.g., "Fighter Level 03", "Orc, Lesser")
+            
+        Returns:
+            Modified npc_data with weapons replaced
+        """
+        if 'weapons' not in npc_data or not npc_data['weapons']:
+            return npc_data
+        
+        # Determine NPC base type (strip level if present)
+        base_type = npc_name
+        if ' Level ' in npc_name:
+            base_type = npc_name.split(' Level ')[0]
+        
+        # Check if we have default weapons for this type
+        if base_type not in self.default_weapons:
+            return npc_data
+        
+        default_config = self.default_weapons[base_type]
+        if 'weapons' not in default_config:
+            return npc_data
+        
+        # Find melee and missile placeholders
+        weapons = npc_data['weapons']
+        melee_key = None
+        missile_key = None
+        
+        for weapon_id, weapon_data in weapons.items():
+            if weapon_id.startswith('_'):
+                continue
+            if isinstance(weapon_data, dict):
+                weapon_name = weapon_data.get('name', {}).get('_text', weapon_data.get('name', '')).lower()
+                if weapon_name == 'melee':
+                    melee_key = weapon_id
+                elif weapon_name == 'missile':
+                    missile_key = weapon_id
+        
+        # Apply default weapons
+        for default_weapon in default_config['weapons']:
+            weapon_name = default_weapon['name']
+            slot = default_weapon.get('slot', 'melee')
+            ob_modifier = default_weapon.get('ob_modifier', 0)
+            
+            target_key = None
+            if slot == 'melee' and melee_key:
+                target_key = melee_key
+            elif slot == 'missile' and missile_key:
+                target_key = missile_key
+            elif slot == 'shield':
+                # Shields go in a new slot
+                target_key = f"id-{len(weapons) + 1:05d}"
+            
+            if target_key:
+                # Get base OB from placeholder if it exists
+                base_ob = 0
+                if target_key in weapons and 'ob' in weapons[target_key]:
+                    ob_data = weapons[target_key]['ob']
+                    if isinstance(ob_data, dict):
+                        base_ob = int(ob_data.get('_text', 0))
+                    else:
+                        base_ob = int(ob_data)
+                
+                # Create weapon entry
+                weapons[target_key] = {
+                    'name': {'@type': 'string', '_text': weapon_name},
+                    'ob': {'@type': 'number', '_text': str(base_ob + ob_modifier)}
+                }
+                
+                if self.verbose:
+                    mod_str = f" ({ob_modifier:+d})" if ob_modifier != 0 else ""
+                    print(f"    Assigned {weapon_name} to {npc_name} (OB {base_ob + ob_modifier}{mod_str})")
+        
+        return npc_data
+    
     def create_npc_from_library(self, npc_data: Dict, use_item_refs: bool = True) -> ET.Element:
         """
         Create NPC element from complete library data
@@ -176,6 +267,11 @@ class NPCGenerator:
         Returns:
             XML Element with complete stat block (tag will be temporary)
         """
+        # Apply default weapons if configured
+        npc_name = npc_data.get('_display_name', '')
+        if npc_name and self.default_weapons:
+            npc_data = self.apply_default_weapons(npc_data, npc_name)
+        
         # Create element with temporary tag (caller will set the real ID)
         npc_elem = ET.Element('temp')
         

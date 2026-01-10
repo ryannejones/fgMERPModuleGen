@@ -1,0 +1,105 @@
+# default_weapons.yaml
+# Maps NPC types/professions to their default weapons
+# Format:
+#   profession_or_creature_name:
+#     weapons:
+#       - name: "Weapon Name"
+#         slot: "melee" or "missile"
+#         ob_modifier: optional bonus/penalty to OB (e.g., -5, +10)
+
+# Professions
+Fighter:
+  weapons:
+    - name: "Long Sword"
+      slot: "melee"
+    - name: "Normal Shield"
+      slot: "shield"
+
+Ranger:
+  weapons:
+    - name: "Long Bow"
+      slot: "missile"
+    - name: "Short Sword"
+      slot: "melee"
+
+Rogue:
+  weapons:
+    - name: "Blow Gun"
+      slot: "missile"
+    - name: "Dagger"
+      slot: "melee"
+
+Thief:
+  weapons:
+    - name: "Blow Gun"
+      slot: "missile"
+    - name: "Dagger"
+      slot: "melee"
+
+# Spell users - staff only, no missile
+"Pure Channeling Spell User":
+  weapons:
+    - name: "Staff"
+      slot: "melee"
+
+"Pure Essence Spell User":
+  weapons:
+    - name: "Staff"
+      slot: "melee"
+
+"Pure Mentalism Spell User":
+  weapons:
+    - name: "Staff"
+      slot: "melee"
+
+Animist:
+  weapons:
+    - name: "Staff"
+      slot: "melee"
+
+Cleric:
+  weapons:
+    - name: "Staff"
+      slot: "melee"
+
+Mage:
+  weapons:
+    - name: "Staff"
+      slot: "melee"
+
+# Creatures - Orcs
+"Orc (non-combatant)":
+  weapons:
+    - name: "Club"
+      slot: "melee"
+
+"Orc":  # Alias for Orc (non-combatant)
+  weapons:
+    - name: "Club"
+      slot: "melee"
+
+"Orc, Lesser":
+  weapons:
+    - name: "Scimitar"
+      slot: "melee"
+      ob_modifier: -5
+    - name: "Short Bow"
+      slot: "missile"
+      ob_modifier: -5
+
+"Orc, Greater":
+  weapons:
+    - name: "Scimitar"
+      slot: "melee"
+    - name: "Short Bow"
+      slot: "missile"
+
+"Orc (leader)":
+  weapons:
+    - name: "Battle Axe"
+      slot: "melee"
+
+"Orc (commander)":
+  weapons:
+    - name: "Battle Axe"
+      slot: "melee"

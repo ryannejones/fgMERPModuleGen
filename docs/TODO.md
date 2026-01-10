@@ -2,7 +2,66 @@
 
 ## High Priority
 
-### 1. ⚠️ REVISIT: Spell System
+### 1. Add MERP Herb System from Rolemaster Companion 1
+**Status:** Waiting for RMC1 module
+
+**Background:**
+- MERP adventures reference specific herbs (Mirenna, Carefree Mustard, Kelventari, Tulavar, etc.)
+- These herbs have proper MERP stats (AF rating, healing amounts, effect types, codes)
+- Currently not in our item library - need to extract from Rolemaster Companion 1
+
+**Plan:**
+1. Get Rolemaster Companion 1 .mod file
+2. Extract herb/potion data from XML
+3. Add to item extraction script
+4. Regenerate `items_complete.json` with herbs included
+5. Re-add "Healing Herbs (Woodmen Supply)" to Chapter 6 parcels with proper individual herbs
+
+**Example Herb Entry:**
+- Name: Mirenna
+- Type: Herb
+- Effect: AF1. Heals 10. Instant effect.
+- Effect Type: Concus.
+- Codes: c-M-3
+- Form/Prep: Berry/ingest
+- Cost: 10gp
+
+**Files to Update:**
+- `scripts/extract_items.py` - Add RMC1 parsing
+- `data/items_complete.json` - Regenerate with herbs
+- `examples/test_chapter6_updated/items.yaml` - Re-add herbs
+- `examples/test_chapter6_updated/parcels.yaml` - Re-add to parcels
+
+---
+
+### 2. Default Weapons for Generic NPCs
+**Status:** Future enhancement
+
+**Problem:** 
+Generic NPCs (Fighter, Ranger, etc.) come with "melee" and "missile" placeholders instead of actual weapons. GMs have to manually delete these and drag in weapons for every NPC.
+
+**Solution:** 
+Pre-assign typical weapons based on profession:
+- Fighter Level X → Broadsword, maybe shield
+- Ranger Level X → Long Bow, Short Sword  
+- Rogue Level X → Dagger, Short Sword
+- Cleric/Animist → Mace, Staff
+- Warrior Monk → Staff, martial arts
+- etc.
+
+**Benefits:**
+- GMs get sensible defaults immediately
+- Still can swap them out if they disagree
+- Saves time on every encounter setup
+
+**Implementation:**
+- Add weapon assignment logic in NPCGenerator
+- Map professions to typical weapon loadouts
+- Use item references to existing weapons
+
+---
+
+### 3. ⚠️ REVISIT: Spell System
 **Status:** Needs review by someone familiar with MERP/Rolemaster magic
 
 **What We Have:**
