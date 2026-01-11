@@ -36,14 +36,33 @@ class ImageGenerator:
         # Single layer with the image file
         layer = ET.SubElement(layers, 'layer')
         
-        # Filename (display name)
-        n = ET.SubElement(layer, 'n')
+        # Layer name (filename)
+        name_elem = ET.SubElement(layer, 'name')
         filename = image.get('file', 'unknown.jpg')
-        n.text = filename
+        name_elem.text = filename
+        
+        # Layer ID (required by FG)
+        id_elem = ET.SubElement(layer, 'id')
+        id_elem.text = '0'
+        
+        # Parent ID (required by FG)
+        parentid_elem = ET.SubElement(layer, 'parentid')
+        parentid_elem.text = '-6'
+        
+        # Layer type (required by FG)
+        type_elem = ET.SubElement(layer, 'type')
+        type_elem.text = 'image'
         
         # Bitmap path (relative to module)
         bitmap = ET.SubElement(layer, 'bitmap')
         bitmap.text = f"images/{filename}"
+        
+        # Add basic grid settings (5ft squares, standard for D&D/MERP)
+        gridsize = ET.SubElement(image_data, 'gridsize')
+        gridsize.text = "50,50"  # 50 pixels per grid square
+        
+        gridoffset = ET.SubElement(image_data, 'gridoffset')
+        gridoffset.text = "0,0"  # No offset
         
         # Name (display name in FG)
         name = ET.SubElement(image_elem, 'name')

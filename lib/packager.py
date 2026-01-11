@@ -60,34 +60,47 @@ class ModulePackager:
         return self.temp_dir
     
     def copy_images(self):
-        """Copy images directory to temp directory"""
-        source_images = self.loader.module_dir / 'images'
+        """Copy images directory and thumbnail.png to temp directory"""
+        something_copied = False
         
-        if not source_images.exists() or not self.loader.images:
+        # Copy thumbnail.png if it exists (goes in root of module)
+        source_thumbnail = self.loader.module_dir / 'thumbnail.png'
+        if source_thumbnail.exists():
+            dest_thumbnail = self.temp_dir / 'thumbnail.png'
+            shutil.copy2(source_thumbnail, dest_thumbnail)
+            something_copied = True
             if self.verbose:
-                print("  [SKIP] No images to copy")
-            return False
+                print("  [OK] Copied thumbnail.png")
         
-        dest_images = self.temp_dir / 'images'
-        dest_images.mkdir(exist_ok=True)
+        # Copy ALL files from images/ directory (FG auto-imports them)
+        source_images = self.loader.module_dir / 'images'
+        if source_images.exists() and source_images.is_dir():
+            dest_images = self.temp_dir / 'images'
+            dest_images.mkdir(exist_ok=True)
+            
+            # Copy all image files
+            copied = 0
+            for source_file in source_images.rglob('*'):
+                if source_file.is_file():
+                    # Preserve directory structure
+                    rel_path = source_file.relative_to(source_images)
+                    dest_file = dest_images / rel_path
+                    
+                    # Create subdirectories if needed
+                    dest_file.parent.mkdir(parents=True, exist_ok=True)
+                    
+                    shutil.copy2(source_file, dest_file)
+                    copied += 1
+            
+            if copied > 0:
+                something_copied = True
+                if self.verbose:
+                    print(f"  [OK] Copied {copied} image files")
         
-        # Copy all image files
-        copied = 0
-        for image in self.loader.images:
-            source_file = source_images / image['file']
-            if source_file.exists():
-                dest_file = dest_images / image['file']
-                
-                # Create subdirectories if needed
-                dest_file.parent.mkdir(parents=True, exist_ok=True)
-                
-                shutil.copy2(source_file, dest_file)
-                copied += 1
+        if not something_copied and self.verbose:
+            print("  [SKIP] No images to copy")
         
-        if self.verbose:
-            print(f"  [OK] Copied {copied} image files")
-        
-        return True
+        return something_copied
     
     def create_zip(self, output_path):
         """Create .mod file (zip archive) from temp directory"""
