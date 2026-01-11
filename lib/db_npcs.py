@@ -179,12 +179,20 @@ class NPCGenerator:
                             name_elem.text = weapon_data['name']
                     
                     if 'ob' in weapon_data:
-                        ob_elem = ET.SubElement(weapon_elem, 'ob')
-                        ob_elem.set('type', 'number')
-                        if isinstance(weapon_data['ob'], dict):
-                            ob_elem.text = str(weapon_data['ob'].get('_text', '0'))
-                        else:
-                            ob_elem.text = str(weapon_data['ob'])
+                        try:
+                            ob_elem = ET.SubElement(weapon_elem, 'ob')
+                            ob_elem.set('type', 'number')
+                            ob_val = weapon_data['ob']
+                            if isinstance(ob_val, dict):
+                                ob_text = str(ob_val.get('_text', '0'))
+                            else:
+                                ob_text = str(ob_val)
+                            ob_elem.text = ob_text
+                            if self.verbose:
+                                print(f"      DEBUG: Wrote OB {ob_text} for {weapon_name}")
+                        except Exception as e:
+                            if self.verbose:
+                                print(f"      ERROR writing OB for {weapon_name}: {e}")
                     
                     # Add count if specified
                     if 'count' in weapon_data:
@@ -197,6 +205,41 @@ class NPCGenerator:
                 else:
                     # Weapon not in module, embed full data
                     self.dict_to_xml(weapon_data, weapon_elem)
+    
+    def add_tokens(self, npc_elem: ET.Element, npc_name: str):
+        """
+        Add token elements to NPC if matching token files exist
+        
+        Args:
+            npc_elem: NPC XML element to add tokens to
+            npc_name: Display name of the NPC
+        """
+        # Normalize the NPC name to match token filenames
+        normalized_name = self.loader.normalize_npc_name(npc_name)
+        
+        # Check if we have tokens for this NPC
+        if normalized_name not in self.loader.tokens:
+            return
+        
+        tokens = self.loader.tokens[normalized_name]
+        
+        # Add picture token if available
+        if 'picture' in tokens:
+            picture = ET.SubElement(npc_elem, 'picture')
+            picture.set('type', 'token')
+            picture.text = tokens['picture']
+        
+        # Add standard token if available
+        if 'token' in tokens:
+            token = ET.SubElement(npc_elem, 'token')
+            token.set('type', 'token')
+            token.text = tokens['token']
+        
+        # Add 3D flat token if available
+        if 'token3dflat' in tokens:
+            token3d = ET.SubElement(npc_elem, 'token3Dflat')
+            token3d.set('type', 'token')
+            token3d.text = tokens['token3dflat']
     
     def apply_default_weapons(self, npc_data: Dict, npc_name: str) -> Dict:
         """
@@ -328,6 +371,9 @@ class NPCGenerator:
         
         # Create element with temporary tag (caller will set the real ID)
         npc_elem = ET.Element('temp')
+        
+        # Add tokens if available
+        self.add_tokens(npc_elem, npc_name)
         
         if use_item_refs:
             # Convert NPC data but skip weapon section
