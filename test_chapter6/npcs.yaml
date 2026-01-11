@@ -1,90 +1,321 @@
 # npcs.yaml - Chapter 6: Skauril's Army
-# Custom NPCs using complete library system
+# NPCs for the Battle of Southern Mirkwood
 
 npcs:
-  # Custom Orc Warrior template for regular orc soldiers
-  - name: "Orc Warrior"
-    based_on: "Orc (leader)"
-    modifications:
-      hits:
-        "@type": "number"
-        "_text": "60"
-      weapons:
-        id-00001:
-          ob:
-            "@type": "number"
-            "_text": "50"
-    description: "Regular orc warrior. Standard soldier in orcish armies."
-
-  - name: "Gardagd"
-    based_on: "Ranger"  # Scout/Assassin is closest to Ranger
-    level: 7
-    modifications:
-      hits:
-        "@type": "number"
-        "_text": "60"
-      armortype:
-        "@type": "number"
-        "_text": "12"
-      defensivebonus:
-        "@type": "number"
-        "_text": "20"
-      baserate:
-        "@type": "number"
-        "_text": "50"
-    description: "Self-trained ranger turned bandit turned assassin. Lost family to Easterling raiders. Enrolled in Skauril's company but secretly hates his Easterling master. Tracking, Stalking, Hiding, Ambush. Bitter hatred of Easterlings. Will kill Skauril if given easy opportunity."
+  # ===== UNIQUE NAMED NPCs =====
   
   - name: "Skauril the Conjurer"
-    based_on: "Pure Channeling Spell User"  # Evil Cleric/Conjurer
-    level: 15
-    modifications:
-      hits:
-        "@type": "number"
-        "_text": "130"
-      armortype:
-        "@type": "number"
-        "_text": "15"
-      defensivebonus:
-        "@type": "number"
-        "_text": "30"
-      baserate:
-        "@type": "number"
-        "_text": "50"
-    description: "Lieutenant of the Witch-king. Commands assault on Thranduil's Elves. Crafty, experienced, but values own life above all. Wears Necklace of Deployment for escape. Necromancy, Summoning, Darkness spells. Commands army of 500+ Orcs and Men. Tactically experienced. Will abandon army to save himself."
-    # Note: Spells should be added in Fantasy Grounds - Leaving, Limbwalking, Levitate, Invisibility, Nature's Awareness, Change of Kind, Plant Facade, Long Ear
+    based_on: "Pure Essence Spell User"
+    level: 10
+    hp: 35
+    at: 2
+    db: 0
+    baserate: 50
+    race: "Easterling"
+    group: "NPCs"
+    
+    weapons:
+      - weapon: "Short Sword"
+        ob: 20
+      - weapon: "Short Bow"
+        ob: 15
+    
+    abilities: "Lieutenant to Khamûl the Easterling. Necklace of Deployment, Ring of Shielding. Commands army of 500+ Orcs and Men."
+    spells: "Fire law, Water law, Wind law, Light law, Earth law, Ice law, Lofty Bridge, Living Change, Spirit Mastery, Spell Ways, Unbarring Ways, Directed Spells (all to 10th level). Animal Handling 45, Animal Healing 15."
+    stats: "Co86, Ag81, SD35, Me97, Re98, St74, Qu72, Pr63, Em100, In87"
+    description: "Lieutenant of the Witch-king. Commands assault on Thranduil's Elves. Crafty, experienced, but values own life above all. Will abandon army to save himself."
   
-  - name: "Gihellin"
-    based_on: "Fighter"  # Elven Warrior closest to Fighter
-    level: 5
-    modifications:
-      hits:
-        "@type": "number"
-        "_text": "55"
-      armortype:
-        "@type": "number"
-        "_text": "13"
-      defensivebonus:
-        "@type": "number"
-        "_text": "25"
-      baserate:
-        "@type": "number"
-        "_text": "60"
-    description: "Young Sindar Elf. Footloose traveler and courier. Addresses PCs as 'Elf-friends.' Offers family heirloom dagger to aid the quest. Elven senses, woodland paths knowledge, courier for Thranduil. Friendly to Men."
+  - name: "Penemith"
+    based_on: "Rogue"
+    level: 8
+    hp: 90
+    at: 13
+    db: 50
+    baserate: 50
+    race: "Gondorian"
+    group: "NPCs"
+    
+    weapons:
+      - weapon: "Battle Axe"
+        ob: 110
+      - weapon: "Long Bow"
+        ob: 75
+    
+    defences:
+      - name: "+10 Chain Shirt"
+        melee_bonus: 10
+        missile_bonus: 10
+    
+    abilities: "Skauril's assistant. +15 long bow. Cards +10 gambling. Fire law (5), Unbarring ways (5)."
+    stats: "Co94, Ag90, SD61, Me81, Re72, Sg90, Qu92, Pr60, Em59, In90"
+    description: "Gondorian thief turned to evil. Serves Skauril as his primary assistant and enforcer."
   
   - name: "Natak"
-    based_on: "Orc (commander)"  # Orc Commander
-    level: 8
-    modifications:
-      hits:
-        "@type": "number"
-        "_text": "95"
-      armortype:
-        "@type": "number"
-        "_text": "14"
-      defensivebonus:
-        "@type": "number"
-        "_text": "15"
-      baserate:
-        "@type": "number"
-        "_text": "50"
-    description: "Largest of his brood. Never learned subtlety—uses strength and terror. Orcs fear him more than the enemy. Darkvision, Commands through fear and brutality. Orcs under his command prefer front lines to stay away from him."
+    based_on: "Orc, Greater"
+    level: 5
+    hp: 76
+    at: 20
+    db: 20
+    baserate: 50
+    group: "Monsters"
+    
+    weapons:
+      - weapon: "Throwing Hammer"
+        ob: 90
+      - weapon: "Long Bow"
+        ob: 50
+    
+    defences:
+      - name: "+10 Plate Armor with Horned Drake Helm"
+        melee_bonus: 10
+        missile_bonus: 10
+    
+    abilities: "Commander of Skauril's Orcs at the battle of the Gladuin. Wields 'Reaver' +15 two-handed sword of slaying Dwarves. Darkvision."
+    stats: "Co96, Ag85, SD71, Me74, Re78, St93, Qu81, Pr91, Em65, In80"
+    description: "Largest and most brutal of the Uruks. Commands through fear and terror. His own troops fear him more than the enemy."
+    tokens:
+      picture: "images/Half-Orc Barbarian male.webp@FG Heroic Male Characters HMC1"
+      token: "tokens/Half-Orc Barbarian male.webp@FG Heroic Male Characters HMC1"
+      token3dflat: "images/Half-Orc Barbarian male.webp@FG Heroic Male Characters HMC1"
+  
+  - name: "Gardagd"
+    based_on: "Rogue"
+    level: 5
+    hp: 68
+    at: 13
+    db: 25
+    baserate: 60
+    race: "Common Man"
+    group: "NPCs"
+    
+    weapons:
+      - weapon: "Throwing Hammer"
+        ob: 60
+      - weapon: "Long Bow"
+        ob: 70
+    
+    abilities: "Tracking, Stalking, Hiding, Ambush. Bitter hatred of Easterlings. Will kill Skauril if given easy opportunity."
+    description: "Self-trained ranger turned bandit turned assassin. Lost family to Easterling raiders. Enrolled in Skauril's company but secretly hates his Easterling master."
+  
+  - name: "Sergeant"
+    based_on: "Fighter"
+    level: 5
+    hp: 70
+    at: 12
+    db: 40
+    baserate: 50
+    race: "Common Man"
+    group: "NPCs"
+    
+    weapons:
+      - weapon: "Battle Axe"
+        ob: 80
+      - weapon: "Long Bow"
+        ob: 50
+    
+    defences:
+      - name: "Shield"
+        melee_bonus: 0
+        missile_bonus: 0
+    
+    abilities: "Iron weapons. Leads units of bandits in Skauril's army."
+    description: "Experienced soldier who has turned to raiding. Commands respect through competence rather than fear."
+  
+  - name: "Bandit"
+    based_on: "Rogue"
+    level: 3
+    hp: 30
+    at: 10
+    db: 20
+    baserate: 50
+    race: "Common Man"
+    group: "NPCs"
+    
+    weapons:
+      - weapon: "Long Sword"
+        ob: 30
+      - weapon: "Sling"
+        ob: 30
+    
+    abilities: "Iron weapons. Low morale - will flee if battle goes badly."
+    description: "Desperate men driven to banditry by war and hardship. Fight reluctantly and flee quickly."
+
+  # ===== GENERIC TROOPS (with token references) =====
+  
+  - name: "Animist"
+    based_on: "Pure Channeling Spell User"
+    level: 5
+    tokens:
+      picture: "images/Druid.webp@FG Fantasy Monsters FM1"
+      token: "tokens/Druid.webp@FG Fantasy Monsters FM1"
+      token3dflat: "images/Druid.webp@FG Fantasy Monsters FM1"
+  
+  - name: "Ranger"
+    based_on: "Ranger"
+    level: 5
+    tokens:
+      picture: "images/Scout.webp@FG Fantasy Monsters FM1"
+      token: "tokens/Scout.webp@FG Fantasy Monsters FM1"
+      token3dflat: "images/Scout.webp@FG Fantasy Monsters FM1"
+  
+  - name: "Scout"
+    based_on: "Fighter"
+    level: 3
+    hp: 40
+    at: 4
+    db: 20
+    baserate: 50
+    race: "Common Man"
+    
+    weapons:
+      - weapon: "Dagger"
+        ob: 65
+      - weapon: "Dagger"
+        ob: 50
+    
+    abilities: "+30 Detect Traps. Steel weapons."
+    description: "Skilled scouts in Skauril's army. Used for reconnaissance and trap detection."
+  
+  - name: "Warrior"
+    based_on: "Fighter"
+    level: 1
+    hp: 25
+    at: 9
+    db: 10
+    baserate: 50
+    race: "Common Man"
+    
+    weapons:
+      - weapon: "Battle Axe"
+        ob: 35
+      - weapon: "Short Bow"
+        ob: 40
+    
+    abilities: "Steel weapons. Basic infantry in Skauril's forces."
+    description: "Common soldiers forming the bulk of Skauril's human forces."
+  
+  - name: "Overseer"
+    based_on: "Fighter"
+    level: 4
+    hp: 70
+    at: 13
+    db: 35
+    baserate: 50
+    race: "Common Man"
+    
+    weapons:
+      - weapon: "Throwing Hammer"
+        ob: 75
+      - weapon: "Long Bow"
+        ob: 40
+    
+    abilities: "Steel weapons. Commands road crew units of orcs and wargs."
+    description: "Brutal taskmasters who keep the orc workers in line through fear and violence."
+
+  # ===== CREATURES (with token references) =====
+  
+  - name: "Orc Scout"
+    based_on: "Orc, Lesser"
+    tokens:
+      picture: "images/Orc.webp@FG Fantasy Monsters FM1"
+      token: "tokens/Orc.webp@FG Fantasy Monsters FM1"
+      token3dflat: "images/Orc.webp@FG Fantasy Monsters FM1"
+  
+  - name: "Orc Uruk"
+    based_on: "Orc (leader)"
+    tokens:
+      picture: "images/Oni.webp@FG Fantasy Monsters FM1"
+      token: "tokens/Oni.webp@FG Fantasy Monsters FM1"
+      token3dflat: "images/Oni.webp@FG Fantasy Monsters FM1"
+  
+  - name: "Giant Spider"
+    based_on: "Giant Spider"
+    tokens:
+      picture: "images/Giant Spider.webp@FG Fantasy Monsters FM1"
+      token: "tokens/Giant Spider.webp@FG Fantasy Monsters FM1"
+      token3dflat: "images/Giant Spider.webp@FG Fantasy Monsters FM1"
+  
+  - name: "Warg"
+    based_on: "Warg"
+    tokens:
+      picture: "images/Worg.webp@FG Fantasy Monsters FM1"
+      token: "tokens/Worg.webp@FG Fantasy Monsters FM1"
+      token3dflat: "images/Worg.webp@FG Fantasy Monsters FM1"
+  
+  - name: "Orc Warrior"
+    based_on: "Orc, Lesser"
+    level: 3
+    hp: 45
+    at: 9
+    db: 35
+    baserate: 50
+    
+    weapons:
+      - weapon: "Scimitar"
+        ob: 60
+      - weapon: "Battle Axe"
+        ob: 40
+    
+    defences:
+      - name: "Shield"
+        melee_bonus: 0
+        missile_bonus: 0
+    
+    abilities: "Low steel weapons. Form the core of Skauril's orc forces."
+    description: "Lesser orcs pressed into service. Fight better than expected due to fear of their commanders."
+  
+  - name: "Uruk Sergeant"
+    based_on: "Orc, Greater"
+    level: 4
+    hp: 60
+    at: 20
+    db: 10
+    baserate: 50
+    
+    weapons:
+      - weapon: "Scimitar"
+        ob: 70
+      - weapon: "Long Bow"
+        ob: 45
+    
+    abilities: "High steel weapons. Elite orc warriors. Darkvision."
+    description: "Larger and more skilled uruks who serve as sergeants in Skauril's forces."
+  
+  - name: "Uruk Leader"
+    based_on: "Orc (leader)"
+    level: 5
+    hp: 85
+    at: 9
+    db: 50
+    baserate: 50
+    
+    weapons:
+      - weapon: "Scimitar"
+        ob: 75
+      - weapon: "Long Bow"
+        ob: 50
+    
+    defences:
+      - name: "Shield"
+        melee_bonus: 0
+        missile_bonus: 0
+    
+    abilities: "High steel weapons. Commands scouting units. Darkvision."
+    description: "Battle-hardened uruk commanders who lead scouting and raiding parties."
+  
+  - name: "Tracking Orc"
+    based_on: "Orc, Lesser"
+    level: 2
+    hp: 30
+    at: 10
+    db: 30
+    baserate: 50
+    
+    weapons:
+      - weapon: "Scimitar"
+        ob: 30
+      - weapon: "Dagger"
+        ob: 40
+    
+    abilities: "+40 Stalk & Hide, +30 Track. Steel weapons. Darkvision."
+    description: "Orcs trained specifically for tracking and hunting. Used in scouting and foraging parties."

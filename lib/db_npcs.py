@@ -408,11 +408,55 @@ class NPCGenerator:
                             w_name = w_name.get('_text', 'unknown')
                         print(f"      {w_id}: {w_name}")
         
+        # Override with YAML weapons if provided
+        if yaml_npc and 'weapons' in yaml_npc:
+            # Convert YAML weapons list to library format dict
+            # This overrides default/base weapons with custom YAML weapons
+            npc_data['weapons'] = {}
+            for idx, weapon_spec in enumerate(yaml_npc['weapons'], 1):
+                weapon_name = weapon_spec.get('weapon')
+                ob = weapon_spec.get('ob', 0)
+                bonus = weapon_spec.get('bonus', 0)
+                
+                # Find weapon in item library
+                weapon_result = self.library.find_item(weapon_name)
+                if weapon_result['found']:
+                    weapon_data = weapon_result['entry'].copy()
+                    # Set custom OB if specified
+                    if ob:
+                        weapon_data['ob'] = {'@type': 'number', '_text': str(ob)}
+                    if bonus:
+                        weapon_data['bonus'] = {'@type': 'number', '_text': str(bonus)}
+                    npc_data['weapons'][f'id-{idx:04d}'] = weapon_data
+        
+        # Override with YAML defences if provided
+        if yaml_npc and 'defences' in yaml_npc:
+            # Convert YAML defences list to library format dict
+            npc_data['defences'] = {}
+            for idx, defence_spec in enumerate(yaml_npc['defences'], 1):
+                defence_name = defence_spec.get('name')
+                melee_bonus = defence_spec.get('melee_bonus', 0)
+                missile_bonus = defence_spec.get('missile_bonus', 0)
+                
+                # Create defence entry
+                npc_data['defences'][f'id-{idx:04d}'] = {
+                    'name': {'@type': 'string', '_text': defence_name},
+                    'melee': {'@type': 'number', '_text': str(melee_bonus)},
+                    'missile': {'@type': 'number', '_text': str(missile_bonus)}
+                }
+        
         # Create element with temporary tag (caller will set the real ID)
         npc_elem = ET.Element('temp')
         
-        # Add tokens if available (check YAML first, then file-based)
-        self.add_tokens(npc_elem, npc_name, yaml_npc)
+        # Remove token fields from npc_data so FG generates letter badges automatically
+        # Empty token fields from library data prevent FG's auto-generation
+        for token_field in ['token', 'picture', 'token3Dflat']:
+            if token_field in npc_data:
+                del npc_data[token_field]
+        
+        # Ensure nonid_name is set (this is what shows in combat tracker even when not identified)
+        if 'nonid_name' not in npc_data:
+            npc_data['nonid_name'] = {'@type': 'string', '_text': npc_name}
         
         if use_item_refs:
             # Convert NPC data but skip weapon section
@@ -476,7 +520,18 @@ class NPCGenerator:
         else:
             based_on = yaml_npc['based_on']
             level = yaml_npc.get('level')
-            modifications = yaml_npc.get('modifications', {})
+            
+            # Collect modifications - both from explicit modifications dict
+            # and from top-level attributes (but skip structural fields and weapons/defences)
+            modifications = yaml_npc.get('modifications', {}).copy()
+            
+            # Add top-level attributes as modifications (skip meta and structural fields)
+            skip_fields = {'name', 'based_on', 'modifications', 'tokens', 
+                          'weapons', 'defences', 'group'}  # weapons/defences handled separately
+            # Note: 'level' is NOT skipped - if specified, it overrides the template level
+            for key, value in yaml_npc.items():
+                if key not in skip_fields and key not in modifications:
+                    modifications[key] = value
             
             result = self.library.create_custom_npc(
                 npc_name,
@@ -524,30 +579,42 @@ class NPCGenerator:
             for yaml_npc in self.loader.npcs:
                 npc_elem = self.create_npc_from_yaml(yaml_npc)
                 if npc_elem is not None:
+                    # Append to tree (this sets the real ID tag)
                     npc_root.append(npc_elem)
                     custom_count += 1
-                    # Track this NPC
+                    # Track this NPC by name (tag is now set by append)
                     npc_name = yaml_npc.get('name')
                     if npc_name:
-                        generated_npcs[npc_name] = npc_elem.tag
+                        generated_npcs[npc_name] = True  # Just mark as generated
         
         # Step 2: Collect unique NPCs from encounters
-        encounter_npcs = {}  # name -> {level, based_on} mapping
+        encounter_npcs = {}  # name -> {level, based_on, display_name} mapping
         if self.loader.encounters:
             for encounter in self.loader.encounters:
                 for npc_ref in encounter.get('npcs', []):
                     npc_name = npc_ref.get('creature') or npc_ref.get('name')
-                    if npc_name and npc_name not in generated_npcs:
+                    display_name = npc_ref.get('display_name')
+                    
+                    # If display_name is provided, use it as the actual NPC name
+                    # and set based_on to the original npc_name
+                    if display_name:
+                        final_name = display_name
+                        final_based_on = npc_ref.get('based_on') or npc_name
+                    else:
+                        final_name = npc_name
+                        final_based_on = npc_ref.get('based_on')
+                    
+                    if final_name and final_name not in generated_npcs:
                         # Store unique NPC with its details
-                        key = npc_name
+                        key = final_name
                         if npc_ref.get('level'):
-                            key = f"{npc_name}_L{npc_ref['level']}"
+                            key = f"{final_name}_L{npc_ref['level']}"
                         
                         if key not in encounter_npcs:
                             encounter_npcs[key] = {
-                                'name': npc_name,
+                                'name': final_name,
                                 'level': npc_ref.get('level'),
-                                'based_on': npc_ref.get('based_on')
+                                'based_on': final_based_on
                             }
         
         # Step 3: Generate NPCs from encounters
@@ -573,8 +640,8 @@ class NPCGenerator:
                 if npc_elem is not None:
                     npc_root.append(npc_elem)
                     encounter_count += 1
-                    # Track this NPC by original name for battle references
-                    generated_npcs[npc_name] = npc_elem.tag
+                    # Track this NPC by name for battle references
+                    generated_npcs[npc_name] = True  # Just mark as generated
         
         if self.verbose:
             print(f"  [OK] Generated {custom_count} custom NPCs")
