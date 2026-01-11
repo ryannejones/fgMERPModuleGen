@@ -206,14 +206,52 @@ class NPCGenerator:
                     # Weapon not in module, embed full data
                     self.dict_to_xml(weapon_data, weapon_elem)
     
-    def add_tokens(self, npc_elem: ET.Element, npc_name: str):
+    def add_tokens(self, npc_elem: ET.Element, npc_name: str, yaml_npc: Dict = None):
         """
-        Add token elements to NPC if matching token files exist
+        Add token elements to NPC
+        
+        Priority order:
+        1. Tokens specified in YAML (can reference other modules)
+        2. Token files in tokens/ folder (auto-detected by name)
+        3. None (FG generates letter badges)
         
         Args:
             npc_elem: NPC XML element to add tokens to
             npc_name: Display name of the NPC
+            yaml_npc: Optional YAML NPC specification
         """
+        tokens_added = False
+        
+        # Priority 1: Check if tokens are specified in YAML
+        if yaml_npc and 'tokens' in yaml_npc:
+            yaml_tokens = yaml_npc['tokens']
+            
+            # Add picture token if specified
+            if 'picture' in yaml_tokens:
+                picture = ET.SubElement(npc_elem, 'picture')
+                picture.set('type', 'token')
+                picture.text = yaml_tokens['picture']
+                tokens_added = True
+            
+            # Add standard token if specified
+            if 'token' in yaml_tokens:
+                token = ET.SubElement(npc_elem, 'token')
+                token.set('type', 'token')
+                token.text = yaml_tokens['token']
+                tokens_added = True
+            
+            # Add 3D flat token if specified
+            if 'token3dflat' in yaml_tokens:
+                token3d = ET.SubElement(npc_elem, 'token3Dflat')
+                token3d.set('type', 'token')
+                token3d.text = yaml_tokens['token3dflat']
+                tokens_added = True
+            
+            # If YAML tokens were specified, we're done
+            if tokens_added:
+                return
+        
+        # Priority 2: Check for file-based tokens
         # Normalize the NPC name to match token filenames
         normalized_name = self.loader.normalize_npc_name(npc_name)
         
@@ -341,7 +379,7 @@ class NPCGenerator:
         
         return npc_data
     
-    def create_npc_from_library(self, npc_data: Dict, use_item_refs: bool = True) -> ET.Element:
+    def create_npc_from_library(self, npc_data: Dict, use_item_refs: bool = True, yaml_npc: Dict = None) -> ET.Element:
         """
         Create NPC element from complete library data
         
@@ -350,6 +388,7 @@ class NPCGenerator:
         Args:
             npc_data: Complete NPC dictionary from library
             use_item_refs: If True, use item references where possible
+            yaml_npc: Optional YAML NPC specification (for tokens, etc.)
             
         Returns:
             XML Element with complete stat block (tag will be temporary)
@@ -372,8 +411,8 @@ class NPCGenerator:
         # Create element with temporary tag (caller will set the real ID)
         npc_elem = ET.Element('temp')
         
-        # Add tokens if available
-        self.add_tokens(npc_elem, npc_name)
+        # Add tokens if available (check YAML first, then file-based)
+        self.add_tokens(npc_elem, npc_name, yaml_npc)
         
         if use_item_refs:
             # Convert NPC data but skip weapon section
@@ -428,7 +467,7 @@ class NPCGenerator:
             self.loader.name_to_id['npc'][npc_name] = npc_id
             
             # Create XML from library data (with item references)
-            npc_elem = self.create_npc_from_library(result['entry'], use_item_refs=True)
+            npc_elem = self.create_npc_from_library(result['entry'], use_item_refs=True, yaml_npc=yaml_npc)
             # Update the element's tag to the assigned ID
             npc_elem.tag = npc_id
             return npc_elem
@@ -460,7 +499,7 @@ class NPCGenerator:
             self.loader.name_to_id['npc'][npc_name] = npc_id
             
             # Create XML from custom data (with item references)
-            npc_elem = self.create_npc_from_library(result['entry'], use_item_refs=True)
+            npc_elem = self.create_npc_from_library(result['entry'], use_item_refs=True, yaml_npc=yaml_npc)
             # Update the element's tag to the assigned ID
             npc_elem.tag = npc_id
             return npc_elem

@@ -2,6 +2,98 @@
 
 The Fantasy Grounds module generator automatically detects and assigns token images to NPCs. Tokens are the visual representations of NPCs that appear in the combat tracker and on maps.
 
+## Token Assignment Methods
+
+There are **two ways** to assign tokens to NPCs:
+
+1. **YAML Token References** - Reference tokens from FG modules or external sources
+2. **File-Based Tokens** - Provide your own token image files
+
+The generator checks in this priority order:
+1. YAML tokens specified in `npcs.yaml` (if provided)
+2. Token files in `tokens/` folder (auto-detected by name)
+3. No tokens → Fantasy Grounds generates letter badges automatically
+
+## Method 1: YAML Token References
+
+Specify token references directly in your `npcs.yaml` file. This is useful for referencing tokens from Fantasy Grounds' built-in token packs or other loaded modules.
+
+### YAML Format
+
+```yaml
+npcs:
+  - name: "Gihellin"
+    race: "Elf"
+    profession: "Mage"
+    level: 5
+    tokens:
+      picture: "tokens/elf_male_noble_a_01.png@Character Pogs"
+      token: "tokens/elf_male_adventurer_a_01.png@Character Tokens"
+      token3dflat: "tokens/elf_warrior_topdown.png@Top Down Tokens"
+```
+
+### Token Reference Format
+
+The format for referencing external tokens is:
+
+```
+tokens/{filename}@{module_name}
+```
+
+**Examples:**
+- `tokens/elf_male_noble_a_01.png@Character Pogs`
+- `tokens/dwarf_warrior.png@Character Tokens`
+- `tokens/orc_topdown.png@Top Down Tokens`
+
+### Available Token Types in YAML
+
+You can specify any combination of these three token types:
+
+- **`picture`** - Portrait/artwork of the NPC
+- **`token`** - Standard token (front-facing view)
+- **`token3dflat`** - Top-down token view
+
+All three are optional. You can specify just one, two, or all three.
+
+### YAML Token Examples
+
+**Example 1: Reference all three token types from FG modules**
+```yaml
+npcs:
+  - name: "Elven Ranger"
+    profession: "Ranger"
+    level: 10
+    tokens:
+      picture: "tokens/elf_ranger_portrait.png@Character Pogs"
+      token: "tokens/elf_ranger.png@Character Tokens"
+      token3dflat: "tokens/elf_ranger_top.png@Top Down Tokens"
+```
+
+**Example 2: Only specify picture**
+```yaml
+npcs:
+  - name: "Human Fighter"
+    profession: "Fighter"
+    level: 5
+    tokens:
+      picture: "tokens/human_fighter.png@Character Pogs"
+```
+
+**Example 3: Mix of different modules**
+```yaml
+npcs:
+  - name: "Orc Chieftain"
+    based_on: "Orc, Greater"
+    level: 8
+    tokens:
+      token: "tokens/orc_leader.png@Monster Tokens"
+      token3dflat: "tokens/orc_chief_top.png@Top Down Tokens"
+```
+
+## Method 2: File-Based Tokens
+
+Place token image files in the `tokens/` folder within your adventure directory. The generator will automatically detect and assign them based on NPC names.
+
 ## Token Types
 
 Fantasy Grounds supports three types of tokens for each NPC:
