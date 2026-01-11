@@ -128,12 +128,39 @@ class ModuleLoader:
         return False
     
     def load_images(self):
-        """Load images.yaml (optional)"""
+        """Load images from images.yaml or auto-detect from images/ folder"""
+        # First try loading from images.yaml
         data = self.load_yaml_file('images.yaml')
         if data and 'images' in data:
             self.images = data['images']
             print(f"  [OK] images.yaml: {len(self.images)} images")
             return True
+        
+        # If no images.yaml, auto-detect from images/ folder
+        images_dir = self.module_dir / 'images'
+        if images_dir.exists() and images_dir.is_dir():
+            # Find all image files (common extensions)
+            image_extensions = {'.png', '.jpg', '.jpeg', '.webp', '.gif', '.bmp'}
+            detected_images = []
+            
+            for image_file in images_dir.rglob('*'):
+                if image_file.is_file() and image_file.suffix.lower() in image_extensions:
+                    # Create image entry
+                    # Use filename without extension as display name
+                    display_name = image_file.stem
+                    # Get path relative to images/ folder
+                    rel_path = image_file.relative_to(images_dir)
+                    
+                    detected_images.append({
+                        'name': display_name,
+                        'file': str(rel_path)
+                    })
+            
+            if detected_images:
+                self.images = detected_images
+                print(f"  [OK] Auto-detected {len(detected_images)} images from images/ folder")
+                return True
+        
         return False
     
     def load_all(self):

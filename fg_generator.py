@@ -1,8 +1,14 @@
 #!/usr/bin/env python3
 """
-Fantasy Grounds Module Generator
+Fantasy Grounds Module Generator v0.12
 Generates Fantasy Grounds .mod files from YAML input files
+
+New in v0.12:
+- Default weapons for NPCs (replaces melee/missile placeholders)
+- MERP herb support from Rolemaster Companion 1
 """
+
+VERSION = "0.12"
 
 import sys
 import argparse
@@ -45,7 +51,7 @@ def main():
     
     # Print header
     print("=" * 60)
-    print("Fantasy Grounds Module Generator")
+    print(f"Fantasy Grounds Module Generator v{VERSION}")
     print("=" * 60)
     print()
     

@@ -1,0 +1,58 @@
+{
+  "merp_herbs": {
+    "items": [
+      {
+        "name": "Carefree Mustard",
+        "type": "Herb",
+        "effect": "AF0. Heals all concussion hits (takes 1 hr)",
+        "effect_type": "Concussion Relief",
+        "codes": "m-C-5",
+        "form": "leaf/apply",
+        "cost": "10gp",
+        "weight": 0,
+        "notes": "AF0. Heals all concussion hits (takes 1 hr)",
+        "_display_name": "Carefree Mustard",
+        "_source_module": "Rolemaster Companion 1"
+      },
+      {
+        "name": "Tulavar",
+        "type": "Herb",
+        "effect": "AF10. Stops any form of bleeding 1 round.",
+        "effect_type": "Circulatory Repair",
+        "codes": "c-T-6",
+        "form": "leaf/boil/drink",
+        "cost": "110gp",
+        "weight": 0,
+        "notes": "AF10. Stops any form of bleeding 1 round.",
+        "_display_name": "Tulavar",
+        "_source_module": "Rolemaster Companion 1"
+      },
+      {
+        "name": "Kelventari",
+        "type": "Herb",
+        "effect": "AF0. Heals 1st and 2d degree burns, 1-10 hits resulting from heat.",
+        "effect_type": "Burn/Expos",
+        "codes": "t-T-3",
+        "form": "Berry/rub",
+        "cost": "19gp",
+        "weight": 0,
+        "notes": "AF0. Heals 1st and 2d degree burns, 1-10 hits resulting from heat.",
+        "_display_name": "Kelventari",
+        "_source_module": "Rolemaster Companion 1"
+      },
+      {
+        "name": "Mirenna",
+        "type": "Herb",
+        "effect": "AF1. Heals 10. Instant effect.",
+        "effect_type": "Concus.",
+        "codes": "c-M-3",
+        "form": "Berry/ingest",
+        "cost": "10gp",
+        "weight": 0,
+        "notes": "AF1. Heals 10. Instant effect.",
+        "_display_name": "Mirenna",
+        "_source_module": "Rolemaster Companion 1"
+      }
+    ]
+  }
+}

@@ -1,7 +1,8 @@
 """
-Items and Parcels XML Generator v0.11
+Items and Parcels XML Generator v0.12
 Generates item definitions that NPCs can reference
 When items are looted by players, FG automatically copies full data
+Includes MERP herb support from Rolemaster Companion 1
 """
 
 import xml.etree.ElementTree as ET
