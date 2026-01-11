@@ -36,37 +36,50 @@ Thief:
     - name: "Dagger"
       slot: "melee"
 
-# Spell users - no default weapons, they use spell lists (Base Spell Attack, MA Strikes)
-# If you want them to have a physical weapon, add it in npcs.yaml
-# "Pure Channeling Spell User":
-#   weapons:
-#     - name: "Quarterstaff"
-#       slot: "melee"
+# Spell users - Dagger (melee) and Light Crossbow (missile)
+# These are fallback weapons for when they can't cast spells
+# Can be overridden in npcs.yaml if needed
+"Pure Channeling Spell User":
+  weapons:
+    - name: "Dagger"
+      slot: "melee"
+    - name: "Light Crossbow"
+      slot: "missile"
 
-# "Pure Essence Spell User":
-#   weapons:
-#     - name: "Quarterstaff"
-#       slot: "melee"
+"Pure Essence Spell User":
+  weapons:
+    - name: "Dagger"
+      slot: "melee"
+    - name: "Light Crossbow"
+      slot: "missile"
 
-# "Pure Mentalism Spell User":
-#   weapons:
-#     - name: "Quarterstaff"
-#       slot: "melee"
+"Pure Mentalism Spell User":
+  weapons:
+    - name: "Dagger"
+      slot: "melee"
+    - name: "Light Crossbow"
+      slot: "missile"
 
-# Animist:
-#   weapons:
-#     - name: "Quarterstaff"
-#       slot: "melee"
+Animist:
+  weapons:
+    - name: "Dagger"
+      slot: "melee"
+    - name: "Light Crossbow"
+      slot: "missile"
 
-# Cleric:
-#   weapons:
-#     - name: "Quarterstaff"
-#       slot: "melee"
+Cleric:
+  weapons:
+    - name: "Dagger"
+      slot: "melee"
+    - name: "Light Crossbow"
+      slot: "missile"
 
-# Mage:
-#   weapons:
-#     - name: "Quarterstaff"
-#       slot: "melee"
+Mage:
+  weapons:
+    - name: "Dagger"
+      slot: "melee"
+    - name: "Light Crossbow"
+      slot: "missile"
 
 # Creatures - Orcs
 "Orc (non-combatant)":
