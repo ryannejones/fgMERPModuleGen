@@ -1,0 +1,47 @@
+diff --git a/lib/db_npcs.py b/lib/db_npcs.py
+--- a/lib/db_npcs.py
++++ b/lib/db_npcs.py
+@@ -1,10 +1,10 @@
+ """
+ NPC XML Generator v0.12 - Generate <npc> section with item references and default weapons
+ Uses references to module items (single point of truth)
+ When players loot, FG automatically copies full item data to character
+ """
+ 
+ import xml.etree.ElementTree as ET
+ from typing import Dict, Any, Optional
+ 
+ 
+ class NPCGenerator:
+@@ -31,6 +31,34 @@
+         except FileNotFoundError:
+             self.default_weapons = {}
+             if self.verbose:
+                 print("  Warning: default_weapons.yaml not found, skipping weapon assignment")
++
++    def ensure_auto_letter_token(self, npc_elem: ET.Element, npc_id: str, npc_display_name: str):
++        """
++        If no explicit token was added, assign a generated letter token.
++        This makes encounter->map dragging work even without custom token art.
++        """
++        # Don't override an existing token (e.g., from YAML tokens or file-based tokens)
++        if npc_elem.find('token') is not None:
++            return
++
++        token_path = f"tokens/{npc_id}.png"
++
++        token = ET.SubElement(npc_elem, 'token')
++        token.set('type', 'token')
++        token.text = token_path
++
++        # Record this token so the packager can generate the PNG into the .mod
++        if not hasattr(self.loader, 'generated_tokens'):
++            self.loader.generated_tokens = {}
++
++        name = (npc_display_name or "").strip()
++        initial = name[:1].upper() if name else "?"
++        self.loader.generated_tokens[token_path] = initial
+ 
+     def get_next_id(self):
+         """Get
+

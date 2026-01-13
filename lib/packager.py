@@ -136,7 +136,55 @@ class ModulePackager:
         if self.verbose:
             print("  [SKIP] No tokens to copy")
         return False
-    
+
+    def write_generated_tokens(self):
+        """
+        Write auto-generated letter token PNGs into tokens/ inside the temp module folder.
+        NPCGenerator records what it needs in loader.generated_tokens[token_path] = initial
+        """
+        gen = getattr(self.loader, "generated_tokens", None)
+        if not gen:
+            if self.verbose:
+                print("  [SKIP] No generated tokens to write")
+            return False
+
+        try:
+            from PIL import Image, ImageDraw, ImageFont
+        except ImportError as e:
+            raise RuntimeError(
+                "Auto token generation requires Pillow. Install it with: pip install pillow"
+            ) from e
+
+        wrote = 0
+        for token_path, letter in gen.items():
+            out_path = self.temp_dir / token_path  # e.g. tokens/id-00001.png
+            out_path.parent.mkdir(parents=True, exist_ok=True)
+
+            size = 100
+            img = Image.new("RGBA", (size, size), (0, 0, 0, 0))
+            draw = ImageDraw.Draw(img)
+
+            pad = 4
+            draw.ellipse((pad, pad, size - pad, size - pad), fill=(60, 60, 60, 255))
+
+            text = (letter or "?")[:1].upper()
+            try:
+                font = ImageFont.truetype("DejaVuSans-Bold.ttf", 56)
+            except Exception:
+                font = ImageFont.load_default()
+
+            bbox = draw.textbbox((0, 0), text, font=font)
+            tw = bbox[2] - bbox[0]
+            th = bbox[3] - bbox[1]
+            draw.text(((size - tw) / 2, (size - th) / 2 - 2), text, font=font, fill=(255, 255, 255, 255))
+
+            img.save(out_path, "PNG")
+            wrote += 1
+
+        if self.verbose:
+            print(f"  [OK] Wrote {wrote} generated token files")
+        return wrote > 0
+
     def create_zip(self, output_path):
         """Create .mod file (zip archive) from temp directory"""
         
@@ -149,7 +197,7 @@ class ModulePackager:
             for root, dirs, files in os.walk(self.temp_dir):
                 for file in files:
                     file_path = Path(root) / file
-                    arcname = file_path.relative_to(self.temp_dir)
+                    arcname = file_path.relative_to(self.temp_dir).as_posix()
                     zf.write(file_path, arcname)
         
         if self.verbose:
@@ -231,7 +279,10 @@ class ModulePackager:
             
             # Copy tokens
             self.copy_tokens()
-            
+           
+            # Write tokens
+            self.write_generated_tokens()
+ 
             # Create .mod file (zip)
             self.create_zip(output_path)
             

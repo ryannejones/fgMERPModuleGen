@@ -26,6 +26,7 @@ class BattleGenerator:
     
     def get_creature_link(self, creature_name):
         """Get the link reference for a creature"""
+        mod = self.loader.config["name"]
         # Check if it's a custom NPC from npcs.yaml
         if creature_name in self.loader.name_to_id.get('npc', {}):
             npc_id = self.loader.name_to_id['npc'][creature_name]
@@ -76,37 +77,33 @@ class BattleGenerator:
         recordname = ET.SubElement(link, 'recordname')
         recordname.text = link_data['recordname']
         
-        # Add maplink section for placement tokens
-        # This is what enables the placement tokens in FG
-        maplink = ET.SubElement(entry, 'maplink')
-        maplink_entry = ET.SubElement(maplink, 'id-00001')
-        
-        # Image reference (empty - no specific map placement yet)
-        imageref = ET.SubElement(maplink_entry, 'imageref')
-        imageref.set('type', 'windowreference')
-        imageref_class = ET.SubElement(imageref, 'class')
-        imageref_recordname = ET.SubElement(imageref, 'recordname')
-        
-        # Map coordinates (default to 0,0)
-        imagex = ET.SubElement(maplink_entry, 'imagex')
-        imagex.set('type', 'number')
-        imagex.text = '0'
-        
-        imagey = ET.SubElement(maplink_entry, 'imagey')
-        imagey.set('type', 'number')
-        imagey.text = '0'
-        
         # Name (use display_name if provided, otherwise creature name)
         name = ET.SubElement(entry, 'name')
         name.set('type', 'string')
         name.text = link_name
         
-        # Token (if provided)
-        if 'token' in npc_ref:
-            token = ET.SubElement(entry, 'token')
-            token.set('type', 'token')
-            token.text = npc_ref['token']
-        
+        # Token (encounter-row token drives placement icon in encounter list)
+        token_value = npc_ref.get("token")
+
+        if not token_value:
+            # recordname looks like: npc.id-00020@skaurilsarmy
+            rn = link_data.get("recordname", "")
+            if rn.startswith("npc.") and "@".join(rn.split("@")[1:]):
+                base, mod = rn.split("@", 1)          # base = npc.id-00020
+                npc_id = base.replace("npc.", "")     # id-00020
+                token_value = f"tokens/{npc_id}.png"
+            elif rn.startswith("npc."):
+                base = rn.split("@", 1)[0]
+                npc_id = base.replace("npc.", "")
+                mod = self.loader.config["name"]
+                token_value = f"tokens/{npc_id}.png"
+
+        if token_value:
+            token = ET.SubElement(entry, "token")
+            token.set("type", "token")
+            token.text = token_value
+       
+ 
         return entry
     
     def create_battle(self, encounter):
