@@ -64,7 +64,11 @@ class BattleGenerator:
         
         # Support both 'creature' (old) and 'name' (new)
         creature_name = npc_ref.get('creature') or npc_ref.get('name')
-        link_data = self.get_creature_link(creature_name)
+        
+        # If display_name is provided, link to that NPC instead (it should exist as a variant)
+        # Otherwise link to the base creature
+        link_name = npc_ref.get('display_name') or creature_name
+        link_data = self.get_creature_link(link_name)
         
         link_class = ET.SubElement(link, 'class')
         link_class.text = link_data['class']
@@ -72,14 +76,30 @@ class BattleGenerator:
         recordname = ET.SubElement(link, 'recordname')
         recordname.text = link_data['recordname']
         
-        # Name (display name if provided, otherwise creature name)
+        # Add maplink section for placement tokens
+        # This is what enables the placement tokens in FG
+        maplink = ET.SubElement(entry, 'maplink')
+        maplink_entry = ET.SubElement(maplink, 'id-00001')
+        
+        # Image reference (empty - no specific map placement yet)
+        imageref = ET.SubElement(maplink_entry, 'imageref')
+        imageref.set('type', 'windowreference')
+        imageref_class = ET.SubElement(imageref, 'class')
+        imageref_recordname = ET.SubElement(imageref, 'recordname')
+        
+        # Map coordinates (default to 0,0)
+        imagex = ET.SubElement(maplink_entry, 'imagex')
+        imagex.set('type', 'number')
+        imagex.text = '0'
+        
+        imagey = ET.SubElement(maplink_entry, 'imagey')
+        imagey.set('type', 'number')
+        imagey.text = '0'
+        
+        # Name (use display_name if provided, otherwise creature name)
         name = ET.SubElement(entry, 'name')
         name.set('type', 'string')
-        if 'display_name' in npc_ref:
-            name.text = npc_ref['display_name']
-        else:
-            # Use creature name as default
-            name.text = creature_name
+        name.text = link_name
         
         # Token (if provided)
         if 'token' in npc_ref:

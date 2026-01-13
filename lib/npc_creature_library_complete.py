@@ -258,8 +258,36 @@ class CompleteNPCCreatureLibrary:
         
         # Apply modifications
         if modifications:
+            # Field type mappings for proper FG XML conversion
+            number_fields = {'hp', 'at', 'db', 'level', 'baserate', 'reach', 'outlook'}
+            string_fields = {'profession', 'race', 'group', 'subgroup', 'abilities', 
+                           'description', 'spells', 'stats', 'size'}
+            
             for key, value in modifications.items():
-                new_entry[key] = value
+                # If the field already exists in the NPC, preserve its structure
+                if key in new_entry and isinstance(new_entry[key], dict):
+                    # Update only the _text value, preserving @type and other attributes
+                    if '_text' in new_entry[key]:
+                        new_entry[key]['_text'] = str(value)
+                    else:
+                        # Fallback: replace entirely with proper structure
+                        if key in number_fields:
+                            new_entry[key] = {'@type': 'number', '_text': str(value)}
+                        elif key in string_fields:
+                            new_entry[key] = {'@type': 'string', '_text': str(value)}
+                        else:
+                            # Unknown field - try to preserve type if possible
+                            field_type = new_entry[key].get('@type', 'string')
+                            new_entry[key] = {'@type': field_type, '_text': str(value)}
+                else:
+                    # Field doesn't exist - create new field with proper structure
+                    if key in number_fields:
+                        new_entry[key] = {'@type': 'number', '_text': str(value)}
+                    elif key in string_fields:
+                        new_entry[key] = {'@type': 'string', '_text': str(value)}
+                    else:
+                        # For unknown fields, assume string type
+                        new_entry[key] = {'@type': 'string', '_text': str(value)}
         
         return new_entry
     

@@ -20,6 +20,7 @@ class ModuleLoader:
         self.items = []
         self.parcels = []
         self.images = []
+        self.tokens = {}  # Maps normalized NPC names to available token files
         
         # Name to ID mappings (assigned during validation)
         self.name_to_id = {
@@ -163,6 +164,99 @@ class ModuleLoader:
         
         return False
     
+    @staticmethod
+    def normalize_npc_name(name):
+        """
+        Normalize NPC name for token filename matching
+        
+        Rules:
+        - Convert to lowercase
+        - Replace spaces with underscores
+        - Remove parentheses and their contents
+        - Strip "Level X" and "(Xth Level)" suffixes
+        
+        Examples:
+        - "Gihellin" → "gihellin"
+        - "Orc Scout" → "orc_scout"
+        - "Orc (leader)" → "orc_leader"
+        - "Ranger Level 15" → "ranger"
+        - "Scout (3rd Level)" → "scout"
+        """
+        import re
+        
+        # Convert to lowercase
+        normalized = name.lower()
+        
+        # Remove "Level X" suffix (e.g., "Ranger Level 15" → "Ranger")
+        normalized = re.sub(r'\s+level\s+\d+', '', normalized)
+        
+        # Remove "(Xth Level)" suffix (e.g., "Scout (3rd Level)" → "Scout")
+        normalized = re.sub(r'\s*\([^)]*level[^)]*\)', '', normalized)
+        
+        # Remove parentheses and extract their content
+        # "Orc (leader)" → "Orc leader"
+        normalized = re.sub(r'\s*\(([^)]+)\)', r' \1', normalized)
+        
+        # Replace spaces with underscores
+        normalized = normalized.replace(' ', '_')
+        
+        # Remove any remaining special characters
+        normalized = re.sub(r'[^a-z0-9_]', '', normalized)
+        
+        # Clean up multiple underscores
+        normalized = re.sub(r'_+', '_', normalized)
+        
+        # Strip leading/trailing underscores
+        normalized = normalized.strip('_')
+        
+        return normalized
+    
+    def load_tokens(self):
+        """Scan tokens/ folder for token images and build lookup dictionary"""
+        tokens_dir = self.module_dir / 'tokens'
+        
+        if not tokens_dir.exists() or not tokens_dir.is_dir():
+            return False
+        
+        # Token types to look for
+        token_types = ['picture', 'token', 'token3dflat']
+        token_extensions = {'.png', '.jpg', '.jpeg', '.webp'}
+        
+        token_count = 0
+        
+        for token_file in tokens_dir.iterdir():
+            if not token_file.is_file():
+                continue
+            
+            # Check if it's an image file
+            if token_file.suffix.lower() not in token_extensions:
+                continue
+            
+            # Parse filename: {type}-{normalized_name}.{ext}
+            filename = token_file.stem  # Without extension
+            
+            # Check if it matches pattern
+            for token_type in token_types:
+                prefix = f"{token_type}-"
+                if filename.startswith(prefix):
+                    # Extract normalized NPC name
+                    npc_name = filename[len(prefix):]
+                    
+                    # Initialize entry for this NPC if needed
+                    if npc_name not in self.tokens:
+                        self.tokens[npc_name] = {}
+                    
+                    # Store the token file path (relative to module)
+                    self.tokens[npc_name][token_type] = f"tokens/{token_file.name}"
+                    token_count += 1
+                    break
+        
+        if token_count > 0 and self.verbose:
+            print(f"  [OK] Found {token_count} token files for {len(self.tokens)} NPCs")
+            return True
+        
+        return False
+    
     def load_all(self):
         """Load all module files"""
         # module.yaml is required
@@ -176,6 +270,7 @@ class ModuleLoader:
         self.load_items()
         self.load_parcels()
         self.load_images()
+        self.load_tokens()
         
         # Check if at least some content exists
         has_content = (

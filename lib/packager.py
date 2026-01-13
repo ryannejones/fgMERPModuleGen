@@ -102,6 +102,41 @@ class ModulePackager:
         
         return something_copied
     
+    def copy_tokens(self):
+        """Copy tokens directory to temp directory"""
+        source_tokens = self.loader.module_dir / 'tokens'
+        
+        if not source_tokens.exists() or not source_tokens.is_dir():
+            if self.verbose:
+                print("  [SKIP] No tokens to copy")
+            return False
+        
+        dest_tokens = self.temp_dir / 'tokens'
+        dest_tokens.mkdir(exist_ok=True)
+        
+        # Copy all token files
+        copied = 0
+        for source_file in source_tokens.rglob('*'):
+            if source_file.is_file():
+                # Preserve directory structure
+                rel_path = source_file.relative_to(source_tokens)
+                dest_file = dest_tokens / rel_path
+                
+                # Create subdirectories if needed
+                dest_file.parent.mkdir(parents=True, exist_ok=True)
+                
+                shutil.copy2(source_file, dest_file)
+                copied += 1
+        
+        if copied > 0:
+            if self.verbose:
+                print(f"  [OK] Copied {copied} token files")
+            return True
+        
+        if self.verbose:
+            print("  [SKIP] No tokens to copy")
+        return False
+    
     def create_zip(self, output_path):
         """Create .mod file (zip archive) from temp directory"""
         
@@ -193,6 +228,9 @@ class ModulePackager:
             
             # Copy images
             self.copy_images()
+            
+            # Copy tokens
+            self.copy_tokens()
             
             # Create .mod file (zip)
             self.create_zip(output_path)
