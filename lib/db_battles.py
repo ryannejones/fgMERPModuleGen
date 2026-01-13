@@ -76,6 +76,26 @@ class BattleGenerator:
         recordname = ET.SubElement(link, 'recordname')
         recordname.text = link_data['recordname']
         
+        # Add maplink section for placement tokens
+        # This is what enables the placement tokens in FG
+        maplink = ET.SubElement(entry, 'maplink')
+        maplink_entry = ET.SubElement(maplink, 'id-00001')
+        
+        # Image reference (empty - no specific map placement yet)
+        imageref = ET.SubElement(maplink_entry, 'imageref')
+        imageref.set('type', 'windowreference')
+        imageref_class = ET.SubElement(imageref, 'class')
+        imageref_recordname = ET.SubElement(imageref, 'recordname')
+        
+        # Map coordinates (default to 0,0)
+        imagex = ET.SubElement(maplink_entry, 'imagex')
+        imagex.set('type', 'number')
+        imagex.text = '0'
+        
+        imagey = ET.SubElement(maplink_entry, 'imagey')
+        imagey.set('type', 'number')
+        imagey.text = '0'
+        
         # Name (use display_name if provided, otherwise creature name)
         name = ET.SubElement(entry, 'name')
         name.set('type', 'string')

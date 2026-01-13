@@ -194,6 +194,30 @@ class NPCGenerator:
                             if self.verbose:
                                 print(f"      ERROR writing OB for {weapon_name}: {e}")
                     
+                    # Add attack table if present in weapon data
+                    if 'attacktable' in weapon_data:
+                        attacktable_data = weapon_data['attacktable']
+                        if isinstance(attacktable_data, dict):
+                            attacktable_elem = ET.SubElement(weapon_elem, 'attacktable')
+                            # Add table name
+                            if 'name' in attacktable_data:
+                                name_elem = ET.SubElement(attacktable_elem, 'name')
+                                name_elem.set('type', 'string')
+                                if isinstance(attacktable_data['name'], dict):
+                                    name_elem.text = attacktable_data['name'].get('_text', '')
+                                else:
+                                    name_elem.text = str(attacktable_data['name'])
+                            # Add table ID
+                            if 'tableid' in attacktable_data:
+                                tableid_elem = ET.SubElement(attacktable_elem, 'tableid')
+                                tableid_elem.set('type', 'string')
+                                if isinstance(attacktable_data['tableid'], dict):
+                                    tableid_elem.text = attacktable_data['tableid'].get('_text', '')
+                                else:
+                                    tableid_elem.text = str(attacktable_data['tableid'])
+                            if self.verbose:
+                                print(f"      DEBUG: Added attack table for {weapon_name}")
+                    
                     # Add count if specified
                     if 'count' in weapon_data:
                         count = ET.SubElement(weapon_elem, 'count')
