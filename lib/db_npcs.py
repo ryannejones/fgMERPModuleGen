@@ -35,7 +35,33 @@ class NPCGenerator:
             self.default_weapons = {}
             if self.verbose:
                 print("  Warning: default_weapons.yaml not found, skipping weapon assignment")
+    
+    def ensure_auto_letter_token(self, npc_elem: ET.Element, npc_id: str, npc_display_name: str):
+        """
+        If no explicit token was added, assign a generated letter token.
+        This makes encounter->map dragging work even without custom token art.
+        """
+
+        mod = self.loader.config["name"]
         
+        # Don't override an existing token (e.g., from YAML tokens or file-based tokens)
+        if npc_elem.find('token') is not None:
+            return
+
+        token_path = f"tokens/{npc_id}.png"
+
+        token = ET.SubElement(npc_elem, 'token')
+        token.set('type', 'token')
+        token.text = token_path
+
+        # Record this token so the packager can generate the PNG into the .mod
+        if not hasattr(self.loader, 'generated_tokens'):
+            self.loader.generated_tokens = {}
+
+        name = (npc_display_name or "").strip()
+        initial = name[:1].upper() if name else "?"
+        self.loader.generated_tokens[token_path] = initial
+    
     def get_next_id(self):
         """Get next NPC ID"""
         npc_id = f"id-{self.next_id:05d}"
@@ -538,6 +564,7 @@ class NPCGenerator:
             npc_elem = self.create_npc_from_library(result['entry'], use_item_refs=True, yaml_npc=yaml_npc)
             # Update the element's tag to the assigned ID
             npc_elem.tag = npc_id
+            self.ensure_auto_letter_token(npc_elem, npc_id, npc_name)
             return npc_elem
         
         # Case 3: Custom NPC based on template
@@ -581,6 +608,7 @@ class NPCGenerator:
             npc_elem = self.create_npc_from_library(result['entry'], use_item_refs=True, yaml_npc=yaml_npc)
             # Update the element's tag to the assigned ID
             npc_elem.tag = npc_id
+            self.ensure_auto_letter_token(npc_elem, npc_id, npc_name)
             return npc_elem
     
     def generate(self):

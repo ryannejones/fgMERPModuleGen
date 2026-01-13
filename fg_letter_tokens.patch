@@ -1,0 +1,118 @@
+diff --git a/lib/db_npcs.py b/lib/db_npcs.py
+--- a/lib/db_npcs.py
++++ b/lib/db_npcs.py
+@@ -36,6 +36,31 @@
+             if self.verbose:
+                 print("  Warning: default_weapons.yaml not found, skipping weapon assignment")
+ 
++def ensure_auto_letter_token(self, npc_elem: ET.Element, npc_id: str, npc_display_name: str):
++    """
++    If no explicit token was added, assign a generated letter token.
++    This makes encounter->map dragging work even without custom token art.
++    """
++    # Don't override an existing token (e.g., from YAML tokens or file-based tokens)
++    if npc_elem.find('token') is not None:
++        return
++
++    token_path = f"tokens/{npc_id}.png"
++
++    token = ET.SubElement(npc_elem, 'token')
++    token.set('type', 'token')
++    token.text = token_path
++
++    # Record this token so the packager can generate the PNG into the .mod
++    if not hasattr(self.loader, 'generated_tokens'):
++        self.loader.generated_tokens = {}
++
++    name = (npc_display_name or "").strip()
++    initial = name[:1].upper() if name else "?"
++    self.loader.generated_tokens[token_path] = initial
++
+     def get_next_id(self):
+         """Get next NPC ID"""
+         npc_id = f"id-{self.next_id:05d}"
+         self.next_id += 1
+@@ -757,6 +782,7 @@
+             npc_elem = self.create_npc_from_library(result['entry'], use_item_refs=True, yaml_npc=yaml_npc)
+             # Update the element's tag to the assigned ID
+             npc_elem.tag = npc_id
++            self.ensure_auto_letter_token(npc_elem, npc_id, npc_name)
+             return npc_elem
+         
+         # Case 3: Custom NPC based on template
+@@ -797,6 +823,7 @@
+             npc_elem = self.create_npc_from_library(result['entry'], use_item_refs=True, yaml_npc=yaml_npc)
+             # Update the element's tag to the assigned ID
+             npc_elem.tag = npc_id
++            self.ensure_auto_letter_token(npc_elem, npc_id, npc_name)
+             return npc_elem
+     
+     def generate(self):
+diff --git a/lib/packager.py b/lib/packager.py
+--- a/lib/packager.py
++++ b/lib/packager.py
+@@ -137,6 +137,63 @@
+         if self.verbose:
+             print("  [SKIP] No tokens to copy")
+         return False
++
++    def write_generated_tokens(self):
++        """
++        Write auto-generated letter token PNGs into tokens/ inside the temp module folder.
++        NPCGenerator records what it needs in loader.generated_tokens[token_path] = initial
++        """
++        gen = getattr(self.loader, "generated_tokens", None)
++        if not gen:
++            if self.verbose:
++                print("  [SKIP] No generated tokens to write")
++            return False
++
++        try:
++            from PIL import Image, ImageDraw, ImageFont
++        except ImportError as e:
++            raise RuntimeError(
++                "Auto token generation requires Pillow. Install it with: pip install pillow"
++            ) from e
++
++        wrote = 0
++        for token_path, letter in gen.items():
++            # token_path is like "tokens/id-00001.png"
++            out_path = self.temp_dir / token_path
++            out_path.parent.mkdir(parents=True, exist_ok=True)
++
++            size = 100
++            img = Image.new("RGBA", (size, size), (0, 0, 0, 0))
++            draw = ImageDraw.Draw(img)
++
++            # circle background
++            pad = 4
++            draw.ellipse((pad, pad, size - pad, size - pad), fill=(60, 60, 60, 255))
++
++            # letter
++            text = (letter or "?")[:1].upper()
++            try:
++                font = ImageFont.truetype("DejaVuSans-Bold.ttf", 56)
++            except Exception:
++                font = ImageFont.load_default()
++
++            bbox = draw.textbbox((0, 0), text, font=font)
++            tw = bbox[2] - bbox[0]
++            th = bbox[3] - bbox[1]
++            draw.text(((size - tw) / 2, (size - th) / 2 - 2), text, font=font, fill=(255, 255, 255, 255))
++
++            img.save(out_path, "PNG")
++            wrote += 1
++
++        if self.verbose:
++            print(f"  [OK] Wrote {wrote} generated token files")
++        return wrote > 0
+ 
+     def create_zip(self, output_path):
+         """Create .mod file (zip archive) from temp directory"""
+@@ -263,6 +320,7 @@
+             # Copy tokens
+             self.copy_tokens()
++            self.write_generated_tokens()
+             
+             # Create .mod file
+             self.create_zip(output_path)
