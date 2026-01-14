@@ -39,6 +39,8 @@ Copy the generated module into your Fantasy Grounds `modules/` directory and **r
 
 ## Pipeline Overview
 
+Phases 1-3 Load and Validate Data Tables that are built in. You should not be interacting with them. 
+
 The generator runs in clearly defined phases (mirrored in console output):
 
 ### Phase 4: Generate Items XML
