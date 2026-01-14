@@ -1,93 +1,134 @@
-# Fantasy Grounds Module Generator v0.11
+# fgMERPModuleGen
 
-**Version**: 0.11  
-**Date**: 2026-01-07  
-**Status**: Pre-Release / Development
+`fgMERPModuleGen` generates **Fantasy Grounds MERP / RMC modules** (`.mod` files) from structured YAML input.
+It assembles items, NPCs, and encounters into a module that can be imported directly into Fantasy Grounds.
 
-Complete Fantasy Grounds module generator with intelligent NPC/item matching, compound name handling, and full stat block generation.
+This tool is designed to respect **canonical Fantasy Grounds / Arms Law data**. It does not invent rules, attack tables, or override ruleset behavior.
 
-## What's New in v0.11
+---
 
-- ✅ Compound name matching documented (e.g., "Orc Scout" won't match "Scout")
-- ✅ Default level fixed: 4 → 5 (level 4 doesn't exist in library)
-- ✅ Smart partial matching feature planned for next version
-- ✅ Comprehensive matching behavior documentation
-- ✅ CHANGELOG added
-
-## Quick Start
+## Quickstart
 
 ```bash
-# Test the library
-python3 test_library.py
-
-# Generate a module
-python3 fg_generator.py examples/test_chapter6/ -v
+python fg_generator.py /path/to/source
 ```
 
-## Features
+This will generate a `.mod` file in the `output/` directory use the yaml files in your source directory. 
+You can use test_chapter6/ as an example. A clean set of templates will be furnished later. 
 
-- **715 NPCs/Creatures** with complete stat blocks
-- **1,257 Items** with complete data
-- **80 Skills** with Character Law references
-- **162 Spell Lists** across 3 realms
-- **Intelligent Matching**: Profession mappings, aliases, fuzzy matching
-- **Source Priority**: Character Law > Arms Law > Creatures & Treasures
+Copy the generated module into your Fantasy Grounds `modules/` directory and **restart Fantasy Grounds** before loading it.
 
-## Directory Structure
+> **Important:** Fantasy Grounds caches module data aggressively.  
+> If changes do not appear, fully close and restart FG.
+> If they still do not appear, right click on the module name in Modules and Reset. THIS WILL RESET EVERYTHING TO THE MODULE
 
+---
+
+## Inputs and Outputs
+
+### Inputs
+- `npcs.yaml` — custom NPC definitions
+- `default_weapons.yaml` — default melee/missile weapons by NPC type
+- Library data (e.g. `items_complete.json`) — canonical FG ruleset data
+
+### Output
+- `output/<module>.mod`
+  - Contains `db.xml` with generated items, NPCs, and encounters
+
+---
+
+## Pipeline Overview
+
+The generator runs in clearly defined phases (mirrored in console output):
+
+### Phase 4: Generate Items XML
+- Creates **module item definitions**
+- These are the *master records* NPCs will reference
+- Items are sourced from Fantasy Grounds library data
+
+### Phase 5: Generate NPC XML
+- Builds NPCs from YAML
+- Resolves weapons using:
+  - NPC-specific overrides
+  - Defaults from `default_weapons.yaml`
+- NPC weapons **reference module items** when possible
+
+**Key rule:**  
+NPCs do not define attack tables themselves — they inherit them from item definitions.
+
+---
+
+## Weapon Resolution Rules
+
+Weapon assignment follows these rules:
+
+1. If an NPC specifies a melee/missile weapon in `npcs.yaml`, it overrides defaults
+2. Missing weapon types are filled from `default_weapons.yaml`
+3. If a weapon exists as a module item:
+   - The NPC weapon links to that item
+   - The attack table is copied from the item definition
+4. If a weapon is not generated as an item:
+   - The NPC cannot link to it
+   - No attack table can be inherited
+
+---
+
+## Attack Tables (Important)
+
+Attack tables are **ruleset data**, not generator logic.
+
+- Attack tables come from Fantasy Grounds / Arms Law content
+- Multiple weapons may intentionally share the same attack table
+- This tool preserves those mappings exactly
+
+### Example (expected behavior)
+- **Long Sword uses the Broadsword attack table (ALT-04)**  
+  This is correct per Arms Law and should not be “fixed” in generator code.
+
+If a weapon appears to have the “wrong” attack table:
+1. Check the FG ruleset / Arms Law data first
+2. Verify the item definition in the generated `db.xml`
+3. Do **not** override ruleset behavior in the generator
+
+Custom behavior requires **new items**, not overrides.
+
+---
+
+## Debugging and Verbosity
+
+Use `-v` / `--verbose` to enable detailed debug output:
+
+```bash
+python fg_generator.py /path/to/source -v
 ```
-fg_module_generator_v0.11/
-├── fg_generator.py          # Main script
-├── lib/                     # Core libraries
-│   ├── library.py          # Integrated reference library
-│   ├── npc_creature_library_complete.py
-│   ├── item_library_complete.py
-│   ├── entity_matcher.py
-│   ├── db_npcs.py          # NPC XML generator
-│   ├── db_items.py         # Item XML generator
-│   └── ... (other modules)
-├── data/                    # Complete databases (13+ MB)
-│   ├── npcs_and_creatures_complete.json
-│   ├── items_complete.json
-│   ├── skill_references.json
-│   └── spell_references.json
-├── examples/                # Example YAML files
-│   └── test_chapter6/
-└── docs/                    # Documentation
-```
 
-## Documentation
+This will print extensive internal state information useful for debugging.
 
-- `README.md` - This file
-- `docs/TODO.md` - Roadmap and planned features
-- `docs/COMPOUND_NAME_MATCHING.md` - How matching works
-- `docs/MATCHING_SYSTEM_GUIDE.md` - Matching system details
-- `docs/SKILLS_REFERENCE_GUIDE.md` - Skills documentation
-- `docs/SPELLS_REFERENCE_GUIDE.md` - Spell lists documentation
+If output is noisy, you probably ran with `-v`.
+
+---
+
+## Things This Tool Will Not Do
+
+- It will not invent or modify attack tables
+- It will not override Fantasy Grounds ruleset behavior
+- It will not “correct” weapon-to-table mappings
+- It will not support per-module ruleset customizations
+
+If you need different behavior, create new items explicitly.
+
+---
+
+## Developer Notes
+
+- Library data is treated as canonical
+- Generated items are the single source of truth for NPC weapons
+- Generator code should not compensate for or reinterpret ruleset data
+- Debug output is gated behind the verbose flag
+
+---
 
 ## Status
 
-- ✅ Core library integration complete
-- ✅ Matching system working
-- ✅ Test script passing
-- ⏳ End-to-end testing needed
-- ⏳ XML generation validation needed
-
-## Next Steps
-
-See `docs/TODO.md` for complete roadmap.
-
-Priority items:
-1. Smart partial matching for failed lookups
-2. End-to-end module generation testing
-3. XML output validation
-
-## Version History
-
-- **v0.11** (2026-01-07): Compound name matching documented, default level fixed
-- **v0.10** (2026-01-07): Complete data extraction, library integration
-- **v10_FINAL** (previous): Initial version
-
-## License
-
-For MERP/Rolemaster use only. Respects ICE copyright.
+This project is under active development.  
+Documentation is intentionally minimal and focused on correctness.

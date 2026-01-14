@@ -66,40 +66,40 @@
 					<faction type="string">foe</faction>
 					<link type="windowreference">
 						<class>npc</class>
-						<recordname>npc.id-00020@skaurilsarmy</recordname>
+						<recordname>npc.id-00020</recordname>
 					</link>
 					<name type="string">Bridge Crew Ranger</name>
-					<token type="token">tokens/id-00020.png@skaurilsarmy</token>
+					<token type="token">tokens/id-00020.png</token>
 				</id-00023>
 				<id-00024>
 					<count type="number">1</count>
 					<faction type="string">foe</faction>
 					<link type="windowreference">
 						<class>npc</class>
-						<recordname>npc.id-00021@skaurilsarmy</recordname>
+						<recordname>npc.id-00021</recordname>
 					</link>
 					<name type="string">Bridge Crew Animist</name>
-					<token type="token">tokens/id-00021.png@skaurilsarmy</token>
+					<token type="token">tokens/id-00021.png</token>
 				</id-00024>
 				<id-00025>
 					<count type="number">2</count>
 					<faction type="string">foe</faction>
 					<link type="windowreference">
 						<class>npc</class>
-						<recordname>npc.id-00022@skaurilsarmy</recordname>
+						<recordname>npc.id-00022</recordname>
 					</link>
 					<name type="string">Scout (3rd Level)</name>
-					<token type="token">tokens/id-00022.png@skaurilsarmy</token>
+					<token type="token">tokens/id-00022.png</token>
 				</id-00025>
 				<id-00026>
 					<count type="number">4</count>
 					<faction type="string">foe</faction>
 					<link type="windowreference">
 						<class>npc</class>
-						<recordname>npc.id-00010@skaurilsarmy</recordname>
+						<recordname>npc.id-00010</recordname>
 					</link>
 					<name type="string">Warrior</name>
-					<token type="token">tokens/id-00010.png@skaurilsarmy</token>
+					<token type="token">tokens/id-00010.png</token>
 				</id-00026>
 			</npclist>
 		</id-00007>
@@ -112,30 +112,30 @@
 					<faction type="string">foe</faction>
 					<link type="windowreference">
 						<class>npc</class>
-						<recordname>npc.id-00012@skaurilsarmy</recordname>
+						<recordname>npc.id-00012</recordname>
 					</link>
 					<name type="string">Orc Scout</name>
-					<token type="token">tokens/id-00012.png@skaurilsarmy</token>
+					<token type="token">tokens/id-00012.png</token>
 				</id-00027>
 				<id-00028>
 					<count type="number">1</count>
 					<faction type="string">foe</faction>
 					<link type="windowreference">
 						<class>npc</class>
-						<recordname>npc.id-00023@skaurilsarmy</recordname>
+						<recordname>npc.id-00023</recordname>
 					</link>
 					<name type="string">Mannish Overseer</name>
-					<token type="token">tokens/id-00023.png@skaurilsarmy</token>
+					<token type="token">tokens/id-00023.png</token>
 				</id-00028>
 				<id-00029>
 					<count type="number">2</count>
 					<faction type="string">foe</faction>
 					<link type="windowreference">
 						<class>npc</class>
-						<recordname>npc.id-00015@skaurilsarmy</recordname>
+						<recordname>npc.id-00015</recordname>
 					</link>
 					<name type="string">Warg</name>
-					<token type="token">tokens/id-00015.png@skaurilsarmy</token>
+					<token type="token">tokens/id-00015.png</token>
 				</id-00029>
 			</npclist>
 		</id-00008>
@@ -148,30 +148,30 @@
 					<faction type="string">foe</faction>
 					<link type="windowreference">
 						<class>npc</class>
-						<recordname>npc.id-00018@skaurilsarmy</recordname>
+						<recordname>npc.id-00018</recordname>
 					</link>
 					<name type="string">Uruk Leader</name>
-					<token type="token">tokens/id-00018.png@skaurilsarmy</token>
+					<token type="token">tokens/id-00018.png</token>
 				</id-00030>
 				<id-00031>
 					<count type="number">4</count>
 					<faction type="string">foe</faction>
 					<link type="windowreference">
 						<class>npc</class>
-						<recordname>npc.id-00019@skaurilsarmy</recordname>
+						<recordname>npc.id-00019</recordname>
 					</link>
 					<name type="string">Tracking Orc</name>
-					<token type="token">tokens/id-00019.png@skaurilsarmy</token>
+					<token type="token">tokens/id-00019.png</token>
 				</id-00031>
 				<id-00032>
 					<count type="number">4</count>
 					<faction type="string">foe</faction>
 					<link type="windowreference">
 						<class>npc</class>
-						<recordname>npc.id-00015@skaurilsarmy</recordname>
+						<recordname>npc.id-00015</recordname>
 					</link>
 					<name type="string">Warg</name>
-					<token type="token">tokens/id-00015.png@skaurilsarmy</token>
+					<token type="token">tokens/id-00015.png</token>
 				</id-00032>
 			</npclist>
 		</id-00009>
@@ -184,30 +184,30 @@
 					<faction type="string">foe</faction>
 					<link type="windowreference">
 						<class>npc</class>
-						<recordname>npc.id-00024@skaurilsarmy</recordname>
+						<recordname>npc.id-00024</recordname>
 					</link>
 					<name type="string">Orcish Shaman</name>
-					<token type="token">tokens/id-00024.png@skaurilsarmy</token>
+					<token type="token">tokens/id-00024.png</token>
 				</id-00033>
 				<id-00034>
 					<count type="number">6</count>
 					<faction type="string">foe</faction>
 					<link type="windowreference">
 						<class>npc</class>
-						<recordname>npc.id-00016@skaurilsarmy</recordname>
+						<recordname>npc.id-00016</recordname>
 					</link>
 					<name type="string">Orc Warrior</name>
-					<token type="token">tokens/id-00016.png@skaurilsarmy</token>
+					<token type="token">tokens/id-00016.png</token>
 				</id-00034>
 				<id-00035>
 					<count type="number">3</count>
 					<faction type="string">foe</faction>
 					<link type="windowreference">
 						<class>npc</class>
-						<recordname>npc.id-00015@skaurilsarmy</recordname>
+						<recordname>npc.id-00015</recordname>
 					</link>
 					<name type="string">Warg</name>
-					<token type="token">tokens/id-00015.png@skaurilsarmy</token>
+					<token type="token">tokens/id-00015.png</token>
 				</id-00035>
 			</npclist>
 		</id-00010>
@@ -220,40 +220,40 @@
 					<faction type="string">foe</faction>
 					<link type="windowreference">
 						<class>npc</class>
-						<recordname>npc.id-00003@skaurilsarmy</recordname>
+						<recordname>npc.id-00003</recordname>
 					</link>
 					<name type="string">Natak</name>
-					<token type="token">tokens/id-00003.png@skaurilsarmy</token>
+					<token type="token">tokens/id-00003.png</token>
 				</id-00036>
 				<id-00037>
 					<count type="number">3</count>
 					<faction type="string">foe</faction>
 					<link type="windowreference">
 						<class>npc</class>
-						<recordname>npc.id-00025@skaurilsarmy</recordname>
+						<recordname>npc.id-00025</recordname>
 					</link>
 					<name type="string">Orc Elite</name>
-					<token type="token">tokens/id-00025.png@skaurilsarmy</token>
+					<token type="token">tokens/id-00025.png</token>
 				</id-00037>
 				<id-00038>
 					<count type="number">12</count>
 					<faction type="string">foe</faction>
 					<link type="windowreference">
 						<class>npc</class>
-						<recordname>npc.id-00016@skaurilsarmy</recordname>
+						<recordname>npc.id-00016</recordname>
 					</link>
 					<name type="string">Orc Warrior</name>
-					<token type="token">tokens/id-00016.png@skaurilsarmy</token>
+					<token type="token">tokens/id-00016.png</token>
 				</id-00038>
 				<id-00039>
 					<count type="number">6</count>
 					<faction type="string">foe</faction>
 					<link type="windowreference">
 						<class>npc</class>
-						<recordname>npc.id-00015@skaurilsarmy</recordname>
+						<recordname>npc.id-00015</recordname>
 					</link>
 					<name type="string">Warg</name>
-					<token type="token">tokens/id-00015.png@skaurilsarmy</token>
+					<token type="token">tokens/id-00015.png</token>
 				</id-00039>
 			</npclist>
 		</id-00011>
@@ -266,50 +266,50 @@
 					<faction type="string">foe</faction>
 					<link type="windowreference">
 						<class>npc</class>
-						<recordname>npc.id-00001@skaurilsarmy</recordname>
+						<recordname>npc.id-00001</recordname>
 					</link>
 					<name type="string">Skauril the Conjurer</name>
-					<token type="token">tokens/id-00001.png@skaurilsarmy</token>
+					<token type="token">tokens/id-00001.png</token>
 				</id-00040>
 				<id-00041>
 					<count type="number">1</count>
 					<faction type="string">foe</faction>
 					<link type="windowreference">
 						<class>npc</class>
-						<recordname>npc.id-00004@skaurilsarmy</recordname>
+						<recordname>npc.id-00004</recordname>
 					</link>
 					<name type="string">Gardagd</name>
-					<token type="token">tokens/id-00004.png@skaurilsarmy</token>
+					<token type="token">tokens/id-00004.png</token>
 				</id-00041>
 				<id-00042>
 					<count type="number">2</count>
 					<faction type="string">foe</faction>
 					<link type="windowreference">
 						<class>npc</class>
-						<recordname>npc.id-00026@skaurilsarmy</recordname>
+						<recordname>npc.id-00026</recordname>
 					</link>
 					<name type="string">Orc Commander</name>
-					<token type="token">tokens/id-00026.png@skaurilsarmy</token>
+					<token type="token">tokens/id-00026.png</token>
 				</id-00042>
 				<id-00043>
 					<count type="number">8</count>
 					<faction type="string">foe</faction>
 					<link type="windowreference">
 						<class>npc</class>
-						<recordname>npc.id-00027@skaurilsarmy</recordname>
+						<recordname>npc.id-00027</recordname>
 					</link>
 					<name type="string">Orc Elite Guard</name>
-					<token type="token">tokens/id-00027.png@skaurilsarmy</token>
+					<token type="token">tokens/id-00027.png</token>
 				</id-00043>
 				<id-00044>
 					<count type="number">20</count>
 					<faction type="string">foe</faction>
 					<link type="windowreference">
 						<class>npc</class>
-						<recordname>npc.id-00016@skaurilsarmy</recordname>
+						<recordname>npc.id-00016</recordname>
 					</link>
 					<name type="string">Orc Warrior</name>
-					<token type="token">tokens/id-00016.png@skaurilsarmy</token>
+					<token type="token">tokens/id-00016.png</token>
 				</id-00044>
 			</npclist>
 		</id-00012>
@@ -1802,7 +1802,7 @@
 					</attacktable>
 				</id-0002>
 			</weapons>
-			<token type="token">tokens/id-00001.png@skaurilsarmy</token>
+			<token type="token">tokens/id-00001.png</token>
 		</id-00001>
 		<id-00003>
 			<abilities type="string">Commander of Skauril's Orcs at the battle of the Gladuin. Wields 'Reaver' +15 two-handed sword of slaying Dwarves. Darkvision.</abilities>
@@ -1862,7 +1862,7 @@
 					</attacktable>
 				</id-0002>
 			</weapons>
-			<token type="token">tokens/id-00003.png@skaurilsarmy</token>
+			<token type="token">tokens/id-00003.png</token>
 		</id-00003>
 		<id-00004>
 			<abilities type="string">Tracking, Stalking, Hiding, Ambush. Bitter hatred of Easterlings. Will kill Skauril if given easy opportunity.</abilities>
@@ -2057,7 +2057,7 @@
 					</attacktable>
 				</id-0002>
 			</weapons>
-			<token type="token">tokens/id-00004.png@skaurilsarmy</token>
+			<token type="token">tokens/id-00004.png</token>
 		</id-00004>
 		<id-00005>
 			<abilities type="string">Iron weapons. Leads units of bandits in Skauril's army.</abilities>
@@ -2264,7 +2264,7 @@
 					</attacktable>
 				</id-0002>
 			</weapons>
-			<token type="token">tokens/id-00005.png@skaurilsarmy</token>
+			<token type="token">tokens/id-00005.png</token>
 		</id-00005>
 		<id-00006>
 			<abilities type="string">Iron weapons. Low morale - will flee if battle goes badly.</abilities>
@@ -2522,7 +2522,7 @@
 					<weight_s type="string">0.5-1</weight_s>
 				</id-0002>
 			</weapons>
-			<token type="token">tokens/id-00006.png@skaurilsarmy</token>
+			<token type="token">tokens/id-00006.png</token>
 		</id-00006>
 		<id-00007>
 			<abilities type="formattedtext">
@@ -2662,6 +2662,10 @@
 					</link>
 					<name type="string">Dagger</name>
 					<ob type="number">30</ob>
+					<attacktable>
+						<name type="string">{'@type': 'string', '_text': 'Dagger'}</name>
+						<tableid type="string">{'@type': 'string', '_text': 'ALT-07'}</tableid>
+					</attacktable>
 				</id-0001>
 				<id-0002>
 					<name type="string">Light Crossbow</name>
@@ -2686,7 +2690,7 @@
 					<type type="string">Special</type>
 				</id-0004>
 			</weapons>
-			<token type="token">tokens/id-00007.png@skaurilsarmy</token>
+			<token type="token">tokens/id-00007.png</token>
 		</id-00007>
 		<id-00008>
 			<abilities type="formattedtext">
@@ -2868,6 +2872,10 @@
 					</link>
 					<name type="string">Short Sword</name>
 					<ob type="number">50</ob>
+					<attacktable>
+						<name type="string">{'@type': 'string', '_text': 'Short Sword'}</name>
+						<tableid type="string">{'@type': 'string', '_text': 'ALT-24'}</tableid>
+					</attacktable>
 				</id-0001>
 				<id-0002>
 					<link type="windowreference">
@@ -2876,6 +2884,10 @@
 					</link>
 					<name type="string">Long Bow</name>
 					<ob type="number">30</ob>
+					<attacktable>
+						<name type="string">{'@type': 'string', '_text': 'Long Bow'}</name>
+						<tableid type="string">{'@type': 'string', '_text': 'ALT-15'}</tableid>
+					</attacktable>
 				</id-0002>
 				<id-0003>
 					<attacktable>
@@ -2896,7 +2908,7 @@
 					<type type="string">Special</type>
 				</id-0004>
 			</weapons>
-			<token type="token">tokens/id-00008.png@skaurilsarmy</token>
+			<token type="token">tokens/id-00008.png</token>
 		</id-00008>
 		<id-00009>
 			<abilities type="string">+30 Detect Traps. Steel weapons.</abilities>
@@ -3103,7 +3115,7 @@
 					</attacktable>
 				</id-0002>
 			</weapons>
-			<token type="token">tokens/id-00009.png@skaurilsarmy</token>
+			<token type="token">tokens/id-00009.png</token>
 		</id-00009>
 		<id-00010>
 			<abilities type="string">Steel weapons. Basic infantry in Skauril's forces.</abilities>
@@ -3288,7 +3300,7 @@
 					</attacktable>
 				</id-0002>
 			</weapons>
-			<token type="token">tokens/id-00010.png@skaurilsarmy</token>
+			<token type="token">tokens/id-00010.png</token>
 		</id-00010>
 		<id-00012>
 			<abilities type="formattedtext">
@@ -3348,6 +3360,10 @@
 					</link>
 					<name type="string">Scimitar</name>
 					<ob type="number">35</ob>
+					<attacktable>
+						<name type="string">{'@type': 'string', '_text': 'Scimitar'}</name>
+						<tableid type="string">{'@type': 'string', '_text': 'ALT-22'}</tableid>
+					</attacktable>
 				</id-0001>
 				<id-0002>
 					<link type="windowreference">
@@ -3356,9 +3372,13 @@
 					</link>
 					<name type="string">Short Bow</name>
 					<ob type="number">35</ob>
+					<attacktable>
+						<name type="string">{'@type': 'string', '_text': 'Short Bow'}</name>
+						<tableid type="string">{'@type': 'string', '_text': 'ALT-23'}</tableid>
+					</attacktable>
 				</id-0002>
 			</weapons>
-			<token type="token">tokens/id-00012.png@skaurilsarmy</token>
+			<token type="token">tokens/id-00012.png</token>
 		</id-00012>
 		<id-00013>
 			<abilities type="formattedtext">
@@ -3415,6 +3435,10 @@
 					</link>
 					<name type="string">Battle Axe</name>
 					<ob type="number">60</ob>
+					<attacktable>
+						<name type="string">{'@type': 'string', '_text': 'Battle Axe'}</name>
+						<tableid type="string">{'@type': 'string', '_text': 'ALT-02'}</tableid>
+					</attacktable>
 				</id-0001>
 				<id-0002>
 					<attacktable>
@@ -3427,7 +3451,7 @@
 					<type type="string">Natural Weapon</type>
 				</id-0002>
 			</weapons>
-			<token type="token">tokens/id-00013.png@skaurilsarmy</token>
+			<token type="token">tokens/id-00013.png</token>
 		</id-00013>
 		<id-00015>
 			<abilities type="formattedtext">
@@ -3484,7 +3508,7 @@
 					<type type="string">Natural Weapon</type>
 				</id-0001>
 			</weapons>
-			<token type="token">tokens/id-00015.png@skaurilsarmy</token>
+			<token type="token">tokens/id-00015.png</token>
 		</id-00015>
 		<id-00016>
 			<abilities type="string">Low steel weapons. Form the core of Skauril's orc forces.</abilities>
@@ -3556,7 +3580,7 @@
 					</attacktable>
 				</id-0002>
 			</weapons>
-			<token type="token">tokens/id-00016.png@skaurilsarmy</token>
+			<token type="token">tokens/id-00016.png</token>
 		</id-00016>
 		<id-00017>
 			<abilities type="string">High steel weapons. Elite orc warriors. Darkvision.</abilities>
@@ -3627,7 +3651,7 @@
 					</attacktable>
 				</id-0002>
 			</weapons>
-			<token type="token">tokens/id-00017.png@skaurilsarmy</token>
+			<token type="token">tokens/id-00017.png</token>
 		</id-00017>
 		<id-00018>
 			<abilities type="string">High steel weapons. Commands scouting units. Darkvision.</abilities>
@@ -3696,7 +3720,7 @@
 					</attacktable>
 				</id-0002>
 			</weapons>
-			<token type="token">tokens/id-00018.png@skaurilsarmy</token>
+			<token type="token">tokens/id-00018.png</token>
 		</id-00018>
 		<id-00019>
 			<abilities type="string">+40 Stalk &amp; Hide, +30 Track. Steel weapons. Darkvision.</abilities>
@@ -3768,7 +3792,7 @@
 					</attacktable>
 				</id-0002>
 			</weapons>
-			<token type="token">tokens/id-00019.png@skaurilsarmy</token>
+			<token type="token">tokens/id-00019.png</token>
 		</id-00019>
 		<id-00020>
 			<abilities type="formattedtext">
@@ -3962,6 +3986,10 @@
 					</link>
 					<name type="string">Short Sword</name>
 					<ob type="number">75</ob>
+					<attacktable>
+						<name type="string">{'@type': 'string', '_text': 'Short Sword'}</name>
+						<tableid type="string">{'@type': 'string', '_text': 'ALT-24'}</tableid>
+					</attacktable>
 				</id-0001>
 				<id-0002>
 					<link type="windowreference">
@@ -3970,6 +3998,10 @@
 					</link>
 					<name type="string">Long Bow</name>
 					<ob type="number">55</ob>
+					<attacktable>
+						<name type="string">{'@type': 'string', '_text': 'Long Bow'}</name>
+						<tableid type="string">{'@type': 'string', '_text': 'ALT-15'}</tableid>
+					</attacktable>
 				</id-0002>
 				<id-0003>
 					<attacktable>
@@ -3990,7 +4022,7 @@
 					<type type="string">Special</type>
 				</id-0004>
 			</weapons>
-			<token type="token">tokens/id-00020.png@skaurilsarmy</token>
+			<token type="token">tokens/id-00020.png</token>
 		</id-00020>
 		<id-00021>
 			<abilities type="formattedtext">
@@ -4130,6 +4162,10 @@
 					</link>
 					<name type="string">Dagger</name>
 					<ob type="number">30</ob>
+					<attacktable>
+						<name type="string">{'@type': 'string', '_text': 'Dagger'}</name>
+						<tableid type="string">{'@type': 'string', '_text': 'ALT-07'}</tableid>
+					</attacktable>
 				</id-0001>
 				<id-0002>
 					<name type="string">Light Crossbow</name>
@@ -4154,7 +4190,7 @@
 					<type type="string">Special</type>
 				</id-0004>
 			</weapons>
-			<token type="token">tokens/id-00021.png@skaurilsarmy</token>
+			<token type="token">tokens/id-00021.png</token>
 		</id-00021>
 		<id-00022>
 			<abilities type="formattedtext">
@@ -4345,6 +4381,10 @@
 					</link>
 					<name type="string">Long Sword</name>
 					<ob type="number">60</ob>
+					<attacktable>
+						<name type="string">{'@type': 'string', '_text': 'Broadsword'}</name>
+						<tableid type="string">{'@type': 'string', '_text': 'ALT-04'}</tableid>
+					</attacktable>
 				</id-0001>
 				<id-0003>
 					<attacktable>
@@ -4364,7 +4404,7 @@
 					<ob type="number">0</ob>
 				</id-00004>
 			</weapons>
-			<token type="token">tokens/id-00022.png@skaurilsarmy</token>
+			<token type="token">tokens/id-00022.png</token>
 		</id-00022>
 		<id-00023>
 			<abilities type="formattedtext">
@@ -4555,6 +4595,10 @@
 					</link>
 					<name type="string">Long Sword</name>
 					<ob type="number">60</ob>
+					<attacktable>
+						<name type="string">{'@type': 'string', '_text': 'Broadsword'}</name>
+						<tableid type="string">{'@type': 'string', '_text': 'ALT-04'}</tableid>
+					</attacktable>
 				</id-0001>
 				<id-0003>
 					<attacktable>
@@ -4574,7 +4618,7 @@
 					<ob type="number">0</ob>
 				</id-00004>
 			</weapons>
-			<token type="token">tokens/id-00023.png@skaurilsarmy</token>
+			<token type="token">tokens/id-00023.png</token>
 		</id-00023>
 		<id-00024>
 			<abilities type="formattedtext">
@@ -4714,6 +4758,10 @@
 					</link>
 					<name type="string">Dagger</name>
 					<ob type="number">30</ob>
+					<attacktable>
+						<name type="string">{'@type': 'string', '_text': 'Dagger'}</name>
+						<tableid type="string">{'@type': 'string', '_text': 'ALT-07'}</tableid>
+					</attacktable>
 				</id-0001>
 				<id-0002>
 					<name type="string">Light Crossbow</name>
@@ -4738,7 +4786,7 @@
 					<type type="string">Special</type>
 				</id-0004>
 			</weapons>
-			<token type="token">tokens/id-00024.png@skaurilsarmy</token>
+			<token type="token">tokens/id-00024.png</token>
 		</id-00024>
 		<id-00025>
 			<abilities type="formattedtext">
@@ -4797,6 +4845,10 @@
 					</link>
 					<name type="string">Scimitar</name>
 					<ob type="number">80</ob>
+					<attacktable>
+						<name type="string">{'@type': 'string', '_text': 'Scimitar'}</name>
+						<tableid type="string">{'@type': 'string', '_text': 'ALT-22'}</tableid>
+					</attacktable>
 				</id-0001>
 				<id-0002>
 					<link type="windowreference">
@@ -4805,9 +4857,13 @@
 					</link>
 					<name type="string">Short Bow</name>
 					<ob type="number">60</ob>
+					<attacktable>
+						<name type="string">{'@type': 'string', '_text': 'Short Bow'}</name>
+						<tableid type="string">{'@type': 'string', '_text': 'ALT-23'}</tableid>
+					</attacktable>
 				</id-0002>
 			</weapons>
-			<token type="token">tokens/id-00025.png@skaurilsarmy</token>
+			<token type="token">tokens/id-00025.png</token>
 		</id-00025>
 		<id-00026>
 			<abilities type="formattedtext">
@@ -4864,6 +4920,10 @@
 					</link>
 					<name type="string">Battle Axe</name>
 					<ob type="number">90</ob>
+					<attacktable>
+						<name type="string">{'@type': 'string', '_text': 'Battle Axe'}</name>
+						<tableid type="string">{'@type': 'string', '_text': 'ALT-02'}</tableid>
+					</attacktable>
 				</id-0001>
 				<id-0002>
 					<attacktable>
@@ -4876,7 +4936,7 @@
 					<type type="string">Natural Weapon</type>
 				</id-0002>
 			</weapons>
-			<token type="token">tokens/id-00026.png@skaurilsarmy</token>
+			<token type="token">tokens/id-00026.png</token>
 		</id-00026>
 		<id-00027>
 			<abilities type="formattedtext">
@@ -4935,6 +4995,10 @@
 					</link>
 					<name type="string">Scimitar</name>
 					<ob type="number">80</ob>
+					<attacktable>
+						<name type="string">{'@type': 'string', '_text': 'Scimitar'}</name>
+						<tableid type="string">{'@type': 'string', '_text': 'ALT-22'}</tableid>
+					</attacktable>
 				</id-0001>
 				<id-0002>
 					<link type="windowreference">
@@ -4943,9 +5007,13 @@
 					</link>
 					<name type="string">Short Bow</name>
 					<ob type="number">60</ob>
+					<attacktable>
+						<name type="string">{'@type': 'string', '_text': 'Short Bow'}</name>
+						<tableid type="string">{'@type': 'string', '_text': 'ALT-23'}</tableid>
+					</attacktable>
 				</id-0002>
 			</weapons>
-			<token type="token">tokens/id-00027.png@skaurilsarmy</token>
+			<token type="token">tokens/id-00027.png</token>
 		</id-00027>
 	</npc>
 	<reference>

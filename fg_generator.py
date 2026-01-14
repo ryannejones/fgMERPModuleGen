@@ -110,6 +110,7 @@ def main():
     print("Phase 4: Generating Items XML")
     print("-" * 60)
     item_gen = ItemGenerator(loader, library, verbose=args.verbose)
+    loader.item_generator = item_gen  # allow NPC generator to copy item attack tables onto npc.weapons
     item_xml = item_gen.generate_items()
     
     if item_xml is not None:

@@ -35,7 +35,58 @@ class NPCGenerator:
             self.default_weapons = {}
             if self.verbose:
                 print("  Warning: default_weapons.yaml not found, skipping weapon assignment")
-    
+ 
+    def _add_attacktable_from_item(self, weapon_elem: ET.Element, weapon_name: str) -> bool:
+        """Copy attacktable onto npc.weapons.* from the generated item dict (loader.item_generator.created_items)."""
+
+        # If an attacktable element exists but is empty, replace it
+        existing = weapon_elem.find("attacktable")
+        if existing is not None:
+            tableid_node = existing.find("tableid")
+            if tableid_node is not None and (tableid_node.text or "").strip():
+                return True
+            weapon_elem.remove(existing)
+
+        def _txt(v):
+            if isinstance(v, dict):
+                return v.get("_text", "")
+            return "" if v is None else str(v)
+
+        item_gen = getattr(self.loader, "item_generator", None)
+        if not item_gen or not hasattr(item_gen, "created_items"):
+            return False
+
+        item_dict = item_gen.created_items.get(weapon_name)
+        if not isinstance(item_dict, dict):
+            return False
+
+        # Attack table may be top-level or nested
+        atk = item_dict.get("attacktable")
+        if not isinstance(atk, dict):
+            weapon_block = item_dict.get("weapon")
+            if isinstance(weapon_block, dict):
+                atk = weapon_block.get("attacktable")
+
+        if not isinstance(atk, dict):
+            return False
+
+        tableid = _txt(atk.get("tableid"))
+        if not tableid:
+            return False
+
+        attacktable_elem = ET.SubElement(weapon_elem, "attacktable")
+
+        name_elem = ET.SubElement(attacktable_elem, "name")
+        name_elem.set("type", "string")
+        name_elem.text = _txt(atk.get("name")) or weapon_name
+
+        tableid_elem = ET.SubElement(attacktable_elem, "tableid")
+        tableid_elem.set("type", "string")
+        tableid_elem.text = tableid
+
+        return True
+
+
     def ensure_auto_letter_token(self, npc_elem: ET.Element, npc_id: str, npc_display_name: str):
         """
         If no explicit token was added, assign a generated letter token.
@@ -165,8 +216,8 @@ class NPCGenerator:
             return
         
         weapons_section = ET.SubElement(npc_elem, 'weapons')
-        weapons = npc_data['weapons']
-        
+        weapons = npc_data['weapons']       
+ 
         if not isinstance(weapons, dict):
             return
         
@@ -220,11 +271,27 @@ class NPCGenerator:
                             if self.verbose:
                                 print(f"      ERROR writing OB for {weapon_name}: {e}")
                     
-                    # Add attack table if present in weapon data
-                    if 'attacktable' in weapon_data:
+
+
+                                        # If this weapon references a module item but has no attacktable in NPC data,
+                    # copy the item's attack table onto the NPC weapon entry (FG expects this materialized).
+                    if weapon_name and 'attacktable' not in weapon_data:
+                        if self.verbose:
+                            print(f"      DEBUG: Attempting attacktable copy for {weapon_name} (no attacktable in NPC data)")
+                        try:
+                            added = self._add_attacktable_from_item(weapon_elem, weapon_name)
+                            if self.verbose and added:
+                                print(f"      DEBUG: Copied attack table from item for {weapon_name}")
+                        except Exception as e:
+                            if self.verbose:
+                                print(f"      ERROR copying attack table for {weapon_name}: {e}")
+
+                    # Add attack table if present in weapon data (e.g., natural weapons/spells)
+                    elif 'attacktable' in weapon_data:
                         attacktable_data = weapon_data['attacktable']
                         if isinstance(attacktable_data, dict):
                             attacktable_elem = ET.SubElement(weapon_elem, 'attacktable')
+
                             # Add table name
                             if 'name' in attacktable_data:
                                 name_elem = ET.SubElement(attacktable_elem, 'name')
@@ -233,6 +300,7 @@ class NPCGenerator:
                                     name_elem.text = attacktable_data['name'].get('_text', '')
                                 else:
                                     name_elem.text = str(attacktable_data['name'])
+
                             # Add table ID
                             if 'tableid' in attacktable_data:
                                 tableid_elem = ET.SubElement(attacktable_elem, 'tableid')
@@ -241,9 +309,10 @@ class NPCGenerator:
                                     tableid_elem.text = attacktable_data['tableid'].get('_text', '')
                                 else:
                                     tableid_elem.text = str(attacktable_data['tableid'])
+
                             if self.verbose:
                                 print(f"      DEBUG: Added attack table for {weapon_name}")
-                    
+
                     # Add count if specified
                     if 'count' in weapon_data:
                         count = ET.SubElement(weapon_elem, 'count')

@@ -47,6 +47,7 @@ items:
   - name: "Blow Gun"
   - name: "Club"
   - name: "Normal Shield"
+  - name: "Light Crossbow"
 
 # MERP Herbs from Rolemaster Companion 1
   - name: "Carefree Mustard"
