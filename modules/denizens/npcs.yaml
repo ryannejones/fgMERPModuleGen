@@ -286,7 +286,7 @@ npcs:
   
   # Adventure 3: The Tithing Train - NPCs
   - name: "Grimbold"
-    based_on: "Fighter"
+    based_on: "Fighter Level 03"
     level: 6
     hp: 167
     at: 14
