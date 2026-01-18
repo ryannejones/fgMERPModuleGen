@@ -102,6 +102,18 @@ class ItemGenerator:
         # Convert the complete item data to XML
         self.dict_to_xml(item_data, item_elem)
         
+        # Ensure critical Fantasy Grounds fields are present
+        # These are needed for items to display properly in the module
+        if item_elem.find('locked') is None:
+            locked = ET.SubElement(item_elem, 'locked')
+            locked.set('type', 'number')
+            locked.text = '1'
+        
+        if item_elem.find('isidentified') is None:
+            isidentified = ET.SubElement(item_elem, 'isidentified')
+            isidentified.set('type', 'number')
+            isidentified.text = '1'
+        
         return item_elem
     
     def create_item_from_yaml(self, yaml_item: Dict) -> ET.Element:
@@ -238,6 +250,38 @@ class ItemGenerator:
             p = ET.SubElement(description, 'p')
             p.text = parcel['description']
         
+        # Coins - use coinlist section with amount/description structure
+        if 'coins' in parcel and parcel['coins']:
+            coinlist = ET.SubElement(parcel_elem, 'coinlist')
+            
+            coin_description_map = {
+                'MP': 'MP',
+                'PP': 'PP',
+                'GP': 'GP',
+                'SP': 'SP',
+                'BP': 'BP',
+                'CP': 'CP',
+                'TP': 'TP',
+                'IP': 'IP'
+            }
+            
+            coin_entry_id = 1
+            for coin_type in self.coin_types:
+                if coin_type in parcel['coins']:
+                    entry_id = f"id-{coin_entry_id:05d}"
+                    coin_entry_id += 1
+                    coin_entry = ET.SubElement(coinlist, entry_id)
+                    
+                    # Amount
+                    amount = ET.SubElement(coin_entry, 'amount')
+                    amount.set('type', 'number')
+                    amount.text = str(parcel['coins'][coin_type])
+                    
+                    # Description (coin type)
+                    description = ET.SubElement(coin_entry, 'description')
+                    description.set('type', 'string')
+                    description.text = coin_description_map[coin_type]
+        
         # Items in parcel - EMBED full item data (FG doesn't use links)
         if 'items' in parcel and parcel['items']:
             items = ET.SubElement(parcel_elem, 'itemlist')
@@ -278,15 +322,6 @@ class ItemGenerator:
                     count = ET.SubElement(item_entry, 'count')
                     count.set('type', 'number')
                     count.text = str(item.get('count', 1))
-        
-        # Coins
-        if 'coins' in parcel:
-            coins = ET.SubElement(parcel_elem, 'coins')
-            for coin_type in self.coin_types:
-                if coin_type in parcel['coins']:
-                    coin_elem = ET.SubElement(coins, coin_type.lower())
-                    coin_elem.set('type', 'number')
-                    coin_elem.text = str(parcel['coins'][coin_type])
         
         return parcel_elem
     
