@@ -1,0 +1,516 @@
+encounters:
+  # Adventure 1: Attercop Attack - Spider Encounters
+  - name: "Giant Spider Lair (Full)"
+    exp: 800
+    npcs:
+      - name: "Giant Spider"
+        count: 5
+        faction: "foe"
+  
+  - name: "Giant Spider Lair (Partial - 3 Spiders)"
+    exp: 480
+    npcs:
+      - name: "Giant Spider"
+        count: 3
+        faction: "foe"
+  
+  - name: "Giant Spider Lair (Partial - 2 Spiders)"
+    exp: 320
+    npcs:
+      - name: "Giant Spider"
+        count: 2
+        faction: "foe"
+  
+  - name: "Giant Spider Hunting Party (1)"
+    exp: 160
+    npcs:
+      - name: "Giant Spider"
+        count: 1
+        faction: "foe"
+  
+  - name: "Giant Spider Hunting Party (2)"
+    exp: 320
+    npcs:
+      - name: "Giant Spider"
+        count: 2
+        faction: "foe"
+  
+  - name: "Giant Spider Hunting Party (3)"
+    exp: 480
+    npcs:
+      - name: "Giant Spider"
+        count: 3
+        faction: "foe"
+  
+  # Adventure 2: Trouble with Trolls - Troll Encounters
+  - name: "All Four Trolls"
+    exp: 2000
+    npcs:
+      - name: "Fradurag"
+        count: 1
+        faction: "foe"
+      - name: "Tumag"
+        count: 1
+        faction: "foe"
+      - name: "Tumag (second)"
+        count: 1
+        faction: "foe"
+        display_name: "Tumag"
+      - name: "Umik"
+        count: 1
+        faction: "foe"
+  
+  - name: "Three Trolls (Without Umik)"
+    exp: 1500
+    npcs:
+      - name: "Fradurag"
+        count: 1
+        faction: "foe"
+      - name: "Tumag"
+        count: 1
+        faction: "foe"
+      - name: "Tumag (second)"
+        count: 1
+        faction: "foe"
+        display_name: "Tumag"
+  
+  - name: "Three Trolls (Without Fradurag)"
+    exp: 1200
+    npcs:
+      - name: "Tumag"
+        count: 1
+        faction: "foe"
+      - name: "Tumag (second)"
+        count: 1
+        faction: "foe"
+        display_name: "Tumag"
+      - name: "Umik"
+        count: 1
+        faction: "foe"
+  
+  - name: "Two Trolls (Both Tumags)"
+    exp: 1000
+    npcs:
+      - name: "Tumag"
+        count: 1
+        faction: "foe"
+      - name: "Tumag (second)"
+        count: 1
+        faction: "foe"
+        display_name: "Tumag"
+  
+  - name: "Two Trolls (Fradurag and One Tumag)"
+    exp: 1200
+    npcs:
+      - name: "Fradurag"
+        count: 1
+        faction: "foe"
+      - name: "Tumag"
+        count: 1
+        faction: "foe"
+  
+  - name: "Two Trolls (Fradurag and Umik)"
+    exp: 1000
+    npcs:
+      - name: "Fradurag"
+        count: 1
+        faction: "foe"
+      - name: "Umik"
+        count: 1
+        faction: "foe"
+  
+  - name: "One Troll (Fradurag)"
+    exp: 800
+    npcs:
+      - name: "Fradurag"
+        count: 1
+        faction: "foe"
+  
+  - name: "One Troll (Tumag)"
+    exp: 500
+    npcs:
+      - name: "Tumag"
+        count: 1
+        faction: "foe"
+  
+  - name: "One Troll (Umik)"
+    exp: 350
+    npcs:
+      - name: "Umik"
+        count: 1
+        faction: "foe"
+  
+  # Adventure 3: The Tithing Train - Orc Encounters at Ilmaryen Keep
+  - name: "Full Garrison (All 30 Orcs)"
+    exp: 3000
+    npcs:
+      - name: "Yagrash"
+        count: 1
+        faction: "foe"
+      - name: "Marlurg"
+        count: 1
+        faction: "foe"
+      - name: "Ukrish"
+        count: 1
+        faction: "foe"
+      - name: "Gormuk"
+        count: 1
+        faction: "foe"
+      - name: "Bokdankh"
+        count: 1
+        faction: "foe"
+      - name: "Skoralg"
+        count: 1
+        faction: "foe"
+      - name: "Fektalgh"
+        count: 1
+        faction: "foe"
+      - name: "Hagrakh"
+        count: 1
+        faction: "foe"
+      - name: "Orc, Lesser"
+        level: 1
+        count: 8
+        faction: "foe"
+        display_name: "Lesser Orc Warrior"
+      - name: "Orc, Lesser"
+        level: 2
+        count: 8
+        faction: "foe"
+        display_name: "Lesser Orc Warrior"
+      - name: "Orc, Greater"
+        level: 2
+        count: 4
+        faction: "foe"
+        display_name: "Uruk Warrior"
+      - name: "Orc, Greater"
+        level: 3
+        count: 4
+        faction: "foe"
+        display_name: "Uruk Warrior"
+  
+  - name: "One Lesser Orc Korlagz (5 Orcs)"
+    exp: 250
+    npcs:
+      - name: "Bokdankh"
+        count: 1
+        faction: "foe"
+      - name: "Orc, Lesser"
+        level: 1
+        count: 2
+        faction: "foe"
+        display_name: "Lesser Orc Warrior"
+      - name: "Orc, Lesser"
+        level: 2
+        count: 2
+        faction: "foe"
+        display_name: "Lesser Orc Warrior"
+  
+  - name: "One Uruk Korlagz (5 Orcs)"
+    exp: 350
+    npcs:
+      - name: "Ukrish"
+        count: 1
+        faction: "foe"
+      - name: "Orc, Greater"
+        level: 2
+        count: 2
+        faction: "foe"
+        display_name: "Uruk Warrior"
+      - name: "Orc, Greater"
+        level: 3
+        count: 2
+        faction: "foe"
+        display_name: "Uruk Warrior"
+  
+  - name: "Two Lesser Orc Korlagzrim (10 Orcs)"
+    exp: 500
+    npcs:
+      - name: "Bokdankh"
+        count: 1
+        faction: "foe"
+      - name: "Skoralg"
+        count: 1
+        faction: "foe"
+      - name: "Orc, Lesser"
+        level: 1
+        count: 4
+        faction: "foe"
+        display_name: "Lesser Orc Warrior"
+      - name: "Orc, Lesser"
+        level: 2
+        count: 4
+        faction: "foe"
+        display_name: "Lesser Orc Warrior"
+  
+  - name: "Two Uruk Korlagzrim (10 Orcs)"
+    exp: 700
+    npcs:
+      - name: "Ukrish"
+        count: 1
+        faction: "foe"
+      - name: "Gormuk"
+        count: 1
+        faction: "foe"
+      - name: "Orc, Greater"
+        level: 2
+        count: 4
+        faction: "foe"
+        display_name: "Uruk Warrior"
+      - name: "Orc, Greater"
+        level: 3
+        count: 4
+        faction: "foe"
+        display_name: "Uruk Warrior"
+  
+  - name: "Mixed Korlagzrim (10 Orcs)"
+    exp: 600
+    npcs:
+      - name: "Fektalgh"
+        count: 1
+        faction: "foe"
+      - name: "Ukrish"
+        count: 1
+        faction: "foe"
+      - name: "Orc, Lesser"
+        level: 1
+        count: 2
+        faction: "foe"
+        display_name: "Lesser Orc Warrior"
+      - name: "Orc, Lesser"
+        level: 2
+        count: 2
+        faction: "foe"
+        display_name: "Lesser Orc Warrior"
+      - name: "Orc, Greater"
+        level: 2
+        count: 2
+        faction: "foe"
+        display_name: "Uruk Warrior"
+      - name: "Orc, Greater"
+        level: 3
+        count: 2
+        faction: "foe"
+        display_name: "Uruk Warrior"
+  
+  - name: "Three Korlagzrim with Lieutenant (15 Orcs)"
+    exp: 1000
+    npcs:
+      - name: "Marlurg"
+        count: 1
+        faction: "foe"
+      - name: "Hagrakh"
+        count: 1
+        faction: "foe"
+      - name: "Skoralg"
+        count: 1
+        faction: "foe"
+      - name: "Gormuk"
+        count: 1
+        faction: "foe"
+      - name: "Orc, Lesser"
+        level: 1
+        count: 4
+        faction: "foe"
+        display_name: "Lesser Orc Warrior"
+      - name: "Orc, Lesser"
+        level: 2
+        count: 4
+        faction: "foe"
+        display_name: "Lesser Orc Warrior"
+      - name: "Orc, Greater"
+        level: 2
+        count: 2
+        faction: "foe"
+        display_name: "Uruk Warrior"
+      - name: "Orc, Greater"
+        level: 3
+        count: 2
+        faction: "foe"
+        display_name: "Uruk Warrior"
+  
+  - name: "Commander with Guards (10 Orcs)"
+    exp: 1200
+    npcs:
+      - name: "Yagrash"
+        count: 1
+        faction: "foe"
+      - name: "Marlurg"
+        count: 1
+        faction: "foe"
+      - name: "Ukrish"
+        count: 1
+        faction: "foe"
+      - name: "Gormuk"
+        count: 1
+        faction: "foe"
+      - name: "Orc, Greater"
+        level: 2
+        count: 3
+        faction: "foe"
+        display_name: "Uruk Warrior"
+      - name: "Orc, Greater"
+        level: 3
+        count: 3
+        faction: "foe"
+        display_name: "Uruk Warrior"
+  
+  - name: "Great Hall Gathering (16 Orcs)"
+    exp: 1200
+    npcs:
+      - name: "Skoralg"
+        count: 1
+        faction: "foe"
+      - name: "Fektalgh"
+        count: 1
+        faction: "foe"
+      - name: "Orc, Lesser"
+        level: 1
+        count: 6
+        faction: "foe"
+        display_name: "Lesser Orc Warrior"
+      - name: "Orc, Lesser"
+        level: 2
+        count: 6
+        faction: "foe"
+        display_name: "Lesser Orc Warrior"
+      - name: "Orc, Greater"
+        level: 2
+        count: 1
+        faction: "foe"
+        display_name: "Uruk Warrior"
+      - name: "Orc, Greater"
+        level: 3
+        count: 1
+        faction: "foe"
+        display_name: "Uruk Warrior"
+  
+  - name: "Gatehouse Watch (2 Orcs)"
+    exp: 100
+    npcs:
+      - name: "Orc, Lesser"
+        level: 1
+        count: 2
+        faction: "foe"
+        display_name: "Lesser Orc Warrior"
+  
+  - name: "Gatehouse Watch Uruk (2 Orcs)"
+    exp: 150
+    npcs:
+      - name: "Orc, Greater"
+        level: 2
+        count: 2
+        faction: "foe"
+        display_name: "Uruk Warrior"
+  
+  - name: "Tower Roof Watch (2 Orcs)"
+    exp: 100
+    npcs:
+      - name: "Orc, Lesser"
+        level: 1
+        count: 2
+        faction: "foe"
+        display_name: "Lesser Orc Warrior"
+  
+  - name: "Tower Roof Watch Uruk (2 Orcs)"
+    exp: 150
+    npcs:
+      - name: "Orc, Greater"
+        level: 2
+        count: 2
+        faction: "foe"
+        display_name: "Uruk Warrior"
+  
+  - name: "Patrol with Sergeant (6 Orcs)"
+    exp: 350
+    npcs:
+      - name: "Hagrakh"
+        count: 1
+        faction: "foe"
+      - name: "Orc, Lesser"
+        level: 1
+        count: 2
+        faction: "foe"
+        display_name: "Lesser Orc Warrior"
+      - name: "Orc, Lesser"
+        level: 2
+        count: 3
+        faction: "foe"
+        display_name: "Lesser Orc Warrior"
+  
+  # Random Mirkwood Encounters (for travel between locations)
+  - name: "Orc Patrol (5 Orcs)"
+    exp: 250
+    npcs:
+      - name: "Orc, Lesser"
+        level: 2
+        count: 5
+        faction: "foe"
+        display_name: "Orc Warrior"
+  
+  - name: "Orc Patrol (10 Orcs)"
+    exp: 500
+    npcs:
+      - name: "Orc, Lesser"
+        level: 2
+        count: 10
+        faction: "foe"
+        display_name: "Orc Warrior"
+  
+  - name: "Orc Patrol (15 Orcs)"
+    exp: 750
+    npcs:
+      - name: "Orc, Lesser"
+        level: 3
+        count: 15
+        faction: "foe"
+        display_name: "Orc Warrior"
+  
+  - name: "Wolf Pack (Small)"
+    exp: 150
+    npcs:
+      - name: "Grey Wolf"
+        count: 3
+        faction: "foe"
+  
+  - name: "Wolf Pack (Large)"
+    exp: 400
+    npcs:
+      - name: "Grey Wolf"
+        count: 8
+        faction: "foe"
+  
+  - name: "Dire Wolves"
+    exp: 600
+    npcs:
+      - name: "Dire Wolf"
+        count: 5
+        faction: "foe"
+  
+  - name: "Giant Spiders (Mirkwood)"
+    exp: 480
+    npcs:
+      - name: "Giant Spider"
+        count: 3
+        faction: "foe"
+  
+  - name: "Wargs"
+    exp: 800
+    npcs:
+      - name: "Warg"
+        count: 6
+        faction: "foe"
+  
+  - name: "Cave Troll"
+    exp: 1000
+    npcs:
+      - name: "Cave Troll"
+        count: 1
+        faction: "foe"
+  
+  - name: "Huorn"
+    exp: 1500
+    npcs:
+      - name: "Huorn"
+        count: 1
+        faction: "foe"

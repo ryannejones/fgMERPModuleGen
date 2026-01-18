@@ -117,3 +117,14 @@ Mage:
   weapons:
     - name: "Battle Axe"
       slot: "melee"
+
+# Creatures - Trolls
+"Troll, Stone":
+  weapons:
+    - name: "Club"
+      slot: "melee"
+
+"Troll, Cave":
+  weapons:
+    - name: "Club"
+      slot: "melee"

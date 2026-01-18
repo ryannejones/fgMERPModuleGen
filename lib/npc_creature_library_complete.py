@@ -259,10 +259,10 @@ class CompleteNPCCreatureLibrary:
         # Apply modifications
         if modifications:
             # Field type mappings for proper FG XML conversion
-            number_fields = {'hp', 'at', 'db', 'level', 'baserate', 'reach', 'outlook'}
-            string_fields = {'profession', 'race', 'group', 'subgroup', 'abilities', 
-                           'description', 'spells', 'stats', 'size'}
-            
+            number_fields = {'hp', 'at', 'db', 'level', 'baserate', 'reach', 'outlook', 'mnbonus', 'hits'}
+            string_fields = {'profession', 'race', 'group', 'subgroup', 'spells', 'stats', 'size'}
+            formattedtext_fields = {'description', 'abilities', 'notes'}           
+ 
             for key, value in modifications.items():
                 # If the field already exists in the NPC, preserve its structure
                 if key in new_entry and isinstance(new_entry[key], dict):

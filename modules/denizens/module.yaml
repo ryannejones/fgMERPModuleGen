@@ -1,0 +1,19 @@
+name: "denizens_of_the_dark_wood"
+display_name: "Denizens of the Dark Wood"
+author: "Matthias and Karen Birkner"
+category: "Middle-earth Role Playing"
+ruleset: "RolemasterClassic"
+description: "Three ready-to-run MERP adventures set in Mirkwood. Adventure 1: Attercop Attack (levels 1-2) - Giant Spiders threaten the village of Ulgarstat. Adventure 2: Trouble with Trolls (levels 2-3) - Stone Trolls have captured a merchant caravan. Adventure 3: The Tithing Train (levels 4-6) - Orcs gather tribute for Dol Guldur at Ilmaryen Keep."
+stories: true
+encounters: true
+npcs: true
+items: true
+parcels: true
+images: true
+options:
+  validate: true
+  auto_id: true
+  overwrite: false
+output:
+  filename: "denizens_of_the_dark_wood.mod"
+  directory: "./outputs"

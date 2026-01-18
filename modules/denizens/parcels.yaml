@@ -1,0 +1,394 @@
+parcels:
+  # Adventure 1: Attercop Attack - Spider's Lair Treasure
+  - name: "Spider's Refuse Pile Treasure"
+    description: "Treasure found in the Spider's refuse pile - remains of their victims"
+    coins:
+      GP: 24
+      SP: 104
+      BP: 360
+      CP: 550
+      TP: 450
+    items:
+      - name: "Belt of Brass Rings +10"
+        count: 1
+      - name: "Magic Emerald (Lifegiving)"
+        count: 1
+      - name: "Morning Star (Air Wall)"
+        count: 1
+      - name: "Silver Ring"
+        count: 1
+      - name: "Gold Armband with Garnets"
+        count: 1
+  
+  - name: "Spider's Refuse Pile Coins Only"
+    description: "Additional coins found in the refuse pile"
+    coins:
+      GP: 16
+      SP: 40
+    items:
+      - name: "Silver Ring"
+        count: 1
+  
+  # Adventure 2: Trouble with Trolls - Troll Lair Treasures
+  - name: "Umik's Chest"
+    description: "Contents of Umik's locked chest in his bedchamber"
+    coins:
+      GP: 6
+      SP: 34
+      BP: 56
+      CP: 31
+      TP: 37
+    items:
+      - name: "Rigid Leather Armor +10"
+        count: 1
+      - name: "Mithril Button"
+        count: 1
+  
+  - name: "Tumag's Pallet (Left)"
+    description: "Items found beside the left pallet in Tumag and Tumag's chamber"
+    coins:
+      GP: 10
+      SP: 36
+      BP: 40
+      CP: 53
+      TP: 97
+    items:
+      - name: "Blue Cloak +10 (Invisibility)"
+        count: 1
+  
+  - name: "Tumag's Wooden Box"
+    description: "Contents of wooden box beside the right pallet"
+    coins:
+      SP: 1
+    items:
+      - name: "Gold Necklace (Braided)"
+        count: 1
+      - name: "Silver Bracelet (Tarnished)"
+        count: 1
+      - name: "Brass Buttons (10)"
+        count: 1
+      - name: "Pearl Earrings (Pair)"
+        count: 1
+  
+  - name: "Tumag's Trinket Pile"
+    description: "Pile of trinkets beside the left pallet"
+    items:
+      - name: "Ivory Ring"
+        count: 1
+      - name: "Jade Figurine with Gold Flowers"
+        count: 1
+      - name: "Amethyst (Large Cut)"
+        count: 1
+  
+  - name: "Tumag's Iron Cauldron"
+    description: "Coins in iron cauldron between the beds"
+    coins:
+      GP: 10
+      SP: 36
+      BP: 40
+      CP: 53
+      TP: 97
+  
+  - name: "Fradurag's Cedar Chest"
+    description: "Contents of the unlocked cedar chest beside Fradurag's bed"
+    coins:
+      BP: 1
+    items:
+      - name: "Dagger +5 (Hawk Pommel)"
+        count: 1
+      - name: "Gold Drinking Goblet (Dragon Carved)"
+        count: 1
+  
+  - name: "Fradurag's Locked Oak Chest"
+    description: "Contents of the locked oak chest beside Fradurag's bed (key required or screaming trap)"
+    coins:
+      GP: 731
+      SP: 1809
+    items:
+      - name: "Gold Brooch (Running Horse)"
+        count: 1
+      - name: "Dwarf Chainmail Shirt and Coif"
+        count: 1
+      - name: "Metal Arm Greaves (Pair)"
+        count: 1
+      - name: "Twisted Gold Bracelet"
+        count: 1
+      - name: "Athelas (Dried, 1 dose)"
+        count: 1
+  
+  - name: "Fradurag's Bed (Under Pillow)"
+    description: "Small leather pouch hidden under Fradurag's pillow"
+    items:
+      - name: "Short Sword +10 (Jeweled)"
+        count: 1
+  
+  - name: "Troll Treasure Room Chest 1 (Trapped)"
+    description: "The trapped chest in the Treasure Room - contains vast wealth but protected by Na-del gas trap (Lvl 5 spider venom)"
+    coins:
+      GP: 562
+      SP: 2205
+      BP: 6229
+      CP: 8896
+      TP: 11624
+    items:
+      - name: "Turquoise Ring (Solid)"
+        count: 1
+      - name: "Smokey Quartz Pendant"
+        count: 1
+      - name: "Tiger-Eyes (Dozen)"
+        count: 1
+      - name: "Silver Tiara with Amethysts"
+        count: 1
+      - name: "Bear-Headed Scepter (Golden)"
+        count: 1
+      - name: "Onyx Statue (Tree)"
+        count: 1
+      - name: "Pink Pearls (20)"
+        count: 1
+      - name: "Shield +10 (Invisibility)"
+        count: 1
+      - name: "Garnet (Uncut, Hues)"
+        count: 1
+      - name: "Aldataur (Miniature Spear)"
+        count: 1
+  
+  - name: "Troll Treasure Room Chest 2 (Invisible Contents)"
+    description: "The chest in the Treasure Room with invisible key - contents appear empty due to illusion but can be felt"
+    coins:
+      GP: 969
+      SP: 9017
+      BP: 3082
+      CP: 2305
+      TP: 27303
+    items:
+      - name: "Silver Ring"
+        count: 14
+      - name: "Gold Necklace (Plain)"
+        count: 5
+      - name: "Copper Bracelet with Moonstone"
+        count: 1
+      - name: "Mallorn-Wood Jewelry Box"
+        count: 1
+      - name: "Silver Brooch with Beryls"
+        count: 1
+      - name: "Mithril Ring (Ivy)"
+        count: 1
+      - name: "Golden Girdle (Holly Leaves)"
+        count: 1
+      - name: "Quartz Wine Goblets (Set of 4)"
+        count: 1
+      - name: "Steel Scepter +5 (Magic Mace)"
+        count: 1
+      - name: "Half-Plate Armor +15 (Size-Changing)"
+        count: 1
+      - name: "Boots of Leaving +5"
+        count: 1
+  
+  - name: "Jewelry Box Contents"
+    description: "Three silver rings inside the mallorn-wood jewelry box (18 sp each)"
+    items:
+      - name: "Silver Ring"
+        count: 3
+  
+  - name: "Hidden Room Treasure"
+    description: "The room with the rusted short sword"
+    items:
+      - name: "Rusted Short Sword +5 (Lockjaw)"
+        count: 1
+  
+  # Adventure 3: The Tithing Train - Ilmaryen Keep Treasures
+  - name: "Marlurg's Chest"
+    description: "Contents of Marlurg's double-locked chest (two keys required)"
+    coins:
+      GP: 233
+      SP: 425
+      CP: 38
+    items:
+      - name: "Obsidian Horse Statuette"
+        count: 1
+      - name: "Silver Rings with Sapphires (Pair)"
+        count: 1
+      - name: "Black Pearl Necklace"
+        count: 1
+      - name: "Elven Cloak +75 (Cold Resistance)"
+        count: 1
+  
+  - name: "Yagrash's Chest"
+    description: "Contents of Yagrash's trapped chest (three spring-loaded blades)"
+    coins:
+      GP: 318
+      SP: 631
+      BP: 85
+      CP: 244
+    items:
+      - name: "Malachite Earrings (Matched Pair)"
+        count: 1
+      - name: "Topaz Ring"
+        count: 1
+      - name: "Fire Opals (3)"
+        count: 1
+      - name: "Arkasu Powder (7 doses)"
+        count: 1
+  
+  - name: "Skoralg's Trapped Chest"
+    description: "Contents of Skoralg's chest with poison needle trap (Uraana, 6th-level poison)"
+    coins:
+      GP: 2
+      SP: 63
+      BP: 32
+      CP: 8
+    items:
+      - name: "Engraved Silver Ring"
+        count: 1
+      - name: "Jade Pendant (Leaf-Shaped) +5"
+        count: 1
+  
+  - name: "Fektalgh's Locked Chest"
+    description: "Contents of Fektalgh's locked chest (key hidden under loose stone)"
+    coins:
+      GP: 34
+      SP: 53
+      BP: 68
+    items:
+      - name: "Engraved Silver Ring"
+        count: 1
+  
+  - name: "Hagrakh's Locked Chest"
+    description: "Contents of Hagrakh's locked chest"
+    coins:
+      GP: 8
+      BP: 86
+      CP: 42
+      TP: 154
+    items:
+      - name: "Ivory Bust"
+        count: 1
+      - name: "Jeweled Dagger (Dwarf-made)"
+        count: 1
+  
+  - name: "Ukrish's Chest (False Bottom)"
+    description: "Contents hidden in false bottom of Ukrish's chest"
+    coins:
+      GP: 63
+    items:
+      - name: "Turquoise (Small, 6 gems)"
+        count: 1
+  
+  - name: "Gormuk's Hollow Bedpost"
+    description: "Items hidden in hollow bedpost in Gormuk's room"
+    items:
+      - name: "Ebony Wand (Haste)"
+        count: 1
+  
+  - name: "Bokdankh's Small Chest"
+    description: "Contents of Bokdankh's locked chest"
+    coins:
+      GP: 14
+      SP: 23
+      CP: 3
+      BP: 46
+    items:
+      - name: "Engraved Silver Ring"
+        count: 1
+  
+  - name: "Orc Treasure Room Chest 1 (Trapped Gas)"
+    description: "Eastern chest in Treasure Room #21 - trapped with Na-del gas (Lvl 5 spider venom, dissolves tissue)"
+    coins:
+      GP: 562
+      SP: 2205
+      BP: 6229
+      CP: 8896
+      TP: 11624
+    items:
+      - name: "Turquoise Ring (Solid)"
+        count: 1
+      - name: "Smokey Quartz Pendant"
+        count: 1
+      - name: "Tiger-Eyes (Dozen)"
+        count: 1
+      - name: "Silver Tiara with Amethysts"
+        count: 1
+      - name: "Bear-Headed Scepter (Golden)"
+        count: 1
+      - name: "Onyx Statue (Tree)"
+        count: 1
+      - name: "Pink Pearls (20)"
+        count: 1
+      - name: "Shield +10 (Invisibility)"
+        count: 1
+      - name: "Garnet (Uncut, Hues)"
+        count: 1
+      - name: "Aldataur (Miniature Spear)"
+        count: 1
+  
+  - name: "Orc Treasure Room Chest 2 (Invisible Key)"
+    description: "Western chest in Treasure Room #21 - requires invisible key carried by Yagrash, contents appear empty due to permanent visual illusion"
+    coins:
+      GP: 969
+      SP: 9017
+      BP: 3082
+      CP: 2305
+      TP: 27303
+    items:
+      - name: "Silver Ring"
+        count: 14
+      - name: "Gold Necklace (Plain)"
+        count: 5
+      - name: "Copper Bracelet with Moonstone"
+        count: 1
+      - name: "Mallorn-Wood Jewelry Box"
+        count: 1
+      - name: "Silver Brooch with Beryls"
+        count: 1
+      - name: "Mithril Ring (Ivy)"
+        count: 1
+      - name: "Golden Girdle (Holly Leaves)"
+        count: 1
+      - name: "Quartz Wine Goblets (Set of 4)"
+        count: 1
+      - name: "Steel Scepter +5 (Magic Mace)"
+        count: 1
+      - name: "Half-Plate Armor +15 (Size-Changing)"
+        count: 1
+      - name: "Boots of Leaving +5"
+        count: 1
+  
+  - name: "Secret Cellar Hidden Chest"
+    description: "Chest in the Secret Cellar #50 with false bottom containing the Axe of Orc-Slaying"
+    items:
+      - name: "Axe of Orc-Slaying +15"
+        count: 1
+  
+  - name: "Master Bedchamber Secret Compartment"
+    description: "Velvet bag hidden in secret compartment in headboard of master bed"
+    items:
+      - name: "Star Sapphires (Set of 8)"
+        count: 1
+  
+  - name: "Sitting Room Treasure"
+    description: "The spinning wheel in the Sitting Room #44"
+    items:
+      - name: "Spinning Wheel +5"
+        count: 1
+  
+  - name: "Storeroom #19 Goods"
+    description: "Goods being prepared for shipment to Dol Guldur - cloth, tapestries, ore, meats, weapons, armor, grains, honey, beer, mead, and arrows. Not all may be easily portable."
+    items:
+      - name: "Broadsword"
+        count: 12
+  
+  - name: "Kragashi Personal Wealth"
+    description: "Typical wealth carried by a single Lesser Orc Kragashi warrior"
+    coins:
+      BP: 10
+      CP: 10
+      TP: 10
+      SP: 5
+  
+  - name: "Uruk Kragashi Personal Wealth"
+    description: "Typical wealth carried by a single Uruk Kragashi warrior"
+    coins:
+      BP: 15
+      CP: 15
+      TP: 15
+      SP: 10
