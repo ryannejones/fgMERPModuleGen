@@ -235,6 +235,12 @@ class NPCGenerator:
                     else:
                         weapon_name = weapon_data['name']
                 
+                # Skip empty weapon slots (no name or empty name)
+                if not weapon_name or (isinstance(weapon_name, str) and not weapon_name.strip()):
+                    # Remove the empty element we just created
+                    weapons_section.remove(weapon_elem)
+                    continue
+                
                 if self.verbose and weapon_name:
                     ob_val = weapon_data.get('ob', {})
                     if isinstance(ob_val, dict):

@@ -395,7 +395,7 @@ items:
         "@type": "formattedtext"
         "_text": "Grants +15 OB."
   
-- name: "Kragnifrim"
+  - name: "Kragnifrim"
     based_on: "Dagger"
     modifications:
       description:
@@ -435,6 +435,7 @@ items:
   - name: "Axe of Orc-Slaying +15"
     based_on: "Axe of Orc-Slaying"
     modifications: 
+      weaponbonus:
         "@type": "number"
         "_text": "15"
       description:
