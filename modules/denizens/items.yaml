@@ -6,7 +6,7 @@ items:
   
   - name: "Long Bow"
   
-  - name: "Shield"
+  - name: "Normal Shield"
   
   - name: "War Hammer"
   
@@ -16,6 +16,9 @@ items:
   - name: "Belt of Brass Rings +10"
     based_on: "Weapon belt"
     modifications:
+      defensebonus:
+        "@type": "number"
+        "_text": "10"
       description:
         "@type": "formattedtext"
         "_text": "A leather belt decorated with brass rings that provides protection to the wearer."
@@ -66,7 +69,6 @@ items:
   # Adventure 2: Trouble with Trolls - Items from Troll Lair
   - name: "Rigid Leather Armor +10"
     based_on: "Elven Splinted Leather +10"
-    modifications:
       description:
         "@type": "formattedtext"
         "_text": "A suit of rigid leather armor sized for an Elf or slender man, appearing shabby but possessing magical properties."
@@ -87,6 +89,9 @@ items:
   - name: "Blue Cloak +10 (Invisibility)"
     based_on: "Cloak"
     modifications:
+      defensebonus:
+        "@type": "number"
+        "_text": "10"
       description:
         "@type": "formattedtext"
         "_text": "A richly-woven, man-sized blue cloak embroidered with silver stars and lined with ermine."
@@ -127,6 +132,9 @@ items:
   - name: "Dagger +5 (Hawk Pommel)"
     based_on: "Dagger"
     modifications:
+      weaponbonus:
+        "@type": "number"
+        "_text": "5"
       description:
         "@type": "formattedtext"
         "_text": "A dagger with a silver pommel shaped like a hawk's head with emerald eyes. The blade is strong with a good edge and excellent balance."
@@ -195,8 +203,11 @@ items:
         "_text": "One dose of Athelas."
   
   - name: "Shield +10 (Invisibility)"
-    based_on: "Shield"
+    based_on: "Normal Shield"
     modifications:
+      defensebonus:
+        "@type": "number"
+        "_text": "10"
       description:
         "@type": "formattedtext"
         "_text": "A shield 20% lighter than normal that can turn invisible."
@@ -217,6 +228,9 @@ items:
   - name: "Aldataur (Miniature Spear)"
     based_on: "Spear"
     modifications:
+      weaponbonus:
+        "@type": "number"
+        "_text": "10"
       description:
         "@type": "formattedtext"
         "_text": "A 1-foot long miniature spear made of jet with its name 'Aldataur' (S. 'Commander of the Woods') carved on its side. When its name is spoken, it becomes full-size and functional."
@@ -257,6 +271,9 @@ items:
   - name: "Steel Scepter +5 (Magic Mace)"
     based_on: "Mace"
     modifications:
+      weaponbonus:
+        "@type": "number"
+        "_text": "5"
       description:
         "@type": "formattedtext"
         "_text": "A finely-crafted steel scepter with six flanges, functioning as a mace."
@@ -267,6 +284,9 @@ items:
   - name: "Half-Plate Armor +15 (Size-Changing)"
     based_on: "Half Plate +15"
     modifications:
+      defensebonus:
+        "@type": "number"
+        "_text": "15"
       description:
         "@type": "formattedtext"
         "_text": "A very small suit of half-plate armor (about Hobbit-sized) that can grow or shrink to fit almost anyone who concentrates on changing its size."
@@ -277,6 +297,9 @@ items:
   - name: "Boots of Leaving +5"
     based_on: "Boots"
     modifications:
+      defensebonus:
+        "@type": "number"
+        "_text": "5"
       description:
         "@type": "formattedtext"
         "_text": "Green soft-leather boots with gold-thread tracery in the shape of a group of trees."
@@ -287,6 +310,9 @@ items:
   - name: "Rusted Short Sword +5 (Lockjaw)"
     based_on: "Short Sword"
     modifications:
+      weaponbonus:
+        "@type": "number"
+        "_text": "5"
       description:
         "@type": "formattedtext"
         "_text": "A short sword hanging in shadows, covered in rust. When cleaned, the rust returns within 8 hours but does not affect the blade's effectiveness."
@@ -358,6 +384,9 @@ items:
   - name: "Jeweled Dagger (Dwarf-made)"
     based_on: "Dagger"
     modifications:
+      weaponbonus:
+        "@type": "number"
+        "_text": "10"
       description:
         "@type": "formattedtext"
         "_text": "A Dwarf-made dagger with excellent workmanship."
@@ -388,6 +417,9 @@ items:
   - name: "War Hammer +15"
     based_on: "War Hammer"
     modifications:
+      weaponbonus:
+        "@type": "number"
+        "_text": "15"
       description:
         "@type": "formattedtext"
         "_text": "An excellent war hammer taken from a fallen foe."
@@ -405,6 +437,9 @@ items:
   - name: "Kragashard +10"
     based_on: "Broadsword +10"
     modifications:
+      weaponbonus:
+        "@type": "number"
+        "_text": "10"
       description:
         "@type": "formattedtext"
         "_text": "A well-made Kragashard (Orcish sword about the size and weight of a broadsword, slightly curved to resemble a fang)."
@@ -566,7 +601,7 @@ items:
         "_text": "Worth 7 gp."
   
   - name: "Jade Figurine with Gold Flowers"
-    based_on: ""
+    based_on: "Figurines of the Fighters"
     modifications:
       description:
         "@type": "formattedtext"
