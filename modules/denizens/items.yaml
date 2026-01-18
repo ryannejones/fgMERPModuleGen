@@ -1,0 +1,656 @@
+items:
+  # Standard weapons (library items, no modifications needed)
+  - name: "Broadsword"
+  
+  - name: "Dagger"
+  
+  - name: "Long Bow"
+  
+  - name: "Shield"
+  
+  - name: "War Hammer"
+  
+  - name: "Battleaxe"
+  
+  # Adventure 1: Attercop Attack - Items from Spider's Lair
+  - name: "Belt of Brass Rings +10"
+    based_on: "Weapon belt"
+    modifications:
+      description:
+        "@type": "formattedtext"
+        "_text": "A leather belt decorated with brass rings that provides protection to the wearer."
+      notes:
+        "@type": "formattedtext"
+        "_text": "Grants +10 DB to wearer."
+  
+  - name: "Magic Emerald (Lifegiving)"
+    based_on: "Gem (80 gp)"
+    modifications:
+      description:
+        "@type": "formattedtext"
+        "_text": "A brilliant green emerald containing powerful healing magic."
+      notes:
+        "@type": "formattedtext"
+        "_text": "15th-level lifegiving spell, 1 use only."
+  
+  - name: "Morning Star (Air Wall)"
+    based_on: "Morning Star"
+    modifications:
+      description:
+        "@type": "formattedtext"
+        "_text": "A beautifully crafted morning star, 60% lighter than normal, capable of summoning protective winds."
+      notes:
+        "@type": "formattedtext"
+        "_text": "60% lighter than normal. Can cast MERP Wind Law Air Wall 1x/day."
+  
+  - name: "Silver Ring"
+    based_on: "Gold Ring"
+    modifications:
+      description:
+        "@type": "formattedtext"
+        "_text": "A simple silver ring."
+      notes:
+        "@type": "formattedtext"
+        "_text": "Worth 15 sp."
+  
+  - name: "Gold Armband with Garnets"
+    based_on: "Bracelets of Gorgax"
+    modifications:
+      description:
+        "@type": "formattedtext"
+        "_text": "A golden armband set with red garnets."
+      notes:
+        "@type": "formattedtext"
+        "_text": "Worth 120 gp."
+  
+  # Adventure 2: Trouble with Trolls - Items from Troll Lair
+  - name: "Rigid Leather Armor +10"
+    based_on: "Elven Splinted Leather +10"
+    modifications:
+      description:
+        "@type": "formattedtext"
+        "_text": "A suit of rigid leather armor sized for an Elf or slender man, appearing shabby but possessing magical properties."
+      notes:
+        "@type": "formattedtext"
+        "_text": "Grants +10 DB. Fits Elf or slender man."
+  
+  - name: "Mithril Button"
+    based_on: "Gem (10 gp)"
+    modifications:
+      description:
+        "@type": "formattedtext"
+        "_text": "A small button made of mithril."
+      notes:
+        "@type": "formattedtext"
+        "_text": "Worth 5 gp."
+  
+  - name: "Blue Cloak +10 (Invisibility)"
+    based_on: "Cloak"
+    modifications:
+      description:
+        "@type": "formattedtext"
+        "_text": "A richly-woven, man-sized blue cloak embroidered with silver stars and lined with ermine."
+      notes:
+        "@type": "formattedtext"
+        "_text": "Grants +10 DB to wearer."
+  
+  - name: "Gold Necklace (Braided)"
+    based_on: "Opal Necklace"
+    modifications:
+      description:
+        "@type": "formattedtext"
+        "_text": "A heavy braided gold necklace."
+      notes:
+        "@type": "formattedtext"
+        "_text": "Worth 21 gp."
+  
+  - name: "Pearl Earrings (Pair)"
+    based_on: "Opal Necklace"
+    modifications:
+      description:
+        "@type": "formattedtext"
+        "_text": "A matched pair of pearl earrings."
+      notes:
+        "@type": "formattedtext"
+        "_text": "Worth 15 gp for the pair."
+  
+  - name: "Short Sword +10 (Jeweled)"
+    based_on: "Short Sword"
+    modifications:
+      description:
+        "@type": "formattedtext"
+        "_text": "A beautiful short sword with a vine etched in gold and studded with jewel flowers twining around the hilt. Exceptionally light at only 1.5 pounds."
+      notes:
+        "@type": "formattedtext"
+        "_text": "Non-magical but well-crafted. Weighs only 1.5 lbs. Worth 39 gp."
+  
+  - name: "Dagger +5 (Hawk Pommel)"
+    based_on: "Dagger"
+    modifications:
+      description:
+        "@type": "formattedtext"
+        "_text": "A dagger with a silver pommel shaped like a hawk's head with emerald eyes. The blade is strong with a good edge and excellent balance."
+      notes:
+        "@type": "formattedtext"
+        "_text": "Grants +5 OB due to superior balance. Worth 27 gp."
+  
+  - name: "Gold Drinking Goblet (Dragon Carved)"
+    based_on: "backpack"
+    modifications:
+      description:
+        "@type": "formattedtext"
+        "_text": "A heavy gold drinking goblet carved with pictures of dragons."
+      notes:
+        "@type": "formattedtext"
+        "_text": "Worth 34 gp."
+  
+  - name: "Gold Brooch (Running Horse)"
+    based_on: "Gold Ring"
+    modifications:
+      description:
+        "@type": "formattedtext"
+        "_text": "A gold brooch depicting a running horse with mane and tail streaming behind."
+      notes:
+        "@type": "formattedtext"
+        "_text": "Worth 7 gp."
+  
+  - name: "Dwarf Chainmail Shirt and Coif"
+    based_on: "Full Chain"
+    modifications:
+      description:
+        "@type": "formattedtext"
+        "_text": "A Dwarf-sized chainmail shirt and coif."
+      notes:
+        "@type": "formattedtext"
+        "_text": "Worth 40 sp."
+  
+  - name: "Metal Arm Greaves (Pair)"
+    based_on: "Arm Greaves"
+    modifications:
+      description:
+        "@type": "formattedtext"
+        "_text": "A pair of metal arm greaves."
+      notes:
+        "@type": "formattedtext"
+        "_text": "Worth 4 sp."
+  
+  - name: "Twisted Gold Bracelet"
+    based_on: "Gold Ring"
+    modifications:
+      description:
+        "@type": "formattedtext"
+        "_text": "A twisted gold bracelet."
+      notes:
+        "@type": "formattedtext"
+        "_text": "Worth 5 gp."
+  
+  - name: "Athelas (Dried, 1 dose)"
+    based_on: "Athelas"
+    modifications:
+      description:
+        "@type": "formattedtext"
+        "_text": "A leather pouch containing one dose of dried Athelas, a powerful healing herb."
+      notes:
+        "@type": "formattedtext"
+        "_text": "One dose of Athelas."
+  
+  - name: "Shield +10 (Invisibility)"
+    based_on: "Shield"
+    modifications:
+      description:
+        "@type": "formattedtext"
+        "_text": "A shield 20% lighter than normal that can turn invisible."
+      notes:
+        "@type": "formattedtext"
+        "_text": "20% lighter than normal. Casts MERP Illusions Invisibility 3x/day (affects shield only, not wielder)."
+  
+  - name: "Garnet (Uncut, Hues)"
+    based_on: "Gem (80 gp)"
+    modifications:
+      description:
+        "@type": "formattedtext"
+        "_text": "A large uncut garnet with brown and green coloration that seems to be moving very slowly."
+      notes:
+        "@type": "formattedtext"
+        "_text": "Possessor can cast MERP Nature's Guises Hues 1x/day by grasping the stone and concentrating."
+  
+  - name: "Aldataur (Miniature Spear)"
+    based_on: "Spear"
+    modifications:
+      description:
+        "@type": "formattedtext"
+        "_text": "A 1-foot long miniature spear made of jet with its name 'Aldataur' (S. 'Commander of the Woods') carved on its side. When its name is spoken, it becomes full-size and functional."
+      notes:
+        "@type": "formattedtext"
+        "_text": "Speaking its name makes it full-size or miniature. Grants +10 OB and +10 RR. Animist or Ranger can cast 20 PP/day from MERP Plant Mastery and Animal Mastery spell lists while full-size."
+  
+  - name: "Mithril Ring (Ivy)"
+    based_on: "Gold Ring"
+    modifications:
+      description:
+        "@type": "formattedtext"
+        "_text": "A mithril ring carved like twining ivy."
+      notes:
+        "@type": "formattedtext"
+        "_text": "Worth 488 gp."
+  
+  - name: "Golden Girdle (Holly Leaves)"
+    based_on: "Weapon Belt"
+    modifications:
+      description:
+        "@type": "formattedtext"
+        "_text": "A golden girdle of holly leaves set with ruby berries."
+      notes:
+        "@type": "formattedtext"
+        "_text": "Worth 750 gp."
+  
+  - name: "Quartz Wine Goblets (Set of 4)"
+    based_on: "backpack"
+    modifications:
+      description:
+        "@type": "formattedtext"
+        "_text": "Four pale-blue quartz wine goblets shaped like niphredil flowers, in a velvet-lined wooden box."
+      notes:
+        "@type": "formattedtext"
+        "_text": "Worth 80 gp each (320 gp for set)."
+  
+  - name: "Steel Scepter +5 (Magic Mace)"
+    based_on: "Mace"
+    modifications:
+      description:
+        "@type": "formattedtext"
+        "_text": "A finely-crafted steel scepter with six flanges, functioning as a mace."
+      notes:
+        "@type": "formattedtext"
+        "_text": "50% lighter than normal. Grants +5 OB as magic mace."
+  
+  - name: "Half-Plate Armor +15 (Size-Changing)"
+    based_on: "Half Plate +15"
+    modifications:
+      description:
+        "@type": "formattedtext"
+        "_text": "A very small suit of half-plate armor (about Hobbit-sized) that can grow or shrink to fit almost anyone who concentrates on changing its size."
+      notes:
+        "@type": "formattedtext"
+        "_text": "Grants +15 DB and +30 MM. 80% lighter than normal. Can change size to fit wearer by concentration."
+  
+  - name: "Boots of Leaving +5"
+    based_on: "Boots"
+    modifications:
+      description:
+        "@type": "formattedtext"
+        "_text": "Green soft-leather boots with gold-thread tracery in the shape of a group of trees."
+      notes:
+        "@type": "formattedtext"
+        "_text": "Can cast MERP Lofty Bridge Leaving (100ft range) 3x/day. Grants +5 DB and +5 MM to wearer."
+  
+  - name: "Rusted Short Sword +5 (Lockjaw)"
+    based_on: "Short Sword"
+    modifications:
+      description:
+        "@type": "formattedtext"
+        "_text": "A short sword hanging in shadows, covered in rust. When cleaned, the rust returns within 8 hours but does not affect the blade's effectiveness."
+      notes:
+        "@type": "formattedtext"
+        "_text": "Grants +5 OB. Rust does not affect OB. 10% of creatures struck get Lockjaw disease (paralysis begins after 8 hours, full paralysis after 1 week)."
+  
+  # Adventure 3: The Tithing Train - Items from Ilmaryen Keep
+  - name: "Elven Cloak +75 (Cold Resistance)"
+    based_on: "Cloak"
+    modifications:
+      description:
+        "@type": "formattedtext"
+        "_text": "A large, tattered grey cloak that is actually Elven-made. It is spelled to appear tattered and hide its magical properties."
+      notes:
+        "@type": "formattedtext"
+        "_text": "Protected as by Nature's Ways Cold Resistance. Adds +75 to hiding while stationary, +25 if moving slowly."
+  
+  - name: "Obsidian Horse Statuette"
+    based_on: "Figurines of the Fighters"
+    modifications:
+      description:
+        "@type": "formattedtext"
+        "_text": "A small obsidian statuette of a running horse, packed in straw."
+      notes:
+        "@type": "formattedtext"
+        "_text": "Worth 138 gp."
+  
+  - name: "Silver Rings with Sapphires (Pair)"
+    based_on: "Gold Ring"
+    modifications:
+      description:
+        "@type": "formattedtext"
+        "_text": "Two silver rings with small sapphires mounted in them."
+      notes:
+        "@type": "formattedtext"
+        "_text": "Worth 85 gp each."
+  
+  - name: "Black Pearl Necklace"
+    based_on: "Opal Necklace"
+    modifications:
+      description:
+        "@type": "formattedtext"
+        "_text": "A necklace with a black pearl pendant."
+      notes:
+        "@type": "formattedtext"
+        "_text": "Worth 120 gp."
+  
+  - name: "Jade Pendant (Leaf-Shaped) +5"
+    based_on: "Amulet of Arnd"
+    modifications:
+      description:
+        "@type": "formattedtext"
+        "_text": "A small jade pendant in the shape of a leaf, without a chain."
+      notes:
+        "@type": "formattedtext"
+        "_text": "Grants +5 bonus to hiding maneuvers when worn about the neck."
+  
+  - name: "Ivory Bust"
+    based_on: "Figurine of the Fighters"
+    modifications:
+      description:
+        "@type": "formattedtext"
+        "_text": "A small ivory bust."
+      notes:
+        "@type": "formattedtext"
+        "_text": "Worth 33 gp."
+  
+  - name: "Jeweled Dagger (Dwarf-made)"
+    based_on: "Dagger"
+    modifications:
+      description:
+        "@type": "formattedtext"
+        "_text": "A Dwarf-made dagger with excellent workmanship."
+      notes:
+        "@type": "formattedtext"
+        "_text": "Grants +5 OB due to excellent workmanship. Worth 17 gp."
+  
+  - name: "Engraved Silver Ring"
+    based_on: "Gold Ring"
+    modifications:
+      description:
+        "@type": "formattedtext"
+        "_text": "An engraved silver ring."
+      notes:
+        "@type": "formattedtext"
+        "_text": "Worth 14 gp."
+  
+  - name: "Ebony Wand (Haste)"
+    based_on: "Wand"
+    modifications:
+      description:
+        "@type": "formattedtext"
+        "_text": "A plain ebony wand hidden in a hollow bedpost."
+      notes:
+        "@type": "formattedtext"
+        "_text": "Can cast MERP Living Change Haste I 3x/day."
+  
+  - name: "War Hammer +15"
+    based_on: "War Hammer"
+    modifications:
+      description:
+        "@type": "formattedtext"
+        "_text": "An excellent war hammer taken from a fallen foe."
+      notes:
+        "@type": "formattedtext"
+        "_text": "Grants +15 OB."
+  
+- name: "Kragnifrim"
+    based_on: "Dagger"
+    modifications:
+      description:
+        "@type": "formattedtext"
+        "_text": "Orcish throwing knife (fang-knife), slightly curved. Can be used in melee or thrown."
+  
+  - name: "Kragashard +10"
+    based_on: "Broadsword +10"
+    modifications:
+      description:
+        "@type": "formattedtext"
+        "_text": "A well-made Kragashard (Orcish sword about the size and weight of a broadsword, slightly curved to resemble a fang)."
+      notes:
+        "@type": "formattedtext"
+        "_text": "Grants +10 OB. Same size/weight as broadsword."
+  
+  - name: "Spinning Wheel +5"
+    based_on: "backpack"
+    modifications:
+      description:
+        "@type": "formattedtext"
+        "_text": "An extremely well-crafted spinning wheel."
+      notes:
+        "@type": "formattedtext"
+        "_text": "Adds +5 bonus to any spinning done on it. Worth 25 gp."
+  
+  - name: "Star Sapphires (Set of 8)"
+    based_on: "Gem (50 gp)"
+    modifications:
+      description:
+        "@type": "formattedtext"
+        "_text": "Eight perfectly-matched star sapphires in a velvet bag, hidden in a secret compartment."
+      notes:
+        "@type": "formattedtext"
+        "_text": "Worth 50 gp each, or 600 gp as a matched set."
+  
+  - name: "Axe of Orc-Slaying +15"
+    based_on: "Axe of Orc-Slaying"
+    modifications: 
+        "@type": "number"
+        "_text": "15"
+      description:
+        "@type": "formattedtext"
+        "_text": "A hand-axe with tracery on the axehead and decorative carving on the haft, hidden in a secret compartment."
+      notes:
+        "@type": "formattedtext"
+        "_text": "Normally +15 OB. Against Orcs: +25 OB, gives second slaying critical, bestows MERP Protections Resistance (+10 to RR and DB) on wielder for duration of combat."
+  
+  - name: "Turquoise Ring (Solid)"
+    based_on: "Gold Ring"
+    modifications:
+      description:
+        "@type": "formattedtext"
+        "_text": "A ring made of solid turquoise."
+      notes:
+        "@type": "formattedtext"
+        "_text": "Worth 14 gp."
+  
+  - name: "Smokey Quartz Pendant"
+    based_on: "Opal Necklace"
+    modifications:
+      description:
+        "@type": "formattedtext"
+        "_text": "A large smokey quartz pendant on a gold chain."
+      notes:
+        "@type": "formattedtext"
+        "_text": "Worth 29 gp."
+  
+  - name: "Tiger-Eyes (Dozen)"
+    based_on: "Gem (80 gp)"
+    modifications:
+      description:
+        "@type": "formattedtext"
+        "_text": "A small leather pouch holding a dozen large tiger-eye gems."
+      notes:
+        "@type": "formattedtext"
+        "_text": "Worth 6 gp each (72 gp total)."
+  
+  - name: "Silver Tiara with Amethysts"
+    based_on: "Marlor's Crown"
+    modifications:
+      description:
+        "@type": "formattedtext"
+        "_text": "A silver tiara set with five amethysts of exceptional clarity."
+      notes:
+        "@type": "formattedtext"
+        "_text": "Worth 223 gp."
+  
+  - name: "Bear-Headed Scepter (Golden)"
+    based_on: "Mace"
+    modifications:
+      description:
+        "@type": "formattedtext"
+        "_text": "A golden, bear-headed scepter with ruby eyes."
+      notes:
+        "@type": "formattedtext"
+        "_text": "Worth 362 gp."
+  
+  - name: "Onyx Statue (Tree)"
+    based_on: "Figurine of the Fighters"
+    modifications:
+      description:
+        "@type": "formattedtext"
+        "_text": "A 9-inch tall, intricately carved black-and-white onyx statue of a tree in a wooden box with straw packing."
+      notes:
+        "@type": "formattedtext"
+        "_text": "Worth 412 gp."
+  
+  - name: "Pink Pearls (20)"
+    based_on: "Gem (80 gp)"
+    modifications:
+      description:
+        "@type": "formattedtext"
+        "_text": "A plain bag containing 20 small, pink pearls."
+      notes:
+        "@type": "formattedtext"
+        "_text": "Worth 5 gp each (100 gp total)."
+  
+  - name: "Copper Bracelet with Moonstone"
+    based_on: "Gold Ring"
+    modifications:
+      description:
+        "@type": "formattedtext"
+        "_text": "A copper bracelet with a very large, near-perfect moonstone."
+      notes:
+        "@type": "formattedtext"
+        "_text": "Worth 38 gp."
+  
+  - name: "Mallorn-Wood Jewelry Box"
+    based_on: "backpack"
+    modifications:
+      description:
+        "@type": "formattedtext"
+        "_text": "A jewelry box made of mallorn-wood, inlaid with gold and silver."
+      notes:
+        "@type": "formattedtext"
+        "_text": "Worth 47 gp (empty)."
+  
+  - name: "Silver Brooch with Beryls"
+    based_on: "Jallia's Cloakpin of Shrinking"
+    modifications:
+      description:
+        "@type": "formattedtext"
+        "_text": "A silver brooch set with five beryls in a star pattern."
+      notes:
+        "@type": "formattedtext"
+        "_text": "Worth 52 gp."
+  
+  - name: "Gold Necklace (Plain)"
+    based_on: "Opal Necklace"
+    modifications:
+      description:
+        "@type": "formattedtext"
+        "_text": "A plain gold necklace."
+      notes:
+        "@type": "formattedtext"
+        "_text": "Worth 5 gp."
+  
+  - name: "Ivory Ring"
+    based_on: "Gold Ring"
+    modifications:
+      description:
+        "@type": "formattedtext"
+        "_text": "An intricate ivory ring."
+      notes:
+        "@type": "formattedtext"
+        "_text": "Worth 7 gp."
+  
+  - name: "Jade Figurine with Gold Flowers"
+    based_on: ""
+    modifications:
+      description:
+        "@type": "formattedtext"
+        "_text": "A figurine with jade flowers set on gold stems."
+      notes:
+        "@type": "formattedtext"
+        "_text": "Worth 19 gp."
+  
+  - name: "Amethyst (Large Cut)"
+    based_on: "Gem (10 gp)"
+    modifications:
+      description:
+        "@type": "formattedtext"
+        "_text": "A large cut amethyst."
+      notes:
+        "@type": "formattedtext"
+        "_text": "Worth 12 gp."
+  
+  - name: "Turquoise (Small, 6 gems)"
+    based_on: "Gem (40 gp)"
+    modifications:
+      description:
+        "@type": "formattedtext"
+        "_text": "Six small turquoise gems in a pouch."
+      notes:
+        "@type": "formattedtext"
+        "_text": "Values: 5, 4, 4, 7, 8, 10 gp (38 gp total)."
+  
+  - name: "Silver Bracelet (Tarnished)"
+    based_on: "Gold Ring"
+    modifications:
+      description:
+        "@type": "formattedtext"
+        "_text": "A small silver bracelet, very tarnished."
+      notes:
+        "@type": "formattedtext"
+        "_text": "Worth 1 gp."
+  
+  - name: "Brass Buttons (10)"
+    based_on: "Gem (5 gp)"
+    modifications:
+      description:
+        "@type": "formattedtext"
+        "_text": "Ten flamboyant brass buttons."
+      notes:
+        "@type": "formattedtext"
+        "_text": "Total value 1 sp."
+  
+  - name: "Malachite Earrings (Matched Pair)"
+    based_on: "Gold Ring"
+    modifications:
+      description:
+        "@type": "formattedtext"
+        "_text": "A matched pair of malachite earrings in gold settings."
+      notes:
+        "@type": "formattedtext"
+        "_text": "Worth 132 gp for the pair."
+  
+  - name: "Topaz Ring"
+    based_on: "Opal Ring"
+    modifications:
+      description:
+        "@type": "formattedtext"
+        "_text": "A topaz ring in a silver setting."
+      notes:
+        "@type": "formattedtext"
+        "_text": "Worth 43 gp."
+  
+  - name: "Fire Opals (3)"
+    based_on: "Gem (80 gp)"
+    modifications:
+      description:
+        "@type": "formattedtext"
+        "_text": "Three fire opals in a pouch."
+      notes:
+        "@type": "formattedtext"
+        "_text": "Worth 60 gp each (180 gp total)."
+  
+  - name: "Arkasu Powder (7 doses)"
+    based_on: "Arlan"
+    modifications:
+      description:
+        "@type": "formattedtext"
+        "_text": "A wooden tube containing a fine, grey-brown powder - a very concentrated preparation of Arkasu. Mix with water to form a salve."
+      notes:
+        "@type": "formattedtext"
+        "_text": "Heals 4-24 hits and quadruples healing rate of major wounds. Seven applications total. Worth 168 gp."
+

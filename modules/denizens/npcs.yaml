@@ -1,0 +1,477 @@
+npcs:
+  # Library Creatures - Must be defined for use in encounters
+  - name: "Giant Spider"
+    based_on: "Great Spider, Greater"
+  
+  - name: "Grey Wolf"
+    based_on: "Wolf"
+  
+  - name: "Dire Wolf"
+    based_on: "Dire Wolf"
+  
+  - name: "Warg"
+    based_on: "Warg"
+  
+  - name: "Cave Troll"
+    based_on: "Troll, Cave"
+  
+  - name: "Huorn"
+    based_on: "Sentient, Awakened Tree"
+  
+  - name: "Orc, Lesser"
+    based_on: "Orc, Lesser"
+  
+  - name: "Orc, Greater"
+    based_on: "Orc, Greater"
+  
+  - name: "Stone Troll"
+    based_on: "Troll, Stone"
+  
+  # Adventure 1: Attercop Attack - Named NPCs from Ulgarstat
+  - name: "Ulgar Resticsard"
+    based_on: "Fighter Level 03"
+    level: 3
+    hp: 63
+    at: 1
+    db: 0
+    baserate: 50
+    race: "Human"
+    group: "NPCs"
+    weapons:
+      - weapon: "War Hammer"
+        ob: 70
+    abilities: "Notable Skills: Ride 32, Track 37, Perception 55, Bartering 67, Brewing 63"
+    description: "Ulgar is a plain man with thinning grey hair and piercing grey eyes. Average height and weight. Despite his ordinary appearance, Ulgar is very charismatic: charming, persuasive, a dynamic leader and good speaker. He has led Ulgarstat for seven years and is respected by the townspeople for his fairness and wise decisions. Married for seventeen years with three sons and four daughters. Noted for his ability to brew top-quality beer."
+  
+  - name: "Runnal Resticsard"
+    based_on: "Ranger Level 03"
+    level: 1
+    hp: 41
+    at: 9
+    db: 25
+    baserate: 50
+    race: "Human"
+    group: "NPCs"
+    weapons:
+      - weapon: "Broadsword"
+        ob: 50
+      - weapon: "Long Bow"
+        ob: 45
+    defences:
+      - name: "Shield"
+        melee_bonus: 20
+        missile_bonus: 20
+    abilities: "Notable Skills: Ride 23, Track 23, Stalk/Hide 17, Perception 32, Fletching 53"
+    description: "Incredibly handsome, very blonde, very blue-eyed. Tall and muscular with perfect features and regal bearing. Universally loved for his exceptional good looks, sunny disposition, sweet nature, courage, and charisma. Average intelligence. Tends to stammer when stressed. Desperately in love with Currael Wessuntha and will do anything to save her from harm."
+  
+  - name: "Currael Wessuntha"
+    based_on: "Fighter Level 03"
+    level: 1
+    hp: 42
+    at: 6
+    db: 25
+    baserate: 50
+    race: "Human"
+    group: "NPCs"
+    weapons:
+      - weapon: "Dagger"
+        ob: 40
+    abilities: "Notable Skills: Climb 11, Ride 16, Track 11, Stalk/Hide 17, Perception 18, Leadership 10, Herding (Handling herd animals) 35"
+    description: "The oldest child of Wessun Fraelsen with two brothers and one sister. A farmgirl who does her share of chores. Unusually strong and agile. Tall, slender, and deceptively frail-looking. Golden hair, expressive green eyes, rose-bud complexion. Men noted for being hard-headed follow her with fatuous expressions. Quick wit and quick temper, but regains temper as quickly as she loses it. Generally sweet-natured. As devoted to Runnal as he is to her."
+  
+  - name: "Wessun Fraelsen"
+    based_on: "Fighter Level 03"
+    level: 3
+    hp: 63
+    at: 1
+    db: 20
+    baserate: 50
+    race: "Human"
+    group: "NPCs"
+    weapons:
+      - weapon: "Broadsword"
+        ob: 75
+    abilities: "Notable Skills: Farming 55"
+    description: "Tall and broad, a huge sunburned blonde. Looks like a farmer: very muscular and fairly weatherbeaten, slow to speak but usually quick to laugh. Ulgar and Wessun are old friends who have grown even closer because of the engagement of their offspring."
+  
+  - name: "Sigmar"
+    based_on: "Fighter Level 03"
+    level: 3
+    hp: 77
+    at: 14
+    db: 15
+    baserate: 50
+    race: "Human"
+    group: "NPCs"
+    weapons:
+      - weapon: "War Hammer"
+        ob: 80
+    defences:
+      - name: "Shield"
+        melee_bonus: 20
+        missile_bonus: 20
+    abilities: "Notable Skills: Ride 25, Pick Lock 10, Disarm Trap 15, Perception 25, Smithing 110, Woodcarving 30"
+    description: "A very talented blacksmith and one of Ulgar's closest friends who helped found Ulgarstat. Short but extremely muscular, blonde with green eyes, very quiet but very intelligent. Owns a chain shirt and a hammer that is a family heirloom (+5 DB, +10 to all Smithing Maneuvers). Courting Ulgar's oldest daughter."
+  
+  - name: "Guntar Resticsard"
+    based_on: "Fighter Level 03"
+    level: 1
+    hp: 33
+    at: 1
+    db: 35
+    baserate: 50
+    race: "Human"
+    group: "NPCs"
+    weapons:
+      - weapon: "War Hammer"
+        ob: 45
+    defences:
+      - name: "Shield"
+        melee_bonus: 20
+        missile_bonus: 20
+    abilities: "Notable for good judgement"
+    description: "Ulgar's second son. Fair-haired and medium height. Noted for his good judgement."
+  
+  - name: "Aescstan"
+    based_on: "Fighter Level 03"
+    level: 1
+    hp: 35
+    at: 1
+    db: 30
+    baserate: 50
+    race: "Human"
+    group: "NPCs"
+    weapons:
+      - weapon: "Broadsword"
+        ob: 45
+    defences:
+      - name: "Shield"
+        melee_bonus: 20
+        missile_bonus: 20
+    abilities: "Notable for good judgement"
+    description: "Guntar's neighbor. Dark-haired and tall. Noted for his good judgement."
+  
+  # Adventure 2: Trouble with Trolls - NPCs
+  - name: "Merchant Thal Eolsen"
+    based_on: "Fighter Level 03"
+    level: 3
+    hp: 38
+    at: 1
+    db: 20
+    baserate: 50
+    race: "Human"
+    group: "NPCs"
+    weapons:
+      - weapon: "Dagger"
+        ob: 60
+    abilities: "Notable Skills: Perception 45, Bartering 80"
+    description: "A tall, forbidding man in his late forties. Black hair and bushy black beard, exceptionally tall and broad. Black piercing eyes, gruff voice. Speaks quietly - as big as he is, has no need to raise his voice. Has a reputation for dealing fairly with good hirelings and harshness towards those who try to cheat him. A wealthy man who can survive the loss of this shipment, but much of his livelihood depends on shipping along the Men-i-Naugrim."
+  
+  - name: "Rothaar One-Leg"
+    based_on: "Ranger Level 03"
+    level: 7
+    hp: 115
+    at: 16
+    db: 35
+    baserate: 40
+    race: "Human"
+    group: "NPCs"
+    weapons:
+      - weapon: "War Hammer +15"
+        ob: 120
+      - weapon: "Long Bow"
+        ob: 95
+    defences:
+      - name: "Shield"
+        melee_bonus: 20
+        missile_bonus: 20
+    abilities: "Notable Skills: Climb 36 (no bonus to climbing walls, cliffs, or other sheer surfaces), Ride 61, Swim 21, Track 95, Ambush 35, Stalk/Hide 66, Perception 78, Foraging 40. Spell Lists: Nature's Lore, Nature's Guises. Notable Items: +15 war hammer, +10 long bow, Ring of Healing (heals 3 hits/round, 1 pt. of bleeding/round, heals any other physical damage at 10x normal rate)"
+    description: "A burly, green-eyed, bearded redhead in his late thirties. Born in Mirkwood but lived in Laketown for twenty years. Supervised shipping for Merchant Eolsen for fifteen years. Lost his right lower leg seven years ago while protecting one of Merchant Eolsen's shipments from Orcs. Walks and rides with a wooden leg attached below his knee. Big and powerful man, even with one leg is a vicious fighter. Loyal to Merchant Eolsen and cannot be convinced to rob or betray him. Doesn't talk much but enjoys a good joke and has a surprisingly loud, hearty laugh. Enjoys a good drink but no one has ever seen him even slightly drunk. Conscientious and will attempt to rescue all goods and hirelings. Detests Trolls and wants to kill all four."
+  
+  - name: "Elisa"
+    based_on: "Fighter Level 03"
+    level: 3
+    hp: 65
+    at: 1
+    db: 20
+    baserate: 50
+    race: "Human"
+    group: "NPCs"
+    weapons:
+      - weapon: "Broadsword"
+        ob: 70
+      - weapon: "Long Bow"
+        ob: 65
+    abilities: "Notable Skills: Climb 18, Ride 23, Stalk/Hide 10, Perception 10"
+    description: "Rothaar's second-in-command. Unlike Rothaar, normally loquacious and witty (though not when first rescued). Like Rothaar, conscientious, loyal to Merchant Eolsen, and a fierce warrior. Taken prisoner by Trolls after being knocked unconscious. Has worked for Merchant Eolsen for seven years."
+  
+  - name: "Marluk"
+    based_on: "Fighter Level 03"
+    level: 1
+    hp: 34
+    at: 1
+    db: 15
+    baserate: 50
+    race: "Human"
+    group: "NPCs"
+    weapons:
+      - weapon: "Broadsword"
+        ob: 45
+    abilities: "Notable Skills: Climb 6, Ride 16, Stalk/Hide 5, Perception 5"
+    description: "A first-level warrior on his first assignment, likely to be his last. After his encounter with the Trolls, Marluk has decided that if he survives, he will give up guarding caravans and become a farmer so he can remain dry, sleep in a bed, eat warm meals, and never see another Troll as long as he lives."
+  
+  - name: "Fradurag"
+    based_on: "Troll, Stone"
+    level: 15
+    hp: 170
+    at: 11
+    db: 50
+    baserate: 50
+    race: "Stone Troll"
+    group: "Monsters"
+    weapons:
+      - weapon: "Battleaxe"
+        ob: 140
+    defences:
+      - name: "Shield"
+        melee_bonus: 20
+        missile_bonus: 20
+    abilities: "Fradurag is average height for a Troll (10'3\") but uglier than most. Tangled mat of brown hair, protuberant black eyes, grey hide, cauliflower ear, very large crooked nose, no visible neck. For a Troll, Fradurag is brilliant, capable of speaking in complete sentences and occasionally thinking. He masterminded a simple burglar alarm for their cave doorway using rustling leaves. His exceptional intelligence makes him even more dangerous than average Trolls. Notable Items: Battleaxe casts MERP Spell Defense Protection II 3x/day (Fradurag doesn't know how to use the spell)"
+    description: "Ringleader of the Troll band. Typical Troll who loves violence and eating, frequently combining both. Extremely disagreeable, foul temper, incredibly strong. But has something most Trolls lack: a modicum of intelligence."
+  
+  - name: "Tumag"
+    based_on: "Troll, Stone"
+    level: 10
+    hp: 144
+    at: 11
+    db: 20
+    baserate: 50
+    race: "Stone Troll"
+    group: "Monsters"
+    weapons:
+      - weapon: "Battleaxe"
+        ob: 115
+    abilities: "One of twin brothers. Both are 10th-level. Tumag is 10' tall. Lacks Fradurag's superior intellect and is in every way utterly terrible, hideous, violent, average Stone Troll."
+    description: "Twin brother (non-identical). Mother couldn't tell them apart and gave them the same name. Utterly terrible, hideous, violent, average Stone Troll."
+  
+  - name: "Tumag (second)"
+    based_on: "Troll, Stone"
+    level: 10
+    hp: 144
+    at: 11
+    db: 20
+    baserate: 50
+    race: "Stone Troll"
+    group: "Monsters"
+    weapons:
+      - weapon: "Battleaxe"
+        ob: 115
+    abilities: "One of twin brothers. Both are 10th-level. This Tumag is 9'9\" tall. Lacks Fradurag's superior intellect and is in every way utterly terrible, hideous, violent, average Stone Troll."
+    description: "Twin brother (non-identical). Mother couldn't tell them apart and gave them the same name. Utterly terrible, hideous, violent, average Stone Troll."
+  
+  - name: "Umik"
+    based_on: "Troll, Stone"
+    level: 7
+    hp: 120
+    at: 11
+    db: 20
+    baserate: 50
+    race: "Stone Troll"
+    group: "Monsters"
+    weapons:
+      - weapon: "Battleaxe"
+        ob: 100
+    abilities: "Not full-grown yet, only 8'3\" tall. Lacks Fradurag's superior intellect and is in every way utterly terrible, hideous, violent, average Stone Troll."
+    description: "The youngest Troll, not full-grown. Utterly terrible, hideous, violent, average Stone Troll."
+  
+  # Adventure 3: The Tithing Train - NPCs
+  - name: "Grimbold"
+    based_on: "Fighter"
+    level: 6
+    hp: 167
+    at: 14
+    db: 60
+    baserate: 50
+    race: "Beorning"
+    group: "NPCs"
+    weapons:
+      - weapon: "War Hammer +15"
+        ob: 110
+      - weapon: "Flail +20"
+        ob: 115
+    defences:
+      - name: "Shield +10"
+        melee_bonus: 30
+        missile_bonus: 30
+    abilities: "Notable Skills: Ride 36, Track 36, Ambush 4, Stalk/Hide 30, Pick Lock 5, Disarm Trap 10, Perception 45, Foraging 30. Languages: Atliduk 5, Waildith 5, Westron 5, Nahaiduk 5, Orkish 3. Notable Items: +20 Flail, +10 Chain and Greaves, +10 Shield"
+    description: "A Beorning in his early thirties. Large, red-haired, and so hairy that though not a shape-changer, he looks bear-like at all times. Speaks in a soft grumbling growl. Has a disconcerting habit of staring at the person to whom he's speaking. Like other Beornings, hates Wargs, Trolls, Dragons, and Giants, but abhors Orcs. When little more than a toddler, his parents and brother were killed by goblins. His sister escaped with baby brother Grimbold. Killing Orcs is his personal Quest. A mercenary who will be fair about dividing treasure but is fond of money and wants his share. Uses almost all weapons with equal skill."
+  
+  - name: "Yagrash"
+    based_on: "Orc, Greater"
+    level: 7
+    hp: 126
+    at: 16
+    db: 55
+    baserate: 50
+    race: "Uruk"
+    group: "Monsters"
+    weapons:
+      - weapon: "War Hammer +15"
+        ob: 120
+      - weapon: "Kragashard +5"
+        ob: 115
+      - weapon: "Long Bow"
+        ob: 95
+    defences:
+      - name: "Shield +10"
+        melee_bonus: 30
+        missile_bonus: 30
+    abilities: "Gothkorlagzrim (Master of the Jaws) - overall commander at Ilmaryen Keep. Notable Skills: Climb 32, Ride (Warg) 25, Track 27, Stalk/Hide 15, Perception 15. Languages: Black Speech 5, Orkish 4, Westron 4, Logathig 2. Notable Items: +15 war hammer, +5 Kragashard, +5 long bow, +5 chain hauberk, +10 shield, an invisible key (Very Hard, -25, to find). Young Uruk of exceptional ambition. Lacks neither strength nor intelligence. Proud of being Gothkorlagzrim and will almost certainly fight to the death (88% will not flee). Frequently (01-65) uses both war hammer and Kragashard together, leaving shield slung on back."
+    description: "Seventh level Uruk Gothkorlagzrim of the Blogrum-hai. Almost the opposite of Marlurg - young, ambitious, strong, and intelligent. Wears full chain hauberk (Ch/16) and carries shield. Prefers to use the excellent war hammer he took from a fallen foe, but also uses Kragashard and long bow. Frequently fights with both hammer and sword together. Will almost certainly fight to the death to maintain his title (88% chance will not flee the keep)."
+  
+  - name: "Marlurg"
+    based_on: "Orc, Lesser"
+    level: 5
+    hp: 101
+    at: 14
+    db: 45
+    baserate: 50
+    race: "Orc"
+    group: "Monsters"
+    weapons:
+      - weapon: "Kragashard +10"
+        ob: 95
+      - weapon: "Kragnifrim"
+        ob: 85
+    defences:
+      - name: "Shield +5"
+        melee_bonus: 25
+        missile_bonus: 25
+    abilities: "Korlagzrim-gottul (Lieutenant of the Jaws) - commands 2+ Korlagzrim. Notable Skills: Climb 30, Track 10, Stalk/Hide 10, Perception 5. Languages: Orkish 5, Black Speech 2, Westron 3. Notable Items: +10 Kragashard, +5 chain shirt and greaves, +5 shield. Old for an Orc but still quite strong. A little dull mentally even for an Orc; his rise has been slow but he has sufficient cunning to hold any position he attains. Believes discretion is the better part of valor and will not hesitate to flee if hopeless. Carries eight Kragnifrim instead of the usual four."
+    description: "Fifth level Lesser Orc Korlagzrim-gottul of the Blogrum-hai. Old for an Orc but still quite strong. Wears chain shirt with arm and leg greaves (Ch/14) and carries shield. Armed with an especially well-made Kragashard and carries eight Kragnifrim (instead of usual four). Will always try to use throwing knives first, then close for battle (or flee if appropriate)."
+  
+  - name: "Bokdankh"
+    based_on: "Orc, Lesser"
+    level: 3
+    hp: 75
+    at: 14
+    db: 35
+    baserate: 50
+    race: "Orc"
+    group: "Monsters"
+    weapons:
+      - weapon: "Kragashard"
+        ob: 75
+      - weapon: "Kragnifrim"
+        ob: 65
+    defences:
+      - name: "Shield"
+        melee_bonus: 20
+        missile_bonus: 20
+    abilities: "Korlagz-drartul (Sergeant of the Jaw) - leader of a Korlagz (5-Orc unit). Proficient with Kragnifrim (throwing knives). The newest of the four Lesser Orc sergeants, not remarkable."
+    description: "Third level Lesser Orc Korlagz-drartul of the Blogrum-hai. Wears chain shirt with arm and leg greaves (Ch/14) and carries shield. Armed with Kragashard and carries four Kragnifrim (fang-knives - slightly curved throwing knives). Not particularly remarkable among the sergeants."
+  
+  - name: "Skoralg"
+    based_on: "Orc, Lesser"
+    level: 3
+    hp: 75
+    at: 14
+    db: 35
+    baserate: 50
+    race: "Orc"
+    group: "Monsters"
+    weapons:
+      - weapon: "Kragashard"
+        ob: 75
+      - weapon: "Kragnifrim"
+        ob: 65
+    defences:
+      - name: "Shield"
+        melee_bonus: 20
+        missile_bonus: 20
+    abilities: "Korlagz-drartul (Sergeant of the Jaw) - leader of a Korlagz (5-Orc unit). Proficient with Kragnifrim (throwing knives). Disgusting even by Orc standards."
+    description: "Third level Lesser Orc Korlagz-drartul of the Blogrum-hai. Wears chain shirt with arm and leg greaves (Ch/14) and carries shield. Armed with Kragashard and carries four Kragnifrim. Disgusting even by Orc standards - his room requires a 2nd level RR against poison or be nauseated (-5 to activity) while in the room."
+  
+  - name: "Fektalgh"
+    based_on: "Orc, Lesser"
+    level: 3
+    hp: 75
+    at: 14
+    db: 35
+    baserate: 50
+    race: "Orc"
+    group: "Monsters"
+    weapons:
+      - weapon: "Kragashard"
+        ob: 75
+      - weapon: "Kragnifrim"
+        ob: 65
+    defences:
+      - name: "Shield"
+        melee_bonus: 20
+        missile_bonus: 20
+    abilities: "Korlagz-drartul (Sergeant of the Jaw) - leader of a Korlagz (5-Orc unit). Proficient with Kragnifrim (throwing knives). Neat for an Orc, keeping even his clothes semi-clean."
+    description: "Third level Lesser Orc Korlagz-drartul of the Blogrum-hai. Wears chain shirt with arm and leg greaves (Ch/14) and carries shield. Armed with Kragashard and carries four Kragnifrim. Tidier than most Orcs, keeping his room and clothes relatively clean."
+  
+  - name: "Hagrakh"
+    based_on: "Orc, Lesser"
+    level: 3
+    hp: 75
+    at: 14
+    db: 35
+    baserate: 50
+    race: "Orc"
+    group: "Monsters"
+    weapons:
+      - weapon: "Kragashard"
+        ob: 75
+      - weapon: "Kragnifrim"
+        ob: 75
+    defences:
+      - name: "Shield"
+        melee_bonus: 20
+        missile_bonus: 20
+    abilities: "Korlagz-drartul (Sergeant of the Jaw) - leader of a Korlagz (5-Orc unit). Proficient with Kragnifrim (throwing knives). Has a penchant for knife throwing - practices constantly and receives +10 OB when using Kragnifrim."
+    description: "Third level Lesser Orc Korlagz-drartul of the Blogrum-hai. Wears chain shirt with arm and leg greaves (Ch/14) and carries shield. Armed with Kragashard and carries four Kragnifrim. Has a penchant for knife throwing - practices with his Kragnifrim constantly. Uses a straw-stuffed bag as a target in his room."
+  
+  - name: "Ukrish"
+    based_on: "Orc, Greater"
+    level: 4
+    hp: 93
+    at: 14
+    db: 40
+    baserate: 50
+    race: "Uruk"
+    group: "Monsters"
+    weapons:
+      - weapon: "Kragashard"
+        ob: 85
+      - weapon: "Kragnifrim"
+        ob: 75
+    defences:
+      - name: "Shield"
+        melee_bonus: 20
+        missile_bonus: 20
+    abilities: "Korlagz-drartul (Sergeant of the Jaw) - leader of an Uruk Korlagz (5-Orc unit). Proficient with Kragnifrim (throwing knives). Essentially interchangeable with Gormuk. Neither has any particular distinguishing characteristics."
+    description: "Fourth level Uruk Korlagz-drartul of the Blogrum-hai. Wears chain shirt with arm and leg greaves (Ch/14) and carries shield. Armed with Kragashard and carries four Kragnifrim. Essentially interchangeable with Gormuk - neither has particular distinguishing characteristics."
+  
+  - name: "Gormuk"
+    based_on: "Orc, Greater"
+    level: 4
+    hp: 93
+    at: 14
+    db: 40
+    baserate: 50
+    race: "Uruk"
+    group: "Monsters"
+    weapons:
+      - weapon: "Kragashard"
+        ob: 85
+      - weapon: "Kragnifrim"
+        ob: 75
+    defences:
+      - name: "Shield"
+        melee_bonus: 20
+        missile_bonus: 20
+    abilities: "Korlagz-drartul (Sergeant of the Jaw) - leader of an Uruk Korlagz (5-Orc unit). Proficient with Kragnifrim (throwing knives). Essentially interchangeable with Ukrish. Neither has any particular distinguishing characteristics."
+    description: "Fourth level Uruk Korlagz-drartul of the Blogrum-hai. Wears chain shirt with arm and leg greaves (Ch/14) and carries shield. Armed with Kragashard and carries four Kragnifrim. Essentially interchangeable with Ukrish - neither has particular distinguishing characteristics."

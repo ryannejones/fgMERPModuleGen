@@ -1,0 +1,493 @@
+stories:
+  # Adventure 1: Attercop Attack
+  - name: "Introduction to Attercop Attack"
+    category: "Adventure 1: Attercop Attack"
+    contents:
+      - text_type: "header"
+        text: "Attercop Attack - An Adventure for Levels 1-2"
+      
+      - text_type: "read_aloud"
+        text: |
+          To the east of Mirkwood, nestled under the eaves of the great forest, lies a tiny village named Ulgarstat. The village was founded by Ulgar Resticsard some three years before the Great Plague. At the time of the Plague, the community was self-sufficient and isolated. Either because of that isolation, or by some other workings of fate, it escaped the Plague entirely.
+          
+          Ulgarstat is in a pleasant locale. The land is rolling, graced with tall trees, and crisscrossed by gurgling streams. Sheltered by nearby Mirkwood from harsh winds and the hot afternoon sun, the settlement boasts soft breezes and gentle sunlight. Birds flock and nest willingly among the houses, controlling insects and making the hamlet mirthful by their songs.
+      
+      - text_type: "gm_notes"
+        text: |
+          This adventure is designed for 1st or 2nd level characters. The primary challenge is a group of five Giant Spiders that have been kidnapping travelers on the road between Ulgarstat and outlying farms to the north.
+    links:
+      - link_type: "link_image"
+        target: "adventure1_illustration.jpg"
+      - link_type: "link_image"
+        target: "mirkwood_area_map.jpg"
+  
+  - name: "Fear in Ulgarstat"
+    category: "Adventure 1: Attercop Attack"
+    contents:
+      - text_type: "header"
+        text: "The Problem"
+      
+      - text_type: "gm_notes"
+        text: |
+          Six months ago, Ulgarstat began to experience problems with marauding wild animals. Wolves have twice attacked the town and twice been repulsed. After the first attack, they reinforced the wall around the town and posted a night watch. These additional safety measures have kept the town fairly well-protected for several months.
+          
+          Now Ulgarstat is facing yet another hazard. In recent months, several people have disappeared while travelling between Ulgarstat and outlying lands to the north.
+      
+      - text_type: "read_aloud"
+        text: |
+          Two months ago, a farmer set out for Ulgarstat from his farm in the north. When he still hadn't returned at the end of a week, neighbors discovered that he had never arrived in town. The man disappeared without trace, leaving behind his moderately successful farm.
+          
+          Three weeks later, a peddler left Ulgarstat, announcing his plans to visit Wessun Fraelsen, another farmer in the north. When the peddler had never arrived at Wessun's farm, Ulgar and Wessun tracked him as far as they could along the wooded trail. Wagon tracks led halfway up the trail, then disappeared into the forest. They soon found the wagon, but although they searched the woods around it, they could find no other signs of horse or peddler.
+          
+          Two weeks after the peddler disappeared, three young men went game hunting up the northern trail. When they didn't return for supper, their fathers and brothers went after them. No trace of any of the three was found.
+      
+      - text_type: "gm_notes"
+        text: |
+          The farmers and citizens of Ulgarstat are afraid of this new threat, but don't know what they're dealing with or how to cope with it. Some people believe that bandits are hiding in the forest. Others fear that wolves have begun to attack by day. Still others claim that bears are responsible.
+          
+          Ulgar can't understand why bandits would take corpses, or why wolves or bears would leave no trace of themselves or of a struggle, nor baggage nor clothing from their victims. Though not usually given to hysterical imaginings, Ulgar feels that neither he nor anyone else in his village is capable of dealing with this new menace. He has decided to seek outside help.
+    links:
+      - link_type: "link_npc"
+        target: "Ulgar Resticsard"
+      - link_type: "link_npc"
+        target: "Wessun Fraelsen"
+  
+  - name: "Ulgarstat Village"
+    category: "Adventure 1: Attercop Attack"
+    contents:
+      - text_type: "header"
+        text: "Ulgarstat - The Village"
+      
+      - text_type: "gm_notes"
+        text: |
+          Ulgarstat is a small village with approximately 60 inhabitants. The village is surrounded by a wooden palisade wall that was reinforced after the wolf attacks. Buildings are numbered 1-11 on the map.
+          
+          Key locations:
+          1. Gate and Guard Tower - Always manned at night, sometimes during day
+          2-3. Shops and Storage
+          4. Ulgar's House - Home of the village leader
+          5. Sigmar's Smithy - The village blacksmith
+          6-8. Common Houses
+          9. Village Well
+          10. Common Hall - Meeting place and tavern
+          11. Storage Barn
+      
+      - text_type: "read_aloud"
+        text: |
+          The village of Ulgarstat appears well-maintained despite its small size. Flowers bloom in window boxes and kitchen gardens. The sound of the smithy's hammer rings across the settlement, and you can hear cheerful conversations and occasional laughter from the villagers going about their daily business.
+    links:
+      - link_type: "link_npc"
+        target: "Ulgar Resticsard"
+      - link_type: "link_npc"
+        target: "Sigmar"
+      - link_type: "link_image"
+        target: "ulgarstat_map.jpg"
+  
+  - name: "The Spider's Lair"
+    category: "Adventure 1: Attercop Attack"
+    contents:
+      - text_type: "header"
+        text: "The Giant Spiders' Lair"
+      
+      - text_type: "gm_notes"
+        text: |
+          The Spider's lair is located approximately 3.67 miles north of Ulgarstat, west of the path to Wessun's farm. The lair consists of a complex web structure built between several large trees.
+          
+          There are five Giant Spiders living in this web complex. These five were driven from their more western habitat by hunger and population pressures, and are trying to make a living closer to the forest's edge.
+      
+      - text_type: "read_aloud"
+        text: |
+          As you approach through the forest, you notice an eerie silence. No birds sing, no small animals rustle in the underbrush. The trees ahead are draped with thick, sticky webbing that glistens in the filtered sunlight. The webs stretch between the trunks in intricate patterns, creating chambers and passages. In the center of the web complex, you can make out large, dark shapes - but whether they are cocoons or something worse, you cannot yet tell.
+      
+      - text_type: "gm_notes"
+        text: |
+          The spiders have wrapped their victims in webbing and hung them in the lair. Some cocoons contain the dessicated remains of previous victims. Others may contain recently captured victims who are still alive but paralyzed by spider venom.
+          
+          At the base of the web complex is a refuse pile where the spiders toss the bones and possessions of their meals. This is where the treasure can be found.
+    links:
+      - link_type: "link_encounter"
+        target: "Giant Spider Lair (Full)"
+      - link_type: "link_parcel"
+        target: "Spider's Refuse Pile Treasure"
+      - link_type: "link_image"
+        target: "spiders_lair_terrain_map.jpg"
+      - link_type: "link_image"
+        target: "spiders_lair_detail_map.jpg"
+  
+  - name: "Missing Persons"
+    category: "Adventure 1: Attercop Attack"
+    contents:
+      - text_type: "header"
+        text: "The Missing: Runnal and Currael"
+      
+      - text_type: "gm_notes"
+        text: |
+          If the GM wishes to add urgency to the adventure, Runnal Resticsard and Currael Wessuntha can be among the most recent victims. They went for a walk together three days ago and never returned. Both sets of parents are distraught.
+          
+          If the party moves quickly, they may find Runnal and Currael alive but paralyzed in spider cocoons. Both can be saved if freed within a week of capture.
+      
+      - text_type: "read_aloud"
+        text: |
+          Ulgar's face is drawn with worry as he speaks. "My son Runnal and Wessun's daughter Currael went walking together three days past. They were to be married come spring. When they didn't return by nightfall, we searched but found nothing. Please - you must help us find them before it's too late."
+    links:
+      - link_type: "link_npc"
+        target: "Runnal Resticsard"
+      - link_type: "link_npc"
+        target: "Currael Wessuntha"
+      - link_type: "link_npc"
+        target: "Ulgar Resticsard"
+      - link_type: "link_npc"
+        target: "Wessun Fraelsen"
+  
+  # Adventure 2: Trouble with Trolls
+  - name: "Introduction to Trouble with Trolls"
+    category: "Adventure 2: Trouble with Trolls"
+    contents:
+      - text_type: "header"
+        text: "Trouble with Trolls - An Adventure for Levels 2-3"
+      
+      - text_type: "gm_notes"
+        text: |
+          This adventure is designed for 2nd or 3rd level characters. The primary challenge is a band of four Stone Trolls who have attacked a merchant caravan and taken prisoners.
+      
+      - text_type: "read_aloud"
+        text: |
+          The road known as the Men-i-Naugrim runs through the northern reaches of Mirkwood, connecting the Dwarf settlements in the Emyn-nu-Fuin (Grey Mountains) with the towns of Men to the south. It is a dangerous road, but well-traveled by those brave or desperate enough to risk the perils of Mirkwood for profit.
+    links:
+      - link_type: "link_image"
+        target: "mirkwood_area_map.jpg"
+  
+  - name: "The Lost Caravan"
+    category: "Adventure 2: Trouble with Trolls"
+    contents:
+      - text_type: "header"
+        text: "Merchant Eolsen's Problem"
+      
+      - text_type: "read_aloud"
+        text: |
+          Merchant Thal Eolsen is a forbidding man - tall and broad with black hair and a bushy black beard. His black piercing eyes regard you with calculation as he speaks in his quiet, gruff voice.
+          
+          "I have a problem that requires... capable individuals. Five days ago, one of my caravans was attacked on the Men-i-Naugrim, eight miles north of here in the Emyn-nu-Fuin. My caravan master, Rothaar One-Leg, is missing along with two of my best guards and a new hire. The wagon and most of the goods were left behind - unusual for bandits. I'm offering 500 gold pieces to bring back my people and goods intact. If you can only recover the strongbox from the wagon, I'll pay 300 gold pieces. But I want Rothaar and the others back alive if possible."
+      
+      - text_type: "gm_notes"
+        text: |
+          Merchant Eolsen is a wealthy trader who operates several caravans along the Men-i-Naugrim. He has a reputation for dealing fairly with good hirelings and harshness towards those who try to cheat him. Much of his livelihood depends on shipping along this route, so he takes the attack seriously.
+          
+          The caravan was attacked by four Stone Trolls: Fradurag (the leader), twin brothers both named Tumag, and Umik (the youngest). They killed several guards but took three prisoners: Rothaar One-Leg, Elisa, and Marluk.
+    links:
+      - link_type: "link_npc"
+        target: "Merchant Thal Eolsen"
+      - link_type: "link_npc"
+        target: "Rothaar One-Leg"
+      - link_type: "link_image"
+        target: "rothaar_portrait.jpg"
+  
+  - name: "The Troll Lair"
+    category: "Adventure 2: Trouble with Trolls"
+    contents:
+      - text_type: "header"
+        text: "The Stone Trolls' Cave"
+      
+      - text_type: "read_aloud"
+        text: |
+          You follow the trail of destruction through the forest - broken branches, crushed undergrowth, and occasional bloodstains mark the Trolls' passage. After several miles, you find a rocky hillside with a large cave entrance. The stench of Troll is overwhelming, and you can hear rumbling snores echoing from within.
+      
+      - text_type: "gm_notes"
+        text: |
+          The Troll lair is a natural cave system that has been modified and expanded by the Trolls. It consists of several chambers:
+          
+          - General Storage: Where the Trolls keep stolen goods and Umik sleeps
+          - Tumag and Tumag's Bedchamber: The twin Trolls sleep here
+          - Fradurag's Bedchamber: The leader's private chamber with his treasure
+          - Treasure Room: A hidden chamber containing the caravan strongbox and other valuables
+          
+          The Trolls have rigged a simple alarm at the cave entrance using rustling leaves - Fradurag's idea, showing his unusual intelligence for a Troll.
+      
+      - text_type: "gm_notes"
+        text: |
+          The three prisoners (Rothaar, Elisa, and Marluk) are being kept in the General Storage chamber. They are bound but alive. Rothaar and Elisa are both conscious and will try to escape or assist the party if given the chance. Marluk is terrified and may be more hindrance than help.
+    links:
+      - link_type: "link_encounter"
+        target: "All Four Trolls"
+      - link_type: "link_npc"
+        target: "Fradurag"
+      - link_type: "link_npc"
+        target: "Rothaar One-Leg"
+      - link_type: "link_npc"
+        target: "Elisa"
+      - link_type: "link_npc"
+        target: "Marluk"
+      - link_type: "link_image"
+        target: "troll_lair_map.jpg"
+      - link_type: "link_image"
+        target: "troll_lair_detail_map.jpg"
+  
+  - name: "Fradurag the Clever"
+    category: "Adventure 2: Trouble with Trolls"
+    contents:
+      - text_type: "header"
+        text: "The Troll Leader"
+      
+      - text_type: "gm_notes"
+        text: |
+          Fradurag is unusual among Trolls. While still a violent, disagreeable creature with a foul temper and incredible strength, he has something most Trolls lack: a modicum of intelligence. He's capable of speaking in complete sentences and occasionally thinking ahead.
+          
+          It was Fradurag who masterminded the simple burglar alarm for their cave doorway using rustling leaves. This exceptional intelligence makes him even more dangerous than average Trolls.
+          
+          Fradurag possesses a magical battleaxe that can cast Protection II three times per day, though he doesn't know how to use the spell.
+    links:
+      - link_type: "link_npc"
+        target: "Fradurag"
+      - link_type: "link_item"
+        target: "Battleaxe"
+      - link_type: "link_image"
+        target: "fradurag_portrait.jpg"
+  
+  # Adventure 3: The Tithing Train
+  - name: "Introduction to The Tithing Train"
+    category: "Adventure 3: The Tithing Train"
+    contents:
+      - text_type: "header"
+        text: "The Tithing Train - An Adventure for Levels 4-6"
+      
+      - text_type: "gm_notes"
+        text: |
+          This adventure is designed for 4th to 6th level characters. The primary challenge is clearing out Ilmaryen Keep, which has been occupied by 30 Orcs of the Blogrum-hai tribe who are gathering tribute for Dol Guldur.
+      
+      - text_type: "read_aloud"
+        text: |
+          Eight miles north of the Men-i-Naugrim road in the Emyn-nu-Fuin stands Ilmaryen Keep, an ancient fortress now fallen into the hands of evil. The Orcs of the Blogrum-hai tribe - the People of the Bloody Skull - have claimed it as their own, using it as a staging ground for raids and as a collection point for tribute destined for the Necromancer of Dol Guldur.
+    links:
+      - link_type: "link_image"
+        target: "adventure3_illustration.jpg"
+      - link_type: "link_image"
+        target: "mirkwood_area_map.jpg"
+  
+  - name: "Grimbold's Tale"
+    category: "Adventure 3: The Tithing Train"
+    contents:
+      - text_type: "header"
+        text: "The Beorning's Quest"
+      
+      - text_type: "read_aloud"
+        text: |
+          The man who approaches you is large and red-haired, so hairy that he looks bear-like even in human form. His voice is a soft grumbling growl, and he has a disconcerting habit of staring intently while speaking.
+          
+          "I am Grimbold, son of the Beorning people. When I was but a toddler, my parents and brother were killed by goblins. My sister escaped with me as a babe. Since then, killing Orcs has been my personal Quest. I've tracked a band of them to Ilmaryen Keep, eight miles north of here. There are thirty of the filth - warriors of the Blogrum-hai gathering tribute for their dark master in Dol Guldur."
+          
+          He pauses, his eyes hard. "I cannot take thirty alone. But with skilled companions, we could cleanse that keep and strike a blow against the Shadow. The Orcs have gathered much treasure there - tribute from raids and thefts. It would be yours to divide, though I claim only my fair share and the satisfaction of Orc-slaying. Will you aid me?"
+      
+      - text_type: "gm_notes"
+        text: |
+          Grimbold is a 6th-level Beorning warrior on a lifelong quest to destroy Orcs. He abhors Orcs above all other evils and will not hesitate to fight them. However, he's also pragmatic enough to know when to flee if the situation is hopeless.
+          
+          Grimbold is willing to share treasure equally but is primarily motivated by his hatred of Orcs. He uses almost all weapons with equal skill and possesses several powerful magic items.
+    links:
+      - link_type: "link_npc"
+        target: "Grimbold"
+      - link_type: "link_image"
+        target: "grimbold_portrait.jpg"
+  
+  - name: "Ilmaryen Keep Overview"
+    category: "Adventure 3: The Tithing Train"
+    contents:
+      - text_type: "header"
+        text: "The Keep Structure"
+      
+      - text_type: "gm_notes"
+        text: |
+          Ilmaryen Keep is a three-story stone fortress with two towers. The structure includes:
+          
+          CELLARS (Underground Level):
+          - Storage areas
+          - Secret cellar refuge
+          - Old wine storage
+          
+          FIRST FLOOR:
+          - Gatehouse and entry
+          - Great Hall
+          - Kitchen and pantries
+          - Guard rooms
+          - Storage rooms
+          
+          SECOND FLOOR:
+          - Officer quarters (Yagrash, Marlurg, six sergeants)
+          - Common sleeping areas
+          - Treasure room
+          - Master bedchamber
+          
+          TOWER ROOFS:
+          - Watch posts with guards
+          - Access to battlements
+      
+      - text_type: "read_aloud"
+        text: |
+          The keep rises from the forest floor like a broken tooth of stone. Originally built by Men as a watchtower and waystation, it has been defiled by Orcish occupation. Dark smoke rises from cooking fires, and the stench of Orcs carries on the wind. You can see guards on the tower roofs, and hear harsh Orcish voices from within.
+    links:
+      - link_type: "link_image"
+        target: "ilmaryen_keep_complete_map.jpg"
+      - link_type: "link_image"
+        target: "ilmaryen_keep_first_floor.jpg"
+      - link_type: "link_image"
+        target: "ilmaryen_keep_second_floor.jpg"
+      - link_type: "link_image"
+        target: "ilmaryen_keep_cellars.jpg"
+  
+  - name: "The Blogrum-hai Organization"
+    category: "Adventure 3: The Tithing Train"
+    contents:
+      - text_type: "header"
+        text: "Orc Military Structure"
+      
+      - text_type: "gm_notes"
+        text: |
+          The Orcs are organized in a strict military hierarchy:
+          
+          KORLAGZ (Jaw): The basic 5-Orc unit
+          - 4 Kragashi (Teeth/Warriors)
+          - 1 Korlagz-drartul (Sergeant of the Jaw)
+          
+          LEADERSHIP:
+          - Korlagzrim-gottul (Lieutenant): Commands 2+ Korlagzrim - Marlurg
+          - Gothkorlagzrim (Master of the Jaws): Overall commander - Yagrash
+          
+          CURRENT GARRISON: 30 Orcs total
+          - Yagrash (7th-level Uruk commander)
+          - Marlurg (5th-level Lesser Orc lieutenant)
+          - 6 Sergeants: Bokdankh, Skoralg, Fektalgh, Hagrakh (Lesser Orcs); Ukrish, Gormuk (Uruks)
+          - 16 Lesser Orc warriors (levels 1-2)
+          - 8 Uruk warriors (levels 2-3)
+          
+          The Orcs are disciplined and well-organized. They maintain regular guard rotations and patrols.
+    links:
+      - link_type: "link_npc"
+        target: "Yagrash"
+      - link_type: "link_npc"
+        target: "Marlurg"
+  
+  - name: "The Treasure Room"
+    category: "Adventure 3: The Tithing Train"
+    contents:
+      - text_type: "header"
+        text: "Room #21 - The Tribute Chamber"
+      
+      - text_type: "read_aloud"
+        text: |
+          This chamber on the second floor has been converted into a treasure repository. Two large wooden chests dominate the room, both reinforced with iron bands. The eastern chest bears scorch marks and appears heavily trapped. The western chest looks ordinary, but when you look at its contents, it appears completely empty despite the weight suggesting otherwise.
+      
+      - text_type: "gm_notes"
+        text: |
+          EASTERN CHEST (Trapped):
+          This chest is protected by a deadly trap. Opening it without disarming the trap releases Na-del gas - a distilled spider venom at 5th level. The gas causes 3-30 hits and massive internal bleeding (8 hits per round). All the Orcs know about this trap and avoid the chest.
+          
+          The chest contains an enormous amount of treasure: over 1,500 gold pieces worth of coins plus ten valuable magic items including the Shield +10 that casts Invisibility and Aldataur, the miniature spear that grants spell casting abilities.
+          
+          WESTERN CHEST (Invisible Key):
+          This chest requires an invisible key that only Yagrash carries. The contents are protected by a permanent visual illusion - everything inside appears empty when viewed, but can be felt and heard when handled.
+          
+          The chest contains even more treasure: nearly 1,000 gold pieces and over 50,000 silver pieces, plus eleven valuable items including the size-changing half-plate armor and the Boots of Leaving.
+    links:
+      - link_type: "link_parcel"
+        target: "Orc Treasure Room Chest 1 (Trapped Gas)"
+      - link_type: "link_parcel"
+        target: "Orc Treasure Room Chest 2 (Invisible Key)"
+      - link_type: "link_npc"
+        target: "Yagrash"
+  
+  - name: "The Secret Cellar"
+    category: "Adventure 3: The Tithing Train"
+    contents:
+      - text_type: "header"
+        text: "Room #50 - The Hidden Refuge"
+      
+      - text_type: "read_aloud"
+        text: |
+          Behind a secret door in the cellars, you discover a small chamber that appears to have been a last refuge or bolt-hole for the keep's original inhabitants. The room is dry and well-preserved, with a single chest sitting against the far wall.
+      
+      - text_type: "gm_notes"
+        text: |
+          This secret chamber was unknown to the Orcs. The chest within has a false bottom (Very Hard, -15, to detect) containing the Axe of Orc-Slaying - a powerful weapon that grants +25 OB against Orcs and bestows additional benefits to its wielder during combat with Orcs.
+          
+          The room shows no signs of recent disturbance. Dust covers everything except the chest, which appears to have been sealed for many years.
+    links:
+      - link_type: "link_parcel"
+        target: "Secret Cellar Hidden Chest"
+      - link_type: "link_item"
+        target: "Axe of Orc-Slaying +15"
+  
+  - name: "Commander Yagrash"
+    category: "Adventure 3: The Tithing Train"
+    contents:
+      - text_type: "header"
+        text: "The Gothkorlagzrim"
+      
+      - text_type: "gm_notes"
+        text: |
+          Yagrash is a young Uruk of exceptional ambition. Unlike many Orc commanders who achieve their position through age and treachery, Yagrash earned his rank through strength, intelligence, and battlefield prowess.
+          
+          He is extremely proud of being Gothkorlagzrim (Master of the Jaws) and will almost certainly fight to the death rather than flee (88% chance he will not abandon the keep). This makes him a dangerous opponent - he won't retreat even when tactical wisdom would suggest it.
+          
+          Yagrash frequently fights using both his war hammer and Kragashard together, leaving his shield slung on his back (65% of the time in combat). This gives him tremendous offensive capability at the cost of some defense.
+          
+          He carries an invisible key to the western treasure chest on his person at all times.
+    links:
+      - link_type: "link_npc"
+        target: "Yagrash"
+      - link_type: "link_item"
+        target: "War Hammer +15"
+      - link_type: "link_item"
+        target: "Kragashard +5"
+  
+  # General Information Stories
+  - name: "About Mirkwood"
+    category: "Setting Information"
+    contents:
+      - text_type: "header"
+        text: "Mirkwood Forest"
+      
+      - text_type: "gm_notes"
+        text: |
+          Mirkwood is a vast and ancient forest in northern Middle-earth. Once known as Greenwood the Great, it has fallen under the shadow of evil emanating from Dol Guldur in the south. The forest is home to many dangerous creatures including Giant Spiders, Orcs, Wargs, Trolls, and worse.
+          
+          The eastern edge of Mirkwood, where Ulgarstat is located, is somewhat safer than the deep forest, but still poses significant dangers to travelers. The northern reaches near the Emyn-nu-Fuin (Grey Mountains) are particularly perilous.
+  
+  - name: "The Men-i-Naugrim"
+    category: "Setting Information"
+    contents:
+      - text_type: "header"
+        text: "The Old Forest Road"
+      
+      - text_type: "gm_notes"
+        text: |
+          The Men-i-Naugrim (S. "Way of the Dwarves") is an ancient road that runs through northern Mirkwood, connecting Dwarf settlements in the Grey Mountains with the towns of Men to the south and east.
+          
+          It is a dangerous road, constantly threatened by Orcs, Trolls, and other creatures of the Shadow. Only the brave or desperate travel it, though merchants still use it for the profitable trade between Dwarves and Men.
+          
+          The road requires constant maintenance as the forest attempts to reclaim it, and sections are frequently impassable due to fallen trees, Orc raids, or worse dangers.
+  
+  - name: "Rewards and Experience"
+    category: "GM Information"
+    contents:
+      - text_type: "header"
+        text: "Adventure Rewards"
+      
+      - text_type: "gm_notes"
+        text: |
+          ADVENTURE 1 - ATTERCOP ATTACK:
+          - 100 gp reward from Ulgarstat for killing the spiders
+          - 50 gp each for rescuing Runnal and Currael (if used)
+          - Treasure from spider's refuse pile
+          - Experience based on spiders defeated
+          
+          ADVENTURE 2 - TROUBLE WITH TROLLS:
+          - 500 gp from Merchant Eolsen for returning goods and hirelings
+          - 300 gp for returning strongbox alone
+          - Treasure from Troll lair (considerable)
+          - Experience based on Trolls defeated and prisoners rescued
+          
+          ADVENTURE 3 - THE TITHING TRAIN:
+          - All treasure found in the keep (split with Grimbold)
+          - Two massive treasure chests with combined value over 100,000 silver pieces equivalent
+          - Numerous magic items throughout the keep
+          - Experience based on Orcs defeated and keep cleared
+          - Satisfaction of striking a blow against the Shadow
